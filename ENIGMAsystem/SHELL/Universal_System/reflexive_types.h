@@ -1,0 +1,63 @@
+/********************************************************************************\
+**                                                                              **
+**  Copyright (C) 2008 Josh Ventura                                             **
+**                                                                              **
+**  This file is a part of the ENIGMA Development Environment.                  **
+**                                                                              **
+**                                                                              **
+**  ENIGMA is free software: you can redistribute it and/or modify it under the **
+**  terms of the GNU General Public License as published by the Free Software   **
+**  Foundation, version 3 of the license or any later version.                  **
+**                                                                              **
+**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
+**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
+**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
+**  details.                                                                    **
+**                                                                              **
+**  You should have recieved a copy of the GNU General Public License along     **
+**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
+**                                                                              **
+**  ENIGMA is an environment designed to create games and other programs with a **
+**  high-level, fully compilable language. Developers of ENIGMA or anything     **
+**  associated with ENIGMA are in no way responsible for its users or           **
+**  applications created by its users, or damages caused by the environment     **
+**  or programs made in the environment.                                        **
+**                                                                              **
+\********************************************************************************/
+
+#ifndef _reflexive_types_h
+#define _reflexive_types_h
+
+#define TYPEVARIABLES double *reflex1, *reflex2, *reflex3;
+
+//Make direction work
+#define TYPEPURPOSE directionv
+#define TYPEFUNCTION() *reflex2=*reflex1*cos(rval.d/180*PI); *reflex3=*reflex1*-sin(rval.d/180*PI);
+#include "multifunction_variant.h"
+#undef TYPEFUNCTION
+#undef TYPEPURPOSE
+
+//Make speed work -- same as above, but rval.d and reflex1 are switched.
+#define TYPEPURPOSE speedv
+#define TYPEFUNCTION() *reflex2=rval.d*cos(*reflex1/180*PI); *reflex3=rval.d*-sin(*reflex1/180*PI);
+#include "multifunction_variant.h"
+#undef TYPEFUNCTION
+#undef TYPEPURPOSE
+
+//Make hspeed work
+#define TYPEPURPOSE hspeedv
+#define TYPEFUNCTION() *reflex2=(int(180+180*(1-atan2(*reflex1,rval.d)/PI)))%360; *reflex3=sqrt(rval.d*rval.d+(*reflex1)*(*reflex1));
+#include "multifunction_variant.h"
+#undef TYPEFUNCTION
+#undef TYPEPURPOSE
+
+//Make vspeed work -- Same as above, except the arguments to atan2 are reversed
+#define TYPEPURPOSE vspeedv
+#define TYPEFUNCTION() *reflex2=(int(180+180*(1-atan2(rval.d,*reflex1)/PI)))%360; *reflex3=sqrt(rval.d*rval.d+(*reflex1)*(*reflex1));
+#include "multifunction_variant.h"
+#undef TYPEFUNCTION
+#undef TYPEPURPOSE
+
+#undef TYPEVARIABLES
+
+#endif //_reflexive_types_h

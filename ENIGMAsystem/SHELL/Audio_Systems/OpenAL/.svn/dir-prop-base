@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 76
+.eobjs
+FancyPantsMystery
+FancyPants.wav
+FancyPants.ogg
+.eobjs_Run
+.c_inclrc
+
+END

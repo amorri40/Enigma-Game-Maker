@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/ogg/include
+END
+config_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/ogg/include/config_types.h
+END
+ogg.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/ogg/include/ogg.h
+END
+os_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/305/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/ogg/include/os_types.h
+END

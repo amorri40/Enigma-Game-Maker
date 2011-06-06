@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/enigma-dev/!svn/ver/755/trunk/ENIGMAsystem/SHELL/Platforms/Android
+END
+AndroidFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/463/trunk/ENIGMAsystem/SHELL/Platforms/Android/AndroidFunctions.h
+END
+app-android.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/463/trunk/ENIGMAsystem/SHELL/Platforms/Android/app-android.cpp
+END
+AndroidDialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/456/trunk/ENIGMAsystem/SHELL/Platforms/Android/AndroidDialog.cpp
+END
+org_enigmadev_EnigmaGLSurfaceView.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/enigma-dev/!svn/ver/577/trunk/ENIGMAsystem/SHELL/Platforms/Android/org_enigmadev_EnigmaGLSurfaceView.h
+END
+org_enigmadev_EnigmaRenderer.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/enigma-dev/!svn/ver/463/trunk/ENIGMAsystem/SHELL/Platforms/Android/org_enigmadev_EnigmaRenderer.h
+END
+file_manip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/enigma-dev/!svn/ver/456/trunk/ENIGMAsystem/SHELL/Platforms/Android/file_manip.cpp
+END
+AndroidWindow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/463/trunk/ENIGMAsystem/SHELL/Platforms/Android/AndroidWindow.cpp
+END
+include.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/enigma-dev/!svn/ver/704/trunk/ENIGMAsystem/SHELL/Platforms/Android/include.h
+END
+AndroidFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/enigma-dev/!svn/ver/463/trunk/ENIGMAsystem/SHELL/Platforms/Android/AndroidFunctions.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Platforms/Android/Makefile
+END
+AndroidWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/577/trunk/ENIGMAsystem/SHELL/Platforms/Android/AndroidWindow.h
+END

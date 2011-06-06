@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/enigma-dev/!svn/ver/178/trunk/ENIGMAsystem/additional/zlib
+END
+inffast.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/inffast.h
+END
+crc32.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/crc32.h
+END
+inffixed.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/inffixed.h
+END
+inftrees.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/inftrees.h
+END
+zconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/zconf.h
+END
+libzlib.a
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/178/trunk/ENIGMAsystem/additional/zlib/libzlib.a
+END
+zlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/zlib.h
+END
+inflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/inflate.h
+END
+trees.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/trees.h
+END
+deflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/deflate.h
+END
+zconf.in.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/zconf.in.h
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/91/trunk/ENIGMAsystem/additional/zlib/readme.txt
+END
+zutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/51/trunk/ENIGMAsystem/additional/zlib/zutil.h
+END

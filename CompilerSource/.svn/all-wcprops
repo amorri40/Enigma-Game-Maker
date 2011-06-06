@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/enigma-dev/!svn/ver/765/trunk/CompilerSource
+END
+genmake.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/enigma-dev/!svn/ver/607/trunk/CompilerSource/genmake.sh
+END
+OS_Switchboard.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/enigma-dev/!svn/ver/484/trunk/CompilerSource/OS_Switchboard.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/enigma-dev/!svn/ver/708/trunk/CompilerSource/main.cpp
+END
+settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/settings.h
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/enigma-dev/!svn/ver/184/trunk/CompilerSource/INSTALL
+END
+CompileEGMf.cbp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/enigma-dev/!svn/ver/685/trunk/CompilerSource/CompileEGMf.cbp
+END
+main.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/enigma-dev/!svn/ver/81/trunk/CompilerSource/main.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/enigma-dev/!svn/ver/720/trunk/CompilerSource/Makefile
+END
+standalone_main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/enigma-dev/!svn/ver/701/trunk/CompilerSource/standalone_main.cpp
+END

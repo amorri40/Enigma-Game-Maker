@@ -1,0 +1,15 @@
+K 10
+svn:ignore
+V 63
+.objs
+win32
+vq
+symbian
+macosx
+macos
+m4
+test
+examples
+.c_inclrc
+
+END

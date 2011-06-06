@@ -1,0 +1,26 @@
+K 10
+svn:ignore
+V 469
+IDE_EDIT_fontinfo.h
+IDE_EDIT_objectaccess.h
+IDE_EDIT_whitespace.h
+LIBINCLUDE.h
+IDE_EDIT_wildclass.h
+IDE_EDIT_wildclass.cpp
+IDE_EDIT_roomcreates.h
+IDE_EDIT_roomarrays.h
+IDE_EDIT_resourcenames.h
+IDE_EDIT_objectfunctionality.h
+IDE_EDIT_objectdeclarations.h
+IDE_EDIT_object_switch.h
+IDE_EDIT_modesenabled.h
+IDE_EDIT_inherited_locals.h
+IDE_EDIT_globals.h
+IDE_EDIT_evpatent.h
+IDE_EDIT_evparent.h
+IDE_EDIT_events.h
+IDE_EDIT_events.cpp
+IDE_EDIT_eventpointers.h
+GAME_SETTINGS.h
+
+END

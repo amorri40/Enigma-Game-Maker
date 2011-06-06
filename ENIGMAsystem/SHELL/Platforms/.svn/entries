@@ -1,0 +1,77 @@
+10
+
+dir
+768
+https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms
+https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
+
+
+
+2011-06-06T00:54:13.515830Z
+766
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+726d713c-bd1a-46cb-9ef0-1b6e075168bb
+
+Android
+dir
+
+Win32
+dir
+
+iPhone
+dir
+
+Cocoa
+dir
+
+platforms_mandatory.h
+file
+
+
+
+
+2011-04-20T21:22:06.000000Z
+249a9666f31050b0ba92bc2a9fd885ff
+2010-10-04T14:31:07.739207Z
+484
+ismavatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3431
+
+xlib
+dir
+

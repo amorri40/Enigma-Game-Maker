@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/core/internal
+END
+it.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/core/internal/it.h
+END
+aldumb.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/core/internal/aldumb.h
+END
+dumb.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/core/internal/dumb.h
+END

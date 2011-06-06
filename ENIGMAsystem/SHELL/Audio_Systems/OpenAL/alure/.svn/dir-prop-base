@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 51
+.objs
+.c_inclrc
+src
+examples
+docs
+cmake
+build
+.git
+
+END

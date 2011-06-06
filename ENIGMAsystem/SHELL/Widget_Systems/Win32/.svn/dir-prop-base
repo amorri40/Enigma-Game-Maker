@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 50
+Widgets_Win32.layout
+Widgets_Win32.depend
+bin
+obj
+
+END

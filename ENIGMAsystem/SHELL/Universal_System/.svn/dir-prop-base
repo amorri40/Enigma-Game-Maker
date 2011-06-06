@@ -1,0 +1,8 @@
+K 10
+svn:ignore
+V 28
+.c_inclrc
+.eobjs_Run
+.eobjs
+
+END

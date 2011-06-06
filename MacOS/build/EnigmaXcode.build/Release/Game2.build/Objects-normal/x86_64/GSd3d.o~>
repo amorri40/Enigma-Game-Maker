@@ -1,0 +1,28 @@
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/multifunction_variant.h:28,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/roomsystem.h:113,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:34:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:68:1: warning: "types_binary_bitwise_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:33:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:68:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/multifunction_variant.h:28,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/roomsystem.h:113,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:34:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:78:1: warning: "types_binary_assign_extrapolate_declare" redefined
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:33:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:78:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/multifunction_variant.h:28,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/roomsystem.h:113,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:34:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:130:1: warning: "types_binary_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:33:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:130:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/multifunction_variant.h:28,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/roomsystem.h:113,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:34:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:133:1: warning: "types_binary_extrapolate_alldecce" redefined
+In file included from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp:33:
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/../../Universal_System/var_te.h:133:1: warning: this is the location of the previous definition

@@ -1,0 +1,3 @@
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:34: error: no declaration of property 'enigmaview' found in the interface
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:54: warning: property 'view' requires method '-view' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:54: warning: property 'view' requires the method 'setView:' to be defined - use @synthesize, @dynamic or provide a method implementation
