@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/enigma-dev/!svn/ver/762/trunk/CompilerSource/general
+END
+bettersystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/610/trunk/CompilerSource/general/bettersystem.h
+END
+estring.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/enigma-dev/!svn/ver/299/trunk/CompilerSource/general/estring.h
+END
+darray.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/enigma-dev/!svn/ver/131/trunk/CompilerSource/general/darray.cpp
+END
+parse_basics.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/396/trunk/CompilerSource/general/parse_basics.h
+END
+implicit_stack.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/implicit_stack.h
+END
+textfile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/textfile.cpp
+END
+string.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/enigma-dev/!svn/ver/484/trunk/CompilerSource/general/string.cpp
+END
+darray.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/darray.h
+END
+textfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/textfile.h
+END
+bettersystem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/enigma-dev/!svn/ver/762/trunk/CompilerSource/general/bettersystem.cpp
+END

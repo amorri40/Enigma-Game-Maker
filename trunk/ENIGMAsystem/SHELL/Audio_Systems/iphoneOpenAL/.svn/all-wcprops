@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL
+END
+OpenALManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/enigma-dev/!svn/ver/464/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL/OpenALManager.h
+END
+iphoneOpenAL.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/464/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL/iphoneOpenAL.cpp
+END
+OpenALManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/enigma-dev/!svn/ver/464/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL/OpenALManager.m
+END
+iphoneOpenAL.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/enigma-dev/!svn/ver/464/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL/iphoneOpenAL.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Audio_Systems/iphoneOpenAL/Makefile
+END

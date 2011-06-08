@@ -1,0 +1,28 @@
+K 10
+svn:ignore
+V 280
+VALGRIND_ENIGMA_ENGINE.txt
+mgae
+outputmac.cc
+a.out
+ENIGMAengine.exe
+game-n.7z
+game-n
+game
+FancyPantsMystery
+FancyPants.wav
+FancyPants.ogg
+.c_inclrc
+FUCK.txt
+.objs
+GOODLUCK.LOG
+gmon.out
+game.exe
+ENIGMAengine.layout
+ENIGMAengine.depend
+ENIGMAengine
+ass.out
+asdasd
+API_Switchboard.h
+
+END

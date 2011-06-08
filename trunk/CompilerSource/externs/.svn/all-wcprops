@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs
+END
+ext_iteration.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs/ext_iteration.cpp
+END
+references.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/322/trunk/CompilerSource/externs/references.cpp
+END
+references.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/322/trunk/CompilerSource/externs/references.h
+END
+externs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs/externs.cpp
+END
+externs.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs/externs.h
+END

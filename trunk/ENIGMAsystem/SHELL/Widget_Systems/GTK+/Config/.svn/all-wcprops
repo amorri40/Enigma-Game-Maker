@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/enigma-dev/!svn/ver/637/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Config
+END
+cocoa.ey
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/637/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Config/cocoa.ey
+END
+xlib.ey
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/enigma-dev/!svn/ver/637/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Config/xlib.ey
+END
+win32.ey
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/637/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Config/win32.ey
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/enigma-dev/!svn/ver/591/trunk/CompilerSource/compiler/event_reader
+END
+event_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/enigma-dev/!svn/ver/591/trunk/CompilerSource/compiler/event_reader/event_parser.h
+END
+Event Reader.cbp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/260/trunk/CompilerSource/compiler/event_reader/Event%20Reader.cbp
+END
+events.res
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/enigma-dev/!svn/ver/260/trunk/CompilerSource/compiler/event_reader/events.res
+END
+event_parser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/enigma-dev/!svn/ver/591/trunk/CompilerSource/compiler/event_reader/event_parser.cpp
+END

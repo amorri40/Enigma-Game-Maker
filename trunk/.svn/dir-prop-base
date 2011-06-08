@@ -1,0 +1,46 @@
+K 10
+svn:ignore
+V 579
+hs_err_pid3432.log
+hs_err_pid1448.log
+hs_err_pid22057.log
+hs_err_pid21979.log
+hs_err_pid3560.log
+ENIGMA.exe
+compileEGMf.dll
+hs_err_pid9416.log
+hs_err_pid9345.log
+hs_err_pid3516.log
+hs_err_pid23939.log
+hs_err_pid23454.log
+hs_err_pid23390.log
+hs_err_pid23301.log
+hs_err_pid23034.log
+hs_err_pid18234.log
+hs_err_pid16708.log
+hs_err_pid15401.log
+valwho.txt
+valr.txt
+test.txt
+searchdirs.txt
+redirfile.txt
+parse_output.txt
+output.cc
+hs_err_pid4168.log
+hs_err_pid3439.log
+hs_err_pid27060.log
+hs_err_pid2417.log
+freezway.txt
+ENIGMA.zip
+definitions.h
+defines.txt
+blank.txt
+ASS.txt
+*.class
+
+K 13
+svn:mergeinfo
+V 49
+/branches/YAML:447-483
+/branches/polymask:561-564
+END

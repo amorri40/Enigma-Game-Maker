@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers
+END
+memfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/memfile.c
+END
+resample.inc
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/resample.inc
+END
+resamp2.inc
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/resamp2.inc
+END
+resamp3.inc
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/resamp3.inc
+END
+silence.c
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/silence.c
+END
+resample.c
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/resample.c
+END
+aldumb.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/aldumb.h
+END
+clickrem.c
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/clickrem.c
+END
+stdfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/stdfile.c
+END
+dumb.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/dumb.h
+END
+sampbuf.c
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/dumb/src/helpers/sampbuf.c
+END

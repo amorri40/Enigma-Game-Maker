@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/enigma-dev/!svn/ver/674/trunk/CompilerSource/backend
+END
+ideprint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/311/trunk/CompilerSource/backend/ideprint.cpp
+END
+JavaCallbacks.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/623/trunk/CompilerSource/backend/JavaCallbacks.cpp
+END
+ideprint.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/enigma-dev/!svn/ver/301/trunk/CompilerSource/backend/ideprint.h
+END
+EnigmaCallbacks.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/623/trunk/CompilerSource/backend/EnigmaCallbacks.h
+END
+JavaCallbacks.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/enigma-dev/!svn/ver/627/trunk/CompilerSource/backend/JavaCallbacks.h
+END
+EnigmaStruct.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/426/trunk/CompilerSource/backend/EnigmaStruct.h
+END
+JavaStruct.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/enigma-dev/!svn/ver/627/trunk/CompilerSource/backend/JavaStruct.h
+END

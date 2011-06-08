@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include
+END
+al.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/al.h
+END
+EFX-Util.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/EFX-Util.h
+END
+alc.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/alc.h
+END
+efx-creative.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/efx-creative.h
+END
+efx.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/efx.h
+END
+xram.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/xram.h
+END

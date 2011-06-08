@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/enigma-dev/!svn/ver/756/trunk/Autoconf
+END
+MinGW.exe
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/enigma-dev/!svn/ver/321/trunk/Autoconf/MinGW.exe
+END
+wingcc_template.eyt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/enigma-dev/!svn/ver/756/trunk/Autoconf/wingcc_template.eyt
+END
+makeRelease.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/enigma-dev/!svn/ver/628/trunk/Autoconf/makeRelease.sh
+END
+oalinst.exe
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/enigma-dev/!svn/ver/441/trunk/Autoconf/oalinst.exe
+END
+svnkit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/enigma-dev/!svn/ver/639/trunk/Autoconf/svnkit.jar
+END

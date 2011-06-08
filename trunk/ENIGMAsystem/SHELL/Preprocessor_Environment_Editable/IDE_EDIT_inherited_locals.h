@@ -1,0 +1,12 @@
+int alarm[8];
+int image_single;
+int path_endaction;
+int path_index;
+bool path_orientation;
+double path_position;
+double path_positionprevious;
+double path_scale;
+double path_speed;
+int timeline_index;
+int timeline_position;
+int timeline_speed;

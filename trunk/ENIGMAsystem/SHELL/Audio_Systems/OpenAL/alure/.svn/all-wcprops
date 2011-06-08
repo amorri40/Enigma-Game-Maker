@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/enigma-dev/!svn/ver/614/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure
+END
+automake.sh
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/enigma-dev/!svn/ver/614/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/automake.sh
+END
+streamplay.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/streamplay.cpp
+END
+istream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/istream.cpp
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/enigma-dev/!svn/ver/299/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/COPYING
+END
+streamdec.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/streamdec.cpp
+END
+alure.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/alure.cpp
+END
+buffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/buffer.cpp
+END
+main.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/main.h
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/config.h
+END
+stream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/enigma-dev/!svn/ver/302/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/stream.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/614/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/Makefile
+END
