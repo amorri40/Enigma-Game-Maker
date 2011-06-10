@@ -1,9 +1,0 @@
-K 10
-svn:ignore
-V 39
-.c_inclrc
-.eobjs_Run
-.eobjs_run
-.eobjs
-
-END
