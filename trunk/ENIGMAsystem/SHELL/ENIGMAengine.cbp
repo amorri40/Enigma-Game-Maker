@@ -364,8 +364,16 @@
 		</Unit>
 		<Unit filename="Audio_Systems/OpenAL/vorbis/lib/window.h" />
 		<Unit filename="Audio_Systems/audio_mandatory.h" />
+		<Unit filename="Collision_Systems/BBox/Info/collision_info.h" />
+		<Unit filename="Collision_Systems/BBox/coll_funcs.cpp" />
+		<Unit filename="Collision_Systems/BBox/coll_funcs.h" />
+		<Unit filename="Collision_Systems/BBox/coll_impl.cpp" />
+		<Unit filename="Collision_Systems/BBox/coll_impl.h" />
+		<Unit filename="Collision_Systems/BBox/coll_util.cpp" />
+		<Unit filename="Collision_Systems/BBox/coll_util.h" />
+		<Unit filename="Collision_Systems/BBox/include.h" />
+		<Unit filename="Collision_Systems/BBox/placeholderlinks.cpp" />
 		<Unit filename="Collision_Systems/collision_mandatory.h" />
-		<Unit filename="Collision_Systems/none/placeholderlinks.cpp" />
 		<Unit filename="Graphics_Systems/OpenGL/EGMenable.h" />
 		<Unit filename="Graphics_Systems/OpenGL/GSbackground.cpp" />
 		<Unit filename="Graphics_Systems/OpenGL/GSbackground.h" />
@@ -647,6 +655,8 @@
 			<Option target="win-debug" />
 			<Option target="win-build" />
 		</Unit>
+		<Unit filename="Platforms/xlib/LINUXjoystick.cpp" />
+		<Unit filename="Platforms/xlib/LINUXjoystick.h" />
 		<Unit filename="Platforms/xlib/XLIBdialog.cpp" />
 		<Unit filename="Platforms/xlib/XLIBdialog.h">
 			<Option target="lin-debug" />
@@ -697,6 +707,12 @@
 		<Unit filename="Universal_System/CallbackArrays.h" />
 		<Unit filename="Universal_System/ENIGMA_GLOBALS.cpp" />
 		<Unit filename="Universal_System/ENIGMA_GLOBALS.h" />
+		<Unit filename="Universal_System/Extensions/Alarms/alarmcode.cpp" />
+		<Unit filename="Universal_System/Extensions/Alarms/implement.h" />
+		<Unit filename="Universal_System/Extensions/Alarms/include.h" />
+		<Unit filename="Universal_System/Extensions/Paths/implement.h" />
+		<Unit filename="Universal_System/Extensions/Timelines/implement.h" />
+		<Unit filename="Universal_System/Extensions/recast.h" />
 		<Unit filename="Universal_System/GAME_GLOBALS.h" />
 		<Unit filename="Universal_System/IMGloading.cpp" />
 		<Unit filename="Universal_System/IMGloading.h" />
@@ -712,12 +728,13 @@
 		<Unit filename="Universal_System/compression.h" />
 		<Unit filename="Universal_System/darray.cpp" />
 		<Unit filename="Universal_System/darray.h" />
+		<Unit filename="Universal_System/dynamic_args.cpp" />
+		<Unit filename="Universal_System/dynamic_args.h" />
 		<Unit filename="Universal_System/estring.cpp" />
 		<Unit filename="Universal_System/estring.h" />
 		<Unit filename="Universal_System/event_system.cpp" />
 		<Unit filename="Universal_System/events.cpp" />
 		<Unit filename="Universal_System/events.h" />
-		<Unit filename="Universal_System/extensions/alarmcode.cpp" />
 		<Unit filename="Universal_System/fileio.cpp" />
 		<Unit filename="Universal_System/fileio.h" />
 		<Unit filename="Universal_System/fontinit.cpp" />

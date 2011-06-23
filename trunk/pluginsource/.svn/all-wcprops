@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 51
-/svnroot/enigma-dev/!svn/ver/768/trunk/pluginsource
+/svnroot/enigma-dev/!svn/ver/790/trunk/pluginsource
 END
 .classpath
 K 25
@@ -32,4 +32,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 71
 /svnroot/enigma-dev/!svn/ver/646/trunk/pluginsource/description.jardesc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/enigma-dev/!svn/ver/785/trunk/pluginsource/Makefile
 END

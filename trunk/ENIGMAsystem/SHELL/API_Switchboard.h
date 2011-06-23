@@ -34,3 +34,7 @@
 #include "Collision_Systems/BBox/include.h"
 #include "Widget_Systems/None/include.h"
 
+// Extensions selected by user
+#include "Universal_System/Extensions/Alarms/include.h"
+#include "Universal_System/Extensions/Alarms/implement.h"
+

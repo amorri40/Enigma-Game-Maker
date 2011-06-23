@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/enigma-dev/!svn/ver/765/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES
 END
 GSstdraw.cpp
 K 25
@@ -55,7 +55,7 @@ GSscreen.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svnroot/enigma-dev/!svn/ver/636/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES/GSscreen.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES/GSscreen.cpp
 END
 GSspriteadd.cpp
 K 25
@@ -181,5 +181,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svnroot/enigma-dev/!svn/ver/765/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES/Makefile
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGLES/Makefile
 END

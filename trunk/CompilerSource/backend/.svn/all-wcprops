@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svnroot/enigma-dev/!svn/ver/674/trunk/CompilerSource/backend
+/svnroot/enigma-dev/!svn/ver/779/trunk/CompilerSource/backend
 END
 ideprint.cpp
 K 25
@@ -37,7 +37,7 @@ EnigmaStruct.h
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svnroot/enigma-dev/!svn/ver/426/trunk/CompilerSource/backend/EnigmaStruct.h
+/svnroot/enigma-dev/!svn/ver/779/trunk/CompilerSource/backend/EnigmaStruct.h
 END
 JavaStruct.h
 K 25

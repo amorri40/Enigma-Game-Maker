@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/755/trunk/ENIGMAsystem/SHELL/Platforms/iPhone
+/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Platforms/iPhone
 END
 main.m
 K 25
@@ -13,7 +13,7 @@ automake.sh
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/automake.sh
+/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/automake.sh
 END
 file_manip.cpp
 K 25
@@ -109,5 +109,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/Makefile
+/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/Makefile
 END

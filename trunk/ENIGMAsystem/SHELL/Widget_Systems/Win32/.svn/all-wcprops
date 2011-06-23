@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32
 END
 gtklike.h
 K 25
@@ -44,4 +44,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 85
 /svnroot/enigma-dev/!svn/ver/738/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/res.rc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/Makefile
 END

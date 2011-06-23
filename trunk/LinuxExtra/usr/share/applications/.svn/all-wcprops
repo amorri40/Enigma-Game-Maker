@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svnroot/enigma-dev/!svn/ver/726/trunk/LinuxExtra/usr/share/applications
+/svnroot/enigma-dev/!svn/ver/783/trunk/LinuxExtra/usr/share/applications
 END
-enigma.desktop
+enigma-dev.desktop
 K 25
 svn:wc:ra_dav:version-url
-V 87
-/svnroot/enigma-dev/!svn/ver/726/trunk/LinuxExtra/usr/share/applications/enigma.desktop
+V 91
+/svnroot/enigma-dev/!svn/ver/783/trunk/LinuxExtra/usr/share/applications/enigma-dev.desktop
 END

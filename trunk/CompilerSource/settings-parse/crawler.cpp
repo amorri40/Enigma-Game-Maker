@@ -32,6 +32,7 @@
 using namespace std;
 
 #include "../filesystem/file_find.h"
+#include "../externs/externs.h"
 #include "crawler.h"
 #include "eyaml.h"
 
@@ -81,37 +82,53 @@ namespace extensions
     for (map<string,string>::iterator it = locals.begin(); it != locals.end(); it++)
       lmap[it->first]++;
   }
+  void parse_extensions(vector<string> exts)
+  {
+    if (exts.empty())
+      return;  //IsmAvatar: Remove this if() return.
+    parsed_extensions.clear();
+    
+    for (unsigned i = 0; i < exts.size(); i++)
+    {
+      parsed_extension pe;
+      pe.pathname = exts[i];
+      size_t pos = exts[i].find_last_of("/\\");
+      pe.name = pos == string::npos ? exts[i] : exts[i].substr(pos + 1);
+      pe.path = pos == string::npos ? ""      : exts[i].substr(0, pos + 1);
+      for (pos = 0; pos < pe.path.length(); pos++)
+        if (pe.path[pos] == '\\')
+          pe.path[i] = '/';
+      
+      ifstream iey(("ENIGMAsystem/SHELL/" + exts[i]+"/About.ey").c_str());
+      if (!iey.is_open())
+        cout << "ERROR! Failed to open extension descriptor for " << exts[i] << endl;
+      ey_data about = parse_eyaml(iey,exts[i]);
+      pe.implements = about.get("implement");
+      
+      parsed_extensions.push_back(pe);
+    }
+  }
   void crawl_for_locals()
   {
     locals.clear();
-    for (string ef = file_find_first("ENIGMAsystem/Extensions/*", fa_sysfile | fa_readonly); ef != ""; ef = file_find_next())
+    for (unsigned i = 0; i < parsed_extensions.size(); i++)
     {
-      ifstream ext(("ENIGMAsystem/Extensions/" + ef).c_str(), ios_base::in);
-      if (ext.is_open())
+      current_scope = &global_scope, immediate_scope = NULL;
+      find_extname("enigma", 0xFFFFFFFF);
+      
+      immediate_scope = ext_retriever_var;
+      bool found = find_extname(parsed_extensions[i].implements,0xFFFFFFFF);
+      
+      if (!found)
+        cout << "ERROR! Extension implements " << parsed_extensions[i].implements << " without defining it!" << endl;
+      else
       {
-        ey_data dat = parse_eyaml(ext, ef);
-        for (eyit it = dat.begin(); it != dat.end(); it++)
-        {
-          if (it->second->is_scalar)
-            continue;
-          
-          eyit locs = it->second->data().find("locals");
-          if (locs != it->second->data().end())
-          {
-            if (locs->second->is_scalar)
-              continue;
-            ey_data *ld = (ey_data*)locs->second;
-            for (eycit cit = ld->first(); cit; cit = cit->next)
-              locals[cit->value->name] = eyscalar(cit);
-          }
-        }
+        for (extiter it = ext_retriever_var->members.begin(); it != ext_retriever_var->members.end(); it++)
+          locals[it->second->name] = it->second->type ? it->second->type->name : "var";
       }
     }
   }
   
-  sdk_descriptor targetSDK;
-  api_descriptor targetAPI;
-  compiler_descriptor targetOS;
   map<string, sdk_descriptor> all_platforms;
   typedef map<string, sdk_descriptor>::iterator platIter;
   
@@ -131,7 +148,7 @@ namespace extensions
         ey_data dat = parse_eyaml(ext,ef);
         eyit hasname = dat.values.find("represents");
         if (hasname == dat.values.end()) {
-          cout << "Skipping invalid operating system under `" << ef << "': File does not specify an OS it represents.";
+          cout << "Skipping invalid platform API under `" << ef << "': File does not specify an OS it represents.";
           continue;
         }
         

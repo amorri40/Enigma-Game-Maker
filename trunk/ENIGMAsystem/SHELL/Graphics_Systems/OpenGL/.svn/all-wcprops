@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/763/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 END
 GSstdraw.cpp
 K 25
@@ -25,7 +25,7 @@ GSd3d.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/636/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.cpp
 END
 OPENGLStd.h
 K 25
@@ -73,7 +73,7 @@ GSsurface.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svnroot/enigma-dev/!svn/ver/385/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsurface.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsurface.cpp
 END
 GSblend.h
 K 25
@@ -109,7 +109,7 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/Makefile
+/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/Makefile
 END
 GSmiscextra.h
 K 25
@@ -121,7 +121,7 @@ OPENGLStd.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/OPENGLStd.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/OPENGLStd.cpp
 END
 GSsprite.cpp
 K 25
@@ -151,7 +151,7 @@ GSscreen.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
 END
 GSbackground.cpp
 K 25

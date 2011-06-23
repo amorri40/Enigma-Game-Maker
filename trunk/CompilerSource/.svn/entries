@@ -1,14 +1,14 @@
 10
 
 dir
-768
+792
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-06-06T00:52:28.055935Z
-765
+2011-06-22T05:55:51.685597Z
+792
 JoshDreamland
 has-props
 
@@ -60,6 +60,40 @@ has-props
 
 3363
 
+settings.cpp
+file
+
+
+
+
+2011-06-21T22:12:08.000000Z
+6e927f0ad7211af4c1d5613a4daa9035
+2011-06-21T21:59:32.148251Z
+789
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2979
+
 filesystem
 dir
 
@@ -69,11 +103,11 @@ file
 
 
 
-2011-04-20T21:23:33.000000Z
-752a55c066ace9f4cf3be2761d8e0ef5
-2010-04-03T00:34:50.070987Z
-96
-joshdreamland
+2011-06-21T22:12:08.000000Z
+55c2a4fd0a52a8f7487ef26b7e9d3cf9
+2011-06-21T21:59:32.148251Z
+789
+JoshDreamland
 
 
 
@@ -95,7 +129,7 @@ joshdreamland
 
 
 
-2344
+3527
 
 syntax
 dir
@@ -112,11 +146,11 @@ file
 
 
 
-2011-04-20T21:23:33.000000Z
-a9938bb98f101e9a4a3598a2a4aa5fd0
-2011-04-11T06:11:11.685590Z
-685
-joshdreamland
+2011-06-21T22:12:08.000000Z
+5047e83c455d2b3aa73475f0f60d424e
+2011-06-21T21:59:32.148251Z
+789
+JoshDreamland
 
 
 
@@ -138,7 +172,7 @@ joshdreamland
 
 
 
-10136
+10280
 
 parser
 dir
@@ -183,11 +217,11 @@ file
 
 
 
-2011-04-21T11:37:42.000000Z
-ba41f5eb35d883cf546f089b13961f97
-2011-04-21T03:26:15.815817Z
-708
-joshdreamland
+2011-06-22T14:42:20.000000Z
+876327e1ee24e5e5a8ea061dedaa2549
+2011-06-22T05:55:51.685597Z
+792
+JoshDreamland
 
 
 
@@ -209,7 +243,7 @@ joshdreamland
 
 
 
-9706
+9721
 
 stupidity-buffer
 dir
@@ -309,11 +343,11 @@ file
 
 
 
-2011-04-24T16:51:35.000000Z
-9de2081234df7c9b2b612db1d3b49d79
-2011-04-22T16:34:37.209496Z
-720
-retroxyz
+2011-06-21T22:12:08.000000Z
+d34f169a86e97650447effbb073ce800
+2011-06-21T21:59:32.148251Z
+789
+JoshDreamland
 
 
 
@@ -335,7 +369,7 @@ retroxyz
 
 
 
-32606
+33466
 
 standalone_main.cpp
 file
@@ -343,11 +377,11 @@ file
 
 
 
-2011-04-20T21:23:33.000000Z
-b626a63456f95e4fbbc6c0c86d3baae8
-2011-04-18T06:50:45.802487Z
-701
-joshdreamland
+2011-06-22T14:42:20.000000Z
+fdf45eb7df20cd2b0865cd43676520d7
+2011-06-22T05:55:51.685597Z
+792
+JoshDreamland
 
 
 
@@ -369,5 +403,5 @@ joshdreamland
 
 
 
-9580
+9597
 

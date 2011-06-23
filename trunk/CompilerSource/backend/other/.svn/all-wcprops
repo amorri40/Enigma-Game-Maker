@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
-V 66
-/svnroot/enigma-dev/!svn/ver/95/trunk/CompilerSource/backend/other
+V 67
+/svnroot/enigma-dev/!svn/ver/779/trunk/CompilerSource/backend/other
 END
 Constant.h
 K 25
 svn:wc:ra_dav:version-url
 V 77
 /svnroot/enigma-dev/!svn/ver/75/trunk/CompilerSource/backend/other/Constant.h
+END
+Extension.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/779/trunk/CompilerSource/backend/other/Extension.h
 END
 Include.h
 K 25

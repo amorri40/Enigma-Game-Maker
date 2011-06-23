@@ -37,11 +37,12 @@ using namespace std;
 #include "object_storage.h"
 #include "../externs/externs.h"
 #include "../settings-parse/crawler.h"
+#include "../compiler/compile_common.h"
 
 
 map<string,int> shared_object_locals;
 map<string,dectrip> dot_accessed_locals;
-int shared_locals_load()
+int shared_locals_load(vector<string> exts)
 {
   cout << "Finding parent..."; fflush(stdout);
   
@@ -52,11 +53,13 @@ int shared_locals_load()
 
   // Find the parent object
   if (ns_enigma != current_scope->members.end()) {
-    extiter parent = ns_enigma->second->members.find("object_collisions");
+    extiter parent = ns_enigma->second->members.find(system_get_uppermost_tier());
     if (parent != ns_enigma->second->members.end())
       pscope = parent->second;
   }
   cout << "found"; fflush(stdout);
+  
+  shared_object_locals.clear();
   
   //Iterate the tiers of the parent object
   for (externs *cs = pscope; cs; cs = (cs->ancestors.size ? cs->ancestors[0] : NULL) )
@@ -107,6 +110,9 @@ parsed_object::parsed_object() {}
 parsed_object::parsed_object(string n, int i, int s, int p, bool vis, bool sol): name(n), id(i), sprite_index(s), parent(p), visible(vis), solid(sol) {}
 map<int,parsed_object*> parsed_objects;
 
+vector<parsed_extension> parsed_extensions;
+vector<string> requested_extensions;
+
 void parsed_object::copy_from(parsed_object& source, string sourcename, string destname)
 {
   parsed_object& dest = *this;
@@ -152,80 +158,36 @@ void parsed_object::copy_calls_from(parsed_object& source)
 #include "../backend/ideprint.h"
 
 typedef map<string,dectrip> msi;
+struct useinfo { dectrip dec; int c; string lastobject; };
 void add_dot_accessed_local(string name)
 {
   pair<msi::iterator, bool> insd = dot_accessed_locals.insert(msi::value_type(name,dectrip()));
   if (!insd.second) // If we didn't insert new, 
     return; // all this figuring has been done already
   
-  bool ft = true; string chckpre, chcksuf;
-  map<string, vector<string> > acs, pres, sufs;
-  for (po_i it = parsed_objects.begin(); it != parsed_objects.end(); it++)
-  {
-    msi::iterator itt = it->second->locals.find(name);
-    if (itt != it->second->locals.end())
-    {
-      if (itt->second.type != "")
-        acs[itt->second.type].push_back(it->second->name);
-      chckpre = itt->second.prefix; chcksuf = itt->second.suffix;
-      pres[itt->second.type].push_back(chckpre);
-      sufs[itt->second.type].push_back(chcksuf);
-      ft = false;
-    }
-  }
-  string rest, resp, ress;
-  unsigned maxagree = 0;
-  if (acs.size() > 1)
-  {
-    user << "Warning: variable `" << name << "` is accessed via GM1 Integer, but defined differently between objects.";
-    for (map<string, vector<string> >::iterator it = acs.begin(); it != acs.end(); it++)
-    {
-      user << "Info: Declared as `" << it->first << "` in " << it->second.size() << " objects: ";
-      for (size_t i = 0; i < it->second.size() and i <= 10; i++)
-         user << (i == 10 ? "..." : it->second[i]) << (i+1 < it->second.size() and i+1 < 10 ? ", " : "");
-      user << flushl;
-      if (it->second.size() > maxagree)
-        rest = it->first, maxagree = it->second.size();
-    }
-  }
-  else if (!acs.size())
-    rest = "var";
-  else
-    rest = acs.begin()->first;
+  user << "Add dot accessed local " << name << flushl;
   
-  maxagree = 0;
-  if (pres.size() > 1)
-  {
-    user << "Warning: variable `" << name << "` is accessed via GM1 Integer, but varies in reference path.";
-    for (map<string, vector<string> >::iterator it = pres.begin(); it != pres.end(); it++)
-    {
-      user << "Info: Declared with `" << it->first << "` in " << it->second.size() << " objects: ";
-      for (size_t i = 0; i < it->second.size() and i <= 10; i++)
-         user << (i == 10 ? "..." : it->second[i]) << (i+1 < it->second.size() and i+1 < 10 ? ", " : "");
-      user << flushl;
-      if (it->second.size() > maxagree)
-        resp = it->first, maxagree = it->second.size();
-    }
-  }
-  else if (pres.size() == 1)
-    resp = pres.begin()->first;
-    
-  maxagree = 0;
-  if (sufs.size() > 1)
-  {
-    user << "Warning: variable `" << name << "` is accessed via GM1 Integer, but varies in postfix reference path.";
-    for (map<string, vector<string> >::iterator it = sufs.begin(); it != sufs.end(); it++)
-    {
-      user << "Info: Declared with `" << it->first << "` in " << it->second.size() << " objects: ";
-      for (size_t i = 0; i < it->second.size() and i <= 10; i++)
-         user << (i == 10 ? "..." : it->second[i]) << (i+1 < it->second.size() and i+1 < 10 ? ", " : "");
-      user << flushl;
-      if (it->second.size() > maxagree)
-        ress = it->first, maxagree = it->second.size();
-    }
-  }
-  else if (sufs.size() == 1)
-    ress = sufs.begin()->first;
+  map<string,useinfo> uses;
+  insd.first->second.type = "var"; // Default, just in case of stupidity.
   
-  insd.first->second.type = rest;
+  int maxvotes = 0; // The highest number of votes on a type for this variable
+  for (po_i it = parsed_objects.begin(); it != parsed_objects.end(); it++) // For each of our objects
+  {
+    msi::iterator itt = it->second->locals.find(name); // Find a variable by this name
+    if (itt != it->second->locals.end() and itt->second.type != "") // If found, and indeed declared locally
+    {
+      pair<map<string,useinfo>::iterator,bool> ins = uses.insert(pair<string,useinfo>(itt->second.type,useinfo()));
+      if (ins.second and uses.size() > 1) {
+        user << "Warning: variable `" << name << "` is accessed via GM1 Integer, but varies in postfix reference path.";
+        user << "Info: Declaration in object " << it->second->name << " conflicts with that in object " << ins.first->second.lastobject << flushl;
+      }
+      ins.first->second.lastobject = it->second->name;
+      ins.first->second.dec = itt->second;
+      ins.first->second.c++;
+      
+      if (ins.first->second.c > maxvotes)
+        insd.first->second = ins.first->second.dec, maxvotes = ins.first->second.c;
+    }
+  }
+  user << insd.first->second.prefix << " " << insd.first->second.type << " " << insd.first->second.suffix << flushl; 
 }

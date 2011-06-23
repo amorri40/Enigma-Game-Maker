@@ -30,22 +30,12 @@
 
 enum //object names
 {
-  obj_wall = 2,
-  obj_bot = 3,
-  obj_exit = 4,
-  obj_food = 5,
-  obj_player = 6,
-  obj_feeder = 9,
 };
 
 enum //sprite names
 {
-  spr_wall = 0,
-  spr_player = 2,
-  spr_exit = 3,
-  spr_food = 4,
 };
-namespace enigma { size_t sprite_idmax = 5; }
+namespace enigma { size_t sprite_idmax = 0; }
 
 enum //background names
 {
@@ -60,12 +50,11 @@ namespace enigma { size_t font_idmax = 0; }
 
 enum //sound names
 {
-  snd_pew = 1,
 };
-namespace enigma { size_t sound_idmax = 2; }
+namespace enigma { size_t sound_idmax = 0; }
 
 enum //room names
 {
-  maze_1 = 1,
+  rm_0 = 0,
 };
 

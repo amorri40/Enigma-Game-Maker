@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svnroot/enigma-dev/!svn/ver/763/trunk/CompilerSource/parser
+/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/parser
 END
 object_storage.h
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svnroot/enigma-dev/!svn/ver/392/trunk/CompilerSource/parser/object_storage.h
+/svnroot/enigma-dev/!svn/ver/787/trunk/CompilerSource/parser/object_storage.h
 END
 parser.h
 K 25
@@ -19,7 +19,7 @@ parser_components.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svnroot/enigma-dev/!svn/ver/691/trunk/CompilerSource/parser/parser_components.cpp
+/svnroot/enigma-dev/!svn/ver/789/trunk/CompilerSource/parser/parser_components.cpp
 END
 collect_variables.h
 K 25
@@ -31,23 +31,23 @@ parser_components.h
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svnroot/enigma-dev/!svn/ver/329/trunk/CompilerSource/parser/parser_components.h
+/svnroot/enigma-dev/!svn/ver/789/trunk/CompilerSource/parser/parser_components.h
 END
 object_storage.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svnroot/enigma-dev/!svn/ver/392/trunk/CompilerSource/parser/object_storage.cpp
+/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/parser/object_storage.cpp
 END
 parser.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/762/trunk/CompilerSource/parser/parser.cpp
+/svnroot/enigma-dev/!svn/ver/789/trunk/CompilerSource/parser/parser.cpp
 END
 collect_variables.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svnroot/enigma-dev/!svn/ver/763/trunk/CompilerSource/parser/collect_variables.cpp
+/svnroot/enigma-dev/!svn/ver/771/trunk/CompilerSource/parser/collect_variables.cpp
 END

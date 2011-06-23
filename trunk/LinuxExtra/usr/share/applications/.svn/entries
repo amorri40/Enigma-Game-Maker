@@ -1,14 +1,14 @@
 10
 
 dir
-768
+792
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/LinuxExtra/usr/share/applications
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-04-23T01:24:50.120717Z
-726
+2011-06-16T23:35:19.760798Z
+783
 retroxyz
 
 
@@ -26,16 +26,16 @@ retroxyz
 
 726d713c-bd1a-46cb-9ef0-1b6e075168bb
 
-enigma.desktop
+enigma-dev.desktop
 file
 
 
 
 
-2011-04-24T16:51:35.000000Z
-d34c85d5865bfc0bba03b2a09cc3d8ae
-2011-04-23T01:24:50.120717Z
-726
+2011-06-21T22:11:36.000000Z
+789dac496177be0a4cda83264254513d
+2011-06-16T23:35:19.760798Z
+783
 retroxyz
 has-props
 
@@ -58,5 +58,5 @@ has-props
 
 
 
-367
+372
 

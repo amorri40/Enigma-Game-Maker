@@ -8,18 +8,21 @@
 		<Cursor position="12692" topLine="338" />
 	</File>
 	<File name="compiler/compile.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="5731" topLine="123" />
+		<Cursor position="19564" topLine="458" />
 	</File>
 	<File name="gcc_interface/gcc_backend.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="5956" topLine="121" />
 	</File>
-	<File name="settings-parse/parse_ide_settings.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="4832" topLine="0" />
+	<File name="settings-parse/parse_ide_settings.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="4832" topLine="98" />
+	</File>
+	<File name="settings.cpp" open="1" top="1" tabpos="5">
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="syntax/chkfunction.h" open="1" top="0" tabpos="2">
 		<Cursor position="4398" topLine="89" />
 	</File>
-	<File name="syntax/syntax.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="2998" topLine="57" />
+	<File name="syntax/syntax.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2998" topLine="53" />
 	</File>
 </CodeBlocks_layout_file>

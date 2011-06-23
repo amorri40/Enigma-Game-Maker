@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/740/trunk/LinuxExtra/usr/share/mime/packages
+/svnroot/enigma-dev/!svn/ver/783/trunk/LinuxExtra/usr/share/mime/packages
 END
-enigma.xml
+enigma-dev.xml
 K 25
 svn:wc:ra_dav:version-url
-V 84
-/svnroot/enigma-dev/!svn/ver/740/trunk/LinuxExtra/usr/share/mime/packages/enigma.xml
+V 88
+/svnroot/enigma-dev/!svn/ver/783/trunk/LinuxExtra/usr/share/mime/packages/enigma-dev.xml
 END

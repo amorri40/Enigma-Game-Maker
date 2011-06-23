@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/svnroot/enigma-dev/!svn/ver/766/trunk/ENIGMAsystem/SHELL
+/svnroot/enigma-dev/!svn/ver/789/trunk/ENIGMAsystem/SHELL
 END
 libEGMstd.h
 K 25
@@ -31,7 +31,7 @@ ENIGMAengine.cbp
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/765/trunk/ENIGMAsystem/SHELL/ENIGMAengine.cbp
+/svnroot/enigma-dev/!svn/ver/789/trunk/ENIGMAsystem/SHELL/ENIGMAengine.cbp
 END
 libEGMstd.cpp
 K 25
@@ -43,11 +43,11 @@ SHELLmain.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/764/trunk/ENIGMAsystem/SHELL/SHELLmain.cpp
+/svnroot/enigma-dev/!svn/ver/773/trunk/ENIGMAsystem/SHELL/SHELLmain.cpp
 END
 Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Makefile
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Makefile
 END

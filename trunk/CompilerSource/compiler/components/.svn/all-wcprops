@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/765/trunk/CompilerSource/compiler/components
+/svnroot/enigma-dev/!svn/ver/787/trunk/CompilerSource/compiler/components
 END
 write_room_data.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svnroot/enigma-dev/!svn/ver/661/trunk/CompilerSource/compiler/components/write_room_data.cpp
+/svnroot/enigma-dev/!svn/ver/773/trunk/CompilerSource/compiler/components/write_room_data.cpp
 END
 module_write_backgrounds.cpp
 K 25
@@ -25,7 +25,7 @@ write_object_access.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/svnroot/enigma-dev/!svn/ver/492/trunk/CompilerSource/compiler/components/write_object_access.cpp
+/svnroot/enigma-dev/!svn/ver/776/trunk/CompilerSource/compiler/components/write_object_access.cpp
 END
 write_event_code.cpp
 K 25
@@ -61,13 +61,13 @@ write_object_data.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svnroot/enigma-dev/!svn/ver/765/trunk/CompilerSource/compiler/components/write_object_data.cpp
+/svnroot/enigma-dev/!svn/ver/787/trunk/CompilerSource/compiler/components/write_object_data.cpp
 END
 components.h
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/685/trunk/CompilerSource/compiler/components/components.h
+/svnroot/enigma-dev/!svn/ver/773/trunk/CompilerSource/compiler/components/components.h
 END
 module_write_sounds.cpp
 K 25
@@ -85,5 +85,5 @@ write_globals.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/492/trunk/CompilerSource/compiler/components/write_globals.cpp
+/svnroot/enigma-dev/!svn/ver/771/trunk/CompilerSource/compiler/components/write_globals.cpp
 END

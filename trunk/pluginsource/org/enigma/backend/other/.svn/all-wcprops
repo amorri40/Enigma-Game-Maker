@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svnroot/enigma-dev/!svn/ver/559/trunk/pluginsource/org/enigma/backend/other
+/svnroot/enigma-dev/!svn/ver/779/trunk/pluginsource/org/enigma/backend/other
 END
 Include.java
 K 25
@@ -12,12 +12,18 @@ END
 Trigger.java
 K 25
 svn:wc:ra_dav:version-url
-V 88
-/svnroot/enigma-dev/!svn/ver/80/trunk/pluginsource/org/enigma/backend/other/Trigger.java
+V 89
+/svnroot/enigma-dev/!svn/ver/778/trunk/pluginsource/org/enigma/backend/other/Trigger.java
 END
 Constant.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
 /svnroot/enigma-dev/!svn/ver/90/trunk/pluginsource/org/enigma/backend/other/Constant.java
+END
+Extension.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/779/trunk/pluginsource/org/enigma/backend/other/Extension.java
 END
