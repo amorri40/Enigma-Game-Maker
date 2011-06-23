@@ -30,7 +30,10 @@ Preprocessor_Environment_Editable/../unimplemented.h: In function ‘void show_d
 Preprocessor_Environment_Editable/../unimplemented.h:1180: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
 Preprocessor_Environment_Editable/../unimplemented.h:1180: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
 In file included from SHELLmain.cpp:114:
-Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In function ‘variant _SCR_scr_0()’:
-Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:33: error: ‘image_index’ was not declared in this scope
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In member function ‘virtual variant enigma::OBJ_obj_player::myevent_draw()’:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:407: error: call of overloaded ‘sin(var&)’ is ambiguous
+/usr/include/architecture/i386/math.h:268: note: candidates are: double sin(double)
+/usr/include/c++/4.2.1/cmath:383: note:                 long double std::sin(long double)
+/usr/include/c++/4.2.1/cmath:379: note:                 float std::sin(float)
 make[1]: *** [link] Error 1
 make: *** [Game] Error 2

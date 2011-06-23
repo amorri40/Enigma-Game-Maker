@@ -41,4 +41,6 @@ void d3d_set_culling(bool cull);
 void d3d_set_lighting(bool enable);
 void d3d_set_hidden(bool enable);
 
+int background_get_texture(int back);
+
 

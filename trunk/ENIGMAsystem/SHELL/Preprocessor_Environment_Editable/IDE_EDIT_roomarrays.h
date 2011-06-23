@@ -32,7 +32,7 @@ namespace enigma {
   int room_loadtimecount = 1;
   roomstruct grd_rooms[1] = {
     //Room 0
-    { 0, "rm_0",  "",
+    { 0, "room0",  "Standard Gore effect",
       0, roomcreate0,
       640, 480, 30,  false, {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
@@ -51,10 +51,10 @@ namespace enigma {
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      0,       (enigma::inst*)(int[]){  0,0,0,0}
+      },      15,       (enigma::inst*)(int[]){102841,74,48,80,102842,74,48,48,102843,74,16,48,102844,74,16,80,102845,74,80,80,102846,74,80,48,102847,74,112,48,102848,74,144,48,102849,74,112,80,102850,74,144,80,102856,75,160,64,102868,75,0,64,102875,72,152,64,102798,44,16,16,102839,0,32,64,  0,0,0,0}
     },
   };
   
   int room_max = 0 + 1;
-  int maxid = 100000 + 1;
+  int maxid = 102875 + 1;
 } // Namespace enigma

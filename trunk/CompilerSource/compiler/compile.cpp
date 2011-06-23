@@ -360,6 +360,20 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
     } wto << "};\nnamespace enigma { size_t font_idmax = " << max << "; }\n\n";
 
     max = 0;
+	wto << "enum //timeline names\n{\n";
+	for (int i = 0; i < es->timelineCount; i++) {
+	    if (es->timelines[i].id >= max) max = es->timelines[i].id + 1;
+	  wto << "  " << es->timelines[i].name << " = " << es->timelines[i].id << ",\n";
+	} wto << "};\nnamespace enigma { size_t timeline_idmax = " << max << "; }\n\n";
+
+    max = 0;
+	wto << "enum //path names\n{\n";
+	for (int i = 0; i < es->pathCount; i++) {
+	    if (es->paths[i].id >= max) max = es->paths[i].id + 1;
+	  wto << "  " << es->paths[i].name << " = " << es->paths[i].id << ",\n";
+	} wto << "};\nnamespace enigma { size_t path_idmax = " << max << "; }\n\n";
+
+    max = 0;
     wto << "enum //sound names\n{\n";
     for (int i = 0; i < es->soundCount; i++) {
       if (es->sounds[i].id >= max) max = es->sounds[i].id + 1;

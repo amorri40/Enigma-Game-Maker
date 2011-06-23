@@ -305,6 +305,10 @@
 		9CEBA9491213A54100FC1D14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEBA7BA1213884500FC1D14 /* main.m */; };
 		9CEBA94A1213A54100FC1D14 /* ObjectiveC.h in Sources */ = {isa = PBXBuildFile; fileRef = 9CEBA7BC1213884500FC1D14 /* ObjectiveC.h */; };
 		9CEBA9741213A62700FC1D14 /* iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEBA9731213A62700FC1D14 /* iPhone.xib */; };
+		9CFD9AA213B2C175009575DD /* alarmcode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */; };
+		9CFD9AA813B2C175009575DD /* alarmcode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */; };
+		9CFD9AB313B2C1C0009575DD /* dynamic_args.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD9AB113B2C1C0009575DD /* dynamic_args.cpp */; };
+		9CFD9AB413B2C1C0009575DD /* dynamic_args.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD9AB113B2C1C0009575DD /* dynamic_args.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -823,6 +827,15 @@
 		9CEBA9311213A44600FC1D14 /* iPhoneEnigmaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneEnigmaView.h; sourceTree = "<group>"; };
 		9CEBA9321213A44600FC1D14 /* iPhoneEnigmaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneEnigmaView.m; sourceTree = "<group>"; };
 		9CEBA9731213A62700FC1D14 /* iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iPhone.xib; sourceTree = "<group>"; };
+		9CFD9A9513B2C174009575DD /* alarmcode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alarmcode.cpp; sourceTree = "<group>"; };
+		9CFD9A9613B2C174009575DD /* implement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = implement.h; sourceTree = "<group>"; };
+		9CFD9A9713B2C174009575DD /* include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = include.h; sourceTree = "<group>"; };
+		9CFD9A9B13B2C174009575DD /* implement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = implement.h; sourceTree = "<group>"; };
+		9CFD9A9C13B2C174009575DD /* recast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recast.h; sourceTree = "<group>"; };
+		9CFD9A9F13B2C175009575DD /* implement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = implement.h; sourceTree = "<group>"; };
+		9CFD9AB013B2C1C0009575DD /* dnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dnd.h; sourceTree = "<group>"; };
+		9CFD9AB113B2C1C0009575DD /* dynamic_args.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dynamic_args.cpp; sourceTree = "<group>"; };
+		9CFD9AB213B2C1C0009575DD /* dynamic_args.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_args.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1797,6 +1810,10 @@
 		9CD0E1B81211552700A01347 /* Universal_System */ = {
 			isa = PBXGroup;
 			children = (
+				9CFD9AB013B2C1C0009575DD /* dnd.h */,
+				9CFD9AB113B2C1C0009575DD /* dynamic_args.cpp */,
+				9CFD9AB213B2C1C0009575DD /* dynamic_args.h */,
+				9CFD9A8E13B2C174009575DD /* Extensions */,
 				9C0D004913605BEB0083E470 /* actions.h */,
 				9C0D004A13605BEB0083E470 /* fontinit.cpp */,
 				9C0D004B13605BEB0083E470 /* fontstruct.cpp */,
@@ -2056,6 +2073,43 @@
 			path = OpenGLES;
 			sourceTree = "<group>";
 		};
+		9CFD9A8E13B2C174009575DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD9A8F13B2C174009575DD /* Alarms */,
+				9CFD9A9913B2C174009575DD /* Paths */,
+				9CFD9A9C13B2C174009575DD /* recast.h */,
+				9CFD9A9D13B2C174009575DD /* Timelines */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CFD9A8F13B2C174009575DD /* Alarms */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD9A9513B2C174009575DD /* alarmcode.cpp */,
+				9CFD9A9613B2C174009575DD /* implement.h */,
+				9CFD9A9713B2C174009575DD /* include.h */,
+			);
+			path = Alarms;
+			sourceTree = "<group>";
+		};
+		9CFD9A9913B2C174009575DD /* Paths */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD9A9B13B2C174009575DD /* implement.h */,
+			);
+			path = Paths;
+			sourceTree = "<group>";
+		};
+		9CFD9A9D13B2C174009575DD /* Timelines */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD9A9F13B2C175009575DD /* implement.h */,
+			);
+			path = Timelines;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2281,6 +2335,8 @@
 				9C0D005213605BEB0083E470 /* rectpack.cpp in Sources */,
 				9C0D01DA1361E2A00083E470 /* highscore_functions.cpp in Sources */,
 				9CBA43EA1394B586008375A8 /* GSd3d.cpp in Sources */,
+				9CFD9AA213B2C175009575DD /* alarmcode.cpp in Sources */,
+				9CFD9AB313B2C1C0009575DD /* dynamic_args.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2433,6 +2489,8 @@
 				9CBA414D138DD6D3008375A8 /* GScurves.cpp in Sources */,
 				9CBA414E138DD6D3008375A8 /* GSd3d.cpp in Sources */,
 				9CBA414F138DD6D3008375A8 /* GSfont.cpp in Sources */,
+				9CFD9AA813B2C175009575DD /* alarmcode.cpp in Sources */,
+				9CFD9AB413B2C1C0009575DD /* dynamic_args.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

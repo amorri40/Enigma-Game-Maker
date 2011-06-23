@@ -876,17 +876,6 @@ public final class EnigmaWriter
 							{
 							if (!actionDemise)
 								{
-<<<<<<< .mine
-								String mess = "Warning, you have a D&D action which is unsupported by this compiler."
-										+ " This and future unsupported D&D actions will be discarded. (Question + Applies To"
-										+ " in moment/event " + ac.toString() + " in library ";
-								System.out.println(mess);
-								if (la.parent == null || la.parent.tabCaption.length() == 0)
-									mess += la.parentId;
-								else
-									mess += la.parent.tabCaption;
-								mess += " action " + (la.name.length() == 0 ? la.id : la.name) + ")";
-=======
 								//								String mess = "Warning, you have a D&D action which is unsupported by this compiler."
 								//										+ " This and future unsupported D&D actions will be discarded. (Question + Applies To"
 								//										+ " in moment/event " + ac.toString() + " in library ";
@@ -900,7 +889,6 @@ public final class EnigmaWriter
 								//								mess += " action " + (la.name.length() == 0 ? la.id : la.name) + ")";
 								String mess = Messages.format(
 										"EnigmaWriter.UNSUPPORTED_DND_QA",ac.toString(),library,action); //$NON-NLS-1$
->>>>>>> .r789
 								JOptionPane.showMessageDialog(null,mess);
 								actionDemise = true;
 								}

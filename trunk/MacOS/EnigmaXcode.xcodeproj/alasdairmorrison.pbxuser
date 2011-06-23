@@ -21,6 +21,7 @@
 		activeTarget = 8D1107260486CEB800E47090 /* Game2 */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* Game2 */,
+			9CEBA59C1213815F00FC1D14 /* EnigmaIphone */,
 		);
 		breakpoints = (
 			9C38297512154860007B24C5 /* GSspriteadd.cpp:46 */,
@@ -684,9 +685,9 @@
 	};
 	9C0D004113605BB70083E470 /* GSfont.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 8463}}";
-			sepNavSelRange = "{2315, 0}";
-			sepNavVisRange = "{1848, 1026}";
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 8970}}";
+			sepNavSelRange = "{19089, 0}";
+			sepNavVisRange = "{22317, 610}";
 		};
 	};
 	9C0D004213605BB70083E470 /* GSfont.h */ = {
@@ -698,9 +699,9 @@
 	};
 	9C0D004913605BEB0083E470 /* actions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {901, 5954}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{5681, 1969}";
+			sepNavIntBoundsRect = "{{0, 0}, {1244, 5590}}";
+			sepNavSelRange = "{13723, 0}";
+			sepNavVisRange = "{13454, 667}";
 		};
 	};
 	9C0D004B13605BEB0083E470 /* fontstruct.cpp */ = {
@@ -1440,6 +1441,11 @@
 		name = stl_tree.h;
 		path = "/Users/alasdairmorrison/PSPDev/devkitPSP/psp/include/c++/4.3.5/bits/stl_tree.h";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {841, 19045}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{2421, 1553}";
+		};
 	};
 	9C27C352139D3272009BF45A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -3953,7 +3959,7 @@
 		fRef = 9C0D004113605BB70083E470 /* GSfont.cpp */;
 		name = "GSfont.cpp: 527";
 		rLen = 0;
-		rLoc = 19043;
+		rLoc = 19239;
 		rType = 0;
 		vrLen = 723;
 		vrLoc = 23436;
@@ -3970,9 +3976,9 @@
 	};
 	9CBA43E91394B586008375A8 /* GSd3d.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2378, 5447}}";
-			sepNavSelRange = "{6327, 0}";
-			sepNavVisRange = "{5632, 986}";
+			sepNavIntBoundsRect = "{{0, 0}, {2378, 4810}}";
+			sepNavSelRange = "{5789, 36}";
+			sepNavVisRange = "{5634, 556}";
 		};
 	};
 	9CBA43EB1394B674008375A8 /* PBXTextBookmark */ = {
@@ -4324,8 +4330,8 @@
 	};
 	9CD0E1781211552700A01347 /* graphics_object.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 1469}}";
-			sepNavSelRange = "{2608, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {782, 1430}}";
+			sepNavSelRange = "{2609, 11}";
 			sepNavVisRange = "{2368, 390}";
 			sepNavWindowFrame = "{{496, -6}, {900, 723}}";
 		};
@@ -4595,9 +4601,9 @@
 	};
 	9CD0E1F41211552700A01347 /* object.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {852, 1872}}";
-			sepNavSelRange = "{4338, 9}";
-			sepNavVisRange = "{2945, 518}";
+			sepNavIntBoundsRect = "{{0, 0}, {852, 1963}}";
+			sepNavSelRange = "{5585, 11}";
+			sepNavVisRange = "{5158, 702}";
 		};
 	};
 	9CD0E1F81211552700A01347 /* planar_object.cpp */ = {
@@ -4716,8 +4722,8 @@
 	};
 	9CD0E2D812115A8300A01347 /* API_Switchboard.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 455}}";
-			sepNavSelRange = "{2516, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {943, 494}}";
+			sepNavSelRange = "{2662, 0}";
 			sepNavVisRange = "{0, 2224}";
 			sepNavWindowFrame = "{{278, 198}, {1002, 488}}";
 		};
@@ -4746,9 +4752,9 @@
 	};
 	9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1111, 2093}}";
-			sepNavSelRange = "{3849, 0}";
-			sepNavVisRange = "{3535, 433}";
+			sepNavIntBoundsRect = "{{0, 0}, {1580, 10907}}";
+			sepNavSelRange = "{12440, 16}";
+			sepNavVisRange = "{12224, 256}";
 			sepNavWindowFrame = "{{-15, 51}, {900, 727}}";
 		};
 	};
@@ -5518,8 +5524,8 @@
 	};
 	9CEBA83512138F3F00FC1D14 /* graphics_object.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 1495}}";
-			sepNavSelRange = "{2608, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {782, 1430}}";
+			sepNavSelRange = "{2609, 11}";
 			sepNavVisRange = "{2477, 371}";
 		};
 	};
@@ -5738,6 +5744,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {875, 1612}}";
 			sepNavSelRange = "{2192, 16}";
 			sepNavVisRange = "{755, 1660}";
+		};
+	};
+	9CFD9AB013B2C1C0009575DD /* dnd.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 426}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 31}";
 		};
 	};
 }
