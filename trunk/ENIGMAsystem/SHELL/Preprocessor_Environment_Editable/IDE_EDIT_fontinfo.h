@@ -33,8 +33,7 @@
 namespace enigma {
   rawfont rawfontdata[] = {
     {"EnigmaDefault", -1, "Dialog", 12, 0, 0, 32, 96},
-    {"pause_font", 0, "Comic Sans MS", 20, -1, 0, 32, 96},
   };
 
-  int rawfontcount = 2, rawfontmaxid = 0;
+  int rawfontcount = 1, rawfontmaxid = -1;
 }

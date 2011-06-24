@@ -29,23 +29,13 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 // Script arguments
-variant argument0 = 0, argument1 = 0, argument2 = 0, argument3 = 0, argument4 = 0, argument5 = 0;
+variant argument0 = 0, argument1 = 0, argument2 = 0;
 
 
 namespace enigma
 {
   struct ENIGMA_global_structure: object_locals
   {
-    var ani;
-    var camcos;
-    var camsin;
-    var camx;
-    var camy;
-    var gun_obj;
-    var model_chunk1;
-    var snipe;
-    var tex;
-    var z;
     ENIGMA_global_structure(const int x, const int y): object_locals(x,y) {}
   };
   object_basic *ENIGMA_global_instance = new ENIGMA_global_structure(global,global);

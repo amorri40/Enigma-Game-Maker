@@ -479,6 +479,12 @@ double mean(double x, double y) { return x;}
 double mean(double x, double y, double z) {return mean(x,mean(y,z));}
 double mean(double x, double y, double z,double a) {return mean(x,mean(y,z,a));}
 
+/*median by YellowAfterLife*/
+double median(double x)           { return x; }
+double median(double x,double y)  { return fmin(x,y); }
+double median(double x,double y,double z) { return x > y ? x > z ? y > z ? y : z : x : y > z ? x > z ? x : z : y; }
+double median(double w,double x,double y,double z) { return w > x ? w > y ? w > z ? median(x,y,z) : median(w,x,y) : y > z ? median(w,x,z) : median(w,x,y) : x > y ? x > z ? median(w,y,z) : median(w,x,y) : y > z ? median(w,x,z) : median(w,x,y); }
+
 
 double enigma_floor(double i) {
     return floor(i);

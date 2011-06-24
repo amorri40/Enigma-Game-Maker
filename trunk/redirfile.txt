@@ -27,13 +27,6 @@ Preprocessor_Environment_Editable/../unimplemented.h:337:6: warning: #warning "d
 In file included from Preprocessor_Environment_Editable/IDE_EDIT_whitespace.h:2,
                  from SHELLmain.cpp:94:
 Preprocessor_Environment_Editable/../unimplemented.h: In function ‘void show_debug_message(std::string)’:
-Preprocessor_Environment_Editable/../unimplemented.h:1180: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
-Preprocessor_Environment_Editable/../unimplemented.h:1180: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
-In file included from SHELLmain.cpp:114:
-Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In member function ‘virtual variant enigma::OBJ_obj_player::myevent_draw()’:
-Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:407: error: call of overloaded ‘sin(var&)’ is ambiguous
-/usr/include/architecture/i386/math.h:268: note: candidates are: double sin(double)
-/usr/include/c++/4.2.1/cmath:383: note:                 long double std::sin(long double)
-/usr/include/c++/4.2.1/cmath:379: note:                 float std::sin(float)
-make[1]: *** [link] Error 1
-make: *** [Game] Error 2
+Preprocessor_Environment_Editable/../unimplemented.h:1186: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
+Preprocessor_Environment_Editable/../unimplemented.h:1186: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
+Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode

@@ -846,7 +846,7 @@ public final class EnigmaWriter
 					code.append('{');
 					break;
 				case Action.ACT_CODE:
-					code.append(args.get(0).getVal()).append(nl);
+					code.append("{"+args.get(0).getVal()+"\n}").append(nl);
 					break;
 				case Action.ACT_ELSE:
 					code.append("else "); //$NON-NLS-1$
