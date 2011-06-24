@@ -39,4 +39,77 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
+  var dummy_0; // Referenced by 7 accessors
+  var  &varaccess_bg(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->bg;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_file1(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file1;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_file2(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file2;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_highnum(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->highnum;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_name2(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->name2;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_number(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case block_obj: return ((OBJ_block_obj*)inst)->number;
+      case box_obj: return ((OBJ_box_obj*)inst)->number;
+      case dude_obj: return ((OBJ_dude_obj*)inst)->number;
+      case dude2_obj: return ((OBJ_dude2_obj*)inst)->number;
+      case tree_obj: return ((OBJ_tree_obj*)inst)->number;
+      case light1_obj: return ((OBJ_light1_obj*)inst)->number;
+      case light2_obj: return ((OBJ_light2_obj*)inst)->number;
+      case light3_obj: return ((OBJ_light3_obj*)inst)->number;
+      case practice_obj: return ((OBJ_practice_obj*)inst)->number;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->number;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_save(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->save;
+    }
+    return dummy_0;
+  }
 } // namespace enigma

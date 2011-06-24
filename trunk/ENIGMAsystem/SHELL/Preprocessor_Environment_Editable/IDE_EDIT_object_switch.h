@@ -29,12 +29,39 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_obj_player(x,y,idn);
+    new enigma::OBJ_save_obj(x,y,idn);
   break;
-case 1:
-    new enigma::OBJ_obj_solid(x,y,idn);
+case 117:
+    new enigma::OBJ_block_obj(x,y,idn);
   break;
-case 2:
-    new enigma::OBJ_obj_prop(x,y,idn);
+case 118:
+    new enigma::OBJ_mouse_obj(x,y,idn);
+  break;
+case 119:
+    new enigma::OBJ_box_obj(x,y,idn);
+  break;
+case 120:
+    new enigma::OBJ_dude_obj(x,y,idn);
+  break;
+case 121:
+    new enigma::OBJ_dude2_obj(x,y,idn);
+  break;
+case 122:
+    new enigma::OBJ_blockper_obj(x,y,idn);
+  break;
+case 123:
+    new enigma::OBJ_tree_obj(x,y,idn);
+  break;
+case 124:
+    new enigma::OBJ_light1_obj(x,y,idn);
+  break;
+case 125:
+    new enigma::OBJ_light2_obj(x,y,idn);
+  break;
+case 126:
+    new enigma::OBJ_light3_obj(x,y,idn);
+  break;
+case 127:
+    new enigma::OBJ_practice_obj(x,y,idn);
   break;
 

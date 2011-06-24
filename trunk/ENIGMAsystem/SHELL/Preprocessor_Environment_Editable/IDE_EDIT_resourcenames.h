@@ -30,22 +30,81 @@
 
 enum //object names
 {
-  obj_player = 0,
-  obj_solid = 1,
-  obj_prop = 2,
+  save_obj = 0,
+  block_obj = 117,
+  mouse_obj = 118,
+  box_obj = 119,
+  dude_obj = 120,
+  dude2_obj = 121,
+  blockper_obj = 122,
+  tree_obj = 123,
+  light1_obj = 124,
+  light2_obj = 125,
+  light3_obj = 126,
+  practice_obj = 127,
 };
 
 enum //sprite names
 {
-  spr_player = 0,
-  spr_prop = 1,
+  dudespr = 0,
+  bulletspr = 1,
+  blockspr = 2,
+  blockmask = 3,
+  sparkspr = 4,
+  bloodspr = 5,
+  tcpipspr = 6,
+  sessionstartspr = 7,
+  session2spr = 8,
+  sprite3 = 9,
+  sprite4 = 10,
+  ipxstartspr = 11,
+  redhandspr = 148,
+  bluehandspr = 149,
+  mouse1spr = 150,
+  alertspr = 154,
+  spotlightspr = 157,
+  playaibut = 158,
+  mask = 159,
+  shellspr = 160,
+  shadowspr = 162,
+  blockshadowspr = 163,
+  bulletflashspr = 166,
+  bulletflarespr = 169,
+  blockshadow2spr = 170,
+  boxspr = 171,
+  boxshadowspr = 172,
+  dudeexplospr = 173,
+  feetspr = 174,
+  razorspr = 175,
+  razormaskspr = 176,
+  bulletlongspr = 177,
+  turretspr = 178,
+  turfeetspr = 179,
+  daynightspr = 181,
+  goospr = 182,
+  light1spr = 184,
+  flamespr = 186,
+  boxmaskspr = 188,
+  savespr = 189,
+  dude2spr = 190,
+  treespr = 191,
+  light2spr = 193,
+  light3spr = 194,
+  buttonspr = 195,
+  pracspr = 197,
 };
-namespace enigma { size_t sprite_idmax = 2; }
+namespace enigma { size_t sprite_idmax = 198; }
 
 enum //background names
 {
+  Rbg0 = 12,
+  Rbg1 = 13,
+  Rbg2 = 14,
+  Rbg3 = 15,
+  Rbg4 = 16,
+  buttonbg = 17,
 };
-namespace enigma { size_t background_idmax = 0; }
+namespace enigma { size_t background_idmax = 18; }
 
 enum //font names
 {
@@ -70,6 +129,6 @@ namespace enigma { size_t sound_idmax = 0; }
 
 enum //room names
 {
-  room0 = 0,
+  mapeditrm = 23,
 };
 

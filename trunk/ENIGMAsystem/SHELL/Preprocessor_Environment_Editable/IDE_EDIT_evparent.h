@@ -32,12 +32,20 @@ namespace enigma
 {
   struct event_parent: object_collisions
   {
+    virtual void    myevent_alarm() { } // No default Alarm ... code.
+    virtual variant myevent_beginstep() { return 0; } // No default Begin Step code.
     virtual variant myevent_create() { return 0; } // No default Create code.
+    virtual variant myevent_destroy() { return 0; } // No default Destroy code.
     virtual variant myevent_draw()
     {
   if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);image_index+=image_speed;
     return 0;
     }
+    virtual variant myevent_globalleftpress() { return 0; } // No default Global Left Press code.
+    virtual variant myevent_globalrightpress() { return 0; } // No default Global Right Press code.
+    virtual void    myevent_keypress() { } // No default Press <key39> code.
+    virtual variant myevent_mousewheeldown() { return 0; } // No default Mouse Wheel Down code.
+    virtual variant myevent_mousewheelup() { return 0; } // No default Mouse Wheel Up code.
     virtual variant myevent_step()
     {
   enigma::propagate_locals(this);

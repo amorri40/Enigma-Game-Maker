@@ -31,15 +31,12 @@
 #include "../Universal_System/collisions_object.h"
 
 // Script identifiers
-const int domove = 0;
-const int limit = 1;
+const int loadmap_scr = 26;
 
-#define domove(arguments...) _SCR_domove(arguments)
-#define limit(arguments...) _SCR_limit(arguments)
+#define loadmap_scr(arguments...) _SCR_loadmap_scr(arguments)
 
 
-variant _SCR_domove();
-variant _SCR_limit();
+variant _SCR_loadmap_scr();
 
 namespace enigma
 {
@@ -51,28 +48,39 @@ namespace enigma
     object_locals(unsigned x, int y): event_parent(x,y) {}
   };
   
-  struct OBJ_obj_player: object_locals
+  struct OBJ_save_obj: object_locals
   {
     //Locals to instances of this object
-    var ax;
-    var ay;
-    var fx;
-    var fy;
-    var gx;
-    var gy;
-    var i;
-    var mx;
-    var my;
-    var mys;
-    var s;
-    var sj;
-    var sx;
-    var sy;
+    var ariel;
+    var crte;
+    var name;
     
     //Scripts called by this object
     
         variant myevent_create();
+        variant myevent_alarm_0();
         variant myevent_step();
+        variant myevent_draw();
+        variant myevent_keypress_38();
+        variant myevent_keypress_40();
+        variant myevent_keypress_113();
+        variant myevent_keypress_114();
+        variant myevent_keypress_115();
+    
+    
+    // Grouped event bases
+      void myevent_alarm()
+      {
+        myevent_alarm_0();
+      }
+      void myevent_keypress()
+      {
+        if (keyboard_check_pressed(38)) myevent_keypress_38();
+        if (keyboard_check_pressed(40)) myevent_keypress_40();
+        if (keyboard_check_pressed(113)) myevent_keypress_113();
+        if (keyboard_check_pressed(114)) myevent_keypress_114();
+        if (keyboard_check_pressed(115)) myevent_keypress_115();
+      }
     
     // Self-tracking
       enigma::instance_list_iterator ENOBJ_ITER_me;
@@ -80,6 +88,8 @@ namespace enigma
       enigma::inst_iter *ENOBJ_ITER_myevent_create;
       enigma::inst_iter *ENOBJ_ITER_myevent_step;
       enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+      enigma::inst_iter *ENOBJ_ITER_myevent_alarm;
+      enigma::inst_iter *ENOBJ_ITER_myevent_keypress;
 
     void unlink()
     {
@@ -89,11 +99,13 @@ namespace enigma
       enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
       enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
       enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+      enigma::event_alarm->unlink(ENOBJ_ITER_myevent_alarm);
+      enigma::event_keypress->unlink(ENOBJ_ITER_myevent_keypress);
     }
     
-    OBJ_obj_player(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 0)
+    OBJ_save_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 0)
     {
-      sprite_index = 0;
+      sprite_index = 189;
       visible = 1;
       solid = 0;
       ENOBJ_ITER_me = enigma::link_instance(this);
@@ -101,30 +113,41 @@ namespace enigma
       ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
       ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
       ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      ENOBJ_ITER_myevent_alarm = enigma::event_alarm->add_inst(this);
+      ENOBJ_ITER_myevent_keypress = enigma::event_keypress->add_inst(this);
       x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
       enigma::constructor(this);
       myevent_create();
     }
     
-    ~OBJ_obj_player()
+    ~OBJ_save_obj()
     {
       delete ENOBJ_ITER_myobj0;
       delete ENOBJ_ITER_myevent_create;
       delete ENOBJ_ITER_myevent_step;
       delete ENOBJ_ITER_myevent_draw;
+      delete ENOBJ_ITER_myevent_alarm;
+      delete ENOBJ_ITER_myevent_keypress;
     }
   };
   
-  struct OBJ_obj_solid: object_locals
+  struct OBJ_block_obj: object_locals
   {
     //Locals to instances of this object
+    var number;
+    var writing;
     
     //Scripts called by this object
     
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
     
     // Self-tracking
       enigma::instance_list_iterator ENOBJ_ITER_me;
-      enigma::inst_iter *ENOBJ_ITER_myobj1;
+      enigma::inst_iter *ENOBJ_ITER_myobj117;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
       enigma::inst_iter *ENOBJ_ITER_myevent_step;
       enigma::inst_iter *ENOBJ_ITER_myevent_draw;
 
@@ -132,18 +155,22 @@ namespace enigma
     {
       instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
       enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
-      unlink_object_id_iter(ENOBJ_ITER_myobj1, 1);
+      unlink_object_id_iter(ENOBJ_ITER_myobj117, 117);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
       enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
       enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
     }
     
-    OBJ_obj_solid(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 1)
+    OBJ_block_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 117)
     {
-      sprite_index = -1;
+      sprite_index = 2;
       visible = 1;
       solid = 0;
       ENOBJ_ITER_me = enigma::link_instance(this);
-      ENOBJ_ITER_myobj1 = enigma::link_obj_instance(this, 1);
+      ENOBJ_ITER_myobj117 = enigma::link_obj_instance(this, 117);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
       ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
       ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
       x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
@@ -151,15 +178,284 @@ namespace enigma
       myevent_create();
     }
     
-    ~OBJ_obj_solid()
+    ~OBJ_block_obj()
     {
-      delete ENOBJ_ITER_myobj1;
+      delete ENOBJ_ITER_myobj117;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
       delete ENOBJ_ITER_myevent_step;
       delete ENOBJ_ITER_myevent_draw;
     }
   };
   
-  struct OBJ_obj_prop: object_locals
+  struct OBJ_mouse_obj: object_locals
+  {
+    //Locals to instances of this object
+    var closest;
+    var object;
+    var tempnum;
+    var xx1;
+    var xx2;
+    var yy1;
+    var yy2;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_beginstep();
+        variant myevent_globalleftpress();
+        variant myevent_globalrightpress();
+        variant myevent_mousewheelup();
+        variant myevent_mousewheeldown();
+        variant myevent_draw();
+        variant myevent_keypress_37();
+        variant myevent_keypress_39();
+    
+    
+    // Grouped event bases
+      void myevent_keypress()
+      {
+        if (keyboard_check_pressed(37)) myevent_keypress_37();
+        if (keyboard_check_pressed(39)) myevent_keypress_39();
+      }
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj118;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_beginstep;
+      enigma::inst_iter *ENOBJ_ITER_myevent_globalleftpress;
+      enigma::inst_iter *ENOBJ_ITER_myevent_globalrightpress;
+      enigma::inst_iter *ENOBJ_ITER_myevent_mousewheelup;
+      enigma::inst_iter *ENOBJ_ITER_myevent_mousewheeldown;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_keypress;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj118, 118);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_beginstep->unlink(ENOBJ_ITER_myevent_beginstep);
+      enigma::event_globalleftpress->unlink(ENOBJ_ITER_myevent_globalleftpress);
+      enigma::event_globalrightpress->unlink(ENOBJ_ITER_myevent_globalrightpress);
+      enigma::event_mousewheelup->unlink(ENOBJ_ITER_myevent_mousewheelup);
+      enigma::event_mousewheeldown->unlink(ENOBJ_ITER_myevent_mousewheeldown);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_keypress->unlink(ENOBJ_ITER_myevent_keypress);
+    }
+    
+    OBJ_mouse_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 118)
+    {
+      sprite_index = 188;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj118 = enigma::link_obj_instance(this, 118);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_beginstep = enigma::event_beginstep->add_inst(this);
+      ENOBJ_ITER_myevent_globalleftpress = enigma::event_globalleftpress->add_inst(this);
+      ENOBJ_ITER_myevent_globalrightpress = enigma::event_globalrightpress->add_inst(this);
+      ENOBJ_ITER_myevent_mousewheelup = enigma::event_mousewheelup->add_inst(this);
+      ENOBJ_ITER_myevent_mousewheeldown = enigma::event_mousewheeldown->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_keypress = enigma::event_keypress->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_mouse_obj()
+    {
+      delete ENOBJ_ITER_myobj118;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_beginstep;
+      delete ENOBJ_ITER_myevent_globalleftpress;
+      delete ENOBJ_ITER_myevent_globalrightpress;
+      delete ENOBJ_ITER_myevent_mousewheelup;
+      delete ENOBJ_ITER_myevent_mousewheeldown;
+      delete ENOBJ_ITER_myevent_draw;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_keypress;
+    }
+  };
+  
+  struct OBJ_box_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj119;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj119, 119);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_box_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 119)
+    {
+      sprite_index = 171;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj119 = enigma::link_obj_instance(this, 119);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_box_obj()
+    {
+      delete ENOBJ_ITER_myobj119;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_dude_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj120;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj120, 120);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_dude_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 120)
+    {
+      sprite_index = 0;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj120 = enigma::link_obj_instance(this, 120);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_dude_obj()
+    {
+      delete ENOBJ_ITER_myobj120;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_dude2_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj121;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj121, 121);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_dude2_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 121)
+    {
+      sprite_index = 190;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj121 = enigma::link_obj_instance(this, 121);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_dude2_obj()
+    {
+      delete ENOBJ_ITER_myobj121;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_blockper_obj: object_locals
   {
     //Locals to instances of this object
     
@@ -168,8 +464,7 @@ namespace enigma
     
     // Self-tracking
       enigma::instance_list_iterator ENOBJ_ITER_me;
-      enigma::inst_iter *ENOBJ_ITER_myobj2;
-      enigma::inst_iter *ENOBJ_ITER_myobj1;
+      enigma::inst_iter *ENOBJ_ITER_myobj122;
       enigma::inst_iter *ENOBJ_ITER_myevent_step;
       enigma::inst_iter *ENOBJ_ITER_myevent_draw;
 
@@ -177,20 +472,18 @@ namespace enigma
     {
       instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
       enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
-      unlink_object_id_iter(ENOBJ_ITER_myobj2, 2);
-      unlink_object_id_iter(ENOBJ_ITER_myobj1, 1);
+      unlink_object_id_iter(ENOBJ_ITER_myobj122, 122);
       enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
       enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
     }
     
-    OBJ_obj_prop(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 2)
+    OBJ_blockper_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 122)
     {
-      sprite_index = 1;
+      sprite_index = 2;
       visible = 1;
       solid = 0;
       ENOBJ_ITER_me = enigma::link_instance(this);
-      ENOBJ_ITER_myobj2 = enigma::link_obj_instance(this, 2);
-      ENOBJ_ITER_myobj1 = enigma::link_obj_instance(this, 1);
+      ENOBJ_ITER_myobj122 = enigma::link_obj_instance(this, 122);
       ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
       ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
       x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
@@ -198,10 +491,297 @@ namespace enigma
       myevent_create();
     }
     
-    ~OBJ_obj_prop()
+    ~OBJ_blockper_obj()
     {
-      delete ENOBJ_ITER_myobj2;
-      delete ENOBJ_ITER_myobj1;
+      delete ENOBJ_ITER_myobj122;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_tree_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj123;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj123, 123);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_tree_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 123)
+    {
+      sprite_index = 191;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj123 = enigma::link_obj_instance(this, 123);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_tree_obj()
+    {
+      delete ENOBJ_ITER_myobj123;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_light1_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+        variant myevent_draw();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj124;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj124, 124);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_light1_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 124)
+    {
+      sprite_index = 184;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj124 = enigma::link_obj_instance(this, 124);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_light1_obj()
+    {
+      delete ENOBJ_ITER_myobj124;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_light2_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+        variant myevent_draw();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj125;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj125, 125);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_light2_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 125)
+    {
+      sprite_index = 193;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj125 = enigma::link_obj_instance(this, 125);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_light2_obj()
+    {
+      delete ENOBJ_ITER_myobj125;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_light3_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+        variant myevent_draw();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj126;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj126, 126);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_light3_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 126)
+    {
+      sprite_index = 194;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj126 = enigma::link_obj_instance(this, 126);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_light3_obj()
+    {
+      delete ENOBJ_ITER_myobj126;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_draw;
+    }
+  };
+  
+  struct OBJ_practice_obj: object_locals
+  {
+    //Locals to instances of this object
+    var number;
+    var writing;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+    
+    // Self-tracking
+      enigma::instance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj127;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_draw;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me->second); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj127, 127);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_draw->unlink(ENOBJ_ITER_myevent_draw);
+    }
+    
+    OBJ_practice_obj(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 127)
+    {
+      sprite_index = 197;
+      visible = 1;
+      solid = 0;
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj127 = enigma::link_obj_instance(this, 127);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_draw = enigma::event_draw->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_practice_obj()
+    {
+      delete ENOBJ_ITER_myobj127;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
       delete ENOBJ_ITER_myevent_step;
       delete ENOBJ_ITER_myevent_draw;
     }
