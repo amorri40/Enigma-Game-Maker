@@ -128,6 +128,7 @@ void clear_ide_editables()
   wto.close();
 
   wto.open("ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/GAME_SETTINGS.h",ios_base::out);
+
     wto << license;
     wto << "#define ASSUMEZERO 0\n";
     wto << "#define PRIMBUFFER 0\n";

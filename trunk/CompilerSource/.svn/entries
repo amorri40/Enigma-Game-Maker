@@ -1,7 +1,7 @@
 10
 
 dir
-795
+796
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
@@ -97,9 +97,6 @@ JoshDreamland
 filesystem
 dir
 
-syntax
-dir
-
 settings.h
 file
 
@@ -133,6 +130,9 @@ JoshDreamland
 
 
 3527
+
+syntax
+dir
 
 backend
 dir
@@ -211,9 +211,6 @@ ismavatar
 
 1010
 
-stupidity-buffer
-dir
-
 main.cpp
 file
 
@@ -247,6 +244,9 @@ JoshDreamland
 
 
 9721
+
+stupidity-buffer
+dir
 
 INSTALL
 file

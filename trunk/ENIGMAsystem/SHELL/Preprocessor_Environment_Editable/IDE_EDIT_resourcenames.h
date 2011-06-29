@@ -30,87 +30,80 @@
 
 enum //object names
 {
-  save_obj = 0,
-  block_obj = 117,
-  mouse_obj = 118,
-  box_obj = 119,
-  dude_obj = 120,
-  dude2_obj = 121,
-  blockper_obj = 122,
-  tree_obj = 123,
-  light1_obj = 124,
-  light2_obj = 125,
-  light3_obj = 126,
-  practice_obj = 127,
+  obj_player = 0,
+  bullit = 30,
+  roomname = 44,
+  nolook = 48,
+  gun_thenigmaing = 53,
+  fountaenigmain = 60,
+  chunk_obj = 61,
+  chunk2_obj = 62,
+  gore_spr = 64,
+  gore_puddle = 68,
+  slpat = 69,
+  chunk3 = 70,
+  gore_test = 72,
+  gore_fountaenigmain_last = 73,
+  wallH = 74,
+  wallv = 75,
+  wallV_basic = 76,
+  wall_Hbasic = 77,
+  gore_splat = 78,
+  wall_basic = 79,
 };
 
 enum //sprite names
 {
-  dudespr = 0,
-  bulletspr = 1,
-  blockspr = 2,
-  blockmask = 3,
-  sparkspr = 4,
-  bloodspr = 5,
-  tcpipspr = 6,
-  sessionstartspr = 7,
-  session2spr = 8,
-  sprite3 = 9,
-  sprite4 = 10,
-  ipxstartspr = 11,
-  redhandspr = 148,
-  bluehandspr = 149,
-  mouse1spr = 150,
-  alertspr = 154,
-  spotlightspr = 157,
-  playaibut = 158,
-  mask = 159,
-  shellspr = 160,
-  shadowspr = 162,
-  blockshadowspr = 163,
-  bulletflashspr = 166,
-  bulletflarespr = 169,
-  blockshadow2spr = 170,
-  boxspr = 171,
-  boxshadowspr = 172,
-  dudeexplospr = 173,
-  feetspr = 174,
-  razorspr = 175,
-  razormaskspr = 176,
-  bulletlongspr = 177,
-  turretspr = 178,
-  turfeetspr = 179,
-  daynightspr = 181,
-  goospr = 182,
-  light1spr = 184,
-  flamespr = 186,
-  boxmaskspr = 188,
-  savespr = 189,
-  dude2spr = 190,
-  treespr = 191,
-  light2spr = 193,
-  light3spr = 194,
-  buttonspr = 195,
-  pracspr = 197,
+  spr_player = 0,
+  sprite1 = 1,
+  sprite2 = 2,
+  wall2s = 3,
+  sprite4 = 4,
+  sprite5 = 5,
+  sprite6 = 6,
+  floor_spr = 7,
+  sprite8 = 8,
+  sprite9 = 9,
+  sprite11 = 11,
+  pool = 12,
+  sprite14 = 14,
+  sprite15 = 15,
+  splash_spr = 16,
+  targetspr = 18,
+  poenigmaenigmainter = 21,
+  sprite23 = 23,
+  guntex = 25,
+  poenigmaenigmainttrans = 26,
+  sprite27 = 27,
+  sprite28 = 28,
+  sprite29 = 29,
+  fountaenigmain_spr = 31,
+  gore = 32,
+  blood_puddle = 33,
+  sprite34 = 34,
+  sprite35 = 35,
+  dummy = 36,
+  sprite37 = 37,
 };
-namespace enigma { size_t sprite_idmax = 198; }
+namespace enigma { size_t sprite_idmax = 38; }
 
 enum //background names
 {
-  Rbg0 = 12,
-  Rbg1 = 13,
-  Rbg2 = 14,
-  Rbg3 = 15,
-  Rbg4 = 16,
-  buttonbg = 17,
+  back1 = 0,
+  back = 1,
+  treetop = 2,
+  treebark = 3,
+  box = 4,
+  chunktex = 13,
 };
-namespace enigma { size_t background_idmax = 18; }
+namespace enigma { size_t background_idmax = 14; }
 
 enum //font names
 {
   EnigmaDefault = -1,
+  enigenigmamapause_font = 0,
 };
-namespace enigma { size_t font_idmax = 0; }
+namespace enigma { size_t font_idmax = 1; }
 
 enum //timeline names
 {
@@ -124,11 +117,12 @@ namespace enigma { size_t path_idmax = 0; }
 
 enum //sound names
 {
+  sound2 = 2,
 };
-namespace enigma { size_t sound_idmax = 0; }
+namespace enigma { size_t sound_idmax = 3; }
 
 enum //room names
 {
-  mapeditrm = 23,
+  room0 = 0,
 };
 

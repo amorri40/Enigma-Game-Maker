@@ -904,9 +904,9 @@ public final class EnigmaWriter
 					if (la.allowRelative)
 						{
 						if (la.question)
-							code.append("(argument_relative = ").append(act.isRelative()).append(", "); //$NON-NLS-1$ //$NON-NLS-2$
+							code.append("(argument_relative := ").append(act.isRelative()).append(", "); //$NON-NLS-1$ //$NON-NLS-2$
 						else
-							code.append("{argument_relative = ").append(act.isRelative()).append("; "); //$NON-NLS-1$ //$NON-NLS-2$
+							code.append("{argument_relative := ").append(act.isRelative()).append("; "); //$NON-NLS-1$ //$NON-NLS-2$
 						}
 					if (la.question && la.execType == Action.EXEC_CODE)
 						code.append("lib").append(la.parentId).append("_action").append(la.id); //$NON-NLS-1$ //$NON-NLS-2$
@@ -919,9 +919,9 @@ public final class EnigmaWriter
 						for (int i = 0; i < args.size(); i++)
 							{
 							
-							if (toString(args.get(i)).equals("") && args.size()>7) continue;
+							if ( (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")) && args.size()>7) continue; //required with due to bug with CLI which thinks actions with no arguments have >7!
 							if (i != 0) code.append(',');
-							if (toString(args.get(i)).equals("")) code.append("0");
+							if (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")) code.append("0");
 							
 							code.append(toString(args.get(i)));
 							}

@@ -81,17 +81,21 @@ extern int amain();
 #endif
 
 #include "Universal_System/instance_system.h"
+#include "Universal_System/actions.h"
 
+//#define ENIGMA_WS_COCOA 1
 #ifndef ENIGMA_PARSER_RUN
   #include "Universal_System/syntax_quirks.h"
   #include "Preprocessor_Environment_Editable/IDE_EDIT_resourcenames.h"
+  #include "unimplemented.h"
+  #include "Preprocessor_Environment_Editable/IDE_EDIT_whitespace.h"
 #endif
 
 #include "Universal_System/resource_data.h"
 #include "Universal_System/highscore_functions.h" 
 
-#include "Universal_System/actions.h"
-#include "Preprocessor_Environment_Editable/IDE_EDIT_whitespace.h"
+
+
 
 double max(varargs t)
 {

@@ -499,11 +499,11 @@ variant external_call(/*int eid, */variant args, ...) { return 0;}
 void external_free(string dll) {}
 var execute_string(variant args, ...) {} //can only have 1 argument, the string to execute!
 void execute_file(string fname) {}
-void script_execute(variant args, ...) {}
+//void script_execute(variant args, ...) {}
 
 //void script_execute(string script,string argument0,string argument1,string argument2,string argument3,string argument4) {}
 //#define script_execute(script,argument0,argument1,argument2,argument3,argument4) script((argument0),(argument1),(argument2),(argument3),(argument4))
-#define script_execute(script) script_execute("script")
+//#define script_execute(script) script_execute("script")
 
 
 int window_handle() {return 0;}

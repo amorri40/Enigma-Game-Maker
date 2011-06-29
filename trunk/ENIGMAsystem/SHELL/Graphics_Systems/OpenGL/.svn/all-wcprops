@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
+/svnroot/enigma-dev/!svn/ver/796/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 END
 GSstdraw.cpp
 K 25
@@ -123,17 +123,17 @@ svn:wc:ra_dav:version-url
 V 95
 /svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/OPENGLStd.cpp
 END
-GSsprite.cpp
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.cpp
-END
 GSfont.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 92
 /svnroot/enigma-dev/!svn/ver/763/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSfont.cpp
+END
+GSsprite.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.cpp
 END
 GSstdraw.h
 K 25
@@ -147,11 +147,11 @@ svn:wc:ra_dav:version-url
 V 92
 /svnroot/enigma-dev/!svn/ver/543/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GScurves.h
 END
-GSscreen.cpp
+GSd3d.h
 K 25
 svn:wc:ra_dav:version-url
-V 94
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
+V 89
+/svnroot/enigma-dev/!svn/ver/466/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.h
 END
 GSbackground.cpp
 K 25
@@ -159,17 +159,17 @@ svn:wc:ra_dav:version-url
 V 98
 /svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSbackground.cpp
 END
-GSd3d.h
+GSscreen.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 89
-/svnroot/enigma-dev/!svn/ver/466/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSd3d.h
+V 94
+/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
 END
 GStextures.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GStextures.cpp
+/svnroot/enigma-dev/!svn/ver/796/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GStextures.cpp
 END
 GSblend.cpp
 K 25

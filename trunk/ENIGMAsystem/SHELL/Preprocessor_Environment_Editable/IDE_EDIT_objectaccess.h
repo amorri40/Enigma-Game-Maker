@@ -39,76 +39,116 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 7 accessors
-  var  &varaccess_bg(int x)
+  var dummy_0; // Referenced by 10 accessors
+  var  &varaccess_ani(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->bg;
+      case obj_player: return ((OBJ_obj_player*)inst)->ani;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->ani;
     }
     return dummy_0;
   }
-  var  &varaccess_file1(int x)
+  var  &varaccess_camcos(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file1;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->camcos;
     }
     return dummy_0;
   }
-  var  &varaccess_file2(int x)
+  var  &varaccess_camsin(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file2;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->camsin;
     }
     return dummy_0;
   }
-  var  &varaccess_highnum(int x)
+  var  &varaccess_camx(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->highnum;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->camx;
     }
     return dummy_0;
   }
-  var  &varaccess_name2(int x)
+  var  &varaccess_camy(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->name2;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->camy;
     }
     return dummy_0;
   }
-  var  &varaccess_number(int x)
+  var  &varaccess_gun_obj(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case block_obj: return ((OBJ_block_obj*)inst)->number;
-      case box_obj: return ((OBJ_box_obj*)inst)->number;
-      case dude_obj: return ((OBJ_dude_obj*)inst)->number;
-      case dude2_obj: return ((OBJ_dude2_obj*)inst)->number;
-      case tree_obj: return ((OBJ_tree_obj*)inst)->number;
-      case light1_obj: return ((OBJ_light1_obj*)inst)->number;
-      case light2_obj: return ((OBJ_light2_obj*)inst)->number;
-      case light3_obj: return ((OBJ_light3_obj*)inst)->number;
-      case practice_obj: return ((OBJ_practice_obj*)inst)->number;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->number;
+      case gun_thenigmaing: return ((OBJ_gun_thenigmaing*)inst)->gun_obj;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->gun_obj;
     }
     return dummy_0;
   }
-  var  &varaccess_save(int x)
+  var  &varaccess_model_chunk1(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->save;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->model_chunk1;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_snipe(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->snipe;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_tex(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case chunk_obj: return ((OBJ_chunk_obj*)inst)->tex;
+      case chunk2_obj: return ((OBJ_chunk2_obj*)inst)->tex;
+      case gore_spr: return ((OBJ_gore_spr*)inst)->tex;
+      case chunk3: return ((OBJ_chunk3*)inst)->tex;
+      case gore_test: return ((OBJ_gore_test*)inst)->tex;
+      case wallH: return ((OBJ_wallH*)inst)->tex;
+      case wallv: return ((OBJ_wallv*)inst)->tex;
+      case wallV_basic: return ((OBJ_wallV_basic*)inst)->tex;
+      case wall_Hbasic: return ((OBJ_wall_Hbasic*)inst)->tex;
+      case wall_basic: return ((OBJ_wall_basic*)inst)->tex;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->tex;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_z(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_player: return ((OBJ_obj_player*)inst)->z;
+      case bullit: return ((OBJ_bullit*)inst)->z;
+      case gun_thenigmaing: return ((OBJ_gun_thenigmaing*)inst)->z;
+      case chunk_obj: return ((OBJ_chunk_obj*)inst)->z;
+      case chunk2_obj: return ((OBJ_chunk2_obj*)inst)->z;
+      case gore_spr: return ((OBJ_gore_spr*)inst)->z;
+      case slpat: return ((OBJ_slpat*)inst)->z;
+      case chunk3: return ((OBJ_chunk3*)inst)->z;
+      case gore_test: return ((OBJ_gore_test*)inst)->z;
+      case gore_splat: return ((OBJ_gore_splat*)inst)->z;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->z;
     }
     return dummy_0;
   }
