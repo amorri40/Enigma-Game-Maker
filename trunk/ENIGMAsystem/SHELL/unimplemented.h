@@ -27,9 +27,12 @@ void draw_text_ext_color(int x, int y, string str, string sep, int w, int c1, in
 /*
 Input
 */
-//void keyboard_wait() {}
+
+
+
+
 //void io_handle() {}
-//void io_clear() {}
+
 void keyboard_clear(int key) {}
 void mouse_clear(int button) {}
 void keyboard_set_map(int key1, int key2) {}//Maps the key with keycode key1 to key2.

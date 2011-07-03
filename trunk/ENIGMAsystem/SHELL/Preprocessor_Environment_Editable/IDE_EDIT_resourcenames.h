@@ -30,80 +30,26 @@
 
 enum //object names
 {
-  obj_player = 0,
-  bullit = 30,
-  roomname = 44,
-  nolook = 48,
-  gun_thenigmaing = 53,
-  fountaenigmain = 60,
-  chunk_obj = 61,
-  chunk2_obj = 62,
-  gore_spr = 64,
-  gore_puddle = 68,
-  slpat = 69,
-  chunk3 = 70,
-  gore_test = 72,
-  gore_fountaenigmain_last = 73,
-  wallH = 74,
-  wallv = 75,
-  wallV_basic = 76,
-  wall_Hbasic = 77,
-  gore_splat = 78,
-  wall_basic = 79,
+  obj_0 = 0,
 };
+namespace enigma { size_t object_idmax = 1; }
 
 enum //sprite names
 {
-  spr_player = 0,
-  sprite1 = 1,
-  sprite2 = 2,
-  wall2s = 3,
-  sprite4 = 4,
-  sprite5 = 5,
-  sprite6 = 6,
-  floor_spr = 7,
-  sprite8 = 8,
-  sprite9 = 9,
-  sprite11 = 11,
-  pool = 12,
-  sprite14 = 14,
-  sprite15 = 15,
-  splash_spr = 16,
-  targetspr = 18,
-  poenigmaenigmainter = 21,
-  sprite23 = 23,
-  guntex = 25,
-  poenigmaenigmainttrans = 26,
-  sprite27 = 27,
-  sprite28 = 28,
-  sprite29 = 29,
-  fountaenigmain_spr = 31,
-  gore = 32,
-  blood_puddle = 33,
-  sprite34 = 34,
-  sprite35 = 35,
-  dummy = 36,
-  sprite37 = 37,
+  spr_0 = 0,
 };
-namespace enigma { size_t sprite_idmax = 38; }
+namespace enigma { size_t sprite_idmax = 1; }
 
 enum //background names
 {
-  back1 = 0,
-  back = 1,
-  treetop = 2,
-  treebark = 3,
-  box = 4,
-  chunktex = 13,
 };
-namespace enigma { size_t background_idmax = 14; }
+namespace enigma { size_t background_idmax = 0; }
 
 enum //font names
 {
   EnigmaDefault = -1,
-  enigenigmamapause_font = 0,
 };
-namespace enigma { size_t font_idmax = 1; }
+namespace enigma { size_t font_idmax = 0; }
 
 enum //timeline names
 {
@@ -117,12 +63,11 @@ namespace enigma { size_t path_idmax = 0; }
 
 enum //sound names
 {
-  sound2 = 2,
 };
-namespace enigma { size_t sound_idmax = 3; }
+namespace enigma { size_t sound_idmax = 0; }
 
 enum //room names
 {
-  room0 = 0,
+  rm_0 = 0,
 };
 

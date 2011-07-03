@@ -1,5 +1,5 @@
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/obj/local/armeabi/objs/ndkEnigmaGame/../../../../../SHELL/Universal_System/mathnc.o: \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/mathnc.cpp \
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/obj/local/armeabi/objs/ndkEnigmaGame/../../../../../SHELL/Universal_System/mathnc.o: \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/mathnc.cpp \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/stdlib.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -20,8 +20,8 @@
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h
 
 /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/stdlib.h:
 
@@ -63,6 +63,6 @@
 
 /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h:

@@ -29,63 +29,6 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_obj_player(x,y,idn);
-  break;
-case 30:
-    new enigma::OBJ_bullit(x,y,idn);
-  break;
-case 44:
-    new enigma::OBJ_roomname(x,y,idn);
-  break;
-case 48:
-    new enigma::OBJ_nolook(x,y,idn);
-  break;
-case 53:
-    new enigma::OBJ_gun_thenigmaing(x,y,idn);
-  break;
-case 60:
-    new enigma::OBJ_fountaenigmain(x,y,idn);
-  break;
-case 61:
-    new enigma::OBJ_chunk_obj(x,y,idn);
-  break;
-case 62:
-    new enigma::OBJ_chunk2_obj(x,y,idn);
-  break;
-case 64:
-    new enigma::OBJ_gore_spr(x,y,idn);
-  break;
-case 68:
-    new enigma::OBJ_gore_puddle(x,y,idn);
-  break;
-case 69:
-    new enigma::OBJ_slpat(x,y,idn);
-  break;
-case 70:
-    new enigma::OBJ_chunk3(x,y,idn);
-  break;
-case 72:
-    new enigma::OBJ_gore_test(x,y,idn);
-  break;
-case 73:
-    new enigma::OBJ_gore_fountaenigmain_last(x,y,idn);
-  break;
-case 74:
-    new enigma::OBJ_wallH(x,y,idn);
-  break;
-case 75:
-    new enigma::OBJ_wallv(x,y,idn);
-  break;
-case 76:
-    new enigma::OBJ_wallV_basic(x,y,idn);
-  break;
-case 77:
-    new enigma::OBJ_wall_Hbasic(x,y,idn);
-  break;
-case 78:
-    new enigma::OBJ_gore_splat(x,y,idn);
-  break;
-case 79:
-    new enigma::OBJ_wall_basic(x,y,idn);
+    new enigma::OBJ_obj_0(x,y,idn);
   break;
 

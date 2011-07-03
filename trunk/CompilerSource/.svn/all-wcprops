@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svnroot/enigma-dev/!svn/ver/795/trunk/CompilerSource
+/svnroot/enigma-dev/!svn/ver/799/trunk/CompilerSource
 END
 genmake.sh
 K 25
@@ -43,7 +43,7 @@ CompileEGMf.cbp
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svnroot/enigma-dev/!svn/ver/789/trunk/CompilerSource/CompileEGMf.cbp
+/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/CompileEGMf.cbp
 END
 main.h
 K 25

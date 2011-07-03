@@ -11,8 +11,8 @@ enigma::object_planar* const inst = ((enigma::object_planar*)enigma::instance_ev
 
 ///////// Asteroids
 void draw_set_halign(int halign) {}
-void keyboard_wait() {}
-void io_clear() {}
+//void keyboard_wait() {}
+//void io_clear() {}
 void action_set_friction(double newfriction) {
 	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->friction=newfriction;
 }

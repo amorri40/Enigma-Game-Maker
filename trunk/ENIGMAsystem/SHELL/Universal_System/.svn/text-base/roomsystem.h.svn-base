@@ -108,9 +108,8 @@ namespace enigma
 
 // room variable
 
-  #define TYPEPURPOSE roomv
-  #define TYPEVARIABLES
-    #include "multifunction_variant.h"
-  #undef TYPEVARIABLES
-  #undef TYPEPURPOSE
+#include "multifunction_variant.h"
+namespace enigma { struct roomv: multifunction_variant {
+  void function();
+}; }
 extern enigma::roomv room;

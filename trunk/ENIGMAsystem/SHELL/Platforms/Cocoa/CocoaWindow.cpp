@@ -203,6 +203,19 @@ void screen_refresh() {
     cocoa_flush_opengl();
 }
 
+namespace enigma {
+    extern char keybdstatus[256];
+}
+
+extern char cocoa_keybdstatus[256];
+void io_clear() {
+    for(int i=0; i<255; i++) {
+        enigma::keybdstatus[i]=0;
+        cocoa_keybdstatus[i]=0;
+    }
+}
+
+
 namespace enigma
 {	
 	char keymap[256];
@@ -381,6 +394,16 @@ extern void cocoa_io_handle();
 void io_handle() {
     
     cocoa_io_handle();
+}
+
+bool keyboard_check(int key);
+
+
+void keyboard_wait() {
+    io_clear();
+    while(!keyboard_check(1/*vk_anykey*/)) {
+        io_handle();
+    }
 }
 
 

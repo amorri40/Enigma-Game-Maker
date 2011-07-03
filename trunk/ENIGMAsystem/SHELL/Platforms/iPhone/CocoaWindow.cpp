@@ -38,6 +38,7 @@ using namespace std;
 
 
 void io_handle() {
+    cocoa_io_handle();
 }
 
 //////////

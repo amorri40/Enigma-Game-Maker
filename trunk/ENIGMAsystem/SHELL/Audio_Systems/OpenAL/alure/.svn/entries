@@ -1,14 +1,14 @@
 10
 
 dir
-796
+799
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-01-24T01:09:53.836208Z
-614
+2011-06-30T20:50:50.637805Z
+798
 JoshDreamland
 has-props
 
@@ -276,10 +276,10 @@ file
 
 
 
-2011-04-20T21:21:59.000000Z
-19a3239ea2e8fda7d070e7ac907c2313
-2010-08-03T21:55:15.332812Z
-306
+2011-07-01T22:12:24.000000Z
+625ad2082f8f037b54169ed9b13490c4
+2011-06-30T20:50:50.637805Z
+798
 JoshDreamland
 
 
@@ -302,7 +302,7 @@ JoshDreamland
 
 
 
-8020
+8138
 
 config.h
 file

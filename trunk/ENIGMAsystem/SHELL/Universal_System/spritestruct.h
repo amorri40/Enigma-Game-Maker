@@ -25,10 +25,10 @@
 **                                                                              **
 \********************************************************************************/
 
+#include <stdlib.h>
+
 #ifndef ENIGMA_SPRITESTRUCT
 #define ENIGMA_SPRITESTRUCT
-
-#include <map>
 
 namespace enigma
 {

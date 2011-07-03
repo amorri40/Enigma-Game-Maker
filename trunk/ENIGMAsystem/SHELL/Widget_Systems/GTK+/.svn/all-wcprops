@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+
 END
 automake.sh
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/automake.sh
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/automake.sh
 END
 dialogs.cpp
 K 25
@@ -49,5 +49,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Makefile
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Widget_Systems/GTK+/Makefile
 END

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svnroot/enigma-dev/!svn/ver/614/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure
 END
 automake.sh
 K 25
@@ -49,7 +49,7 @@ main.h
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/306/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/main.h
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure/main.h
 END
 config.h
 K 25

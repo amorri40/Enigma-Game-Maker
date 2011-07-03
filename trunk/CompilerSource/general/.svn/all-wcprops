@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svnroot/enigma-dev/!svn/ver/762/trunk/CompilerSource/general
+/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/general
 END
 bettersystem.h
 K 25
@@ -25,7 +25,7 @@ parse_basics.h
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svnroot/enigma-dev/!svn/ver/396/trunk/CompilerSource/general/parse_basics.h
+/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/general/parse_basics.h
 END
 implicit_stack.h
 K 25

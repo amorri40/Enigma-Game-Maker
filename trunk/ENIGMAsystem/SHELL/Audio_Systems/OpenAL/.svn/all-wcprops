@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/780/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL
 END
 automake.sh
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/automake.sh
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/automake.sh
 END
 as_basic.cpp
 K 25
@@ -31,5 +31,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/777/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Makefile
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Makefile
 END
