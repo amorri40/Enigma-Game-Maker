@@ -30,27 +30,18 @@
 
 namespace enigma
 {
-  event_iter *event_create; // Defined in 1 objects
   event_iter *event_draw; // Defined in 0 objects
-  event_iter *event_keypress; // Defined in 1 objects
   event_iter *event_step; // Defined in 0 objects
   int event_system_initialize()
   {
-    events = new event_iter[4]; // Allocated here; not really meant to change.
+    events = new event_iter[2]; // Allocated here; not really meant to change.
     objects = new objectid_base[1]; // Allocated here; not really meant to change.
-    event_create = events + 0;  event_create->name = "Create";
-    event_draw = events + 1;  event_draw->name = "Draw";
-    event_keypress = events + 2;  event_keypress->name = "Press <key13>";
-    event_step = events + 3;  event_step->name = "Step";
+    event_draw = events + 0;  event_draw->name = "Draw";
+    event_step = events + 1;  event_step->name = "Step";
     return 0;
   }
   int ENIGMA_events()
   {
-    for (instance_event_iterator = event_keypress->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
-      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_keypress();
-    
-    enigma::update_globals();
-    
     for (instance_event_iterator = event_step->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
       ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_step();
     

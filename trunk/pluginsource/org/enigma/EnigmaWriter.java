@@ -885,11 +885,20 @@ public final class EnigmaWriter
 								//									mess += la.parentId;
 								//								else
 								//									mess += la.parent.tabCaption;
-								String action = la.name.length() == 0 ? Integer.toString(la.id) : la.name;
+								System.out.println("=== Unsupported action!!!!: "+la.name);
+								String action;
+								if (la.name==null) 
+									action = Integer.toString(la.id);
+								else
+								action = la.name.length() == 0 ? Integer.toString(la.id) : la.name;
 								//								mess += " action " + (la.name.length() == 0 ? la.id : la.name) + ")";
-								String mess = Messages.format(
-										"EnigmaWriter.UNSUPPORTED_DND_QA",ac.toString(),library,action); //$NON-NLS-1$
-								JOptionPane.showMessageDialog(null,mess);
+								if (ac !=null && library !=null && action !=null) {
+								/*String mess = Messages.format(
+										"EnigmaWriter.UNSUPPORTED_DND_QA",ac.toString(),library,action); //$NON-NLS-1$*/
+									String mess="EnigmaWriter UNSUPPORTED_DND_QA"+ac.toString()+"library:"+library+" action:"+action;
+								//JOptionPane.showMessageDialog(null,mess);
+									System.out.println(mess);
+								}
 								actionDemise = true;
 								}
 							continue;
