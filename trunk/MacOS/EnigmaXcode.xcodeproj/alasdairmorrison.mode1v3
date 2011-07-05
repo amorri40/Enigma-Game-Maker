@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9CCA662A13C3C31900D7F6AC</string>
+						<string>9CCA663213C3CFC900D7F6AC</string>
 						<key>history</key>
 						<array>
 							<string>9CF95FA813C18EC1009DE5FB</string>
@@ -256,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9CCA662B13C3C31900D7F6AC</string>
+						<string>9CCA663313C3CFC900D7F6AC</string>
 						<key>history</key>
 						<array>
 							<string>9CF95FAA13C18EC1009DE5FB</string>
@@ -413,7 +413,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CocoaWindow.cpp</string>
+								<string>object.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -421,11 +421,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CocoaWindow.cpp</string>
+										<string>object.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9CCA662713C3C31900D7F6AC</string>
+										<string>9CCA663113C3CFC900D7F6AC</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -649,7 +649,8 @@
 											<string>9CF95F9213C00D7D009DE5FB</string>
 											<string>9CF95F9313C00D7D009DE5FB</string>
 											<string>9CF95F9413C00D7D009DE5FB</string>
-											<string>9CF95FA713C18EC0009DE5FB</string>
+											<string>9CCA662F13C3CFC900D7F6AC</string>
+											<string>9CCA663013C3CFC900D7F6AC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -847,10 +848,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9CD0E31A12115D9300A01347</string>
 		<string>9C0D007A1360B0EF0083E470</string>
 		<string>9C27C34E139D3272009BF45A</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 125 1280 653 0 0 1280 778 </string>
@@ -1052,13 +1055,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>9CF95EF113BE8619009DE5FB</string>
+				<string>9CCA663413C3CFC900D7F6AC</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>9CF95EF213BE8619009DE5FB</string>
-				<string>9CF95EF313BE8619009DE5FB</string>
-				<string>9CF95EF413BE8619009DE5FB</string>
-				<string>9CF95EF513BE8619009DE5FB</string>
-				<string>9CF95EF613BE8619009DE5FB</string>
+				<string>9CCA663513C3CFC900D7F6AC</string>
+				<string>9CCA663613C3CFC900D7F6AC</string>
+				<string>9CCA663713C3CFC900D7F6AC</string>
+				<string>9CCA663813C3CFC900D7F6AC</string>
+				<string>9CCA663913C3CFC900D7F6AC</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1090,7 +1093,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>mathnc.h</string>
+										<string>graphics_object.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1148,8 +1151,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>9CF95F1513BE985C009DE5FB</string>
-				<string>9CF95F1613BE985C009DE5FB</string>
+				<string>9CCA663A13C3CFC900D7F6AC</string>
+				<string>9CCA663B13C3CFC900D7F6AC</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
