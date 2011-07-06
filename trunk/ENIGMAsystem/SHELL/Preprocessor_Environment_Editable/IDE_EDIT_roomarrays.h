@@ -29,32 +29,10 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 namespace enigma {
-  int room_loadtimecount = 1;
-  roomstruct grd_rooms[1] = {
-    //Room 0
-    { 0, "rm_0",  "",
-      0xcccccc, roomcreate0,
-      640, 480, 30,  false, {
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-}, {      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      1,       (enigma::inst*)(int[]){100001,0,64,80,  0,0,0,0}
-    },
+  int room_loadtimecount = 0;
+  roomstruct grd_rooms[0] = {
   };
   
   int room_max = 0 + 1;
-  int maxid = 100001 + 1;
+  int maxid = 100000 + 1;
 } // Namespace enigma

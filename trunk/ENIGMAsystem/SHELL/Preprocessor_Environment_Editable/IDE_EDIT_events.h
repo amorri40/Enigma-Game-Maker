@@ -30,16 +30,14 @@
 
 namespace enigma
 {
-  event_iter *event_create; // Defined in 1 objects
-  event_iter *event_draw; // Defined in 1 objects
+  event_iter *event_draw; // Defined in 0 objects
   event_iter *event_step; // Defined in 0 objects
   int event_system_initialize()
   {
-    events = new event_iter[3]; // Allocated here; not really meant to change.
+    events = new event_iter[2]; // Allocated here; not really meant to change.
     objects = new objectid_base[1]; // Allocated here; not really meant to change.
-    event_create = events + 0;  event_create->name = "Create";
-    event_draw = events + 1;  event_draw->name = "Draw";
-    event_step = events + 2;  event_step->name = "Step";
+    event_draw = events + 0;  event_draw->name = "Draw";
+    event_step = events + 1;  event_step->name = "Step";
     return 0;
   }
   int ENIGMA_events()
