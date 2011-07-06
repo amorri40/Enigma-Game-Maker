@@ -35,5 +35,4 @@ clean:
 	cd Collision_Systems/None     && $(MAKE) clean
 	cd Collision_Systems/BBox     && $(MAKE) clean
 	cd Platforms/Cocoa/           && $(MAKE) clean
-	cd Universal_System/Extensions/ && $(MAKE) clean
 
