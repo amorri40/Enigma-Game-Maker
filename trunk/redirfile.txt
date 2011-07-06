@@ -1,171 +1,23 @@
 cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL" GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o"
 cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c GSbackground.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSbackground.o -s -O3 
-g++ -c GSblend.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSblend.o -s -O3 
-g++ -c GScolors.cpp		-o .eobjs/MacOSX/MacOSX/Run/GScolors.o -s -O3 
-g++ -c GScurves.cpp		-o .eobjs/MacOSX/MacOSX/Run/GScurves.o -s -O3 
-g++ -c GSd3d.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSd3d.o -s -O3 
-g++ -c GSenable.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSenable.o -s -O3 
-g++ -c GSfont.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSfont.o -s -O3 
-g++ -c GSmiscextra.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSmiscextra.o -s -O3 
-g++ -c GSprmtvs.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSprmtvs.o -s -O3 
-g++ -c GSscreen.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSscreen.o -s -O3 
-g++ -c GSsprite.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSsprite.o -s -O3 
-g++ -c GSstdraw.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSstdraw.o -s -O3 
-GSstdraw.cpp: In function ‘void draw_set_line_pattern(short unsigned int, int)’:
-GSstdraw.cpp:45: warning: comparison is always false due to limited range of data type
-g++ -c GSsurface.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSsurface.o -s -O3 
-g++ -c GStextures.cpp		-o .eobjs/MacOSX/MacOSX/Run/GStextures.o -s -O3 
-g++ -c OPENGLStd.cpp		-o .eobjs/MacOSX/MacOSX/Run/OPENGLStd.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c CocoaDialog.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaDialog.o -s -O3 
-g++ -c CocoaFunctions.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaFunctions.o -s -O3 
-g++ -c CocoaMain.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaMain.o -s -O3 
-g++ -c CocoaWindow.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaWindow.o -s -O3 
-g++ -c file_manip.cpp		-o .eobjs/MacOSX/MacOSX/Run/file_manip.o -s -O3 
-g++ -c XLIBthreads.cpp		-o .eobjs/MacOSX/MacOSX/Run/XLIBthreads.o -s -O3 
-g++ -c EnigmaView.m		-o .eobjs/MacOSX/MacOSX/Run/EnigmaView.o -s -O3 
-g++ -c EnigmaXcodeAppDelegate.m		-o .eobjs/MacOSX/MacOSX/Run/EnigmaXcodeAppDelegate.o -s -O3 
-g++ -c main.m		-o .eobjs/MacOSX/MacOSX/Run/main.o -s -O3 
-g++ -c WindowFunctions.m		-o .eobjs/MacOSX/MacOSX/Run/WindowFunctions.o -s -O3 
-WindowFunctions.m: In function ‘cocoa_window_set_caption’:
-WindowFunctions.m:74: warning: ‘stringWithCString:length:’ is deprecated (declared at /System/Library/Frameworks/Foundation.framework/Headers/NSString.h:385)
+make[2]: Nothing to be done for `this'.
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c backgroundinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/backgroundinit.o -s -O3 
-g++ -c backgroundstruct.cpp		-o .eobjs/MacOSX/MacOSX/Run/backgroundstruct.o -s -O3 
-g++ -c CallbackArrays.cpp		-o .eobjs/MacOSX/MacOSX/Run/CallbackArrays.o -s -O3 
-g++ -c collisions_object.cpp		-o .eobjs/MacOSX/MacOSX/Run/collisions_object.o -s -O3 
-g++ -c compression.cpp		-o .eobjs/MacOSX/MacOSX/Run/compression.o -s -O3 
-g++ -c darray.cpp		-o .eobjs/MacOSX/MacOSX/Run/darray.o -s -O3 
-g++ -c depth_draw.cpp		-o .eobjs/MacOSX/MacOSX/Run/depth_draw.o -s -O3 
-g++ -c dynamic_args.cpp		-o .eobjs/MacOSX/MacOSX/Run/dynamic_args.o -s -O3 
-g++ -c ENIGMA_GLOBALS.cpp		-o .eobjs/MacOSX/MacOSX/Run/ENIGMA_GLOBALS.o -s -O3 
-g++ -c estring.cpp		-o .eobjs/MacOSX/MacOSX/Run/estring.o -s -O3 
-g++ -c events.cpp		-o .eobjs/MacOSX/MacOSX/Run/events.o -s -O3 
-g++ -c event_system.cpp		-o .eobjs/MacOSX/MacOSX/Run/event_system.o -s -O3 
-g++ -c fileio.cpp		-o .eobjs/MacOSX/MacOSX/Run/fileio.o -s -O3 
-g++ -c fontinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/fontinit.o -s -O3 
-g++ -c fontstruct.cpp		-o .eobjs/MacOSX/MacOSX/Run/fontstruct.o -s -O3 
-g++ -c globalupdate.cpp		-o .eobjs/MacOSX/MacOSX/Run/globalupdate.o -s -O3 
-g++ -c graphics_object.cpp		-o .eobjs/MacOSX/MacOSX/Run/graphics_object.o -s -O3 
-g++ -c highscore_functions.cpp		-o .eobjs/MacOSX/MacOSX/Run/highscore_functions.o -s -O3 
-g++ -c IMGloading.cpp		-o .eobjs/MacOSX/MacOSX/Run/IMGloading.o -s -O3 
-g++ -c instance.cpp		-o .eobjs/MacOSX/MacOSX/Run/instance.o -s -O3 
-g++ -c instance_system.cpp		-o .eobjs/MacOSX/MacOSX/Run/instance_system.o -s -O3 
-g++ -c loading.cpp		-o .eobjs/MacOSX/MacOSX/Run/loading.o -s -O3 
-g++ -c mathnc.cpp		-o .eobjs/MacOSX/MacOSX/Run/mathnc.o -s -O3 
-g++ -c multifunction_variant.cpp		-o .eobjs/MacOSX/MacOSX/Run/multifunction_variant.o -s -O3 
-g++ -c object.cpp		-o .eobjs/MacOSX/MacOSX/Run/object.o -s -O3 
-g++ -c planar_object.cpp		-o .eobjs/MacOSX/MacOSX/Run/planar_object.o -s -O3 
-g++ -c rectpack.cpp		-o .eobjs/MacOSX/MacOSX/Run/rectpack.o -s -O3 
-g++ -c reflexive_types.cpp		-o .eobjs/MacOSX/MacOSX/Run/reflexive_types.o -s -O3 
-g++ -c resource_data.cpp		-o .eobjs/MacOSX/MacOSX/Run/resource_data.o -s -O3 
-g++ -c roomsystem.cpp		-o .eobjs/MacOSX/MacOSX/Run/roomsystem.o -s -O3 
-g++ -c simplecollisions.cpp		-o .eobjs/MacOSX/MacOSX/Run/simplecollisions.o -s -O3 
-g++ -c soundinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/soundinit.o -s -O3 
-g++ -c spriteinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/spriteinit.o -s -O3 
-g++ -c spritestruct.cpp		-o .eobjs/MacOSX/MacOSX/Run/spritestruct.o -s -O3 
-g++ -c terminal_io.cpp		-o .eobjs/MacOSX/MacOSX/Run/terminal_io.o -s -O3 
-g++ -c transform_object.cpp		-o .eobjs/MacOSX/MacOSX/Run/transform_object.o -s -O3 
-g++ -c var4.cpp		-o .eobjs/MacOSX/MacOSX/Run/var4.o -s -O3 
-g++ -c var4_lua.cpp		-o .eobjs/MacOSX/MacOSX/Run/var4_lua.o -s -O3 
-g++ -c WITHconstruct.cpp		-o .eobjs/MacOSX/MacOSX/Run/WITHconstruct.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c as_basic.cpp		-o .eobjs/MacOSX/MacOSX/Run/as_basic.o 
 cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
-g++ -c alure.cpp		-o .objs/alure.o 
-g++ -c buffer.cpp		-o .objs/buffer.o 
-g++ -c istream.cpp		-o .objs/istream.o 
-g++ -c stream.cpp		-o .objs/stream.o 
-g++ -c streamdec.cpp		-o .objs/streamdec.o 
-g++ -c streamplay.cpp		-o .objs/streamplay.o 
-ar r ../.eobjs/MacOSX/MacOSX/Run/libalure.a .objs/*.o
-ar: creating archive ../.eobjs/MacOSX/MacOSX/Run/libalure.a
+make[3]: Nothing to be done for `static'.
 cd dumb   && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
-gcc -c src/core/atexit.c		-o .objs/dumb_dumb_atexit.o 
-gcc -c src/core/duhlen.c		-o .objs/dumb_dumb_duhlen.o 
-gcc -c src/core/duhtag.c		-o .objs/dumb_dumb_duhtag.o 
-gcc -c src/core/dumbfile.c		-o .objs/dumb_dumb_dumbfile.o 
-gcc -c src/core/loadduh.c		-o .objs/dumb_dumb_loadduh.o 
-gcc -c src/core/makeduh.c		-o .objs/dumb_dumb_makeduh.o 
-gcc -c src/core/rawsig.c		-o .objs/dumb_dumb_rawsig.o 
-gcc -c src/core/readduh.c		-o .objs/dumb_dumb_readduh.o 
-gcc -c src/core/register.c		-o .objs/dumb_dumb_register.o 
-gcc -c src/core/rendduh.c		-o .objs/dumb_dumb_rendduh.o 
-gcc -c src/core/rendsig.c		-o .objs/dumb_dumb_rendsig.o 
-gcc -c src/core/unload.c		-o .objs/dumb_dumb_unload.o 
-gcc -c src/helpers/clickrem.c		-o .objs/dumb_dumb_clickrem.o 
-gcc -c src/helpers/memfile.c		-o .objs/dumb_dumb_memfile.o 
-gcc -c src/helpers/resample.c		-o .objs/dumb_dumb_resample.o 
-gcc -c src/helpers/sampbuf.c		-o .objs/dumb_dumb_sampbuf.o 
-gcc -c src/helpers/silence.c		-o .objs/dumb_dumb_silence.o 
-gcc -c src/helpers/stdfile.c		-o .objs/dumb_dumb_stdfile.o 
-gcc -c src/it/itload.c		-o .objs/dumb_dumb_itload.o 
-gcc -c src/it/itload2.c		-o .objs/dumb_dumb_itload2.o 
-gcc -c src/it/itmisc.c		-o .objs/dumb_dumb_itmisc.o 
-gcc -c src/it/itorder.c		-o .objs/dumb_dumb_itorder.o 
-gcc -c src/it/itread.c		-o .objs/dumb_dumb_itread.o 
-gcc -c src/it/itread2.c		-o .objs/dumb_dumb_itread2.o 
-gcc -c src/it/itrender.c		-o .objs/dumb_dumb_itrender.o 
-gcc -c src/it/itunload.c		-o .objs/dumb_dumb_itunload.o 
-gcc -c src/it/loadmod.c		-o .objs/dumb_dumb_loadmod.o 
-gcc -c src/it/loadmod2.c		-o .objs/dumb_dumb_loadmod2.o 
-gcc -c src/it/loads3m.c		-o .objs/dumb_dumb_loads3m.o 
-gcc -c src/it/loads3m2.c		-o .objs/dumb_dumb_loads3m2.o 
-gcc -c src/it/loadxm.c		-o .objs/dumb_dumb_loadxm.o 
-gcc -c src/it/loadxm2.c		-o .objs/dumb_dumb_loadxm2.o 
-gcc -c src/it/readmod.c		-o .objs/dumb_dumb_readmod.o 
-gcc -c src/it/readmod2.c		-o .objs/dumb_dumb_readmod2.o 
-gcc -c src/it/reads3m.c		-o .objs/dumb_dumb_reads3m.o 
-gcc -c src/it/reads3m2.c		-o .objs/dumb_dumb_reads3m2.o 
-gcc -c src/it/readxm.c		-o .objs/dumb_dumb_readxm.o 
-gcc -c src/it/readxm2.c		-o .objs/dumb_dumb_readxm2.o 
-gcc -c src/it/xmeffect.c		-o .objs/dumb_dumb_xmeffect.o 
-ar r ../.eobjs/MacOSX/MacOSX/Run/libdumb.a .objs/*.o
-ar: creating archive ../.eobjs/MacOSX/MacOSX/Run/libdumb.a
+make[3]: Nothing to be done for `static'.
 cd ogg    && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
-gcc -c bitwise.c		-o .objs/ogg_bitwise.o 
-gcc -c framing.c		-o .objs/ogg_framing.o 
-ar r ../.eobjs/MacOSX/MacOSX/Run/libogg.a .objs/*.o
-ar: creating archive ../.eobjs/MacOSX/MacOSX/Run/libogg.a
+make[3]: Nothing to be done for `static'.
 cd vorbis && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
-gcc -c lib/analysis.c		-o .objs/vorbis_analysis.o 
-gcc -c lib/bitrate.c		-o .objs/vorbis_bitrate.o 
-gcc -c lib/block.c		-o .objs/vorbis_block.o 
-gcc -c lib/codebook.c		-o .objs/vorbis_codebook.o 
-gcc -c lib/envelope.c		-o .objs/vorbis_envelope.o 
-gcc -c lib/floor0.c		-o .objs/vorbis_floor0.o 
-gcc -c lib/floor1.c		-o .objs/vorbis_floor1.o 
-gcc -c lib/info.c		-o .objs/vorbis_info.o 
-gcc -c lib/lookup.c		-o .objs/vorbis_lookup.o 
-gcc -c lib/lpc.c		-o .objs/vorbis_lpc.o 
-gcc -c lib/lsp.c		-o .objs/vorbis_lsp.o 
-gcc -c lib/mapping0.c		-o .objs/vorbis_mapping0.o 
-gcc -c lib/mdct.c		-o .objs/vorbis_mdct.o 
-gcc -c lib/psy.c		-o .objs/vorbis_psy.o 
-gcc -c lib/registry.c		-o .objs/vorbis_registry.o 
-gcc -c lib/res0.c		-o .objs/vorbis_res0.o 
-gcc -c lib/sharedbook.c		-o .objs/vorbis_sharedbook.o 
-gcc -c lib/smallft.c		-o .objs/vorbis_smallft.o 
-gcc -c lib/synthesis.c		-o .objs/vorbis_synthesis.o 
-gcc -c lib/vorbisfile.c		-o .objs/vorbis_vorbisfile.o 
-gcc -c lib/window.c		-o .objs/vorbis_window.o 
-ar r ../.eobjs/MacOSX/MacOSX/Run/libvorbis.a .objs/*.o
-ar: creating archive ../.eobjs/MacOSX/MacOSX/Run/libvorbis.a
-ranlib: file: ../.eobjs/MacOSX/MacOSX/Run/libvorbis.a(vorbis_lookup.o) has no symbols
+make[3]: Nothing to be done for `static'.
 cd Collision_Systems/BBox/ && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c coll_funcs.cpp		-o .eobjs/MacOSX/MacOSX/Run/coll_funcs.o -s -O3 
-g++ -c coll_impl.cpp		-o .eobjs/MacOSX/MacOSX/Run/coll_impl.o -s -O3 
-g++ -c coll_util.cpp		-o .eobjs/MacOSX/MacOSX/Run/coll_util.o -s -O3 
-g++ -c placeholderlinks.cpp		-o .eobjs/MacOSX/MacOSX/Run/placeholderlinks.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Widget_Systems/None/      && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-mkdir -p .eobjs/MacOSX/MacOSX/Run || mkdir ".eobjs/MacOSX/MacOSX/Run"
-g++ -c nowidget_impl.cpp		-o .eobjs/MacOSX/MacOSX/Run/nowidget_impl.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
 make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
