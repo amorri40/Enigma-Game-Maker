@@ -32,6 +32,7 @@ namespace enigma
 {
   struct event_parent: object_collisions
   {
+    virtual variant myevent_create() { return 0; } // No default Create code.
     virtual variant myevent_draw()
     {
   if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));

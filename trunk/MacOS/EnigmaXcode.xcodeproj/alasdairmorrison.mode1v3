@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9CCA663213C3CFC900D7F6AC</string>
+						<string>9C4A7D3B13C4293900D9534C</string>
 						<key>history</key>
 						<array>
-							<string>9CF95FA813C18EC1009DE5FB</string>
+							<string>9CCA664913C40F0D00D7F6AC</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -256,10 +256,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9CCA663313C3CFC900D7F6AC</string>
+						<string>9C4A7D3C13C4293900D9534C</string>
 						<key>history</key>
 						<array>
-							<string>9CF95FAA13C18EC1009DE5FB</string>
+							<string>9CCA664B13C40F0D00D7F6AC</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -354,11 +354,6 @@
 								<string>9CD0E2FF12115C9B00A01347</string>
 								<string>9CD0E16B1211552700A01347</string>
 								<string>9CD0E16D1211552700A01347</string>
-								<string>9CD0E1B81211552700A01347</string>
-								<string>9CFD9A8E13B2C174009575DD</string>
-								<string>9CFD9A8F13B2C174009575DD</string>
-								<string>9CFD9A9913B2C174009575DD</string>
-								<string>9CFD9A9D13B2C174009575DD</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -367,16 +362,16 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>74</integer>
+									<integer>62</integer>
+									<integer>59</integer>
 									<integer>12</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 199}, {322, 594}}</string>
+							<string>{{0, 1029}, {322, 594}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -413,7 +408,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>object.cpp</string>
+								<string>graphics_object.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -421,11 +416,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>object.cpp</string>
+										<string>graphics_object.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9CCA663113C3CFC900D7F6AC</string>
+										<string>9C4A7D3813C4293900D9534C</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -540,7 +535,6 @@
 											<string>9C0ACEAD1325374300AB1FCD</string>
 											<string>9C0ACEB01325374300AB1FCD</string>
 											<string>9C0ACEB11325374300AB1FCD</string>
-											<string>9C0ACEBB1325397C00AB1FCD</string>
 											<string>9C0ACEEB1325451A00AB1FCD</string>
 											<string>9C0D00FC1360FB390083E470</string>
 											<string>9C0D011E1360FF710083E470</string>
@@ -636,7 +630,6 @@
 											<string>9C16DC3113BAD00600F82EE5</string>
 											<string>9C16DC3613BAD09200F82EE5</string>
 											<string>9C16DC4013BAD2EA00F82EE5</string>
-											<string>9CF95EE613BE8619009DE5FB</string>
 											<string>9CF95EF813BE950C009DE5FB</string>
 											<string>9CF95EFF13BE9609009DE5FB</string>
 											<string>9CF95F0013BE9609009DE5FB</string>
@@ -647,10 +640,12 @@
 											<string>9CF95F4913C00719009DE5FB</string>
 											<string>9CF95F5713C00867009DE5FB</string>
 											<string>9CF95F9213C00D7D009DE5FB</string>
-											<string>9CF95F9313C00D7D009DE5FB</string>
 											<string>9CF95F9413C00D7D009DE5FB</string>
-											<string>9CCA662F13C3CFC900D7F6AC</string>
-											<string>9CCA663013C3CFC900D7F6AC</string>
+											<string>9CCA663C13C3E0BE00D7F6AC</string>
+											<string>9CCA663D13C3E0BE00D7F6AC</string>
+											<string>9CCA663E13C3E0BE00D7F6AC</string>
+											<string>9C4A7D3613C4293900D9534C</string>
+											<string>9C4A7D3713C4293900D9534C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -662,14 +657,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {936, 442}}</string>
+								<string>{{0, 0}, {936, 436}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>442pt</string>
+							<string>436pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -682,14 +677,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 447}, {936, 165}}</string>
+								<string>{{0, 441}, {936, 171}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>165pt</string>
+							<string>171pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -708,9 +703,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>9CCA662813C3C31900D7F6AC</string>
+				<string>9C4A7D3913C4293900D9534C</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>9CCA662913C3C31900D7F6AC</string>
+				<string>9C4A7D3A13C4293900D9534C</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -848,12 +843,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9CD0E31A12115D9300A01347</string>
 		<string>9C0D007A1360B0EF0083E470</string>
 		<string>9C27C34E139D3272009BF45A</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 125 1280 653 0 0 1280 778 </string>
@@ -933,7 +926,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>9CD0E31A12115D9300A01347</string>
-				<string>9CCA662C13C3C31900D7F6AC</string>
+				<string>9C4A7D3D13C4293900D9534C</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

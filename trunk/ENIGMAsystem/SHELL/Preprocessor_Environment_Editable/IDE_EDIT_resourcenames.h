@@ -30,8 +30,9 @@
 
 enum //object names
 {
+  tester = 0,
 };
-namespace enigma { size_t object_idmax = 0; }
+namespace enigma { size_t object_idmax = 1; }
 
 enum //sprite names
 {
@@ -66,5 +67,6 @@ namespace enigma { size_t sound_idmax = 0; }
 
 enum //room names
 {
+  rm_0 = 0,
 };
 
