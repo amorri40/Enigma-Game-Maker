@@ -33,6 +33,7 @@ namespace enigma
 {
   struct ENIGMA_global_structure: object_locals
   {
+    var petrol;
     ENIGMA_global_structure(const int x, const int y): object_locals(x,y) {}
   };
   object_basic *ENIGMA_global_instance = new ENIGMA_global_structure(global,global);

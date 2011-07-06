@@ -4103,14 +4103,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 468}}";
 			sepNavSelRange = "{2247, 12}";
-			sepNavVisRange = "{1007, 1329}";
+			sepNavVisRange = "{335, 2002}";
 		};
 	};
 	9CD0E36E1211960600A01347 /* CocoaMain.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 481}}";
 			sepNavSelRange = "{964, 0}";
-			sepNavVisRange = "{114, 1013}";
+			sepNavVisRange = "{146, 981}";
 			sepNavWindowFrame = "{{15, 75}, {750, 703}}";
 		};
 	};
@@ -4508,21 +4508,21 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 624}}";
 			sepNavSelRange = "{2367, 0}";
-			sepNavVisRange = "{1847, 774}";
+			sepNavVisRange = "{1343, 1284}";
 		};
 	};
 	9CEBA4041212D6B700FC1D14 /* EnigmaXcodeAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 715}}";
 			sepNavSelRange = "{2319, 0}";
-			sepNavVisRange = "{2015, 544}";
+			sepNavVisRange = "{1931, 718}";
 		};
 	};
 	9CEBA4061212D6D900FC1D14 /* main.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 455}}";
 			sepNavSelRange = "{2182, 0}";
-			sepNavVisRange = "{1007, 1298}";
+			sepNavVisRange = "{251, 2056}";
 		};
 	};
 	9CEBA43D1212E3E200FC1D14 /* PBXTextBookmark */ = {

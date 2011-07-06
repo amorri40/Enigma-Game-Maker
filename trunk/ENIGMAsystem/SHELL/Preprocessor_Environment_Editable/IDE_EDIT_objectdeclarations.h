@@ -44,4 +44,494 @@ namespace enigma
     object_locals() {}
     object_locals(unsigned x, int y): event_parent(x,y) {}
   };
+  
+  struct OBJ_car_down: object_locals
+  {
+    //Locals to instances of this object
+    var dead;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_collision_5();
+        variant myevent_collision_3();
+        variant myevent_collision_0();
+        variant myevent_outsideroom();
+    
+    
+    // Grouped event bases
+      void myevent_collision()
+      {
+        if (instance_number(5)) myevent_collision_5();
+        if (instance_number(3)) myevent_collision_3();
+        if (instance_number(0)) myevent_collision_0();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj0;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_outsideroom;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_collision;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj0, 0);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_outsideroom->unlink(ENOBJ_ITER_myevent_outsideroom);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      depth.remove();;
+      enigma::event_collision->unlink(ENOBJ_ITER_myevent_collision);
+    }
+    
+    OBJ_car_down(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 0)
+    {
+      sprite_index = 3;
+      visible = 1;
+      solid = 0;
+      depth.init(0, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj0 = enigma::link_obj_instance(this, 0);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_outsideroom = enigma::event_outsideroom->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_collision = enigma::event_collision->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_car_down()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj0;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_outsideroom;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_collision;
+    }
+  };
+  
+  struct OBJ_controller: object_locals
+  {
+    //Locals to instances of this object
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_alarm_0();
+        variant myevent_step();
+        variant myevent_nomorelives();
+        variant myevent_draw();
+    
+    
+    // Grouped event bases
+      void myevent_alarm()
+      {
+        myevent_alarm_0();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj1;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_nomorelives;
+      enigma::inst_iter *ENOBJ_ITER_myevent_alarm;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj1, 1);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_nomorelives->unlink(ENOBJ_ITER_myevent_nomorelives);
+      depth.remove();;
+      enigma::event_alarm->unlink(ENOBJ_ITER_myevent_alarm);
+    }
+    
+    OBJ_controller(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 1)
+    {
+      sprite_index = 1;
+      visible = 1;
+      solid = 0;
+      depth.init(0, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj1 = enigma::link_obj_instance(this, 1);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_nomorelives = enigma::event_nomorelives->add_inst(this);
+      ENOBJ_ITER_myevent_alarm = enigma::event_alarm->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_controller()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj1;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_nomorelives;
+      delete ENOBJ_ITER_myevent_alarm;
+    }
+  };
+  
+  struct OBJ_car_up: object_locals
+  {
+    //Locals to instances of this object
+    var dead;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_collision_5();
+        variant myevent_collision_3();
+        variant myevent_collision_2();
+        variant myevent_outsideroom();
+    
+    
+    // Grouped event bases
+      void myevent_collision()
+      {
+        if (instance_number(5)) myevent_collision_5();
+        if (instance_number(3)) myevent_collision_3();
+        if (instance_number(2)) myevent_collision_2();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj2;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_outsideroom;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_collision;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj2, 2);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_outsideroom->unlink(ENOBJ_ITER_myevent_outsideroom);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      depth.remove();;
+      enigma::event_collision->unlink(ENOBJ_ITER_myevent_collision);
+    }
+    
+    OBJ_car_up(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 2)
+    {
+      sprite_index = 2;
+      visible = 1;
+      solid = 0;
+      depth.init(0, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj2 = enigma::link_obj_instance(this, 2);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_outsideroom = enigma::event_outsideroom->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_collision = enigma::event_collision->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_car_up()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj2;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_outsideroom;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_collision;
+    }
+  };
+  
+  struct OBJ_car_racing: object_locals
+  {
+    //Locals to instances of this object
+    var dead;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_step();
+        variant myevent_collision_5();
+        variant myevent_collision_4();
+        variant myevent_collision_2();
+        variant myevent_collision_0();
+        variant myevent_keyboard_40();
+        variant myevent_keyboard_39();
+        variant myevent_keyboard_38();
+        variant myevent_keyboard_37();
+        variant myevent_keyboard_32();
+        variant myevent_outsideroom();
+    
+    
+    // Grouped event bases
+      void myevent_collision()
+      {
+        if (instance_number(5)) myevent_collision_5();
+        if (instance_number(4)) myevent_collision_4();
+        if (instance_number(2)) myevent_collision_2();
+        if (instance_number(0)) myevent_collision_0();
+      }
+      void myevent_keyboard()
+      {
+        if (keyboard_check(40)) myevent_keyboard_40();
+        if (keyboard_check(39)) myevent_keyboard_39();
+        if (keyboard_check(38)) myevent_keyboard_38();
+        if (keyboard_check(37)) myevent_keyboard_37();
+        if (keyboard_check(32)) myevent_keyboard_32();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj3;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_outsideroom;
+      enigma::inst_iter *ENOBJ_ITER_myevent_collision;
+      enigma::inst_iter *ENOBJ_ITER_myevent_keyboard;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj3, 3);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_outsideroom->unlink(ENOBJ_ITER_myevent_outsideroom);
+      depth.remove();;
+      enigma::event_collision->unlink(ENOBJ_ITER_myevent_collision);
+      enigma::event_keyboard->unlink(ENOBJ_ITER_myevent_keyboard);
+    }
+    
+    OBJ_car_racing(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 3)
+    {
+      sprite_index = 4;
+      visible = 1;
+      solid = 0;
+      depth.init(0, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj3 = enigma::link_obj_instance(this, 3);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_outsideroom = enigma::event_outsideroom->add_inst(this);
+      ENOBJ_ITER_myevent_collision = enigma::event_collision->add_inst(this);
+      ENOBJ_ITER_myevent_keyboard = enigma::event_keyboard->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_car_racing()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj3;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_outsideroom;
+      delete ENOBJ_ITER_myevent_collision;
+      delete ENOBJ_ITER_myevent_keyboard;
+    }
+  };
+  
+  struct OBJ_gas: object_locals
+  {
+    //Locals to instances of this object
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_outsideroom();
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj4;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_outsideroom;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj4, 4);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_outsideroom->unlink(ENOBJ_ITER_myevent_outsideroom);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      depth.remove();;
+    }
+    
+    OBJ_gas(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 4)
+    {
+      sprite_index = 5;
+      visible = 1;
+      solid = 0;
+      depth.init(10, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj4 = enigma::link_obj_instance(this, 4);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_outsideroom = enigma::event_outsideroom->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_gas()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj4;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_outsideroom;
+      delete ENOBJ_ITER_myevent_step;
+    }
+  };
+  
+  struct OBJ_police: object_locals
+  {
+    //Locals to instances of this object
+    var dead;
+    
+    //Scripts called by this object
+    
+        variant myevent_create();
+        variant myevent_destroy();
+        variant myevent_step();
+        variant myevent_collision_5();
+        variant myevent_collision_3();
+        variant myevent_collision_2();
+        variant myevent_collision_0();
+        variant myevent_outsideroom();
+    
+    
+    // Grouped event bases
+      void myevent_collision()
+      {
+        if (instance_number(5)) myevent_collision_5();
+        if (instance_number(3)) myevent_collision_3();
+        if (instance_number(2)) myevent_collision_2();
+        if (instance_number(0)) myevent_collision_0();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj5;
+      enigma::inst_iter *ENOBJ_ITER_myevent_create;
+      enigma::inst_iter *ENOBJ_ITER_myevent_destroy;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_outsideroom;
+      enigma::inst_iter *ENOBJ_ITER_myevent_collision;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj5, 5);
+      enigma::event_create->unlink(ENOBJ_ITER_myevent_create);
+      enigma::event_destroy->unlink(ENOBJ_ITER_myevent_destroy);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_outsideroom->unlink(ENOBJ_ITER_myevent_outsideroom);
+      depth.remove();;
+      enigma::event_collision->unlink(ENOBJ_ITER_myevent_collision);
+    }
+    
+    OBJ_police(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 5)
+    {
+      sprite_index = 9;
+      visible = 1;
+      solid = 0;
+      depth.init(0, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj5 = enigma::link_obj_instance(this, 5);
+      ENOBJ_ITER_myevent_create = enigma::event_create->add_inst(this);
+      ENOBJ_ITER_myevent_destroy = enigma::event_destroy->add_inst(this);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_outsideroom = enigma::event_outsideroom->add_inst(this);
+      ENOBJ_ITER_myevent_collision = enigma::event_collision->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_police()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj5;
+      delete ENOBJ_ITER_myevent_create;
+      delete ENOBJ_ITER_myevent_destroy;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_outsideroom;
+      delete ENOBJ_ITER_myevent_collision;
+    }
+  };
+  
+  struct OBJ_controller_start: object_locals
+  {
+    //Locals to instances of this object
+    
+    //Scripts called by this object
+    
+        variant myevent_step();
+        variant myevent_keyboard_1();
+        variant myevent_gamestart();
+        variant myevent_draw();
+    
+    
+    // Grouped event bases
+      void myevent_keyboard()
+      {
+        if (keyboard_check(1)) myevent_keyboard_1();
+      }
+    
+    // Self-tracking
+      enigma::pinstance_list_iterator ENOBJ_ITER_me;
+      enigma::inst_iter *ENOBJ_ITER_myobj6;
+      enigma::inst_iter *ENOBJ_ITER_myevent_step;
+      enigma::inst_iter *ENOBJ_ITER_myevent_gamestart;
+      enigma::inst_iter *ENOBJ_ITER_myevent_keyboard;
+
+    void unlink()
+    {
+      instance_iter_queue_for_destroy(ENOBJ_ITER_me); // Queue for delete while we're still valid
+      enigma::unlink_main(ENOBJ_ITER_me); // Remove this instance from the non-redundant, tree-structured list.
+      unlink_object_id_iter(ENOBJ_ITER_myobj6, 6);
+      enigma::event_step->unlink(ENOBJ_ITER_myevent_step);
+      enigma::event_gamestart->unlink(ENOBJ_ITER_myevent_gamestart);
+      depth.remove();;
+      enigma::event_keyboard->unlink(ENOBJ_ITER_myevent_keyboard);
+    }
+    
+    OBJ_controller_start(int enigma_genericconstructor_newinst_x = 0, int enigma_genericconstructor_newinst_y = 0, const int id = (enigma::maxid++)): object_locals(id, 6)
+    {
+      sprite_index = 1;
+      visible = 1;
+      solid = 0;
+      depth.init(-100, this);
+      ENOBJ_ITER_me = enigma::link_instance(this);
+      ENOBJ_ITER_myobj6 = enigma::link_obj_instance(this, 6);
+      ENOBJ_ITER_myevent_step = enigma::event_step->add_inst(this);
+      ENOBJ_ITER_myevent_gamestart = enigma::event_gamestart->add_inst(this);
+      ENOBJ_ITER_myevent_keyboard = enigma::event_keyboard->add_inst(this);
+      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;
+      enigma::constructor(this);
+      myevent_create();
+    }
+    
+    ~OBJ_controller_start()
+    {
+      enigma::winstance_list_iterator_delete(ENOBJ_ITER_me);
+      delete ENOBJ_ITER_myobj6;
+      delete ENOBJ_ITER_myevent_step;
+      delete ENOBJ_ITER_myevent_gamestart;
+      delete ENOBJ_ITER_myevent_keyboard;
+    }
+  };
 }

@@ -47,7 +47,7 @@ int getWindowDimension(int i)
 }
 
 void cocoa_window_set_size(unsigned int w,unsigned int h) {
-	NSRect rect = NSMakeRect(0,0,w,h+22);
+	NSRect rect = NSMakeRect([[delegate window] frame].origin.x,[[delegate window] frame].origin.y,w,h+22);
 	[[delegate window] setFrame:rect display:YES ];
 	
 }

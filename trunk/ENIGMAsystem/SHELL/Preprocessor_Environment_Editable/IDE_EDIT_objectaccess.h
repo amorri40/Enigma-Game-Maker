@@ -39,4 +39,14 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
+  var dummy_0; // Referenced by 1 accessors
+  var  &varaccess_petrol(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->petrol;
+    }
+    return dummy_0;
+  }
 } // namespace enigma

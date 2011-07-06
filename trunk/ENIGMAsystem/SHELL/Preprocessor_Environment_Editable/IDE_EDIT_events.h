@@ -30,20 +30,61 @@
 
 namespace enigma
 {
-  event_iter *event_draw; // Defined in 0 objects
-  event_iter *event_step; // Defined in 0 objects
+  event_iter *event_alarm; // Defined in 1 objects
+  event_iter *event_collision; // Defined in 14 objects
+  event_iter *event_create; // Defined in 6 objects
+  event_iter *event_destroy; // Defined in 1 objects
+  event_iter *event_draw; // Defined in 2 objects
+  event_iter *event_gamestart; // Defined in 1 objects
+  event_iter *event_keyboard; // Defined in 6 objects
+  event_iter *event_nomorelives; // Defined in 1 objects
+  event_iter *event_outsideroom; // Defined in 5 objects
+  event_iter *event_step; // Defined in 4 objects
   int event_system_initialize()
   {
-    events = new event_iter[2]; // Allocated here; not really meant to change.
-    objects = new objectid_base[1]; // Allocated here; not really meant to change.
-    event_draw = events + 0;  event_draw->name = "Draw";
-    event_step = events + 1;  event_step->name = "Step";
+    events = new event_iter[10]; // Allocated here; not really meant to change.
+    objects = new objectid_base[7]; // Allocated here; not really meant to change.
+    event_alarm = events + 0;  event_alarm->name = "Alarm ...";
+    event_collision = events + 1;  event_collision->name = "obj_0";
+    event_create = events + 2;  event_create->name = "Create";
+    event_destroy = events + 3;  event_destroy->name = "Destroy";
+    event_draw = events + 4;  event_draw->name = "Draw";
+    event_gamestart = events + 5;  event_gamestart->name = "Game Start";
+    event_keyboard = events + 6;  event_keyboard->name = "Keyboard <key1>";
+    event_nomorelives = events + 7;  event_nomorelives->name = "No More Lives";
+    event_outsideroom = events + 8;  event_outsideroom->name = "Outside Room";
+    event_step = events + 9;  event_step->name = "Step";
     return 0;
   }
   int ENIGMA_events()
   {
+    for (instance_event_iterator = event_alarm->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_alarm();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_keyboard->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_keyboard();
+    
+    enigma::update_globals();
+    
     for (instance_event_iterator = event_step->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
       ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_step();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_outsideroom->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_outsideroom();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_collision->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_collision();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_nomorelives->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_nomorelives();
     
     enigma::update_globals();
     
