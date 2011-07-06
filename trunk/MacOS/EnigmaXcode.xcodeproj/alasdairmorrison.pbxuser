@@ -922,7 +922,7 @@
 		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
 		name = "WindowFunctions.m: 79";
 		rLen = 0;
-		rLoc = 3391;
+		rLoc = 3457;
 		rType = 0;
 		vrLen = 1102;
 		vrLoc = 1343;
@@ -3656,7 +3656,7 @@
 	};
 	9CD0E1781211552700A01347 /* graphics_object.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1417}}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 1430}}";
 			sepNavSelRange = "{2611, 0}";
 			sepNavVisRange = "{2262, 720}";
 			sepNavWindowFrame = "{{496, -6}, {900, 723}}";
@@ -4116,9 +4116,9 @@
 	};
 	9CD0E36F1211960600A01347 /* CocoaWindow.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1692, 5083}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1692, 5447}}";
 			sepNavSelRange = "{11348, 13}";
-			sepNavVisRange = "{11040, 523}";
+			sepNavVisRange = "{1955, 794}";
 			sepNavWindowFrame = "{{15, 67}, {750, 711}}";
 		};
 	};
@@ -4673,9 +4673,9 @@
 	};
 	9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1534}}";
-			sepNavSelRange = "{3391, 0}";
-			sepNavVisRange = "{1343, 1102}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 1274}}";
+			sepNavSelRange = "{2844, 0}";
+			sepNavVisRange = "{2361, 896}";
 		};
 	};
 	9CEBA59C1213815F00FC1D14 /* EnigmaIphone */ = {
