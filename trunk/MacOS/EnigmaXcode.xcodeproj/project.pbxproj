@@ -118,7 +118,6 @@
 		9CD0E2841211552800A01347 /* synthesis.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E1411211552700A01347 /* synthesis.c */; };
 		9CD0E2851211552800A01347 /* vorbisfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E1421211552700A01347 /* vorbisfile.c */; };
 		9CD0E2861211552800A01347 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E1431211552700A01347 /* window.c */; };
-		9CD0E28F1211552800A01347 /* graphics_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E1771211552700A01347 /* graphics_object.cpp */; };
 		9CD0E2901211552800A01347 /* GSblend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E1791211552700A01347 /* GSblend.cpp */; };
 		9CD0E2911211552800A01347 /* GScolors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E17B1211552700A01347 /* GScolors.cpp */; };
 		9CD0E2921211552800A01347 /* GSenable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0E17D1211552700A01347 /* GSenable.cpp */; };
@@ -645,7 +644,6 @@
 		9CD0E1691211552700A01347 /* simple_makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simple_makefile; sourceTree = "<group>"; };
 		9CD0E16C1211552700A01347 /* graphics_mandatory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_mandatory.h; sourceTree = "<group>"; };
 		9CD0E16E1211552700A01347 /* EGMenable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMenable.h; sourceTree = "<group>"; };
-		9CD0E1771211552700A01347 /* graphics_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics_object.cpp; sourceTree = "<group>"; };
 		9CD0E1781211552700A01347 /* graphics_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_object.h; sourceTree = "<group>"; };
 		9CD0E1791211552700A01347 /* GSblend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GSblend.cpp; sourceTree = "<group>"; };
 		9CD0E17A1211552700A01347 /* GSblend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSblend.h; sourceTree = "<group>"; };
@@ -1781,7 +1779,6 @@
 				9CAB7F0F12245C1B00B1DAD6 /* GStextures.cpp */,
 				9CAB7F1012245C1B00B1DAD6 /* GStextures.h */,
 				9CD0E16E1211552700A01347 /* EGMenable.h */,
-				9CD0E1771211552700A01347 /* graphics_object.cpp */,
 				9CD0E1781211552700A01347 /* graphics_object.h */,
 				9CD0E1791211552700A01347 /* GSblend.cpp */,
 				9CD0E17A1211552700A01347 /* GSblend.h */,
@@ -2283,7 +2280,6 @@
 				9CD0E2841211552800A01347 /* synthesis.c in Sources */,
 				9CD0E2851211552800A01347 /* vorbisfile.c in Sources */,
 				9CD0E2861211552800A01347 /* window.c in Sources */,
-				9CD0E28F1211552800A01347 /* graphics_object.cpp in Sources */,
 				9CD0E2901211552800A01347 /* GSblend.cpp in Sources */,
 				9CD0E2911211552800A01347 /* GScolors.cpp in Sources */,
 				9CD0E2921211552800A01347 /* GSenable.cpp in Sources */,

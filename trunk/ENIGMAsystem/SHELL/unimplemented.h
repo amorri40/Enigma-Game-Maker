@@ -262,8 +262,8 @@ int choose(var n, ...) {
 /*
 Collision checking
 */
-bool collision_point(int x, int y, int obj, int prec, bool notme) { return false;}// This function tests whether at point (x,y) there is a collision with entities of object obj.
-bool collision_rectangle(int x1, int y1, int x2, int y2, int obj, int prec, bool notme) {return false;}// This function tests whether there is a collision between the (filled) rectangle with the indicated opposite corners and entities of object obj. For example, you can use this to test whether an area is free of obstacles.
+//bool collision_point(int x, int y, int obj, int prec, bool notme) { return false;}// This function tests whether at point (x,y) there is a collision with entities of object obj.
+//bool collision_rectangle(int x1, int y1, int x2, int y2, int obj, int prec, bool notme) {return false;}// This function tests whether there is a collision between the (filled) rectangle with the indicated opposite corners and entities of object obj. For example, you can use this to test whether an area is free of obstacles.
 bool collision_circle(int xc, int yc, int radius, int obj, int prec, bool notme) {return false;}//This function tests whether there is a collision between the (filled) circle centered at position (xc,yc) with the given radius and entities of object obj. For example, you can use this to test whether there is an object close to a particular location.
 bool collision_ellipse(int x1, int y1, int x2, int y2, int obj, int prec, bool notme) {return false;}//This function tests whether there is a collision between the (filled) ellipse with the indicated opposite corners and entities of object obj.
 

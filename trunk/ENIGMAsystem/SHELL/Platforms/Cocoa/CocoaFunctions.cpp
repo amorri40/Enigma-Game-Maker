@@ -84,7 +84,7 @@ enigma::initialize_everything();
 
 
 void key_press(int keycode) {
-    printf("Keycode pressed: %d",keycode); //useful to create the keymap array
+    //printf("Keycode pressed: %d",keycode); //useful to create the keymap array
 	int actualKey = enigma::keymap[keycode];
 	
 	if (cocoa_keybdstatus[actualKey]==1) {

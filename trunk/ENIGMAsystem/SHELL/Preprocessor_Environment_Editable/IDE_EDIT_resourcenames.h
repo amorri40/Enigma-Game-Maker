@@ -30,44 +30,32 @@
 
 enum //object names
 {
-  car_down = 0,
-  controller = 1,
-  car_up = 2,
-  car_racing = 3,
-  gas = 4,
-  police = 5,
-  controller_start = 6,
+  obj_sprite = 25,
+  obj_object = 26,
+  obj_track = 53,
+  obj_wall = 65,
+  obj_solid = 66,
 };
-namespace enigma { size_t object_idmax = 7; }
+namespace enigma { size_t object_idmax = 67; }
 
 enum //sprite names
 {
-  sprite_controller = 1,
-  sprite_car_up = 2,
-  sprite_car_down = 3,
-  sprite_racing = 4,
-  sprite_gas = 5,
-  sprite_racing_dead = 6,
-  sprite_car_down_dead = 7,
-  sprite_car_up_dead = 8,
-  sprite_police = 9,
-  sprite_police_dead = 10,
+  spr_controller = 33,
+  spr_track = 56,
+  spr_wall = 72,
 };
-namespace enigma { size_t sprite_idmax = 11; }
+namespace enigma { size_t sprite_idmax = 73; }
 
 enum //background names
 {
-  background0 = 0,
 };
-namespace enigma { size_t background_idmax = 1; }
+namespace enigma { size_t background_idmax = 0; }
 
 enum //font names
 {
   EnigmaDefault = -1,
-  font_small = 0,
-  font_large = 1,
 };
-namespace enigma { size_t font_idmax = 2; }
+namespace enigma { size_t font_idmax = 0; }
 
 enum //timeline names
 {
@@ -81,17 +69,11 @@ namespace enigma { size_t path_idmax = 0; }
 
 enum //sound names
 {
-  background_music = 0,
-  horn = 1,
-  collision = 2,
-  sirens = 3,
-  gas_sound = 6,
 };
-namespace enigma { size_t sound_idmax = 7; }
+namespace enigma { size_t sound_idmax = 0; }
 
 enum //room names
 {
-  room0 = 0,
-  room1 = 1,
+  rm_1 = 0,
 };
 

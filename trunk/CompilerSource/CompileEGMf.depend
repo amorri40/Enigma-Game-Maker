@@ -883,7 +883,7 @@
 	"../general/parse_basics.h"
 	"cfile_parse.h"
 
-1303334612 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/general/parse_basics.h
+1309558350 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/general/parse_basics.h
 
 1303334612 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/cfile_parse.h
 	"cparse_shared.h"
@@ -957,7 +957,7 @@
 	"value.h"
 	"macro_functions.h"
 
-1303334612 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/handle_letters.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/handle_letters.cpp
 	<stack>
 	<string>
 	<iostream>
@@ -969,7 +969,7 @@
 	"macro_functions.h"
 	"../general/parse_basics.h"
 
-1303334612 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/keyword_operator.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/keyword_operator.cpp
 	<map>
 	<string>
 	<iostream>
@@ -1030,8 +1030,9 @@
 	"../externs/externs.h"
 	"../parser/object_storage.h"
 
-1308798187 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/object_storage.h
+1309558350 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/object_storage.h
 	<map>
+	<string>
 	<vector>
 	"../general/darray.h"
 
@@ -1219,7 +1220,7 @@
 	"../compile_common.h"
 	"../../backend/ideprint.h"
 
-1308798187 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/parse_and_link.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/parse_and_link.cpp
 	<stdio.h>
 	<iostream>
 	"../../backend/ideprint.h"
@@ -1232,7 +1233,7 @@
 	"../event_reader/event_parser.h"
 	<math.h>
 
-1303334607 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.h
+1309558350 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.h
 	<string>
 	<vector>
 	<map>
@@ -1249,7 +1250,7 @@
 	"../compile_common.h"
 	"../event_reader/event_parser.h"
 
-1303334608 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_defragged_events.cpp
+1309994673 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_defragged_events.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1273,7 +1274,7 @@
 
 1303334609 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/reshandlers/refont.h
 
-1303334607 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.cpp
+1309994779 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string>
@@ -1415,7 +1416,7 @@
 	"JavaStruct.h"
 	"util/Image.h"
 
-1309316454 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
 	"../OS_Switchboard.h"
 	"../backend/EnigmaStruct.h"
 	"../general/darray.h"
@@ -1475,7 +1476,7 @@
 	"../event_reader/event_parser.h"
 	"../../parser/object_storage.h"
 
-1308694320 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1484,6 +1485,7 @@
 	"../../backend/EnigmaStruct.h"
 	"../compile_common.h"
 	"../event_reader/event_parser.h"
+	"../../general/parse_basics.h"
 
 1308694320 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_room_data.cpp
 	<stdio.h>
@@ -1536,7 +1538,7 @@
 	"object_storage.h"
 	"../externs/externs.h"
 
-1308753740 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/object_storage.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/object_storage.cpp
 	<map>
 	<string>
 	<stdio.h>
@@ -1549,7 +1551,7 @@
 	<vector>
 	"../backend/ideprint.h"
 
-1308798187 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.cpp
+1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.cpp
 	<map>
 	<string>
 	<iostream>

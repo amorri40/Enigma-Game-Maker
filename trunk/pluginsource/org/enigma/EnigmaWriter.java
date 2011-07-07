@@ -928,9 +928,9 @@ public final class EnigmaWriter
 						for (int i = 0; i < args.size(); i++)
 							{
 							
-							if ( (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")) && args.size()>7) continue; //required with due to bug with CLI which thinks actions with no arguments have >7!
+							if ( (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")||toString(args.get(i)).equals(" ")) && args.size()>7) continue; //required with due to bug with CLI which thinks actions with no arguments have >7!
 							if (i != 0) code.append(',');
-							if (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")) code.append("0");
+							if (toString(args.get(i)).equals("")||toString(args.get(i)).equals(" ")||toString(args.get(i)).equals("  ")) code.append("0");
 							
 							code.append(toString(args.get(i)));
 							}

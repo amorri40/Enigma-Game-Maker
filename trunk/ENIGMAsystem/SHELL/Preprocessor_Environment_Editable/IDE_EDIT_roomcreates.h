@@ -33,8 +33,3 @@ void roomcreate0()
   ;
   
 }
-void roomcreate1()
-{
-  ;
-  
-}

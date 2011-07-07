@@ -29,12 +29,13 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 namespace enigma {
-  int room_loadtimecount = 2;
-  roomstruct grd_rooms[2] = {
+  int room_loadtimecount = 1;
+  roomstruct grd_rooms[1] = {
     //Room 0
-    { 0, "room0",  "Street Racing",
-      0xc0c0c0, roomcreate0,
-      640, 480, 40,  false, {
+    { 0, "rm_1",  "",
+      0xe6c2a4, roomcreate0,
+      640, 480, 60,  false, {
+      { 0,   0, 0, 1000, 1000,   0, 0, 640, 640,   -1,   200, 200,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
@@ -42,8 +43,7 @@ namespace enigma {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-}, {      { true,   false,   0,   0,   0,   0,   3,   false,   true,   false },
+}, {      { false,   false,   -1,   0,   0,   0,   2,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
@@ -51,32 +51,10 @@ namespace enigma {
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      3,       (enigma::inst*)(int[]){100035,0,60,96,100036,2,280,192,100037,6,0,0,  0,0,0,0}
-    },
-    //Room 1
-    { 1, "room1",  "Street Racing",
-      0xc0c0c0, roomcreate1,
-      640, 480, 40,  false, {
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-}, {      { true,   false,   0,   0,   0,   0,   3,   false,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      4,       (enigma::inst*)(int[]){100030,1,0,0,100034,3,200,240,100035,0,60,96,100036,2,280,192,  0,0,0,0}
+      },      5,       (enigma::inst*)(int[]){100327,26,352,48,100328,65,0,464,100329,65,608,464,100331,53,16,464,100332,53,0,0,  0,0,0,0}
     },
   };
   
-  int room_max = 1 + 1;
-  int maxid = 100037 + 1;
+  int room_max = 0 + 1;
+  int maxid = 100332 + 1;
 } // Namespace enigma
