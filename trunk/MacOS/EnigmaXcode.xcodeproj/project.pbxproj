@@ -32,6 +32,10 @@
 		9C0D01DB1361E2A00083E470 /* highscore_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D01D91361E2A00083E470 /* highscore_functions.cpp */; };
 		9C3829541215459C007B24C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3829531215459C007B24C5 /* CoreGraphics.framework */; };
 		9C382B231215685D007B24C5 /* iPhone-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C382B221215685D007B24C5 /* iPhone-Info.plist */; };
+		9C3B47BC13C567390015E8E2 /* multifunction_variant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */; };
+		9C3B47BD13C567390015E8E2 /* resource_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B47B913C567390015E8E2 /* resource_data.cpp */; };
+		9C3B47BE13C567390015E8E2 /* multifunction_variant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */; };
+		9C3B47BF13C567390015E8E2 /* resource_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B47B913C567390015E8E2 /* resource_data.cpp */; };
 		9C4A7D4213C4333E00D9534C /* graphics_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A7D4013C4333E00D9534C /* graphics_object.cpp */; };
 		9C4A7D4313C4333F00D9534C /* graphics_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A7D4013C4333E00D9534C /* graphics_object.cpp */; };
 		9CAB7F1212245C1B00B1DAD6 /* GStextures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB7F0F12245C1B00B1DAD6 /* GStextures.cpp */; };
@@ -369,6 +373,12 @@
 		9C0D01D91361E2A00083E470 /* highscore_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = highscore_functions.cpp; sourceTree = "<group>"; };
 		9C3829531215459C007B24C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C382B221215685D007B24C5 /* iPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhone-Info.plist"; sourceTree = "<group>"; };
+		9C3B47B613C567390015E8E2 /* instance_system_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_base.h; sourceTree = "<group>"; };
+		9C3B47B713C567390015E8E2 /* instance_system_frontend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_frontend.h; sourceTree = "<group>"; };
+		9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multifunction_variant.cpp; sourceTree = "<group>"; };
+		9C3B47B913C567390015E8E2 /* resource_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_data.cpp; sourceTree = "<group>"; };
+		9C3B47BA13C567390015E8E2 /* resource_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource_data.h; sourceTree = "<group>"; };
+		9C3B47BB13C567390015E8E2 /* with.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = with.h; sourceTree = "<group>"; };
 		9C4A7D4013C4333E00D9534C /* graphics_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics_object.cpp; sourceTree = "<group>"; };
 		9C4A7D4113C4333E00D9534C /* graphics_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_object.h; sourceTree = "<group>"; };
 		9C6FA5811213ABF300F930EA /* TestEnigmaIphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TestEnigmaIphone.app; path = build/Debug/TestEnigmaIphone.app; sourceTree = "<group>"; };
@@ -1815,6 +1825,12 @@
 		9CD0E1B81211552700A01347 /* Universal_System */ = {
 			isa = PBXGroup;
 			children = (
+				9C3B47B613C567390015E8E2 /* instance_system_base.h */,
+				9C3B47B713C567390015E8E2 /* instance_system_frontend.h */,
+				9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */,
+				9C3B47B913C567390015E8E2 /* resource_data.cpp */,
+				9C3B47BA13C567390015E8E2 /* resource_data.h */,
+				9C3B47BB13C567390015E8E2 /* with.h */,
 				9C4A7D4013C4333E00D9534C /* graphics_object.cpp */,
 				9C4A7D4113C4333E00D9534C /* graphics_object.h */,
 				9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */,
@@ -2347,6 +2363,8 @@
 				9CFD9AB313B2C1C0009575DD /* dynamic_args.cpp in Sources */,
 				9CF95F1C13BE98BD009DE5FB /* depth_draw.cpp in Sources */,
 				9C4A7D4213C4333E00D9534C /* graphics_object.cpp in Sources */,
+				9C3B47BC13C567390015E8E2 /* multifunction_variant.cpp in Sources */,
+				9C3B47BD13C567390015E8E2 /* resource_data.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2503,6 +2521,8 @@
 				9CFD9AB413B2C1C0009575DD /* dynamic_args.cpp in Sources */,
 				9CF95F1D13BE98BD009DE5FB /* depth_draw.cpp in Sources */,
 				9C4A7D4313C4333F00D9534C /* graphics_object.cpp in Sources */,
+				9C3B47BE13C567390015E8E2 /* multifunction_variant.cpp in Sources */,
+				9C3B47BF13C567390015E8E2 /* resource_data.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

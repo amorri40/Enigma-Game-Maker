@@ -1,0 +1,20 @@
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:36:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:68:1: warning: "types_binary_bitwise_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:33:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:68:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:36:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:78:1: warning: "types_binary_assign_extrapolate_declare" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:33:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:78:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:36:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:130:1: warning: "types_binary_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:33:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:130:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:36:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:133:1: warning: "types_binary_extrapolate_alldecce" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var4.cpp:33:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/var_te.h:133:1: warning: this is the location of the previous definition

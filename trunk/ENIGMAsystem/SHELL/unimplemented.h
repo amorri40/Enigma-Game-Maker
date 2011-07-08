@@ -864,6 +864,11 @@ void file_close() {}
 void file_open_write(string fname) {}
 int file_open_append(string fname) {}
 void action_draw_font(string str) {}
+
+//action_draw_font(Arial, 12, 32896, 1, 1, 0, 0);
+#define action_draw_font(arg1,arg2,arg3,arg4,arg5,arg6,arg7) action_draw_font(arg1)
+
+
 int irandom_range(int i, int j) {}
 int enigma_make_color(int r, int g, int b) {} 
 void move_contact(double x) {}
@@ -1300,5 +1305,6 @@ void sprite_set_offset(int ind, int xoff, int yoff) {}
 string get_open_filename(string filter, string fname){
     return "/Users/alasdairmorrison/Documents/Game Maker/64D general/64D Last 0to10/physics/physics_1.txt";
 }
+
 
 

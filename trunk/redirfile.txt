@@ -21,10 +21,10 @@ make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
 make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
-In file included from SHELLmain.cpp:92:
+In file included from SHELLmain.cpp:99:
 unimplemented.h:340:6: warning: #warning "ds_list_create not implemented"
-In file included from SHELLmain.cpp:92:
+In file included from SHELLmain.cpp:99:
 unimplemented.h: In function ‘void show_debug_message(std::string)’:
-unimplemented.h:1189: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
-unimplemented.h:1189: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
+unimplemented.h:1194: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
+unimplemented.h:1194: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
 Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode

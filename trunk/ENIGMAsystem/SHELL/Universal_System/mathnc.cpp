@@ -207,3 +207,6 @@ double random(double n) //Do not fix. Based off of Delphi prng
 int random_set_seed(int seed){return enigma::Random_Seed=seed;}
 int random_get_seed(){return enigma::Random_Seed;}
 int randomize(){return enigma::Random_Seed=random32();}
+
+
+

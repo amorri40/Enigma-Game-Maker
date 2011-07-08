@@ -39,289 +39,990 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 29 accessors
-  var  &varaccess_fa_center(int x)
+  var dummy_0; // Referenced by 71 accessors
+  var  &varaccess_CKNomountain(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->fa_center;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->fa_center;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKNomountain;
+      case TALLYuptheeraBC: return ((OBJ_TALLYuptheeraBC*)inst)->CKNomountain;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKNomountain;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKNomountain;
     }
     return dummy_0;
   }
-  var  &varaccess_i(int x)
+  var  &varaccess_CKThebunnydeath(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->i;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKThebunnydeath;
+      case thebunnyofearth: return ((OBJ_thebunnyofearth*)inst)->CKThebunnydeath;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKThebunnydeath;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKThebunnydeath;
     }
     return dummy_0;
   }
-  var  &varaccess_joint_dist(int x)
+  var  &varaccess_CKTheforests(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->joint_dist;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->joint_dist;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKTheforests;
+      case treesofglory: return ((OBJ_treesofglory*)inst)->CKTheforests;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKTheforests;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKTheforests;
     }
     return dummy_0;
   }
-  var  &varaccess_joint_max(int x)
+  var  &varaccess_CKThegold(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->joint_max;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->joint_max;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKThegold;
+      case goldishere: return ((OBJ_goldishere*)inst)->CKThegold;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKThegold;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKThegold;
     }
     return dummy_0;
   }
-  var  &varaccess_joint_min(int x)
+  var  &varaccess_CKTheplagues(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->joint_min;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->joint_min;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKTheplagues;
+      case fliesaredefeated: return ((OBJ_fliesaredefeated*)inst)->CKTheplagues;
+      case thebloodyplague: return ((OBJ_thebloodyplague*)inst)->CKTheplagues;
+      case thedeathplaguee: return ((OBJ_thedeathplaguee*)inst)->CKTheplagues;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKTheplagues;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKTheplagues;
     }
     return dummy_0;
   }
-  var  &varaccess_joint_numb(int x)
+  var  &varaccess_CKThesilver(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->joint_numb;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->joint_numb;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKThesilver;
+      case silverishere: return ((OBJ_silverishere*)inst)->CKThesilver;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKThesilver;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKThesilver;
     }
     return dummy_0;
   }
-  var  &varaccess_joint_point(int x)
+  var  &varaccess_CKThetreecity(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->joint_point;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->joint_point;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->CKThetreecity;
+      case treecitybarb: return ((OBJ_treecitybarb*)inst)->CKThetreecity;
+      case treecitybarbrabbit: return ((OBJ_treecitybarbrabbit*)inst)->CKThetreecity;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->CKThetreecity;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->CKThetreecity;
     }
     return dummy_0;
   }
-  var  &varaccess_object(int x)
+  var  &varaccess_advancedcitycheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object;
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->advancedcitycheck;
+      case thefuturenycity: return ((OBJ_thefuturenycity*)inst)->advancedcitycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->advancedcitycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->advancedcitycheck;
     }
     return dummy_0;
   }
-  var  &varaccess_object_number(int x)
+  var  &varaccess_areallbuttonsgone(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object_number;
+      case treebutton: return ((OBJ_treebutton*)inst)->areallbuttonsgone;
+      case lightnenigmainbutton: return ((OBJ_lightnenigmainbutton*)inst)->areallbuttonsgone;
+      case raenigmainbutton: return ((OBJ_raenigmainbutton*)inst)->areallbuttonsgone;
+      case earthquakebutton: return ((OBJ_earthquakebutton*)inst)->areallbuttonsgone;
+      case asteroidbutton: return ((OBJ_asteroidbutton*)inst)->areallbuttonsgone;
+      case scorchbutton: return ((OBJ_scorchbutton*)inst)->areallbuttonsgone;
+      case rabbitbutton: return ((OBJ_rabbitbutton*)inst)->areallbuttonsgone;
+      case wenigmaindbutton: return ((OBJ_wenigmaindbutton*)inst)->areallbuttonsgone;
+      case manbutton: return ((OBJ_manbutton*)inst)->areallbuttonsgone;
+      case Xednouse: return ((OBJ_Xednouse*)inst)->areallbuttonsgone;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->areallbuttonsgone;
+      case CheckendofERA: return ((OBJ_CheckendofERA*)inst)->areallbuttonsgone;
+      case TALLYuptheeraBC: return ((OBJ_TALLYuptheeraBC*)inst)->areallbuttonsgone;
+      case volcanobutton: return ((OBJ_volcanobutton*)inst)->areallbuttonsgone;
+      case fishbutton: return ((OBJ_fishbutton*)inst)->areallbuttonsgone;
+      case floodbutton: return ((OBJ_floodbutton*)inst)->areallbuttonsgone;
+      case enigmafreezebutton: return ((OBJ_enigmafreezebutton*)inst)->areallbuttonsgone;
+      case goldbutton: return ((OBJ_goldbutton*)inst)->areallbuttonsgone;
+      case heaenigmatmajorbutton: return ((OBJ_heaenigmatmajorbutton*)inst)->areallbuttonsgone;
+      case itsasignbutton: return ((OBJ_itsasignbutton*)inst)->areallbuttonsgone;
+      case TALLYuptheeraAD1: return ((OBJ_TALLYuptheeraAD1*)inst)->areallbuttonsgone;
+      case raenigmain2button: return ((OBJ_raenigmain2button*)inst)->areallbuttonsgone;
+      case gold2button: return ((OBJ_gold2button*)inst)->areallbuttonsgone;
+      case farmenigmaingbutton: return ((OBJ_farmenigmaingbutton*)inst)->areallbuttonsgone;
+      case Pfliesbutton: return ((OBJ_Pfliesbutton*)inst)->areallbuttonsgone;
+      case restbutton: return ((OBJ_restbutton*)inst)->areallbuttonsgone;
+      case rest2button: return ((OBJ_rest2button*)inst)->areallbuttonsgone;
+      case itsanothersignbutton: return ((OBJ_itsanothersignbutton*)inst)->areallbuttonsgone;
+      case catapultybutton: return ((OBJ_catapultybutton*)inst)->areallbuttonsgone;
+      case silverbutton: return ((OBJ_silverbutton*)inst)->areallbuttonsgone;
+      case fish2button: return ((OBJ_fish2button*)inst)->areallbuttonsgone;
+      case flood2button: return ((OBJ_flood2button*)inst)->areallbuttonsgone;
+      case TALLYuptheeraAD500: return ((OBJ_TALLYuptheeraAD500*)inst)->areallbuttonsgone;
+      case TALLYuptheeraAD1000: return ((OBJ_TALLYuptheeraAD1000*)inst)->areallbuttonsgone;
+      case Pbloodbutton: return ((OBJ_Pbloodbutton*)inst)->areallbuttonsgone;
+      case rest3button: return ((OBJ_rest3button*)inst)->areallbuttonsgone;
+      case oilbutton: return ((OBJ_oilbutton*)inst)->areallbuttonsgone;
+      case lightnenigmain3button: return ((OBJ_lightnenigmain3button*)inst)->areallbuttonsgone;
+      case silver2button: return ((OBJ_silver2button*)inst)->areallbuttonsgone;
+      case TALLYuptheeraAD1500: return ((OBJ_TALLYuptheeraAD1500*)inst)->areallbuttonsgone;
+      case Pdeathbutton: return ((OBJ_Pdeathbutton*)inst)->areallbuttonsgone;
+      case rest4button: return ((OBJ_rest4button*)inst)->areallbuttonsgone;
+      case fuelbutton: return ((OBJ_fuelbutton*)inst)->areallbuttonsgone;
+      case medicalbutton: return ((OBJ_medicalbutton*)inst)->areallbuttonsgone;
+      case TALLYuptheeraAD2000: return ((OBJ_TALLYuptheeraAD2000*)inst)->areallbuttonsgone;
+      case rest5button: return ((OBJ_rest5button*)inst)->areallbuttonsgone;
+      case peacebutton: return ((OBJ_peacebutton*)inst)->areallbuttonsgone;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->areallbuttonsgone;
     }
     return dummy_0;
   }
-  var  &varaccess_point_collision(int x)
+  var  &varaccess_bunniesbcdeathcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_collision;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_collision;
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->bunniesbcdeathcheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->bunniesbcdeathcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->bunniesbcdeathcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->bunniesbcdeathcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_friction(int x)
+  var  &varaccess_canyoncheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_friction;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_friction;
+      case thehugecrack: return ((OBJ_thehugecrack*)inst)->canyoncheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->canyoncheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->canyoncheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->canyoncheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_numb(int x)
+  var  &varaccess_castlecheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_numb;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_numb;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->castlecheck;
+      case thecastleplace: return ((OBJ_thecastleplace*)inst)->castlecheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->castlecheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->castlecheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_radius(int x)
+  var  &varaccess_checkmarkpercentage(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_radius;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_radius;
+      case checkicon: return ((OBJ_checkicon*)inst)->checkmarkpercentage;
+      case thecheckenigmanew: return ((OBJ_thecheckenigmanew*)inst)->checkmarkpercentage;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->checkmarkpercentage;
+      case showpercentcompl: return ((OBJ_showpercentcompl*)inst)->checkmarkpercentage;
+      case thearchivebutlock: return ((OBJ_thearchivebutlock*)inst)->checkmarkpercentage;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->checkmarkpercentage;
     }
     return dummy_0;
   }
-  var  &varaccess_point_stationary(int x)
+  var  &varaccess_comettomountain(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_stationary;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_stationary;
+      case groundedcomet: return ((OBJ_groundedcomet*)inst)->comettomountain;
+      case EndofTURNBC: return ((OBJ_EndofTURNBC*)inst)->comettomountain;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->comettomountain;
+      case EndofTURNAD1: return ((OBJ_EndofTURNAD1*)inst)->comettomountain;
+      case EndofTURNAD500: return ((OBJ_EndofTURNAD500*)inst)->comettomountain;
+      case EndofTURNAD1000: return ((OBJ_EndofTURNAD1000*)inst)->comettomountain;
+      case EndofTURNAD1500: return ((OBJ_EndofTURNAD1500*)inst)->comettomountain;
+      case EndofTURNAD2000: return ((OBJ_EndofTURNAD2000*)inst)->comettomountain;
+      case EndofTURNAD2100: return ((OBJ_EndofTURNAD2100*)inst)->comettomountain;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->comettomountain;
     }
     return dummy_0;
   }
-  var  &varaccess_point_x(int x)
+  var  &varaccess_cratorcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_x;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_x;
+      case thecrator: return ((OBJ_thecrator*)inst)->cratorcheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->cratorcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->cratorcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->cratorcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_x_prev(int x)
+  var  &varaccess_defensecheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_x_prev;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_x_prev;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->defensecheck;
+      case loadedcatapult1: return ((OBJ_loadedcatapult1*)inst)->defensecheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->defensecheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->defensecheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_y(int x)
+  var  &varaccess_farmcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_y;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_y;
+      case thefarmland: return ((OBJ_thefarmland*)inst)->farmcheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->farmcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->farmcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->farmcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_point_y_prev(int x)
+  var  &varaccess_farmgrowthcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->point_y_prev;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->point_y_prev;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->farmgrowthcheck;
+      case particlefarmmedicenigmaine: return ((OBJ_particlefarmmedicenigmaine*)inst)->farmgrowthcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->farmgrowthcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->farmgrowthcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite(int x)
+  var  &varaccess_forest5check(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->forest5check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->forest5check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->forest5check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->forest5check;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_height(int x)
+  var  &varaccess_forestcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_height;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->forestcheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->forestcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->forestcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->forestcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_image(int x)
+  var  &varaccess_fs_bold(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_image;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_image;
+      case barpurplechanged: return ((OBJ_barpurplechanged*)inst)->fs_bold;
+      case hiscoreB: return ((OBJ_hiscoreB*)inst)->fs_bold;
+      case enigmanewgameB: return ((OBJ_enigmanewgameB*)inst)->fs_bold;
+      case HelpboxFIRST: return ((OBJ_HelpboxFIRST*)inst)->fs_bold;
+      case startenigmaingthegame: return ((OBJ_startenigmaingthegame*)inst)->fs_bold;
+      case objective: return ((OBJ_objective*)inst)->fs_bold;
+      case lightnenigmainblam: return ((OBJ_lightnenigmainblam*)inst)->fs_bold;
+      case whatsbluescore: return ((OBJ_whatsbluescore*)inst)->fs_bold;
+      case firstopportunity: return ((OBJ_firstopportunity*)inst)->fs_bold;
+      case theendofanera: return ((OBJ_theendofanera*)inst)->fs_bold;
+      case whyisitXed: return ((OBJ_whyisitXed*)inst)->fs_bold;
+      case Manhasevolved2: return ((OBJ_Manhasevolved2*)inst)->fs_bold;
+      case thelogotitleBS: return ((OBJ_thelogotitleBS*)inst)->fs_bold;
+      case theplagues: return ((OBJ_theplagues*)inst)->fs_bold;
+      case fliesaredefeated: return ((OBJ_fliesaredefeated*)inst)->fs_bold;
+      case flieswenigmain: return ((OBJ_flieswenigmain*)inst)->fs_bold;
+      case Manloveslaws: return ((OBJ_Manloveslaws*)inst)->fs_bold;
+      case thelawoftheland: return ((OBJ_thelawoftheland*)inst)->fs_bold;
+      case catarocksuccess: return ((OBJ_catarocksuccess*)inst)->fs_bold;
+      case catarockfailure: return ((OBJ_catarockfailure*)inst)->fs_bold;
+      case makesureto1500: return ((OBJ_makesureto1500*)inst)->fs_bold;
+      case thebloodyplague: return ((OBJ_thebloodyplague*)inst)->fs_bold;
+      case thedeathplaguee: return ((OBJ_thedeathplaguee*)inst)->fs_bold;
+      case thebunnygoescity: return ((OBJ_thebunnygoescity*)inst)->fs_bold;
+      case themangoestobunny: return ((OBJ_themangoestobunny*)inst)->fs_bold;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->fs_bold;
+      case theendofthegamea: return ((OBJ_theendofthegamea*)inst)->fs_bold;
+      case thequitgameearned: return ((OBJ_thequitgameearned*)inst)->fs_bold;
+      case thenextgameearned: return ((OBJ_thenextgameearned*)inst)->fs_bold;
+      case thearchivebutearned: return ((OBJ_thearchivebutearned*)inst)->fs_bold;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->fs_bold;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_numb(int x)
+  var  &varaccess_fuelfactorycheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_numb;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_numb;
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->fuelfactorycheck;
+      case fuelplantthenigmaing: return ((OBJ_fuelplantthenigmaing*)inst)->fuelfactorycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->fuelfactorycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->fuelfactorycheck;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_offset(int x)
+  var  &varaccess_goldcheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_offset;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_offset;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->goldcheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->goldcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->goldcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->goldcheck;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_point(int x)
+  var  &varaccess_hasitrainedyet(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_point;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_point;
+      case EndofTURNBC: return ((OBJ_EndofTURNBC*)inst)->hasitrainedyet;
+      case raenigmaincreator: return ((OBJ_raenigmaincreator*)inst)->hasitrainedyet;
+      case treegrower: return ((OBJ_treegrower*)inst)->hasitrainedyet;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->hasitrainedyet;
+      case treesofglory: return ((OBJ_treesofglory*)inst)->hasitrainedyet;
+      case thunderstormcreate: return ((OBJ_thunderstormcreate*)inst)->hasitrainedyet;
+      case EndofTURNAD1: return ((OBJ_EndofTURNAD1*)inst)->hasitrainedyet;
+      case EndofTURNAD500: return ((OBJ_EndofTURNAD500*)inst)->hasitrainedyet;
+      case EndofTURNAD1000: return ((OBJ_EndofTURNAD1000*)inst)->hasitrainedyet;
+      case EndofTURNAD1500: return ((OBJ_EndofTURNAD1500*)inst)->hasitrainedyet;
+      case EndofTURNAD2000: return ((OBJ_EndofTURNAD2000*)inst)->hasitrainedyet;
+      case EndofTURNAD2100: return ((OBJ_EndofTURNAD2100*)inst)->hasitrainedyet;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->hasitrainedyet;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_solid(int x)
+  var  &varaccess_humaniq100check(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_solid;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_solid;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->humaniq100check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->humaniq100check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->humaniq100check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->humaniq100check;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_transparent(int x)
+  var  &varaccess_humaniq150check(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->sprite_transparent;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_transparent;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->humaniq150check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->humaniq150check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->humaniq150check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->humaniq150check;
     }
     return dummy_0;
   }
-  var  &varaccess_sprite_width(int x)
+  var  &varaccess_humaniq320check(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sprite_width;
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->humaniq320check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->humaniq320check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->humaniq320check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->humaniq320check;
     }
     return dummy_0;
   }
-  var  &varaccess_strength(int x)
+  var  &varaccess_humansFIGUREitout(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->strength;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->strength;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->humansFIGUREitout;
+      case EndofTURNAD1: return ((OBJ_EndofTURNAD1*)inst)->humansFIGUREitout;
+      case _DONTUSENUMBERS_2donothenigmaingatall: return ((OBJ__DONTUSENUMBERS_2donothenigmaingatall*)inst)->humansFIGUREitout;
+      case EndofTURNAD1000: return ((OBJ_EndofTURNAD1000*)inst)->humansFIGUREitout;
+      case _DONTUSENUMBERS_4divenigmaineenigmaenigmaintbutton: return ((OBJ__DONTUSENUMBERS_4divenigmaineenigmaenigmaintbutton*)inst)->humansFIGUREitout;
+      case EndofTURNAD1500: return ((OBJ_EndofTURNAD1500*)inst)->humansFIGUREitout;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->humansFIGUREitout;
     }
     return dummy_0;
   }
-  var  &varaccess_tempdist(int x)
+  var  &varaccess_icylakecheck(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_object: return ((OBJ_obj_object*)inst)->tempdist;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->tempdist;
+      case thefrozenlake: return ((OBJ_thefrozenlake*)inst)->icylakecheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->icylakecheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->icylakecheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->icylakecheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_isthefuelthere(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->isthefuelthere;
+      case enigmainjectenigmainfuel: return ((OBJ_enigmainjectenigmainfuel*)inst)->isthefuelthere;
+      case TALLYuptheeraAD2000: return ((OBJ_TALLYuptheeraAD2000*)inst)->isthefuelthere;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->isthefuelthere;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_istheoilthere(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->istheoilthere;
+      case enigmainjectenigmainoil: return ((OBJ_enigmainjectenigmainoil*)inst)->istheoilthere;
+      case TALLYuptheeraAD1500: return ((OBJ_TALLYuptheeraAD1500*)inst)->istheoilthere;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->istheoilthere;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_itsnowacavehome(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case themountaenigmain: return ((OBJ_themountaenigmain*)inst)->itsnowacavehome;
+      case scorchformanhelp: return ((OBJ_scorchformanhelp*)inst)->itsnowacavehome;
+      case TALLYuptheeraAD1: return ((OBJ_TALLYuptheeraAD1*)inst)->itsnowacavehome;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->itsnowacavehome;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_lakecheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case thelakecrator: return ((OBJ_thelakecrator*)inst)->lakecheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->lakecheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->lakecheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->lakecheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_lakefishcheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case fishenigmaenigmaintolake: return ((OBJ_fishenigmaenigmaintolake*)inst)->lakefishcheck;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->lakefishcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->lakefishcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->lakefishcheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_lightthevillage(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case lightnenigmainblam: return ((OBJ_lightnenigmainblam*)inst)->lightthevillage;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->lightthevillage;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->lightthevillage;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_mannowhasahomenow(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->mannowhasahomenow;
+      case themanofearth: return ((OBJ_themanofearth*)inst)->mannowhasahomenow;
+      case mountaenigmaincityplace: return ((OBJ_mountaenigmaincityplace*)inst)->mannowhasahomenow;
+      case thecastleplace: return ((OBJ_thecastleplace*)inst)->mannowhasahomenow;
+      case thevillagecityT: return ((OBJ_thevillagecityT*)inst)->mannowhasahomenow;
+      case thefuturenycity: return ((OBJ_thefuturenycity*)inst)->mannowhasahomenow;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mannowhasahomenow;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_mountaincheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case themountaenigmain: return ((OBJ_themountaenigmain*)inst)->mountaincheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->mountaincheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->mountaincheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mountaincheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_nomoreenderamessages(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->nomoreenderamessages;
+      case ENDerabutton: return ((OBJ_ENDerabutton*)inst)->nomoreenderamessages;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->nomoreenderamessages;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_nomountaincheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->nomountaincheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->nomountaincheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->nomountaincheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->nomountaincheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_notreescheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->notreescheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->notreescheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->notreescheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->notreescheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_nowatercheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->nowatercheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->nowatercheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->nowatercheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->nowatercheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_nuclearcheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->nuclearcheck;
+      case rocketgoesup: return ((OBJ_rocketgoesup*)inst)->nuclearcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->nuclearcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->nuclearcheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_oilderrickcheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->oilderrickcheck;
+      case oilderricksthenigmaing: return ((OBJ_oilderricksthenigmaing*)inst)->oilderrickcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->oilderrickcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->oilderrickcheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_peacetreatycheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->peacetreatycheck;
+      case themangoestobunny: return ((OBJ_themangoestobunny*)inst)->peacetreatycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->peacetreatycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->peacetreatycheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_plaguesdefendcheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->plaguesdefendcheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->plaguesdefendcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->plaguesdefendcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->plaguesdefendcheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rabbitIQcountdown(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case rabbitbutton: return ((OBJ_rabbitbutton*)inst)->rabbitIQcountdown;
+      case EndofTURNBC: return ((OBJ_EndofTURNBC*)inst)->rabbitIQcountdown;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->rabbitIQcountdown;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rabbitIQcountdown;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rabbitiq100check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->rabbitiq100check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rabbitiq100check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rabbitiq100check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rabbitiq100check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rabbitiq200check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->rabbitiq200check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rabbitiq200check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rabbitiq200check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rabbitiq200check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rabbitiq30check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->rabbitiq30check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rabbitiq30check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rabbitiq30check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rabbitiq30check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rabbitsaddeathcheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->rabbitsaddeathcheck;
+      case rocketgoesdown: return ((OBJ_rocketgoesdown*)inst)->rabbitsaddeathcheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rabbitsaddeathcheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rabbitsaddeathcheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rank10check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->rank10check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rank10check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rank10check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rank10check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rank1check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->rank1check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rank1check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rank1check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rank1check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rank4check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->rank4check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rank4check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rank4check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rank4check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rank6check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->rank6check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rank6check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rank6check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rank6check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rankofgod(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case rankofgodbox: return ((OBJ_rankofgodbox*)inst)->rankofgod;
+      case drawtherank: return ((OBJ_drawtherank*)inst)->rankofgod;
+      case rankisgoodD: return ((OBJ_rankisgoodD*)inst)->rankofgod;
+      case rankisaverageD: return ((OBJ_rankisaverageD*)inst)->rankofgod;
+      case rankisgood1D: return ((OBJ_rankisgood1D*)inst)->rankofgod;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->rankofgod;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rankofgod;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rivercheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case cracktoriver: return ((OBJ_cracktoriver*)inst)->rivercheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->rivercheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rivercheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rivercheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rockcitycheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case mountaenigmaincityplace: return ((OBJ_mountaenigmaincityplace*)inst)->rockcitycheck;
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->rockcitycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rockcitycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rockcitycheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_rockolawscheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->rockolawscheck;
+      case thelawoftheland: return ((OBJ_thelawoftheland*)inst)->rockolawscheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->rockolawscheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->rockolawscheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_score8500check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->score8500check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->score8500check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->score8500check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->score8500check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_seedlingseatencheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case thebunnyeatstrees: return ((OBJ_thebunnyeatstrees*)inst)->seedlingseatencheck;
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->seedlingseatencheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->seedlingseatencheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->seedlingseatencheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_silvercheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->silvercheck;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->silvercheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->silvercheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->silvercheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_thehumaniq(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case humaniqbox: return ((OBJ_humaniqbox*)inst)->thehumaniq;
+      case lightnenigmainblam: return ((OBJ_lightnenigmainblam*)inst)->thehumaniq;
+      case drawthehumaniq: return ((OBJ_drawthehumaniq*)inst)->thehumaniq;
+      case thesignisshown: return ((OBJ_thesignisshown*)inst)->thehumaniq;
+      case _DONTUSENUMBERS_2addivenigmaineenigmaenigmaintbutton: return ((OBJ__DONTUSENUMBERS_2addivenigmaineenigmaenigmaintbutton*)inst)->thehumaniq;
+      case Manhasevolved2: return ((OBJ_Manhasevolved2*)inst)->thehumaniq;
+      case flychecktodestroy: return ((OBJ_flychecktodestroy*)inst)->thehumaniq;
+      case fliesaredefeated: return ((OBJ_fliesaredefeated*)inst)->thehumaniq;
+      case flieswenigmain: return ((OBJ_flieswenigmain*)inst)->thehumaniq;
+      case thecastleplace: return ((OBJ_thecastleplace*)inst)->thehumaniq;
+      case manasks1000help: return ((OBJ_manasks1000help*)inst)->thehumaniq;
+      case Manloveslaws: return ((OBJ_Manloveslaws*)inst)->thehumaniq;
+      case catarocksuccess: return ((OBJ_catarocksuccess*)inst)->thehumaniq;
+      case thebiglaunchcata: return ((OBJ_thebiglaunchcata*)inst)->thehumaniq;
+      case oilbutton: return ((OBJ_oilbutton*)inst)->thehumaniq;
+      case thebloodyplague: return ((OBJ_thebloodyplague*)inst)->thehumaniq;
+      case TALLYuptheeraAD1500: return ((OBJ_TALLYuptheeraAD1500*)inst)->thehumaniq;
+      case fuelbutton: return ((OBJ_fuelbutton*)inst)->thehumaniq;
+      case thedeathplaguee: return ((OBJ_thedeathplaguee*)inst)->thehumaniq;
+      case TALLYuptheeraAD2000: return ((OBJ_TALLYuptheeraAD2000*)inst)->thehumaniq;
+      case thebunnygoescity: return ((OBJ_thebunnygoescity*)inst)->thehumaniq;
+      case themangoestobunny: return ((OBJ_themangoestobunny*)inst)->thehumaniq;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->thehumaniq;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->thehumaniq;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_therabbitiq(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case _DONTUSENUMBERS_1divenigmaineenigmaenigmaintbutton: return ((OBJ__DONTUSENUMBERS_1divenigmaineenigmaenigmaintbutton*)inst)->therabbitiq;
+      case rabbitiqbox: return ((OBJ_rabbitiqbox*)inst)->therabbitiq;
+      case drawtherabbitiq: return ((OBJ_drawtherabbitiq*)inst)->therabbitiq;
+      case rabbitsakenigmainhelp: return ((OBJ_rabbitsakenigmainhelp*)inst)->therabbitiq;
+      case _DONTUSENUMBERS_3divenigmaineenigmaenigmaintbutton: return ((OBJ__DONTUSENUMBERS_3divenigmaineenigmaenigmaintbutton*)inst)->therabbitiq;
+      case _DONTUSENUMBERS_5divenigmaineenigmaenigmaintbutton: return ((OBJ__DONTUSENUMBERS_5divenigmaineenigmaenigmaintbutton*)inst)->therabbitiq;
+      case therabbitsaregreedy: return ((OBJ_therabbitsaregreedy*)inst)->therabbitiq;
+      case peacebutton: return ((OBJ_peacebutton*)inst)->therabbitiq;
+      case thebunnygoescity: return ((OBJ_thebunnygoescity*)inst)->therabbitiq;
+      case themangoestobunny: return ((OBJ_themangoestobunny*)inst)->therabbitiq;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->therabbitiq;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->therabbitiq;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_theroundsofgod(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HelpboxFIRST: return ((OBJ_HelpboxFIRST*)inst)->theroundsofgod;
+      case checkicon: return ((OBJ_checkicon*)inst)->theroundsofgod;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->theroundsofgod;
+      case showtherounds: return ((OBJ_showtherounds*)inst)->theroundsofgod;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->theroundsofgod;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_treecity2check(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case HARDLIST: return ((OBJ_HARDLIST*)inst)->treecity2check;
+      case TALLYuptheeraAD2100: return ((OBJ_TALLYuptheeraAD2100*)inst)->treecity2check;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->treecity2check;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->treecity2check;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_treecitycheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case treecitybarb: return ((OBJ_treecitybarb*)inst)->treecitycheck;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->treecitycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->treecitycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->treecitycheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_treevariable(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case EndofTURNBC: return ((OBJ_EndofTURNBC*)inst)->treevariable;
+      case treegrower: return ((OBJ_treegrower*)inst)->treevariable;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->treevariable;
+      case EndofTURNAD1: return ((OBJ_EndofTURNAD1*)inst)->treevariable;
+      case EndofTURNAD500: return ((OBJ_EndofTURNAD500*)inst)->treevariable;
+      case EndofTURNAD1000: return ((OBJ_EndofTURNAD1000*)inst)->treevariable;
+      case EndofTURNAD1500: return ((OBJ_EndofTURNAD1500*)inst)->treevariable;
+      case EndofTURNAD2000: return ((OBJ_EndofTURNAD2000*)inst)->treevariable;
+      case EndofTURNAD2100: return ((OBJ_EndofTURNAD2100*)inst)->treevariable;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->treevariable;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_villagecheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case EASYLIST: return ((OBJ_EASYLIST*)inst)->villagecheck;
+      case thevillagecityT: return ((OBJ_thevillagecityT*)inst)->villagecheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->villagecheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->villagecheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_volcanocheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case volcanoexplodenigmain: return ((OBJ_volcanoexplodenigmain*)inst)->volcanocheck;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->volcanocheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->volcanocheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->volcanocheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_volcanocitycheck(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case therockcityshitty: return ((OBJ_therockcityshitty*)inst)->volcanocitycheck;
+      case MEDIUMLIST: return ((OBJ_MEDIUMLIST*)inst)->volcanocitycheck;
+      case TheCHECKLISTvariable: return ((OBJ_TheCHECKLISTvariable*)inst)->volcanocitycheck;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->volcanocitycheck;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_whenbluescoregoes(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case EndofTURNBC: return ((OBJ_EndofTURNBC*)inst)->whenbluescoregoes;
+      case VARIABLESofgod: return ((OBJ_VARIABLESofgod*)inst)->whenbluescoregoes;
+      case _DONTUSENUMBERS_100bluepts: return ((OBJ__DONTUSENUMBERS_100bluepts*)inst)->whenbluescoregoes;
+      case _DONTUSENUMBERS_50bluepts: return ((OBJ__DONTUSENUMBERS_50bluepts*)inst)->whenbluescoregoes;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->whenbluescoregoes;
     }
     return dummy_0;
   }

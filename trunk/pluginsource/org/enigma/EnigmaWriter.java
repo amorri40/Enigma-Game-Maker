@@ -822,10 +822,15 @@ public final class EnigmaWriter
 
 	public static boolean actionDemise = false;
 
+	static int numberOfBraces=0; //gm ignores the brace actions
+	
 	public static String getActionsCode(ActionContainer ac)
 		{
 		final String nl = System.getProperty("line.separator"); //$NON-NLS-1$
 		StringBuilder code = new StringBuilder();
+		
+		numberOfBraces=0;//reset number of braces
+		
 		for (Action act : ac.actions)
 			{
 			LibAction la = act.getLibAction();
@@ -844,6 +849,7 @@ public final class EnigmaWriter
 				{
 				case Action.ACT_BEGIN:
 					code.append('{');
+					numberOfBraces++;
 					break;
 				case Action.ACT_CODE:
 					code.append("{"+args.get(0).getVal()+"\n}").append(nl);
@@ -852,7 +858,9 @@ public final class EnigmaWriter
 					code.append("else "); //$NON-NLS-1$
 					break;
 				case Action.ACT_END:
+					if (numberOfBraces>0) {
 					code.append('}');
+					numberOfBraces--; }
 					break;
 				case Action.ACT_EXIT:
 					code.append("exit "); //$NON-NLS-1$
@@ -873,7 +881,7 @@ public final class EnigmaWriter
 					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF)
 						{
 						if (la.question)
-							{
+							{ /*
 							if (!actionDemise)
 								{
 								//								String mess = "Warning, you have a D&D action which is unsupported by this compiler."
@@ -893,20 +901,38 @@ public final class EnigmaWriter
 								action = la.name.length() == 0 ? Integer.toString(la.id) : la.name;
 								//								mess += " action " + (la.name.length() == 0 ? la.id : la.name) + ")";
 								if (ac !=null && library !=null && action !=null) {
-								/*String mess = Messages.format(
-										"EnigmaWriter.UNSUPPORTED_DND_QA",ac.toString(),library,action); //$NON-NLS-1$*/
+								
 									String mess="EnigmaWriter UNSUPPORTED_DND_QA"+ac.toString()+"library:"+library+" action:"+action;
 								//JOptionPane.showMessageDialog(null,mess);
 									System.out.println(mess);
 								}
 								actionDemise = true;
 								}
-							continue;
-							}
+							continue;*/
+							
+							//TGMG start
+							if (apto == org.lateralgm.resources.GmObject.OBJECT_OTHER)
+								code.append("with (other) "); //$NON-NLS-1$
+							else
+								if (apto.get() !=null)
+								code.append("with (").append(apto.get().getName()).append(") "); //$NON-NLS-1$ //$NON-NLS-2$
+								else
+									code.append("/*null with!*/"); //$NON-NLS-1$
+							//TGMG end
+							
+							
+							
+							
+							
+							} else {
 						if (apto == org.lateralgm.resources.GmObject.OBJECT_OTHER)
 							code.append("with (other) {"); //$NON-NLS-1$
 						else
+							if (apto.get() !=null)
 							code.append("with (").append(apto.get().getName()).append(") {"); //$NON-NLS-1$ //$NON-NLS-2$
+							else
+								code.append("/*null with!*/{"); //$NON-NLS-1$
+							}
 						}
 					if (la.question) code.append("if "); //$NON-NLS-1$
 					if (act.isNot()) code.append('!');
@@ -939,11 +965,12 @@ public final class EnigmaWriter
 					if (la.allowRelative) code.append(la.question ? ')' : '}');
 					code.append(nl);
 
-					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF) code.append('}');
+					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF && (!la.question)) code.append('}');
 					}
 					break;
 				}
 			}
+		System.out.println("###########code:"+code.toString());
 		return code.toString();
 		}
 
@@ -957,7 +984,7 @@ public final class EnigmaWriter
 				if (val.startsWith("\"") || val.startsWith("'")) return val; //$NON-NLS-1$ //$NON-NLS-2$
 				//else fall through
 			case Argument.ARG_STRING:
-				return "\"" + val.replace("\\","\\\\").replace("\"","\\\"") + "\""; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
+				return "\"" + val.replace("\\","\\\\").replace("\"","'") + "\""; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
 			case Argument.ARG_BOOLEAN:
 				return Boolean.toString(!val.equals("0")); //$NON-NLS-1$
 			case Argument.ARG_MENU:

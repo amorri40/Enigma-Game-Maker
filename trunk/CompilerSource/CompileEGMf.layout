@@ -10,14 +10,17 @@
 	<File name="cfile_parse/type_resolver.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="12692" topLine="338" />
 	</File>
-	<File name="compiler/compile.cpp" open="1" top="1" tabpos="1">
+	<File name="compiler/compile.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="13635" topLine="315" />
 	</File>
 	<File name="compiler/compile_includes.h" open="1" top="0" tabpos="6">
 		<Cursor position="2323" topLine="29" />
 	</File>
-	<File name="compiler/components/write_defragged_events.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="5599" topLine="94" />
+	<File name="compiler/components/write_defragged_events.cpp" open="1" top="1" tabpos="10">
+		<Cursor position="6221" topLine="92" />
+	</File>
+	<File name="compiler/event_reader/event_parser.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="15393" topLine="422" />
 	</File>
 	<File name="gcc_interface/gcc_backend.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="5956" topLine="121" />

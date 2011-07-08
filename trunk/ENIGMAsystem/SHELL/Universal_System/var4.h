@@ -135,6 +135,7 @@ struct variant
   variant&  operator*();
   double    operator-();
   double    operator+();
+    
   
   ~variant();
 };

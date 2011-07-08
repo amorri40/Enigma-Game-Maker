@@ -1,0 +1,22 @@
+action_another_room	U
+action_change_object	U
+action_draw_font	U
+action_draw_variable	U
+action_highscore_clear	U
+action_if_question	U
+action_if_score	U
+action_linear_step	U
+action_load_game	U
+action_message	U
+action_move_random	U
+action_save_game	U
+action_set_friction	U
+action_set_gravity	U
+action_set_sprite	U
+action_webpage	U
+message_background	U
+message_button	U
+message_button_font	U
+message_position	U
+message_text_font	U
+

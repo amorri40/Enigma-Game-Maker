@@ -64,7 +64,7 @@
 #define __VERSION__ "4.2.1 (Apple Inc. build 5646) (dot 1)"
 #define __DEC64_EPSILON__ 1E-15DD
 #define __DEC128_MIN_EXP__ (-6143)
-#define __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ 1060
+#define __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ 1067
 #define __SIZE_TYPE__ long unsigned int
 #define __DEC32_DEN__ 0.000001E-95DF
 #define __FLT_RADIX__ 2

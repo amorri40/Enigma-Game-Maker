@@ -30,26 +30,93 @@
 
 namespace enigma
 {
-  event_iter *event_create; // Defined in 1 objects
-  event_iter *event_draw; // Defined in 1 objects
-  event_iter *event_step; // Defined in 1 objects
+  event_iter *event_alarm; // Defined in 233 objects
+  event_iter *event_animationend; // Defined in 15 objects
+  event_iter *event_collision; // Defined in 72 objects
+  event_iter *event_create; // Defined in 272 objects
+  event_iter *event_destroy; // Defined in 1 objects
+  event_iter *event_draw; // Defined in 101 objects
+  event_iter *event_keypress; // Defined in 18 objects
+  event_iter *event_leftbutton; // Defined in 4 objects
+  event_iter *event_leftpress; // Defined in 74 objects
+  event_iter *event_mouseenter; // Defined in 59 objects
+  event_iter *event_mouseleave; // Defined in 59 objects
+  event_iter *event_outsideroom; // Defined in 15 objects
+  event_iter *event_step; // Defined in 73 objects
   int event_system_initialize()
   {
-    events = new event_iter[3]; // Allocated here; not really meant to change.
-    objects = new objectid_base[67]; // Allocated here; not really meant to change.
-    event_create = events + 0;  event_create->name = "Create";
-    event_draw = events + 1;  event_draw->name = "Draw";
-    event_step = events + 2;  event_step->name = "Step";
+    events = new event_iter[13]; // Allocated here; not really meant to change.
+    objects = new objectid_base[363]; // Allocated here; not really meant to change.
+    event_alarm = events + 0;  event_alarm->name = "Alarm ...";
+    event_animationend = events + 1;  event_animationend->name = "Animation End";
+    event_collision = events + 2;  event_collision->name = "obj_285";
+    event_create = events + 3;  event_create->name = "Create";
+    event_destroy = events + 4;  event_destroy->name = "Destroy";
+    event_draw = events + 5;  event_draw->name = "Draw";
+    event_keypress = events + 6;  event_keypress->name = "Press <key27>";
+    event_leftbutton = events + 7;  event_leftbutton->name = "Left Button";
+    event_leftpress = events + 8;  event_leftpress->name = "Left Press";
+    event_mouseenter = events + 9;  event_mouseenter->name = "Mouse Enter";
+    event_mouseleave = events + 10;  event_mouseleave->name = "Mouse Leave";
+    event_outsideroom = events + 11;  event_outsideroom->name = "Outside Room";
+    event_step = events + 12;  event_step->name = "Step";
     return 0;
   }
   int ENIGMA_events()
   {
+    for (instance_event_iterator = event_alarm->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_alarm();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_keypress->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_keypress();
+    
+    enigma::update_globals();
+    
+    if (mouse_check_button(mb_left))
+      for (instance_event_iterator = event_leftbutton->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+        ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_leftbutton();
+    
+    enigma::update_globals();
+    
+    if (mouse_check_button_pressed(mb_left))
+      for (instance_event_iterator = event_leftpress->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+        ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_leftpress();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_mouseenter->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_mouseenter();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_mouseleave->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_mouseleave();
+    
+    enigma::update_globals();
+    
     for (instance_event_iterator = event_step->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
       ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_step();
     
     enigma::update_globals();
     
+    for (instance_event_iterator = event_outsideroom->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_outsideroom();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_collision->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_collision();
+    
+    enigma::update_globals();
+    
     screen_redraw(); screen_refresh();    
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_animationend->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_animationend();
     
     enigma::update_globals();
     
