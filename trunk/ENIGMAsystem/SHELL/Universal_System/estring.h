@@ -30,13 +30,13 @@ bool is_real(variant val);
 
 string chr(char val);
 
-int ord(char str);
-int ord(const char* str);
+//int ord(char str);
+//int ord(const char* str);
 int ord(string str);
 
-double real(string str);
-double real(char* str);
-double real(double str);
+//double real(string str);
+//double real(char* str);
+//double real(double str);
 double real(const var& str);
 
 size_t string_length(string str);

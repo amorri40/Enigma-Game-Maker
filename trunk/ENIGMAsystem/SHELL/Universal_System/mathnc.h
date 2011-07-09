@@ -103,6 +103,9 @@ double point_distance(double x1, double y1, double x2, double y2);
 
 // These macros are to stop (call of overloaded is ambiguous) errors
 #define ceil(arg) ceil((double)(arg))
+#define cos(arg) cos((double)(arg))
+#define tan(arg) tan((double)(arg))
+#define sin(arg) sin((double)(arg))
 
 
 #endif // ENIGMA_MATHNC

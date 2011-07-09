@@ -29,43 +29,34 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 // Script arguments
-variant argument0 = 0, argument1 = 0, argument2 = 0, argument3 = 0;
+variant argument0 = 0, argument1 = 0, argument2 = 0, argument3 = 0, argument4 = 0, argument5 = 0, argument6 = 0, argument7 = 0, argument8 = 0, argument9 = 0, argument10 = 0, argument11 = 0, argument12 = 0, argument13 = 0, argument14 = 0;
 
 
 namespace enigma
 {
   struct ENIGMA_global_structure: object_locals
   {
-    var _hh;
-    var _ww;
-    var _xx;
-    var _yy;
-    var ac;
-    var act1;
-    var act2;
-    var act3;
-    var act4;
-    var attack;
-    var dd;
-    var discovered;
-    var enigmacontinue;
-    var explo;
-    var fa_left;
-    var fa_top;
-    var gamemaker_registered;
-    var goahead;
-    var goahead2;
-    var health;
-    var health1;
-    var health2;
-    var health3;
-    var mssg1;
-    var mssg2;
-    var mssg3;
-    var mssg4;
-    var mssg5;
-    var success;
-    var welcome;
+    var __lines__;
+    var a;
+    var enigmaplus;
+    var file_read;
+    var i;
+    var in_db2;
+    var j;
+    var sides;
+    var size2;
+    var text2_i4;
+    var text_999i;
+    var text_999ii;
+    var text_999iii;
+    var text_999iiii;
+    var text_999iiiii;
+    var xmean;
+    var xrad;
+    var xx;
+    var ymean;
+    var yrad;
+    var yy;
     ENIGMA_global_structure(const int x, const int y): object_locals(x,y) {}
   };
   object_basic *ENIGMA_global_instance = new ENIGMA_global_structure(global,global);

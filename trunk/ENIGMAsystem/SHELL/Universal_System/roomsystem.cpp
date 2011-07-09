@@ -50,7 +50,7 @@ int room_speed  = 60;
 int room_width  = 640;
 int room_height = 480;
 int room_persistent = 0;
-string room_caption = "ENIGMA Engine";
+var room_caption = "ENIGMA Engine"; /* changed to var to remove ambig error */
 
 int background_color = 16777215;
 int background_showcolor=1;

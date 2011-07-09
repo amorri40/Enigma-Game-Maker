@@ -262,12 +262,28 @@ void sprite_merge(int ind1, int ind2) {
     
 }
 
+void sprite_replace(int ind, string fname, int imgnumb, bool precise, bool transparent, bool smooth, bool preload, int xorig, int yorig) {
+    
+}
+
+void sprite_add_from_surface(int ind, int id, int x, int y, int w, int h) {
+    
+}
+
 /*
 Rooms
 */
 bool room_exists(int ind) {return false;}
 string room_get_name(int ind) {return "";}
 void room_goto_previous() {}
+
+void room_set_width(int ind, int w) {}
+void room_set_height(int ind, int h) {}
+void room_set_caption(int ind, var str) {}
+void room_set_persistent(int ind, bool val) {}
+void room_set_code(int ind, string str) {}
+void room_set_background_color(int ind, int col, bool show) {}
+
 
 void game_save(string str) {}//Saves the game to the file with name string.
 void game_load(string str) {}//Loads the game from the file with name string.
@@ -395,19 +411,19 @@ void ds_grid_resize(int gid, int w, int h) {} // Resizes the grid to the new wid
 int ds_grid_width(int gid){} // Returns the width of the grid with the indicated id.
 int ds_grid_height(int gid) {} // Returns the height of the grid with the indicated id.
 void ds_grid_clear(int gid, int val) {} // Clears the grid with the given id, to the indicated value (can both be a number or a string).
-void ds_grid_set(int gid, int x, int y, int val) {} // Sets the indicated cell in the grid with the given id, to the indicated value (can both be a number or a string).
-void ds_grid_add(int gid, int x, int y, int val) {} // Add the value to the indicated cell in the grid with the given id. For strings this corresponds to concatenation.
-void ds_grid_multiply(int gid, int x, int y, int val) {} // Multiplies the value to the indicated cell in the grid with the given id. Is only valid for numbers.
-void ds_grid_set_region(int gid, int x1, int y1, int x2, int y2, int val) {} // Sets the all cells in the region in the grid with the given id, to the indicated value (can both be a number or a string).
-void ds_grid_add_region(int gid, int x1, int y1, int x2, int y2, int val) {} // Add the value to the cell in the region in the grid with the given id. For strings this corresponds to concatenation.
-void ds_grid_multiply_region(int gid, int x1, int y1, int x2, int y2, int val) {} // Multiplies the value to the cells in the region in the grid with the given id. Is only valid for numbers.
-void ds_grid_set_disk(int gid, int xm, int ym, int r, int val) {} // Sets all cells in the disk with center (xm,ym) and radius r.
-void ds_grid_add_disk(int gid, int xm, int ym, int r, int val) {} // Add the value to all cells in the disk with center (xm,ym) and radius r.
-void ds_grid_multiply_disk(int gid, int xm, int ym, int r, int val) {} // Multiply the value to all cells in the disk with center (xm,ym) and radius r.
-void ds_grid_set_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, int ypos) {} // Copies the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be placed in the grid. (Can also be used to copy values from one place in a grid to another.)
-void ds_grid_add_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, int ypos) {} // Adds the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be added in the grid. (id and source can be the same.)
-void ds_grid_multiply_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, int ypos) {} // Multiplies the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be multiplied in the grid. (id and source can be the same.) Only valid for numbers.
-int ds_grid_get(int gid, int x, int y) {} // Returns the value of the indicated cell in the grid with the given id.
+var ds_grid_set(int gid, int x, int y, var val) {} // Sets the indicated cell in the grid with the given id, to the indicated value (can both be a number or a string).
+void ds_grid_add(int gid, int x, int y, var val) {} // Add the value to the indicated cell in the grid with the given id. For strings this corresponds to concatenation.
+void ds_grid_multiply(int gid, int x, int y, var val) {} // Multiplies the value to the indicated cell in the grid with the given id. Is only valid for numbers.
+void ds_grid_set_region(int gid, int x1, int y1, int x2, int y2, var val) {} // Sets the all cells in the region in the grid with the given id, to the indicated value (can both be a number or a string).
+void ds_grid_add_region(int gid, int x1, int y1, int x2, int y2, var val) {} // Add the value to the cell in the region in the grid with the given id. For strings this corresponds to concatenation.
+void ds_grid_multiply_region(int gid, int x1, int y1, int x2, int y2, var val) {} // Multiplies the value to the cells in the region in the grid with the given id. Is only valid for numbers.
+void ds_grid_set_disk(int gid, int xm, int ym, int r, var val) {} // Sets all cells in the disk with center (xm,ym) and radius r.
+void ds_grid_add_disk(int gid, int xm, int ym, int r, var val) {} // Add the value to all cells in the disk with center (xm,ym) and radius r.
+void ds_grid_multiply_disk(int gid, int xm, int ym, int r, var val) {} // Multiply the value to all cells in the disk with center (xm,ym) and radius r.
+void ds_grid_set_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, var ypos) {} // Copies the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be placed in the grid. (Can also be used to copy values from one place in a grid to another.)
+void ds_grid_add_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, var ypos) {} // Adds the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be added in the grid. (id and source can be the same.)
+void ds_grid_multiply_grid_region(int gid, int source, int x1, int y1, int x2, int y2, int xpos, var ypos) {} // Multiplies the contents of the cells in the region in grid source to grid id. xpos and ypos indicate the place where the region must be multiplied in the grid. (id and source can be the same.) Only valid for numbers.
+var ds_grid_get(int gid, int x, int y) { return 0;} // Returns the value of the indicated cell in the grid with the given id.
 int ds_grid_get_sum(int gid, int x1, int y1, int x2, int y2) {} // Returns the sum of the values of the cells in the region in the grid with the given id. Does only work when the cells contain numbers.
 int ds_grid_get_max(int gid, int x1, int y1, int x2, int y2) {} // Returns the maximum of the values of the cells in the region in the grid with the given id. Does only work when the cells contain numbers.
 int ds_grid_get_min(int gid, int x1, int y1, int x2, int y2) {} // Returns the minimum of the values of the cells in the region in the grid with the given id. Does only work when the cells contain numbers.
@@ -800,7 +816,7 @@ int surface_create(int w, int h) {
     return 0;
 }
 void surface_free(int surfid) {} 
-bool surface_exists(int surfid){
+bool surface_exists(var surfid){
     return 0;
 }
 
@@ -1385,6 +1401,10 @@ string get_open_filename(string filter, string fname){
 
 //These are due to regex (LGMUtility) errors
 #define enigmaround(args...) round(args)
+#define enigmapower(args...) power(args)
+#define enigmarandom(args...) random(args)
+#define enigmadraw_text(args...) draw_text(args)
+
 
 
 

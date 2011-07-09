@@ -48,7 +48,7 @@ extern int room_persistent;
 extern int room_speed;
 extern int room_width;
 
-extern string room_caption;
+extern var room_caption;
 
 int room_count();
 #define room_count room_count()

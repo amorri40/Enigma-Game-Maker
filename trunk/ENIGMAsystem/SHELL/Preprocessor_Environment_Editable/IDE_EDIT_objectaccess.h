@@ -39,308 +39,193 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 30 accessors
-  var  &varaccess__hh(int x)
+  var dummy_0; // Referenced by 21 accessors
+  var  &varaccess___lines__(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_minimap: return ((OBJ_obj_minimap*)inst)->_hh;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_hh;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->__lines__;
     }
     return dummy_0;
   }
-  var  &varaccess__ww(int x)
+  var  &varaccess_a(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_minimap: return ((OBJ_obj_minimap*)inst)->_ww;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_ww;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->a;
     }
     return dummy_0;
   }
-  var  &varaccess__xx(int x)
+  var  &varaccess_enigmaplus(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_minimap: return ((OBJ_obj_minimap*)inst)->_xx;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_xx;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmaplus;
     }
     return dummy_0;
   }
-  var  &varaccess__yy(int x)
+  var  &varaccess_file_read(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case obj_minimap: return ((OBJ_obj_minimap*)inst)->_yy;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_yy;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file_read;
     }
     return dummy_0;
   }
-  var  &varaccess_ac(int x)
+  var  &varaccess_i(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case enemy_tank: return ((OBJ_enemy_tank*)inst)->ac;
-      case enemy_tank2: return ((OBJ_enemy_tank2*)inst)->ac;
-      case base: return ((OBJ_base*)inst)->ac;
-      case allie: return ((OBJ_allie*)inst)->ac;
-      case enemy_tankt1: return ((OBJ_enemy_tankt1*)inst)->ac;
-      case baset1: return ((OBJ_baset1*)inst)->ac;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->ac;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->i;
     }
     return dummy_0;
   }
-  var  &varaccess_act1(int x)
+  var  &varaccess_in_db2(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->act1;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->in_db2;
     }
     return dummy_0;
   }
-  var  &varaccess_act2(int x)
+  var  &varaccess_j(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->act2;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->j;
     }
     return dummy_0;
   }
-  var  &varaccess_act3(int x)
+  var  &varaccess_sides(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->act3;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sides;
     }
     return dummy_0;
   }
-  var  &varaccess_act4(int x)
+  var  &varaccess_size2(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->act4;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->size2;
     }
     return dummy_0;
   }
-  var  &varaccess_attack(int x)
+  var  &varaccess_text2_i4(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->attack;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text2_i4;
     }
     return dummy_0;
   }
-  var  &varaccess_dd(int x)
+  var  &varaccess_text_999i(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->dd;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999i;
     }
     return dummy_0;
   }
-  var  &varaccess_discovered(int x)
+  var  &varaccess_text_999ii(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->discovered;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999ii;
     }
     return dummy_0;
   }
-  var  &varaccess_enigmacontinue(int x)
+  var  &varaccess_text_999iii(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case HQ: return ((OBJ_HQ*)inst)->enigmacontinue;
-      case mmc1: return ((OBJ_mmc1*)inst)->enigmacontinue;
-      case activator1: return ((OBJ_activator1*)inst)->enigmacontinue;
-      case activator2: return ((OBJ_activator2*)inst)->enigmacontinue;
-      case activator3: return ((OBJ_activator3*)inst)->enigmacontinue;
-      case activator4: return ((OBJ_activator4*)inst)->enigmacontinue;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmacontinue;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iii;
     }
     return dummy_0;
   }
-  var  &varaccess_explo(int x)
+  var  &varaccess_text_999iiii(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->explo;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iiii;
     }
     return dummy_0;
   }
-  var  &varaccess_fa_left(int x)
+  var  &varaccess_text_999iiiii(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case HQ: return ((OBJ_HQ*)inst)->fa_left;
-      case mmc1: return ((OBJ_mmc1*)inst)->fa_left;
-      case activator1: return ((OBJ_activator1*)inst)->fa_left;
-      case activator2: return ((OBJ_activator2*)inst)->fa_left;
-      case activator3: return ((OBJ_activator3*)inst)->fa_left;
-      case activator4: return ((OBJ_activator4*)inst)->fa_left;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->fa_left;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iiiii;
     }
     return dummy_0;
   }
-  var  &varaccess_fa_top(int x)
+  var  &varaccess_xmean(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case HQ: return ((OBJ_HQ*)inst)->fa_top;
-      case mmc1: return ((OBJ_mmc1*)inst)->fa_top;
-      case activator1: return ((OBJ_activator1*)inst)->fa_top;
-      case activator2: return ((OBJ_activator2*)inst)->fa_top;
-      case activator3: return ((OBJ_activator3*)inst)->fa_top;
-      case activator4: return ((OBJ_activator4*)inst)->fa_top;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->fa_top;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xmean;
     }
     return dummy_0;
   }
-  var  &varaccess_gamemaker_registered(int x)
+  var  &varaccess_xrad(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case HQ: return ((OBJ_HQ*)inst)->gamemaker_registered;
-      case mmc1: return ((OBJ_mmc1*)inst)->gamemaker_registered;
-      case activator1: return ((OBJ_activator1*)inst)->gamemaker_registered;
-      case activator2: return ((OBJ_activator2*)inst)->gamemaker_registered;
-      case activator3: return ((OBJ_activator3*)inst)->gamemaker_registered;
-      case activator4: return ((OBJ_activator4*)inst)->gamemaker_registered;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->gamemaker_registered;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xrad;
     }
     return dummy_0;
   }
-  var  &varaccess_goahead(int x)
+  var  &varaccess_xx(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->goahead;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xx;
     }
     return dummy_0;
   }
-  var  &varaccess_goahead2(int x)
+  var  &varaccess_ymean(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->goahead2;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->ymean;
     }
     return dummy_0;
   }
-  var  &varaccess_health(int x)
+  var  &varaccess_yrad(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->health;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->yrad;
     }
     return dummy_0;
   }
-  var  &varaccess_health1(int x)
+  var  &varaccess_yy(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->health1;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_health2(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->health2;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_health3(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->health3;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_mssg1(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mssg1;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_mssg2(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mssg2;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_mssg3(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mssg3;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_mssg4(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mssg4;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_mssg5(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->mssg5;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_success(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->success;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_welcome(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->welcome;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->yy;
     }
     return dummy_0;
   }
