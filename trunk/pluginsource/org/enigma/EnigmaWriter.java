@@ -823,6 +823,7 @@ public final class EnigmaWriter
 	public static boolean actionDemise = false;
 
 	static int numberOfBraces=0; //gm ignores the brace actions
+	static int numberOfIfs=0; //gm allows multipe else actions after 1 if >.<
 	
 	public static String getActionsCode(ActionContainer ac)
 		{
@@ -830,6 +831,7 @@ public final class EnigmaWriter
 		StringBuilder code = new StringBuilder();
 		
 		numberOfBraces=0;//reset number of braces
+		numberOfIfs=0;
 		
 		for (Action act : ac.actions)
 			{
@@ -855,10 +857,15 @@ public final class EnigmaWriter
 					code.append("{"+args.get(0).getVal()+"\n}").append(nl);
 					break;
 				case Action.ACT_ELSE:
+				{
+					if (numberOfIfs>0) {
 					code.append("else "); //$NON-NLS-1$
+					numberOfIfs--;}
+				}
 					break;
 				case Action.ACT_END:
-					if (numberOfBraces>0) {
+					if (numberOfBraces>0) 
+					{
 					code.append('}');
 					numberOfBraces--; }
 					break;
@@ -934,7 +941,10 @@ public final class EnigmaWriter
 								code.append("/*null with!*/{"); //$NON-NLS-1$
 							}
 						}
-					if (la.question) code.append("if "); //$NON-NLS-1$
+					if (la.question) {
+						code.append("if "); //$NON-NLS-1$
+						numberOfIfs++;
+					}
 					if (act.isNot()) code.append('!');
 					if (la.allowRelative)
 						{
@@ -955,21 +965,27 @@ public final class EnigmaWriter
 							{
 							
 							if ( (toString(args.get(i)).equals("")||toString(args.get(i)).equals("  ")||toString(args.get(i)).equals(" ")) && args.size()>7) continue; //required with due to bug with CLI which thinks actions with no arguments have >7!
-							if (i != 0) code.append(',');
+							if (i != 0) code.append(" , ");
 							if (toString(args.get(i)).equals("")||toString(args.get(i)).equals(" ")||toString(args.get(i)).equals("  ")) code.append("0");
 							
 							code.append(toString(args.get(i)));
 							}
 						code.append(')');
 						}
-					if (la.allowRelative) code.append(la.question ? ')' : '}');
+					if (la.allowRelative) code.append(la.question ? ')' : "\n}");
 					code.append(nl);
 
-					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF && (!la.question)) code.append('}');
+					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF && (!la.question)) code.append("\n}");
 					}
 					break;
 				}
 			}
+		if (numberOfBraces>0) {
+			//someone forgot the closing block action
+			for(int i=0;i<numberOfBraces;i++){
+				code.append("\n}");
+			}
+		}
 		System.out.println("###########code:"+code.toString());
 		return code.toString();
 		}

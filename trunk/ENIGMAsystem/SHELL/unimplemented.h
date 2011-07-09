@@ -62,6 +62,15 @@ void font_replace(int ind, string name, int size, bool bold, bool italic, int fi
 void font_replace_sprite(int ind, int spr, int first, int prop, int sep) {}
 void font_delete(int ind) {}
 
+bool font_exists(int ind) {}
+string font_get_name(int ind) {}
+string font_get_fontname(int ind) {}
+bool font_get_bold(int ind) {}
+bool font_get_italic(int ind) {}
+int font_get_first(int ind) {}
+int font_get_last(int ind) {}
+
+
 /*
 Moving around functions
 */
@@ -101,13 +110,13 @@ void message_input_color(double col){}// Sets the color for the background of th
 void message_caption(bool show, string str){}// Sets the caption for the pop-up box. show indicates whether a border must b e shown (1) or not (0) and str indicates the caption when the border is shown.
 void message_position(int x, int y){}// Sets the position of the pop-up box on the screen. Use -1, -1 to center the box.
 void message_size(int w, int h){}// Fixes the size of the pop-up box on the screen. If you choose -1 for the width the width of the image is used. If you choose -1 for the height the height is calculated based on the number of lines in the message.
-int show_menu(string str, int def){}// Shows a popup menu. str indicates the menu text. This consists of the different menu items with a vertical bar between them. For example, str = 'menu0|menu1|menu2'. When the first item is selected a 0 is returned, etc. When the player selects no item, the default value def is returned.
-int show_menu_pos(int x, int y, string str, int def){}// Shows a popup menu as in the previous function but at position x,y on the screen.
-double get_color(double defcol){}// Asks the player for a color. defcol is the default color. If the user presses Cancel the value -1 is returned.
+var show_menu(string str, var def){ return 0;}// Shows a popup menu. str indicates the menu text. This consists of the different menu items with a vertical bar between them. For example, str = 'menu0|menu1|menu2'. When the first item is selected a 0 is returned, etc. When the player selects no item, the default value def is returned.
+var show_menu_pos(int x, int y, string str, var def){return 0;}// Shows a popup menu as in the previous function but at position x,y on the screen.
+double get_color(double defcol){return 0;}// Asks the player for a color. defcol is the default color. If the user presses Cancel the value -1 is returned.
 //string get_open_filename(string filter, string fname){}// Asks the player for a filename to open with the given filter. The filter has the form 'name1|mask1|name2|mask2|...'. A mask contains the different options with a semicolon between them. * means any string. For example: 'bitmaps|*.bmp;*.wmf'. If the user presses Cancel an empy string is returned.
-string get_save_filename(string filter, string fname){}// Asks for a filename to save with the given filter. If the user presses Cancel an empy string is returned.
-string get_directory(string dname){}// Asks for a directory. dname is the default name. If the user presses Cancel an empy string is returned.
-string get_directory_alt(string capt, string root){}// An alternative way to ask for a directory. capt is the caption to be show. root is the root of the directory tree to be shown. Use the empty string to show the whole tree. If the user presses Cancel an empy string is returned.
+string get_save_filename(string filter, string fname){return "";}// Asks for a filename to save with the given filter. If the user presses Cancel an empy string is returned.
+string get_directory(string dname){return "";}// Asks for a directory. dname is the default name. If the user presses Cancel an empy string is returned.
+string get_directory_alt(string capt, string root){return "";}// An alternative way to ask for a directory. capt is the caption to be show. root is the root of the directory tree to be shown. Use the empty string to show the whole tree. If the user presses Cancel an empy string is returned.
 
 
 /*
@@ -141,7 +150,7 @@ string registry_read_string_ext(string key, string name) {}
 double registry_read_real_ext(string key, string name) {}
 bool registry_exists_ext(string key, string name) {}
 
-void registry_set_root(string root) {}
+void registry_set_root(var root) {}
 
 /*
 Rooms
@@ -153,6 +162,7 @@ Rooms
 Splash screens
 */
 //void show_info() {}
+void load_info(string fname) {}
 
 /*
 Files
@@ -208,16 +218,16 @@ void object_event_clear(int ind, int evtype, int evnumb) {}//You can use this fu
 int object_add() { return 0;}//Adds a new object. It returns the index of the object. You can now use this index in the routines above to set certain properties of the object and then you can use the index to create instances of the object.
 void object_delete(int ind) {}//Deletes the object with the given index. Make sure no instances of the object exist in any of the rooms.
 void object_event_add(int ind, int evtype, int evnumb, string codestr) {}//
-bool object_exists(int ind) {}//Returns whether an object with the given index exists.
-string object_get_name(int ind) {}//Returns the name of the object with the given index.
-int object_get_sprite(int ind) {}//Returns the index of the default sprite of the object with the given index.
-bool object_get_solid(int ind) {}//Returns whether the object with the given index is default solid.
-bool object_get_visible(int ind) {}//Returns whether the object with the given index is default visible.
-float object_get_depth(int ind) {}//Returns the depth of the object with the given index.
-bool object_get_persistent(int ind) {}//Returns whether the object with the given index is persistent.
-int object_get_mask(int ind) {}//Returns the index of the mask of the object with the given index (-1 if is has no special mask).
-int object_get_parent(int ind) {}//Returns index of the parent object of object ind (a negative value is returned if it has no parent).
-bool object_is_ancestor(int ind1, int ind2) {}//Returns whether object ind2 is an ancestor of object ind1.
+bool object_exists(int ind) {return true;}//Returns whether an object with the given index exists.
+string object_get_name(int ind) {return "";}//Returns the name of the object with the given index.
+int object_get_sprite(int ind) {return 0;}//Returns the index of the default sprite of the object with the given index.
+bool object_get_solid(int ind) {return false;}//Returns whether the object with the given index is default solid.
+bool object_get_visible(int ind) {return false;}//Returns whether the object with the given index is default visible.
+float object_get_depth(int ind) {return 0;}//Returns the depth of the object with the given index.
+bool object_get_persistent(int ind) {return false;}//Returns whether the object with the given index is persistent.
+int object_get_mask(int ind) {return 0;}//Returns the index of the mask of the object with the given index (-1 if is has no special mask).
+int object_get_parent(int ind) {return 0;}//Returns index of the parent object of object ind (a negative value is returned if it has no parent).
+bool object_is_ancestor(int ind1, int ind2) {return false;}//Returns whether object ind2 is an ancestor of object ind1.
 
 void object_set_sprite(int ind, int spr) {}
 void object_set_solid(int ind, bool solid)  {}
@@ -230,15 +240,25 @@ void object_set_parent(int ind, int obj) {}
 /*
 Sprites
 */
-int sprite_create_from_screen(int x, int y, int w, int h, bool precise, bool transparent, bool smooth, bool preload, int xorig, int yorig) {}
+int sprite_create_from_screen(int x, int y, int w, int h, bool precise, bool transparent, bool smooth, bool preload, int xorig, int yorig) {return 0;}
 void sprite_delete(int ind) {}
 void sprite_set_alpha_from_sprite(int ind, int spr) {}
 //void sprite_set_offset(int ind, int xoff, int yoff) {}//Sets the offset of the sprite with the given index.
 void sprite_set_bbox_mode(int ind, int mode) {}//Sets the bounding box mode of the sprite (0=automatic, 1=full image, 2=manual).
 void sprite_set_bbox(int ind, int left, int top, int right, int bottom) {}//Sets the bounding box of the sprite with the given index. Works only when the bounding box mode is manual.
 void sprite_set_precise(int ind, int mode) {}//Sets whether the sprite with the given index uses precise collision checking (true or false).
-int sprite_create_from_surface(int sid, int x, int y, int w, int h, bool precise, bool transparent, bool smooth, bool preload, int xorig, int yorig) {}
+int sprite_create_from_surface(int sid, int x, int y, int w, int h, bool precise, bool transparent, bool smooth, bool preload, int xorig, int yorig) { return 0;}
 void sprite_assign(int ind, int spr) {
+    
+}
+void sprite_add_from_screen(int ind, int x, int y, int w, int h) {
+
+}
+int sprite_duplicate(int ind) {
+    return 0;   
+}
+
+void sprite_merge(int ind1, int ind2) {
     
 }
 
@@ -333,6 +353,15 @@ void d3d_transform_add_rotation_y(double angle) {}
 void d3d_transform_add_rotation_z(double angle) {}
 void d3d_transform_add_rotation_axis(double xa, double ya, double za, double angle) {}
 
+void d3d_vertex_normal(double x, double y, double z, double nx, double ny, double nz) {}
+void d3d_vertex_normal_color(double x, double y, double z, double nx, double ny, double nz, double col, double alpha) {}
+void d3d_vertex_normal_texture(double x, double y, double z, double nx, double ny, double nz, double xtex, double ytex) {}
+void d3d_vertex_normal_texture_color(double x, double y, double z, double nx, double ny, double nz, double xtex, double ytex, double col, double alpha) {}
+
+void d3d_primitive_begin_texture(int kind, int texid) {}
+void d3d_vertex_texture(double x, double y, double z, double xtex, double ytex) {}
+void d3d_vertex_texture_color(double x, double y, double z, double xtex, double ytex, double col, double alpha) {}
+
 /*
 List functions
 */
@@ -416,6 +445,38 @@ int ds_priority_delete_max(int pid) {} // Returns the value with the largest pri
 int ds_priority_find_max(int pid) {} // Returns the value with the largest priority but does not delete it from the priority queue.
 string ds_priority_write(int pid) {} // Turns the data structure into a string and returns this string. The string can then be used to e.g. save it to a file. This provides an easy mechanism for saving data structures.
 void ds_priority_read(int pid, string str) {} // Reads the data structure from the given string (as created by the previous call).
+
+/* Queue */
+int ds_queue_create() {return 0;}
+void ds_queue_destroy(int id) {}
+void ds_queue_clear(int id) {}
+void ds_queue_copy(int id, int source) {}
+int ds_queue_size(int id) {return 0;}
+bool ds_queue_empty(int id) {}
+void ds_queue_enqueue(int id, int val) {}
+int ds_queue_dequeue(int id) {return 0;}
+int ds_queue_head(int id) {return 0;}
+int ds_queue_tail(int id)  {return 0;}
+string ds_queue_write(int id) {}
+void ds_queue_read(int id, string str) {}
+
+int ds_map_create(){return 0;}
+void ds_map_destroy(int id) {}
+void ds_map_clear(int id) {}
+void ds_map_copy(int id, int source) {}
+int ds_map_size(int id) {return 0;}
+bool ds_map_empty(int id) {return true;}
+void ds_map_add(int id, var key, var val) {}
+void ds_map_replace(int id, var key, var val) {}
+void ds_map_delete(int id, var key)  {}
+bool ds_map_exists(int id, var key) {return false;}
+var ds_map_find_value(int id, var key) {return 0;}
+var ds_map_find_previous(int id, var key) {return 0;}
+var ds_map_find_next(int id, var key) {return 0;}
+var ds_map_find_first(int id) {return 0;}
+var ds_map_find_last(int id){return 0;}
+string ds_map_write(int id) {return "";}
+void ds_map_read(int id, string str) {}
 
 
 /*
@@ -511,6 +572,11 @@ void execute_file(string fname) {}
 
 int window_handle() {return 0;}
 void window_set_showborder(bool show){}
+void window_default() {}
+void window_set_stayontop(bool stay) {}
+void screen_wait_vsync() {}
+int window_get_region_width() { return 0;}
+int window_get_region_height() { return 0;}
 #endif
 
 /*
@@ -845,7 +911,7 @@ string filename_ext(string fname) {} //Returns the extension part of the indicat
 string filename_change_ext(string fname, string newext) {} //
 
 /*
-GM 4.0/5.0 functions
+Old GM 4.0/5.0 compatibility functions
 */
 bool instance_sprite(int spr) {return false;}
 void draw_rectangle(float x1, float x2, float y1, float y2) {}
@@ -856,14 +922,18 @@ void draw_polygon_begin() {}
 void draw_polygon_vertex(float x,float y) {}
 void draw_polygon_end() {}
 void draw_pixel(float x,float y) {}
+void draw_arrow(float x1, float y1, float x2, float y2, float line_size);
 void action_draw_rectangle(float x1, float x2, float y1, float y2) {}
 void action_fill_color(double col) {}
 void file_write_string(string str) {}
 void file_writeln() {}
 void file_close() {}
 void file_open_write(string fname) {}
-int file_open_append(string fname) {}
+int file_open_append(string fname) {return 0;}
+int file_open_read(string fname) {return 0;}
+string file_read_string() {return "";}
 void action_draw_font(string str) {}
+int font_get_size(int ind)  {}
 
 //action_draw_font(Arial, 12, 32896, 1, 1, 0, 0);
 #define action_draw_font(arg1,arg2,arg3,arg4,arg5,arg6,arg7) action_draw_font(arg1)
@@ -874,7 +944,13 @@ int enigma_make_color(int r, int g, int b) {}
 void move_contact(double x) {}
 void move_bounce(double x) {}
 
-
+int ev_create=0;
+int ev_destroy=1;
+int ev_step=3;
+int ev_step_normal=0;
+int ev_draw=8;
+double current_time=0;
+bool gamemaker_registered=true;
 
 /*
  Tile functions
@@ -956,6 +1032,7 @@ void cd_set_track_position(double pos) {} //Sets the position in the current tra
 void cd_open_door() {} //Opens the door of the CD player.
 void cd_close_door() {} //Closes the door of the CD player.
 
+void MCI_command(var str) {}
 
 
 /*
@@ -1305,6 +1382,9 @@ void sprite_set_offset(int ind, int xoff, int yoff) {}
 string get_open_filename(string filter, string fname){
     return "/Users/alasdairmorrison/Documents/Game Maker/64D general/64D Last 0to10/physics/physics_1.txt";
 }
+
+//These are due to regex (LGMUtility) errors
+#define enigmaround(args...) round(args)
 
 
 

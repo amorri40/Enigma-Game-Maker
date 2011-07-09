@@ -29,990 +29,216 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_treebutton(x,y,idn);
+    new enigma::OBJ_tank(x,y,idn);
   break;
 case 1:
-    new enigma::OBJ_lightnenigmainbutton(x,y,idn);
+    new enigma::OBJ_turret1(x,y,idn);
   break;
 case 2:
-    new enigma::OBJ_raenigmainbutton(x,y,idn);
+    new enigma::OBJ_bullet(x,y,idn);
   break;
 case 3:
-    new enigma::OBJ_earthquakebutton(x,y,idn);
+    new enigma::OBJ_dest(x,y,idn);
   break;
 case 4:
-    new enigma::OBJ_asteroidbutton(x,y,idn);
+    new enigma::OBJ_cursor1(x,y,idn);
   break;
 case 5:
-    new enigma::OBJ_scorchbutton(x,y,idn);
+    new enigma::OBJ_baddybullet(x,y,idn);
   break;
 case 6:
-    new enigma::OBJ_rabbitbutton(x,y,idn);
-  break;
-case 7:
-    new enigma::OBJ_wenigmaindbutton(x,y,idn);
+    new enigma::OBJ_controller(x,y,idn);
   break;
 case 8:
-    new enigma::OBJ_manbutton(x,y,idn);
+    new enigma::OBJ_enemy_tank(x,y,idn);
   break;
 case 9:
-    new enigma::OBJ__DONTUSENUMBERS_1donothenigmaingatall(x,y,idn);
+    new enigma::OBJ_explosion(x,y,idn);
   break;
 case 10:
-    new enigma::OBJ__DONTUSENUMBERS_1divenigmaineenigmaenigmaintbutton(x,y,idn);
+    new enigma::OBJ_enemyturret(x,y,idn);
   break;
-case 12:
-    new enigma::OBJ_holdfordivenigmaine(x,y,idn);
+case 11:
+    new enigma::OBJ_enemy_tank2(x,y,idn);
+  break;
+case 13:
+    new enigma::OBJ_enemyturret2(x,y,idn);
   break;
 case 14:
-    new enigma::OBJ_themountaenigmain(x,y,idn);
+    new enigma::OBJ_missle_turrret(x,y,idn);
+  break;
+case 15:
+    new enigma::OBJ_laser(x,y,idn);
   break;
 case 16:
-    new enigma::OBJ_thelakecrator(x,y,idn);
+    new enigma::OBJ_missle(x,y,idn);
   break;
 case 17:
-    new enigma::OBJ_barpurplechanged(x,y,idn);
+    new enigma::OBJ_missle_turret(x,y,idn);
   break;
 case 18:
-    new enigma::OBJ_humaniqbox(x,y,idn);
+    new enigma::OBJ_enigmaauto(x,y,idn);
   break;
 case 19:
-    new enigma::OBJ_rankofgodbox(x,y,idn);
+    new enigma::OBJ_bullet2(x,y,idn);
   break;
 case 20:
-    new enigma::OBJ_rabbitiqbox(x,y,idn);
+    new enigma::OBJ_flag(x,y,idn);
   break;
 case 21:
-    new enigma::OBJ_Xednouse(x,y,idn);
+    new enigma::OBJ_baddybullet2(x,y,idn);
   break;
 case 22:
-    new enigma::OBJ_logoenigmaenigmaintro(x,y,idn);
-  break;
-case 23:
-    new enigma::OBJ_hiscoreB(x,y,idn);
+    new enigma::OBJ_explo2(x,y,idn);
   break;
 case 24:
-    new enigma::OBJ_enigmanewgameB(x,y,idn);
+    new enigma::OBJ_boomtu(x,y,idn);
   break;
 case 25:
-    new enigma::OBJ_HelpboxFIRST(x,y,idn);
+    new enigma::OBJ_boomlazer(x,y,idn);
   break;
 case 26:
-    new enigma::OBJ_youhaventevoD(x,y,idn);
+    new enigma::OBJ_dest2(x,y,idn);
   break;
 case 27:
-    new enigma::OBJ_dosomethenigmaing(x,y,idn);
-  break;
-case 28:
-    new enigma::OBJ_manishereD(x,y,idn);
+    new enigma::OBJ_enemyturret3(x,y,idn);
   break;
 case 29:
-    new enigma::OBJ_wenigmaindisblowenigmainD(x,y,idn);
+    new enigma::OBJ_baddybullet3(x,y,idn);
   break;
 case 30:
-    new enigma::OBJ_scorchearthD(x,y,idn);
+    new enigma::OBJ_baddybullet4(x,y,idn);
   break;
 case 31:
-    new enigma::OBJ_planttreeD(x,y,idn);
-  break;
-case 32:
-    new enigma::OBJ_shakeenigmainearthD(x,y,idn);
+    new enigma::OBJ_enemyturret4(x,y,idn);
   break;
 case 33:
-    new enigma::OBJ_lightnenigmainD(x,y,idn);
+    new enigma::OBJ_obj_minimap(x,y,idn);
   break;
 case 34:
-    new enigma::OBJ_raenigmainagroundD(x,y,idn);
+    new enigma::OBJ_blocko(x,y,idn);
   break;
 case 35:
-    new enigma::OBJ_andrabbitsD(x,y,idn);
-  break;
-case 36:
-    new enigma::OBJ_meteorstrikeD(x,y,idn);
+    new enigma::OBJ_title(x,y,idn);
   break;
 case 37:
-    new enigma::OBJ_holdquestionslater(x,y,idn);
+    new enigma::OBJ_hangars(x,y,idn);
   break;
 case 38:
-    new enigma::OBJ_startenigmaingthegame(x,y,idn);
-  break;
-case 39:
-    new enigma::OBJ_ahelpfultipD(x,y,idn);
-  break;
-case 40:
-    new enigma::OBJ_objective(x,y,idn);
-  break;
-case 41:
-    new enigma::OBJ_scorecaption(x,y,idn);
-  break;
-case 42:
-    new enigma::OBJ_drawtherank(x,y,idn);
+    new enigma::OBJ_HQ(x,y,idn);
   break;
 case 43:
-    new enigma::OBJ_drawBCage(x,y,idn);
+    new enigma::OBJ_baseturret(x,y,idn);
   break;
 case 44:
-    new enigma::OBJ_followmee(x,y,idn);
+    new enigma::OBJ_baddybullet5(x,y,idn);
   break;
 case 45:
-    new enigma::OBJ_particleoffury(x,y,idn);
+    new enigma::OBJ_base(x,y,idn);
   break;
 case 46:
-    new enigma::OBJ_sparkoflights(x,y,idn);
-  break;
-case 47:
-    new enigma::OBJ_theearthshakes(x,y,idn);
-  break;
-case 48:
-    new enigma::OBJ_thehugecrack(x,y,idn);
-  break;
-case 49:
-    new enigma::OBJ__DONTUSENUMBERS_500pts(x,y,idn);
-  break;
-case 50:
-    new enigma::OBJ_greenparticleoffury(x,y,idn);
+    new enigma::OBJ_bulletv(x,y,idn);
   break;
 case 51:
-    new enigma::OBJ_meteorfall(x,y,idn);
-  break;
-case 52:
-    new enigma::OBJ_fireballenigmaenigmaintosmk(x,y,idn);
-  break;
-case 53:
-    new enigma::OBJ_smokeafter(x,y,idn);
-  break;
-case 54:
-    new enigma::OBJ_followmecomet(x,y,idn);
-  break;
-case 56:
-    new enigma::OBJ_groundedcomet(x,y,idn);
+    new enigma::OBJ_someting(x,y,idn);
   break;
 case 57:
-    new enigma::OBJ_MOVEbuttonsAWAY(x,y,idn);
-  break;
-case 58:
-    new enigma::OBJ_MOVEbuttonsBACK(x,y,idn);
-  break;
-case 59:
-    new enigma::OBJ_EndofTURNBC(x,y,idn);
-  break;
-case 60:
-    new enigma::OBJ__DONTUSENUMBERS_600pts(x,y,idn);
-  break;
-case 61:
-    new enigma::OBJ_enigmarandomraenigmain(x,y,idn);
-  break;
-case 62:
-    new enigma::OBJ_raenigmaincreator(x,y,idn);
+    new enigma::OBJ_bullet4(x,y,idn);
   break;
 case 63:
-    new enigma::OBJ_GROUNDismushy(x,y,idn);
+    new enigma::OBJ_flamb(x,y,idn);
   break;
 case 64:
-    new enigma::OBJ_GROUNDisregular(x,y,idn);
+    new enigma::OBJ_explosionb(x,y,idn);
   break;
 case 65:
-    new enigma::OBJ_GROUNDisdry(x,y,idn);
-  break;
-case 67:
-    new enigma::OBJ_cracktoriver(x,y,idn);
+    new enigma::OBJ_smoke(x,y,idn);
   break;
 case 68:
-    new enigma::OBJ_thecrator(x,y,idn);
+    new enigma::OBJ_allie(x,y,idn);
   break;
 case 69:
-    new enigma::OBJ__DONTUSENUMBERS_700pts(x,y,idn);
+    new enigma::OBJ_allie_turret(x,y,idn);
   break;
 case 70:
-    new enigma::OBJ_lightnenigmainblam(x,y,idn);
-  break;
-case 71:
-    new enigma::OBJ_thelightnenigmainfire(x,y,idn);
-  break;
-case 72:
-    new enigma::OBJ_orangeparticleoffury(x,y,idn);
+    new enigma::OBJ_alliedbullet(x,y,idn);
   break;
 case 73:
-    new enigma::OBJ__DONTUSENUMBERS_50pts(x,y,idn);
-  break;
-case 74:
-    new enigma::OBJ_themeteorcreate(x,y,idn);
-  break;
-case 75:
-    new enigma::OBJ_scorchenigmaenigmaintheearth(x,y,idn);
-  break;
-case 76:
-    new enigma::OBJ_musicenigmarandomizer(x,y,idn);
-  break;
-case 77:
-    new enigma::OBJ_treegrower(x,y,idn);
-  break;
-case 78:
-    new enigma::OBJ__DONTUSENUMBERS_100pts(x,y,idn);
+    new enigma::OBJ_mmc1(x,y,idn);
   break;
 case 79:
-    new enigma::OBJ_VARIABLESofgod(x,y,idn);
-  break;
-case 80:
-    new enigma::OBJ____200pts(x,y,idn);
-  break;
-case 81:
-    new enigma::OBJ_redparticleoffury(x,y,idn);
-  break;
-case 82:
-    new enigma::OBJ_treesofglory(x,y,idn);
+    new enigma::OBJ_activator1(x,y,idn);
   break;
 case 83:
-    new enigma::OBJ__DONTUSENUMBERS_250pts(x,y,idn);
-  break;
-case 84:
-    new enigma::OBJ_treeseedlenigmaingparticle(x,y,idn);
-  break;
-case 85:
-    new enigma::OBJ_wenigmaindyearthcreate(x,y,idn);
-  break;
-case 86:
-    new enigma::OBJ_thevolcanofrmmtn(x,y,idn);
+    new enigma::OBJ_messenger(x,y,idn);
   break;
 case 87:
-    new enigma::OBJ_thebubblenigmainvolcano(x,y,idn);
+    new enigma::OBJ_tank1(x,y,idn);
   break;
 case 88:
-    new enigma::OBJ_volcanofire(x,y,idn);
+    new enigma::OBJ_turret2(x,y,idn);
   break;
 case 89:
-    new enigma::OBJ_blueparticleoffury(x,y,idn);
-  break;
-case 90:
-    new enigma::OBJ__DONTUSENUMBERS_100bluepts(x,y,idn);
+    new enigma::OBJ_controller2(x,y,idn);
   break;
 case 91:
-    new enigma::OBJ_whatsbluescore(x,y,idn);
+    new enigma::OBJ_bullet5(x,y,idn);
+  break;
+case 93:
+    new enigma::OBJ_activator2(x,y,idn);
+  break;
+case 95:
+    new enigma::OBJ_activator3(x,y,idn);
+  break;
+case 96:
+    new enigma::OBJ_intro(x,y,idn);
+  break;
+case 97:
+    new enigma::OBJ_enigmatm(x,y,idn);
+  break;
+case 98:
+    new enigma::OBJ_tmm(x,y,idn);
+  break;
+case 99:
+    new enigma::OBJ_NEW(x,y,idn);
   break;
 case 100:
-    new enigma::OBJ_mousecursor1(x,y,idn);
+    new enigma::OBJ_LOAD(x,y,idn);
   break;
 case 101:
-    new enigma::OBJ_rabbitcreates(x,y,idn);
+    new enigma::OBJ_OPTION(x,y,idn);
   break;
 case 102:
-    new enigma::OBJ_thebunnyofearth(x,y,idn);
+    new enigma::OBJ_dummy(x,y,idn);
   break;
 case 103:
-    new enigma::OBJ_thebunnyeatstrees(x,y,idn);
+    new enigma::OBJ_dummyt(x,y,idn);
   break;
 case 104:
-    new enigma::OBJ_thebunnyhasahome(x,y,idn);
+    new enigma::OBJ_enemy_tankt1(x,y,idn);
   break;
 case 105:
-    new enigma::OBJ_Fthebunnystayhome(x,y,idn);
+    new enigma::OBJ_enemyturrett1(x,y,idn);
   break;
 case 106:
-    new enigma::OBJ_drawtherabbitiq(x,y,idn);
+    new enigma::OBJ_baddybullet6(x,y,idn);
   break;
 case 107:
-    new enigma::OBJ_HOLDEVERYTHING(x,y,idn);
+    new enigma::OBJ_baset1(x,y,idn);
   break;
 case 108:
-    new enigma::OBJ__DONTUSENUMBERS_1BCrabbitswantIQ(x,y,idn);
+    new enigma::OBJ_baseturrett1(x,y,idn);
   break;
 case 109:
-    new enigma::OBJ_AsksforhelpD(x,y,idn);
+    new enigma::OBJ_baddybullet7(x,y,idn);
   break;
 case 110:
-    new enigma::OBJ_RabbitswantIQD(x,y,idn);
-  break;
-case 111:
-    new enigma::OBJ_donothenigmaing(x,y,idn);
-  break;
-case 112:
-    new enigma::OBJ_holdfornothenigmaingd(x,y,idn);
+    new enigma::OBJ_activator4(x,y,idn);
   break;
 case 113:
-    new enigma::OBJ_noenigmainfoD(x,y,idn);
+    new enigma::OBJ_smallblock(x,y,idn);
   break;
 case 114:
-    new enigma::OBJ_rabbitflashquick(x,y,idn);
-  break;
-case 115:
-    new enigma::OBJ_themanofearth(x,y,idn);
-  break;
-case 116:
-    new enigma::OBJ_mancreates(x,y,idn);
-  break;
-case 118:
-    new enigma::OBJ_manwalkstobunny(x,y,idn);
-  break;
-case 119:
-    new enigma::OBJ_manwalkstomountaenigmain(x,y,idn);
-  break;
-case 120:
-    new enigma::OBJ_IQrabbitparticle(x,y,idn);
-  break;
-case 121:
-    new enigma::OBJ_firstopportunity(x,y,idn);
-  break;
-case 122:
-    new enigma::OBJ_CheckendofERA(x,y,idn);
-  break;
-case 123:
-    new enigma::OBJ_ENDerabutton(x,y,idn);
-  break;
-case 124:
-    new enigma::OBJ_theendofanera(x,y,idn);
-  break;
-case 125:
-    new enigma::OBJ_TALLYuptheeraBC(x,y,idn);
-  break;
-case 126:
-    new enigma::OBJ_draw1ad(x,y,idn);
-  break;
-case 127:
-    new enigma::OBJ_noopportunityD(x,y,idn);
-  break;
-case 128:
-    new enigma::OBJ_yesopportunityD(x,y,idn);
-  break;
-case 129:
-    new enigma::OBJ_letsseehereD(x,y,idn);
-  break;
-case 130:
-    new enigma::OBJ_rankisbadD(x,y,idn);
-  break;
-case 131:
-    new enigma::OBJ_rankisgoodD(x,y,idn);
-  break;
-case 132:
-    new enigma::OBJ_rankisaverageD(x,y,idn);
-  break;
-case 133:
-    new enigma::OBJ_rankflashquick(x,y,idn);
-  break;
-case 134:
-    new enigma::OBJ_starthenigmaingenigmaneweraD(x,y,idn);
-  break;
-case 136:
-    new enigma::OBJ_volcanobutton(x,y,idn);
-  break;
-case 137:
-    new enigma::OBJ_fishbutton(x,y,idn);
-  break;
-case 138:
-    new enigma::OBJ_floodbutton(x,y,idn);
-  break;
-case 139:
-    new enigma::OBJ_enigmafreezebutton(x,y,idn);
-  break;
-case 140:
-    new enigma::OBJ_goldbutton(x,y,idn);
-  break;
-case 141:
-    new enigma::OBJ_heaenigmatmajorbutton(x,y,idn);
-  break;
-case 142:
-    new enigma::OBJ_itsasignbutton(x,y,idn);
-  break;
-case 143:
-    new enigma::OBJ_volcanoboomD(x,y,idn);
-  break;
-case 144:
-    new enigma::OBJ_fishenigmainwaterD(x,y,idn);
-  break;
-case 145:
-    new enigma::OBJ_floodareaD(x,y,idn);
-  break;
-case 146:
-    new enigma::OBJ_enigmafreezelandD(x,y,idn);
-  break;
-case 147:
-    new enigma::OBJ_goldenD(x,y,idn);
-  break;
-case 148:
-    new enigma::OBJ_heathotD(x,y,idn);
-  break;
-case 149:
-    new enigma::OBJ_itssignmanD(x,y,idn);
-  break;
-case 152:
-    new enigma::OBJ_drawthehumaniq(x,y,idn);
-  break;
-case 153:
-    new enigma::OBJ_humanflashquick(x,y,idn);
-  break;
-case 154:
-    new enigma::OBJ_whyisitXed(x,y,idn);
-  break;
-case 155:
-    new enigma::OBJ_thunderstormcreate(x,y,idn);
-  break;
-case 157:
-    new enigma::OBJ_lightnenigmainasignabove(x,y,idn);
-  break;
-case 158:
-    new enigma::OBJ_thesignisshown(x,y,idn);
-  break;
-case 159:
-    new enigma::OBJ_fireballrunsup(x,y,idn);
-  break;
-case 160:
-    new enigma::OBJ_enigmafreezenigmaenigmaintheearth(x,y,idn);
-  break;
-case 161:
-    new enigma::OBJ_thefrozenlake(x,y,idn);
-  break;
-case 164:
-    new enigma::OBJ_goldisplaced(x,y,idn);
-  break;
-case 165:
-    new enigma::OBJ_goldishere(x,y,idn);
-  break;
-case 166:
-    new enigma::OBJ_mountaenigmaincityplace(x,y,idn);
-  break;
-case 167:
-    new enigma::OBJ_themangoestogold(x,y,idn);
-  break;
-case 168:
-    new enigma::OBJ_EndofTURNAD1(x,y,idn);
-  break;
-case 170:
-    new enigma::OBJ_scorchformanhelp(x,y,idn);
-  break;
-case 171:
-    new enigma::OBJ__DONTUSENUMBERS_1AD1heaenigmatmanwants(x,y,idn);
-  break;
-case 172:
-    new enigma::OBJ_HeattoohotDa(x,y,idn);
-  break;
-case 173:
-    new enigma::OBJ__DONTUSENUMBERS_2donothenigmaingatall(x,y,idn);
-  break;
-case 174:
-    new enigma::OBJ__DONTUSENUMBERS_2addivenigmaineenigmaenigmaintbutton(x,y,idn);
-  break;
-case 175:
-    new enigma::OBJ_Manhasevolved2(x,y,idn);
-  break;
-case 176:
-    new enigma::OBJ____75pts(x,y,idn);
-  break;
-case 177:
-    new enigma::OBJ_volcanorockflyenigmain(x,y,idn);
-  break;
-case 178:
-    new enigma::OBJ_volcanoexplodenigmain(x,y,idn);
-  break;
-case 179:
-    new enigma::OBJ_rockfrmvolcanogrnd(x,y,idn);
-  break;
-case 180:
-    new enigma::OBJ_thefishenator(x,y,idn);
-  break;
-case 181:
-    new enigma::OBJ_fishenigmaenigmaintolake(x,y,idn);
-  break;
-case 182:
-    new enigma::OBJ__DONTUSENUMBERS_5pts(x,y,idn);
-  break;
-case 183:
-    new enigma::OBJ____5pts(x,y,idn);
-  break;
-case 184:
-    new enigma::OBJ_smallsparkoflights(x,y,idn);
-  break;
-case 185:
-    new enigma::OBJ_thelogotitleBS(x,y,idn);
-  break;
-case 186:
-    new enigma::OBJ_TALLYuptheeraAD1(x,y,idn);
-  break;
-case 187:
-    new enigma::OBJ_draw500ad(x,y,idn);
-  break;
-case 188:
-    new enigma::OBJ_raenigmain2button(x,y,idn);
-  break;
-case 189:
-    new enigma::OBJ_EndofTURNAD500(x,y,idn);
-  break;
-case 190:
-    new enigma::OBJ_gold2button(x,y,idn);
-  break;
-case 191:
-    new enigma::OBJ_thefarmland(x,y,idn);
-  break;
-case 192:
-    new enigma::OBJ_farmenigmaingbutton(x,y,idn);
-  break;
-case 193:
-    new enigma::OBJ_farmlandD(x,y,idn);
-  break;
-case 194:
-    new enigma::OBJ_makenigmaenigmainthefarm(x,y,idn);
-  break;
-case 195:
-    new enigma::OBJ_particlefarm(x,y,idn);
-  break;
-case 196:
-    new enigma::OBJ_Farmparticleenigmarand(x,y,idn);
-  break;
-case 197:
-    new enigma::OBJ_Pfliesbutton(x,y,idn);
-  break;
-case 198:
-    new enigma::OBJ_PfliesD(x,y,idn);
-  break;
-case 199:
-    new enigma::OBJ_theplagues(x,y,idn);
-  break;
-case 200:
-    new enigma::OBJ_fliesoffury(x,y,idn);
-  break;
-case 201:
-    new enigma::OBJ_plagueflycreate(x,y,idn);
-  break;
-case 202:
-    new enigma::OBJ_flychecktodestroy(x,y,idn);
-  break;
-case 203:
-    new enigma::OBJ_fliesaredefeated(x,y,idn);
-  break;
-case 204:
-    new enigma::OBJ_flieswenigmain(x,y,idn);
-  break;
-case 205:
-    new enigma::OBJ_restbutton(x,y,idn);
-  break;
-case 206:
-    new enigma::OBJ_restasecD(x,y,idn);
-  break;
-case 207:
-    new enigma::OBJ_particlefarmrest(x,y,idn);
-  break;
-case 208:
-    new enigma::OBJ_goldisplaced2(x,y,idn);
-  break;
-case 209:
-    new enigma::OBJ_rabbitsakenigmainhelp(x,y,idn);
-  break;
-case 210:
-    new enigma::OBJ__DONTUSENUMBERS_1AD500rabbitsagaenigmain(x,y,idn);
-  break;
-case 211:
-    new enigma::OBJ_rabbitstoodumbDa(x,y,idn);
-  break;
-case 212:
-    new enigma::OBJ__DONTUSENUMBERS_3donothenigmaingatall(x,y,idn);
-  break;
-case 213:
-    new enigma::OBJ__DONTUSENUMBERS_3divenigmaineenigmaenigmaintbutton(x,y,idn);
-  break;
-case 214:
-    new enigma::OBJ_manwalkstorock(x,y,idn);
-  break;
-case 215:
-    new enigma::OBJ_therockcityshitty(x,y,idn);
-  break;
-case 216:
-    new enigma::OBJ__DONTUSENUMBERS_50bluepts(x,y,idn);
-  break;
-case 217:
-    new enigma::OBJ_questionturnedoff(x,y,idn);
-  break;
-case 218:
-    new enigma::OBJ_turnenigmaenigmaintoholdquest(x,y,idn);
-  break;
-case 220:
-    new enigma::OBJ_turnenigmaenigmaintoOFF(x,y,idn);
-  break;
-case 221:
-    new enigma::OBJ_manwalkstoforest(x,y,idn);
-  break;
-case 222:
-    new enigma::OBJ_treecitybarb(x,y,idn);
-  break;
-case 223:
-    new enigma::OBJ_thehardstuffB(x,y,idn);
-  break;
-case 224:
-    new enigma::OBJ_themedstuffB(x,y,idn);
-  break;
-case 225:
-    new enigma::OBJ_theeasystuffB(x,y,idn);
-  break;
-case 226:
-    new enigma::OBJ_checkicon(x,y,idn);
-  break;
-case 227:
-    new enigma::OBJ_EASYLIST(x,y,idn);
-  break;
-case 228:
-    new enigma::OBJ_thecheckenigmanew(x,y,idn);
-  break;
-case 229:
-    new enigma::OBJ_MEDIUMLIST(x,y,idn);
-  break;
-case 230:
-    new enigma::OBJ_HARDLIST(x,y,idn);
-  break;
-case 231:
-    new enigma::OBJ_loadgameB(x,y,idn);
-  break;
-case 232:
-    new enigma::OBJ_archivebB(x,y,idn);
-  break;
-case 233:
-    new enigma::OBJ_draw1000ad(x,y,idn);
-  break;
-case 234:
-    new enigma::OBJ_silverishere(x,y,idn);
-  break;
-case 235:
-    new enigma::OBJ_thebunnyisready(x,y,idn);
-  break;
-case 236:
-    new enigma::OBJ_thebunnygoestosilver(x,y,idn);
-  break;
-case 237:
-    new enigma::OBJ_thecastleplace(x,y,idn);
-  break;
-case 238:
-    new enigma::OBJ_loadedcatapult1(x,y,idn);
-  break;
-case 240:
-    new enigma::OBJ_EndofTURNAD1000(x,y,idn);
-  break;
-case 241:
-    new enigma::OBJ_rest2button(x,y,idn);
-  break;
-case 242:
-    new enigma::OBJ_itsanothersignbutton(x,y,idn);
-  break;
-case 243:
-    new enigma::OBJ_catapultybutton(x,y,idn);
-  break;
-case 244:
-    new enigma::OBJ_cataDs(x,y,idn);
-  break;
-case 245:
-    new enigma::OBJ_silverbutton(x,y,idn);
-  break;
-case 246:
-    new enigma::OBJ_silverD(x,y,idn);
-  break;
-case 247:
-    new enigma::OBJ_fish2button(x,y,idn);
-  break;
-case 248:
-    new enigma::OBJ_flood2button(x,y,idn);
-  break;
-case 249:
-    new enigma::OBJ_manasks1000help(x,y,idn);
-  break;
-case 250:
-    new enigma::OBJ_ManneedleaderA(x,y,idn);
-  break;
-case 251:
-    new enigma::OBJ_Manloveslaws(x,y,idn);
-  break;
-case 252:
-    new enigma::OBJ__DONTUSENUMBERS_1AD1000manlaws(x,y,idn);
-  break;
-case 253:
-    new enigma::OBJ__DONTUSENUMBERS_4donothenigmaingatall(x,y,idn);
-  break;
-case 254:
-    new enigma::OBJ__DONTUSENUMBERS_4divenigmaineenigmaenigmaintbutton(x,y,idn);
-  break;
-case 255:
-    new enigma::OBJ_thelawoftheland(x,y,idn);
-  break;
-case 256:
-    new enigma::OBJ_lightenigmainoneshot(x,y,idn);
-  break;
-case 257:
-    new enigma::OBJ_mantocatapult(x,y,idn);
-  break;
-case 258:
-    new enigma::OBJ_catarocksuccess(x,y,idn);
-  break;
-case 259:
-    new enigma::OBJ_catarockfailure(x,y,idn);
-  break;
-case 260:
-    new enigma::OBJ_thebiglaunchcata(x,y,idn);
-  break;
-case 261:
-    new enigma::OBJ_TALLYuptheeraAD500(x,y,idn);
-  break;
-case 262:
-    new enigma::OBJ_rankisaverage0D(x,y,idn);
-  break;
-case 263:
-    new enigma::OBJ_rankisgood1D(x,y,idn);
-  break;
-case 264:
-    new enigma::OBJ_logoofmuseum(x,y,idn);
-  break;
-case 265:
-    new enigma::OBJ_thetheoriesB(x,y,idn);
-  break;
-case 266:
-    new enigma::OBJ_credB(x,y,idn);
-  break;
-case 267:
-    new enigma::OBJ_theenigmainspiresB(x,y,idn);
-  break;
-case 268:
-    new enigma::OBJ_workenigmainB(x,y,idn);
-  break;
-case 269:
-    new enigma::OBJ_mamamusicB(x,y,idn);
-  break;
-case 270:
-    new enigma::OBJ_vertigogamenigmainB(x,y,idn);
-  break;
-case 271:
-    new enigma::OBJ_forwardsroomB(x,y,idn);
-  break;
-case 272:
-    new enigma::OBJ_ejectiontomenuB(x,y,idn);
-  break;
-case 273:
-    new enigma::OBJ_theoryofgod(x,y,idn);
-  break;
-case 274:
-    new enigma::OBJ_musicofgod(x,y,idn);
-  break;
-case 275:
-    new enigma::OBJ_enigmainspiregod(x,y,idn);
-  break;
-case 277:
-    new enigma::OBJ_vertigogosh(x,y,idn);
-  break;
-case 278:
-    new enigma::OBJ_ejectotthegameB(x,y,idn);
-  break;
-case 280:
-    new enigma::OBJ_growlenigmainkA(x,y,idn);
-  break;
-case 281:
-    new enigma::OBJ_vertigolenigmainkA(x,y,idn);
-  break;
-case 282:
-    new enigma::OBJ_TALLYuptheeraAD1000(x,y,idn);
-  break;
-case 283:
-    new enigma::OBJ_draw1500ad(x,y,idn);
-  break;
-case 284:
-    new enigma::OBJ_thevillagecityT(x,y,idn);
-  break;
-case 285:
-    new enigma::OBJ_treecitybarbrabbit(x,y,idn);
-  break;
-case 286:
-    new enigma::OBJ_thebunnystartsacity(x,y,idn);
-  break;
-case 287:
-    new enigma::OBJ_worksofgod(x,y,idn);
-  break;
-case 288:
-    new enigma::OBJ_rabitcreditsC(x,y,idn);
-  break;
-case 289:
-    new enigma::OBJ_Creditsofgosh(x,y,idn);
-  break;
-case 290:
-    new enigma::OBJ_thelogocred(x,y,idn);
-  break;
-case 291:
-    new enigma::OBJ_makesureto1500(x,y,idn);
-  break;
-case 292:
-    new enigma::OBJ_Pbloodbutton(x,y,idn);
-  break;
-case 293:
-    new enigma::OBJ_PbloodD(x,y,idn);
-  break;
-case 294:
-    new enigma::OBJ_EndofTURNAD1500(x,y,idn);
-  break;
-case 295:
-    new enigma::OBJ_Thesignshownwoiq(x,y,idn);
-  break;
-case 296:
-    new enigma::OBJ_rest3button(x,y,idn);
-  break;
-case 297:
-    new enigma::OBJ_oilbutton(x,y,idn);
-  break;
-case 298:
-    new enigma::OBJ_theoilD(x,y,idn);
-  break;
-case 299:
-    new enigma::OBJ_enigmainjectenigmainoil(x,y,idn);
-  break;
-case 300:
-    new enigma::OBJ_lightnenigmain3button(x,y,idn);
-  break;
-case 301:
-    new enigma::OBJ_silver2button(x,y,idn);
-  break;
-case 302:
-    new enigma::OBJ_thecivilbunny(x,y,idn);
-  break;
-case 303:
-    new enigma::OBJ_thecivilsilverbunny(x,y,idn);
-  break;
-case 305:
-    new enigma::OBJ_thebloodyplague(x,y,idn);
-  break;
-case 306:
-    new enigma::OBJ_TALLYuptheeraAD1500(x,y,idn);
-  break;
-case 307:
-    new enigma::OBJ_draw2000ad(x,y,idn);
-  break;
-case 308:
-    new enigma::OBJ__DONTUSENUMBERS_1AD1500rabbitsMORE(x,y,idn);
-  break;
-case 309:
-    new enigma::OBJ_Rabbitswantcity(x,y,idn);
-  break;
-case 310:
-    new enigma::OBJ__DONTUSENUMBERS_5divenigmaineenigmaenigmaintbutton(x,y,idn);
-  break;
-case 311:
-    new enigma::OBJ__DONTUSENUMBERS_5donothenigmaingatall(x,y,idn);
-  break;
-case 312:
-    new enigma::OBJ_therabbitsaregreedy(x,y,idn);
-  break;
-case 313:
-    new enigma::OBJ_Pdeathbutton(x,y,idn);
-  break;
-case 314:
-    new enigma::OBJ_PdeathD(x,y,idn);
-  break;
-case 315:
-    new enigma::OBJ_oilderricksthenigmaing(x,y,idn);
-  break;
-case 316:
-    new enigma::OBJ_EndofTURNAD2000(x,y,idn);
-  break;
-case 317:
-    new enigma::OBJ_rest4button(x,y,idn);
-  break;
-case 318:
-    new enigma::OBJ_fuelbutton(x,y,idn);
-  break;
-case 319:
-    new enigma::OBJ_enigmainjectenigmainfuel(x,y,idn);
-  break;
-case 320:
-    new enigma::OBJ_medicalbutton(x,y,idn);
-  break;
-case 321:
-    new enigma::OBJ_thefuelD(x,y,idn);
-  break;
-case 322:
-    new enigma::OBJ_particlefarmmedicenigmaine(x,y,idn);
-  break;
-case 323:
-    new enigma::OBJ_thedeathofmen(x,y,idn);
-  break;
-case 324:
-    new enigma::OBJ_thedeathplaguee(x,y,idn);
-  break;
-case 327:
-    new enigma::OBJ_TALLYuptheeraAD2000(x,y,idn);
-  break;
-case 328:
-    new enigma::OBJ_fuelplantthenigmaing(x,y,idn);
-  break;
-case 329:
-    new enigma::OBJ_draw2100ad(x,y,idn);
-  break;
-case 330:
-    new enigma::OBJ_rest5button(x,y,idn);
-  break;
-case 331:
-    new enigma::OBJ_peacebutton(x,y,idn);
-  break;
-case 332:
-    new enigma::OBJ_EndofTURNAD2100(x,y,idn);
-  break;
-case 333:
-    new enigma::OBJ____1500pts(x,y,idn);
-  break;
-case 334:
-    new enigma::OBJ_knockenigmaindownlaws(x,y,idn);
-  break;
-case 335:
-    new enigma::OBJ_thenegotiator(x,y,idn);
-  break;
-case 336:
-    new enigma::OBJ_thefuturenycity(x,y,idn);
-  break;
-case 337:
-    new enigma::OBJ_thebunnygoescity(x,y,idn);
-  break;
-case 338:
-    new enigma::OBJ_themangoestobunny(x,y,idn);
-  break;
-case 340:
-    new enigma::OBJ_peaceD(x,y,idn);
-  break;
-case 341:
-    new enigma::OBJ_rocketgoesup(x,y,idn);
-  break;
-case 342:
-    new enigma::OBJ_rocketgoesdown(x,y,idn);
-  break;
-case 343:
-    new enigma::OBJ_medicalD(x,y,idn);
-  break;
-case 345:
-    new enigma::OBJ_TALLYuptheeraAD2100(x,y,idn);
-  break;
-case 346:
-    new enigma::OBJ_fenigmainishenigmaingthegameD(x,y,idn);
-  break;
-case 347:
-    new enigma::OBJ_ENDGAMEbutton(x,y,idn);
-  break;
-case 348:
-    new enigma::OBJ_theendofthegamea(x,y,idn);
-  break;
-case 349:
-    new enigma::OBJ_TheCHECKLISTvariable(x,y,idn);
-  break;
-case 350:
-    new enigma::OBJ_showpercentcompl(x,y,idn);
-  break;
-case 352:
-    new enigma::OBJ_savenigmaingchecklist(x,y,idn);
-  break;
-case 353:
-    new enigma::OBJ_thearchivebutlock(x,y,idn);
-  break;
-case 354:
-    new enigma::OBJ_thequitgameearned(x,y,idn);
-  break;
-case 355:
-    new enigma::OBJ_thenextgameearned(x,y,idn);
-  break;
-case 356:
-    new enigma::OBJ_thearchivebutearned(x,y,idn);
-  break;
-case 358:
-    new enigma::OBJ_showtherounds(x,y,idn);
-  break;
-case 359:
-    new enigma::OBJ_starenigmaingtextgame(x,y,idn);
-  break;
-case 362:
-    new enigma::OBJ_MUSICkillerKkey(x,y,idn);
+    new enigma::OBJ_biggerblock(x,y,idn);
   break;
 

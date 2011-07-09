@@ -56,7 +56,7 @@ int background_color = 16777215;
 int background_showcolor=1;
 
 var background_visible, background_foreground, background_index, background_x, background_y, background_htiled,
-background_vtiled, background_hspeed, background_vspeed;
+background_vtiled, background_hspeed, background_vspeed,background_alpha;
 
 int view_current = 0;
 int view_enabled = 0;

@@ -1,4 +1,4 @@
-struct vertex {
+/*struct vertex {
     float xx;
     float yy;
     float zz;
@@ -10,7 +10,7 @@ struct vertex {
     }
     vertex()
     {}
-};
+};*/
 
 
 
