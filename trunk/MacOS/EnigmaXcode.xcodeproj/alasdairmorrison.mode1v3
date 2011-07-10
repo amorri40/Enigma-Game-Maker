@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F41413C992FE004E9008</string>
+						<string>9C11F44A13C9A1DF004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C3B483713C577B40015E8E2</string>
@@ -270,8 +270,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -312,7 +310,6 @@
 								<string>9C0ACE5713252F3C00AB1FCD</string>
 								<string>9CD0E0731211552700A01347</string>
 								<string>9CD0E36B1211960600A01347</string>
-								<string>9CEBA7A01213884500FC1D14</string>
 								<string>9CD0E36C1211960600A01347</string>
 								<string>9CD0E2FF12115C9B00A01347</string>
 								<string>9CD0E1B81211552700A01347</string>
@@ -326,8 +323,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
-									<integer>16</integer>
+									<integer>31</integer>
+									<integer>17</integer>
 									<integer>15</integer>
 									<integer>12</integer>
 									<integer>2</integer>
@@ -335,7 +332,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 470}, {322, 594}}</string>
+							<string>{{0, 286}, {322, 594}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -365,12 +362,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CocoaMain.cpp</string>
+								<string>EnigmaView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -378,11 +377,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CocoaMain.cpp</string>
+										<string>EnigmaView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F41313C992FE004E9008</string>
+										<string>9C11F44913C9A1DF004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -495,7 +494,6 @@
 											<string>9C0D05841363544F0083E470</string>
 											<string>9C0D05FA136494ED0083E470</string>
 											<string>9C0D06F91364C1980083E470</string>
-											<string>9C0D08C11365FA2A0083E470</string>
 											<string>9C0D08F01367427A0083E470</string>
 											<string>9C0D0901136743FC0083E470</string>
 											<string>9C0D0A21136894FA0083E470</string>
@@ -519,7 +517,6 @@
 											<string>9CBA3B4E1384A10F008375A8</string>
 											<string>9CBA3B5E1385AA5A008375A8</string>
 											<string>9CBA3C351386D3D1008375A8</string>
-											<string>9CBA3DBC13881B1D008375A8</string>
 											<string>9CBA3DF81388BE0D008375A8</string>
 											<string>9CBA3DFC1388BE0D008375A8</string>
 											<string>9CBA3DFE1388BE0D008375A8</string>
@@ -577,8 +574,6 @@
 											<string>9CF95F9413C00D7D009DE5FB</string>
 											<string>9CCA663C13C3E0BE00D7F6AC</string>
 											<string>9C4A7D4413C4367700D9534C</string>
-											<string>9C4A7D4513C4367700D9534C</string>
-											<string>9C4A7D4613C4367700D9534C</string>
 											<string>9C4A7D4713C4367700D9534C</string>
 											<string>9C4A7D4813C4367700D9534C</string>
 											<string>9C4A7D4A13C4367700D9534C</string>
@@ -587,7 +582,6 @@
 											<string>9C3B472813C4A73F0015E8E2</string>
 											<string>9C3B478913C541020015E8E2</string>
 											<string>9C3B479D13C55E6A0015E8E2</string>
-											<string>9C3B480313C56B590015E8E2</string>
 											<string>9C3B481A13C5747C0015E8E2</string>
 											<string>9C3B482C13C5771C0015E8E2</string>
 											<string>9C3B482D13C5771C0015E8E2</string>
@@ -613,7 +607,12 @@
 											<string>9C11F36013C97F8A004E9008</string>
 											<string>9C11F36113C97F8A004E9008</string>
 											<string>9C11F36213C97F8A004E9008</string>
-											<string>9C11F36313C97F8A004E9008</string>
+											<string>9C11F41913C99613004E9008</string>
+											<string>9C11F43B13C99D5D004E9008</string>
+											<string>9C11F43C13C99D5D004E9008</string>
+											<string>9C11F43D13C99D5D004E9008</string>
+											<string>9C11F43E13C99D5D004E9008</string>
+											<string>9C11F43F13C99D5D004E9008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -814,10 +813,10 @@
 		<string>9C11F32A13C97776004E9008</string>
 		<string>9C11F32B13C97776004E9008</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>9CD0E31A12115D9300A01347</string>
 		<string>9C0D007A1360B0EF0083E470</string>
+		<string>9CD0E31A12115D9300A01347</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -842,7 +841,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>IDE_EDIT_roomcreates.h</string>
+								<string>IDE_EDIT_objectfunctionality.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -851,7 +850,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1091, 274}}</string>
 								<key>RubberWindowFrame</key>
-								<string>245 202 1091 556 0 0 1280 778 </string>
+								<string>189 202 1091 556 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -877,7 +876,7 @@
 								<key>Frame</key>
 								<string>{{0, 279}, {1091, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>245 202 1091 556 0 0 1280 778 </string>
+								<string>189 202 1091 556 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -909,11 +908,11 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>245 202 1091 556 0 0 1280 778 </string>
+			<string>189 202 1091 556 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>9CD0E31A12115D9300A01347</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1062,7 +1061,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CocoaWindow.cpp</string>
+										<string>IDE_EDIT_evparent.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1128,7 +1127,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

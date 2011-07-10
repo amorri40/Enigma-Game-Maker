@@ -39,4 +39,54 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
+  var dummy_0; // Referenced by 3 accessors
+  var  &varaccess_energy(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case te: return ((OBJ_te*)inst)->energy;
+      case Biohazard: return ((OBJ_Biohazard*)inst)->energy;
+      case Akna: return ((OBJ_Akna*)inst)->energy;
+      case rocksack: return ((OBJ_rocksack*)inst)->energy;
+      case Minerkapcs: return ((OBJ_Minerkapcs*)inst)->energy;
+      case Hordoo: return ((OBJ_Hordoo*)inst)->energy;
+      case Officer: return ((OBJ_Officer*)inst)->energy;
+      case Setten: return ((OBJ_Setten*)inst)->energy;
+      case under: return ((OBJ_under*)inst)->energy;
+      case invis___trigger: return ((OBJ_invis___trigger*)inst)->energy;
+      case Level___code: return ((OBJ_Level___code*)inst)->energy;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->energy;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_global_gold(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case te: return ((OBJ_te*)inst)->global_gold;
+      case object16: return ((OBJ_object16*)inst)->global_gold;
+      case object21: return ((OBJ_object21*)inst)->global_gold;
+      case enigmahealth: return ((OBJ_enigmahealth*)inst)->global_gold;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->global_gold;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_global_key(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case te: return ((OBJ_te*)inst)->global_key;
+      case Kard: return ((OBJ_Kard*)inst)->global_key;
+      case Kardlock___green: return ((OBJ_Kardlock___green*)inst)->global_key;
+      case Kard2: return ((OBJ_Kard2*)inst)->global_key;
+      case kardlock___yellow: return ((OBJ_kardlock___yellow*)inst)->global_key;
+      case Kard3: return ((OBJ_Kard3*)inst)->global_key;
+      case Kardlock___Red: return ((OBJ_Kardlock___Red*)inst)->global_key;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->global_key;
+    }
+    return dummy_0;
+  }
 } // namespace enigma

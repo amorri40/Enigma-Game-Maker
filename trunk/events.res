@@ -291,7 +291,7 @@ draw: 8
 	Iterator-initialize: /* Draw is initialized in the constructor */
 	Iterator-remove: depth.remove();
 	Iterator-delete: /* Draw will destruct with this */
-	Default: if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	Default: if (image_single!=-1) {image_speed=0;image_index=image_single;} if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	Constant: image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));
 	Instead: screen_redraw(); screen_refresh(); # We never want to iterate draw; we let screen_redraw() handle it.
 

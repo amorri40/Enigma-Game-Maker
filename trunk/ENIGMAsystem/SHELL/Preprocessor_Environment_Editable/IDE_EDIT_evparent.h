@@ -34,14 +34,24 @@ namespace enigma
   {
     virtual void    myevent_alarm() { } // No default Alarm ... code.
     virtual variant myevent_animationend() { return 0; } // No default Animation End code.
-    virtual void    myevent_collision() { } // No default obj_14 code.
+    virtual variant myevent_boundary() { return 0; } // No default Intersect Boundary code.
+    virtual void    myevent_collision() { } // No default obj_8 code.
     virtual variant myevent_create() { return 0; } // No default Create code.
     virtual variant myevent_draw()
     {
-  if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));
+  if (image_single!=-1) {image_speed=0;image_index=image_single;} if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));
     return 0;
     }
-    virtual void    myevent_keypress() { } // No default Press <key46> code.
+    virtual variant myevent_gamestart() { return 0; } // No default Game Start code.
+    virtual void    myevent_keyboard() { } // No default Keyboard <key39> code.
+    virtual void    myevent_keypress() { } // No default Press <key38> code.
+    virtual void    myevent_keyrelease() { } // No default Release <key39> code.
+    virtual variant myevent_leftpress() { return 0; } // No default Left Press code.
+    virtual variant myevent_leftrelease() { return 0; } // No default Left Release code.
+    virtual variant myevent_mouseenter() { return 0; } // No default Mouse Enter code.
+    virtual variant myevent_mouseleave() { return 0; } // No default Mouse Leave code.
+    virtual variant myevent_nomorehealth() { return 0; } // No default No More Health code.
+    virtual variant myevent_nomorelives() { return 0; } // No default No More Lives code.
     virtual variant myevent_outsideroom() { return 0; } // No default Outside Room code.
     virtual variant myevent_roomstart() { return 0; } // No default Room Start code.
     virtual variant myevent_step()
