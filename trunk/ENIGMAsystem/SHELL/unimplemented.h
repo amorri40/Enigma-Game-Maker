@@ -1171,9 +1171,7 @@ void action_set_cursor(int sprite, int cursor) {
 	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->gravity=newgravity;
 }*/
 
-void action_set_hspeed(double newhspeed) {
-	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->hspeed=newhspeed;
-}
+
 
 /*void action_set_motion(double newdirection,double newspeed) {
 	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->direction=newdirection;
@@ -1354,10 +1352,7 @@ void event_perform(int type, int numb) {}
 ///////////
 /// Activity_engine
 ///////////
-void action_set_gravity(double direction,double newgravity) { 
-	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->gravity_direction=direction;
-	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->gravity=newgravity;
-}
+
 
 void action_potential_step(double x,double y,double speed,int avoid) {
     //move_towards_point(x,y,speed);
