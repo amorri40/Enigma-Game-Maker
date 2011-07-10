@@ -1,0 +1,5 @@
+action_set_hspeed	U
+enigma_max	U
+enigma_min	U
+enigmadraw_text	U
+

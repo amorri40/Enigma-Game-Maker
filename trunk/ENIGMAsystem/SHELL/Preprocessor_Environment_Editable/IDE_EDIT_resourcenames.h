@@ -30,18 +30,65 @@
 
 enum //object names
 {
+  obj_player_3D = 57,
+  obj_bullet_3D = 160,
+  obj_select = 161,
+  obj_char_image = 162,
+  obj_background = 163,
+  obj_electricity = 164,
 };
-namespace enigma { size_t object_idmax = 0; }
+namespace enigma { size_t object_idmax = 165; }
 
 enum //sprite names
 {
+  spr_pan = 24,
+  spr_greg_run_R = 62,
+  spr_greg_jump = 71,
+  spr_backround = 80,
+  spr_select_2 = 82,
+  spr_player_image = 83,
+  spr_select_1 = 84,
+  spr_default_bullet = 85,
+  spr_spread_bullet = 91,
+  spr_enemy_bullet = 98,
+  spr_greg_run_L = 110,
+  spr_trevor_life = 114,
+  spr_greg_life = 115,
+  spr_explosion = 167,
+  spr_powerups = 169,
+  spr_laser = 210,
+  spr_target = 212,
+  spr_flamethrower = 214,
+  spr_enemy_die = 219,
+  spr_font = 238,
+  spr_greg_shoot_idle_3D = 303,
+  spr_greg_shoot_down_3D = 304,
+  spr_greg_shoot_run_R_3D = 305,
+  spr_greg_shoot_run_L_3D = 306,
+  spr_greg_electrified_3D = 307,
+  spr_greg_run_3D = 308,
+  spr_greg_die1_3D = 309,
+  spr_greg_die2_3D = 310,
+  spr_electricity = 311,
+  spr_innocentguy_L = 312,
+  spr_innocentguy_R = 313,
+  spr_innocentguy_throw = 314,
+  spr_ninja_idle = 315,
+  spr_ninja_jump = 316,
+  spr_ninjapink_idle = 317,
+  spr_ninjapink_jump = 318,
+  spr_pot = 319,
 };
-namespace enigma { size_t sprite_idmax = 0; }
+namespace enigma { size_t sprite_idmax = 320; }
 
 enum //background names
 {
+  bac_base1 = 43,
+  bac_base2 = 44,
+  bac_base3 = 45,
+  bac_base4 = 46,
 };
-namespace enigma { size_t background_idmax = 0; }
+namespace enigma { size_t background_idmax = 47; }
 
 enum //font names
 {
@@ -51,8 +98,10 @@ namespace enigma { size_t font_idmax = 0; }
 
 enum //timeline names
 {
+  bridge_explosions = 0,
+  house_guys = 1,
 };
-namespace enigma { size_t timeline_idmax = 0; }
+namespace enigma { size_t timeline_idmax = 2; }
 
 enum //path names
 {
@@ -61,10 +110,14 @@ namespace enigma { size_t path_idmax = 0; }
 
 enum //sound names
 {
+  base = 13,
+  base_intro = 15,
 };
-namespace enigma { size_t sound_idmax = 0; }
+namespace enigma { size_t sound_idmax = 16; }
 
 enum //room names
 {
+  Tile_Screen = 40,
+  base1 = 9,
 };
 

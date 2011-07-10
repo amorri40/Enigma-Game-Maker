@@ -328,9 +328,10 @@ namespace enigma {
 	char** parameters;
 	void windowsystem_write_exename(char* x)
 	{
+        const char* resourcefile = "./resources.res";
 		unsigned irx;
-		for (irx = 0; enigma::parameters[0][irx] != 0; irx++)
-			x[irx] = enigma::parameters[0][irx];
+		for (irx = 0; resourcefile[irx] != 0; irx++)
+			x[irx] = resourcefile[irx];
 		x[irx] = 0;
 	}
 #define hielem 9

@@ -39,40 +39,77 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 21 accessors
-  var  &varaccess___lines__(int x)
+  var dummy_0; // Referenced by 17 accessors
+  var  &varaccess_Y(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->__lines__;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->Y;
     }
     return dummy_0;
   }
-  var  &varaccess_a(int x)
+  var  &varaccess_a0(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->a;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->a0;
     }
     return dummy_0;
   }
-  var  &varaccess_enigmaplus(int x)
+  var  &varaccess_a1(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmaplus;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->a1;
     }
     return dummy_0;
   }
-  var  &varaccess_file_read(int x)
+  var  &varaccess_ammo(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file_read;
+      case obj_player_3D: return ((OBJ_obj_player_3D*)inst)->ammo;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->ammo;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_b0(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->b0;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_b1(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->b1;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_center(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->center;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_contrafont(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->contrafont;
     }
     return dummy_0;
   }
@@ -81,34 +118,55 @@ namespace enigma
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
+      case obj_player_3D: return ((OBJ_obj_player_3D*)inst)->i;
       case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->i;
     }
     return dummy_0;
   }
-  var  &varaccess_in_db2(int x)
+  var  &varaccess_other_hspeed(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->in_db2;
+      case obj_bullet_3D: return ((OBJ_obj_bullet_3D*)inst)->other_hspeed;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->other_hspeed;
     }
     return dummy_0;
   }
-  var  &varaccess_j(int x)
+  var  &varaccess_other_x(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->j;
+      case obj_bullet_3D: return ((OBJ_obj_bullet_3D*)inst)->other_x;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->other_x;
     }
     return dummy_0;
   }
-  var  &varaccess_sides(int x)
+  var  &varaccess_p1(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->sides;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->p1;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_p2(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->p2;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_size1(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->size1;
     }
     return dummy_0;
   }
@@ -121,111 +179,23 @@ namespace enigma
     }
     return dummy_0;
   }
-  var  &varaccess_text2_i4(int x)
+  var  &varaccess_x1(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text2_i4;
+      case obj_background: return ((OBJ_obj_background*)inst)->x1;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->x1;
     }
     return dummy_0;
   }
-  var  &varaccess_text_999i(int x)
+  var  &varaccess_y1(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999i;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_text_999ii(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999ii;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_text_999iii(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iii;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_text_999iiii(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iiii;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_text_999iiiii(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->text_999iiiii;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_xmean(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xmean;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_xrad(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xrad;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_xx(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xx;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_ymean(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->ymean;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_yrad(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->yrad;
-    }
-    return dummy_0;
-  }
-  var  &varaccess_yy(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->yy;
+      case obj_background: return ((OBJ_obj_background*)inst)->y1;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->y1;
     }
     return dummy_0;
   }

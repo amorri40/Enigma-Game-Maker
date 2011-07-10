@@ -333,7 +333,7 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
   edbg << "Writing resource names and maxima" << flushl;
   wto.open("ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_resourcenames.h",ios_base::out);
     wto << license;
-    
+
     max = 0;
     wto << "enum //object names\n{\n";
     for (po_i i = parsed_objects.begin(); i != parsed_objects.end(); i++) {
@@ -554,9 +554,11 @@ outputFile.open("unimplementedfunctionnames.txt");
   }
   else
   {
-    string resname = extensions::targetOS.buildname;
+    string resname = extensions::targetOS.resfile;
+    printf(resname.c_str(),0);
     for (size_t p = resname.find("$exe"); p != string::npos; p = resname.find("$game"))
       resname.replace(p,4,gameFname);
+    printf(resname.c_str(),0);
     gameModule = fopen(resname.c_str(),"wb");
     if (!gameModule) {
       user << "Failed to write resources to compiler-specified file, `" << resname << "`. Write permissions to valid path?" << flushl;

@@ -27,9 +27,4 @@ In file included from SHELLmain.cpp:99:
 unimplemented.h: In function ‘void show_debug_message(std::string)’:
 unimplemented.h:1287: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
 unimplemented.h:1287: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
-In file included from SHELLmain.cpp:122:
-Preprocessor_Environment_Editable/IDE_EDIT_objectdeclarations.h: In function ‘variant _SCR_search_textfile_string()’:
-Preprocessor_Environment_Editable/IDE_EDIT_objectdeclarations.h:96: error: too many arguments to function ‘variant _SCR_file_text_nol()’
-Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:734: error: at this point in file
-make[1]: *** [link] Error 1
-make: *** [Game] Error 2
+Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode
