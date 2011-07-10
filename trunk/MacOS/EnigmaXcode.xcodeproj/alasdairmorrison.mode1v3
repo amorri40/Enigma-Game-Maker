@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F3D513C98A7A004E9008</string>
+						<string>9C11F41413C992FE004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C3B483713C577B40015E8E2</string>
@@ -354,7 +354,7 @@
 							<real>322</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>702 102 1280 653 0 0 1280 778 </string>
+						<string>-10 125 1280 653 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -382,7 +382,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F3D413C98A7A004E9008</string>
+										<string>9C11F41313C992FE004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -627,7 +627,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {936, 424}}</string>
 								<key>RubberWindowFrame</key>
-								<string>702 102 1280 653 0 0 1280 778 </string>
+								<string>-10 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -647,7 +647,7 @@
 								<key>Frame</key>
 								<string>{{0, 429}, {936, 183}}</string>
 								<key>RubberWindowFrame</key>
-								<string>702 102 1280 653 0 0 1280 778 </string>
+								<string>-10 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -813,15 +813,15 @@
 	<array>
 		<string>9C11F32A13C97776004E9008</string>
 		<string>9C11F32B13C97776004E9008</string>
-		<string>9C0D007A1360B0EF0083E470</string>
-		<string>9CD0E31A12115D9300A01347</string>
-		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>9CD0E31A12115D9300A01347</string>
+		<string>9C0D007A1360B0EF0083E470</string>
+		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>702 102 1280 653 0 0 1280 778 </string>
+	<string>-10 125 1280 653 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -913,7 +913,7 @@
 			<key>WindowToolGUID</key>
 			<string>9CD0E31A12115D9300A01347</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -996,10 +996,10 @@
 									<key>Frame</key>
 									<string>{{463, 0}, {553, 253}}</string>
 									<key>RubberWindowFrame</key>
-									<string>554 188 1016 515 0 0 1280 778 </string>
+									<string>264 227 1016 515 0 0 1280 778 </string>
 								</dict>
 								<key>RubberWindowFrame</key>
-								<string>554 188 1016 515 0 0 1280 778 </string>
+								<string>264 227 1016 515 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugSessionModule</string>
@@ -1033,11 +1033,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
 			<key>WindowString</key>
-			<string>554 188 1016 515 0 0 1280 778 </string>
+			<string>264 227 1016 515 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1062,7 +1062,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>soundinit.cpp</string>
+										<string>CocoaWindow.cpp</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1128,7 +1128,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -1194,7 +1194,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

@@ -36,23 +36,6 @@ namespace enigma
 {
   struct ENIGMA_global_structure: object_locals
   {
-    var Y;
-    var a0;
-    var a1;
-    var ammo;
-    var b0;
-    var b1;
-    var center;
-    var contrafont;
-    var i;
-    var other_hspeed;
-    var other_x;
-    var p1;
-    var p2;
-    var size1;
-    var size2;
-    var x1;
-    var y1;
     ENIGMA_global_structure(const int x, const int y): object_locals(x,y) {}
   };
   object_basic *ENIGMA_global_instance = new ENIGMA_global_structure(global,global);

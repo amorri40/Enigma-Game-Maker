@@ -328,11 +328,15 @@ namespace enigma {
 	char** parameters;
 	void windowsystem_write_exename(char* x)
 	{
-        const char* resourcefile = "./resources.res";
+        const char* resourcefile = enigma::parameters[0];
 		unsigned irx;
 		for (irx = 0; resourcefile[irx] != 0; irx++)
 			x[irx] = resourcefile[irx];
-		x[irx] = 0;
+        x[irx]= '.';
+        x[irx+1]= 'r';
+        x[irx+2]= 'e';
+        x[irx+3]= 's';
+		x[irx+4] = 0;
 	}
 #define hielem 9
 	static int last_second[hielem+1] = {0},last_microsecond[hielem+1] = {0};

@@ -1,5 +1,4 @@
+action_change_object	U
 action_set_hspeed	U
-enigma_max	U
-enigma_min	U
-enigmadraw_text	U
+enigmarandom	U
 

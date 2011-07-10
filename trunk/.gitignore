@@ -1,2 +1,4 @@
 *.o
 *.a
+*.res
+IDE_EDIT_*
