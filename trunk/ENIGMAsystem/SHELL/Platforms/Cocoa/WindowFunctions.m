@@ -61,9 +61,9 @@ int getMouse(int i)
 	switch(i)
 	{
 		case 0:  return mouse.x; //room
-		case 1:  return -(mouse.y-480);
+		case 1:  return -(mouse.y-[[delegate window] frame].size.height);
 		case 2:  return mouse.x; //window
-		case 3:  return  -(mouse.y-480)+22;
+        case 3: return -(mouse.y-[[delegate window] frame].size.height)-22;
 		default: return -1;
 	}
 	

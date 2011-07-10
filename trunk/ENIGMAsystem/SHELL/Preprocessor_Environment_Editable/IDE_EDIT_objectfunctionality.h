@@ -14347,7 +14347,12 @@ if(action_if_dice(22))
 variant enigma::OBJ_menustart::myevent_leftpress()
 {
   if (!(mouse_x > x + bbox_left and mouse_x < x + bbox_right and mouse_y > y + bbox_top and mouse_y < y + bbox_bottom)) return 0;
-action_sound(sound9, 0);
+
+  {
+    show_message("left pressed from lgm!");
+    
+  }
+  action_sound(sound9, 0);
   
   return 0;
 }
@@ -14355,7 +14360,12 @@ action_sound(sound9, 0);
 variant enigma::OBJ_menustart::myevent_leftrelease()
 {
   if (!(mouse_x > x + bbox_left and mouse_x < x + bbox_right and mouse_y > y + bbox_top and mouse_y < y + bbox_bottom)) return 0;
-action_next_room(0);
+
+  {
+    show_message("left released!");
+    
+  }
+  action_next_room(0);
   
   return 0;
 }

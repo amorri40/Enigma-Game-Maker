@@ -1,5 +1,0 @@
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m: In function '-[EnigmaView terminateEnigma]':
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m:142: warning: 'NSThread' may not respond to '-exit'
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m:142: warning: (Messages without a matching method signature
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m:142: warning: will be assumed to return 'id' and accept
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m:142: warning: '...' as arguments.)

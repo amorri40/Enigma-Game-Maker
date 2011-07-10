@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F44A13C9A1DF004E9008</string>
+						<string>9C11F4A913C9B81F004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C3B483713C577B40015E8E2</string>
@@ -323,16 +323,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>31</integer>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>47</integer>
+									<integer>36</integer>
 									<integer>12</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 286}, {322, 594}}</string>
+							<string>{{0, 469}, {322, 594}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -351,7 +350,7 @@
 							<real>322</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>-10 125 1280 653 0 0 1280 778 </string>
+						<string>285 125 1280 653 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -369,7 +368,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EnigmaView.m</string>
+								<string>IDE_EDIT_objectfunctionality.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -377,11 +376,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EnigmaView.m</string>
+										<string>IDE_EDIT_objectfunctionality.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F44913C9A1DF004E9008</string>
+										<string>9C11F4A813C9B81F004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -596,7 +595,6 @@
 											<string>9C11F21213C87DBD004E9008</string>
 											<string>9C11F21313C87DBD004E9008</string>
 											<string>9C11F23A13C87EAB004E9008</string>
-											<string>9C11F2D013C893C7004E9008</string>
 											<string>9C11F2EB13C89F3C004E9008</string>
 											<string>9C11F35A13C97F8A004E9008</string>
 											<string>9C11F35B13C97F8A004E9008</string>
@@ -612,7 +610,9 @@
 											<string>9C11F43C13C99D5D004E9008</string>
 											<string>9C11F43D13C99D5D004E9008</string>
 											<string>9C11F43E13C99D5D004E9008</string>
-											<string>9C11F43F13C99D5D004E9008</string>
+											<string>9C11F48113C9B0AB004E9008</string>
+											<string>9C11F48213C9B0AB004E9008</string>
+											<string>9C11F48313C9B0AB004E9008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -626,7 +626,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {936, 424}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-10 125 1280 653 0 0 1280 778 </string>
+								<string>285 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -646,7 +646,7 @@
 								<key>Frame</key>
 								<string>{{0, 429}, {936, 183}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-10 125 1280 653 0 0 1280 778 </string>
+								<string>285 125 1280 653 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -810,17 +810,18 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>9C11F4AA13C9B81F004E9008</string>
 		<string>9C11F32A13C97776004E9008</string>
 		<string>9C11F32B13C97776004E9008</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9C0D007A1360B0EF0083E470</string>
 		<string>9CD0E31A12115D9300A01347</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>-10 125 1280 653 0 0 1280 778 </string>
+	<string>285 125 1280 653 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -1061,7 +1062,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>IDE_EDIT_evparent.h</string>
+										<string>CocoaFunctions.cpp</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1070,7 +1071,7 @@
 										<key>Frame</key>
 										<string>{{0, 0}, {843, 257}}</string>
 										<key>RubberWindowFrame</key>
-										<string>139 107 843 557 0 0 1280 778 </string>
+										<string>70 126 843 557 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -1094,7 +1095,7 @@
 								<key>Frame</key>
 								<string>{{0, 262}, {843, 254}}</string>
 								<key>RubberWindowFrame</key>
-								<string>139 107 843 557 0 0 1280 778 </string>
+								<string>70 126 843 557 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
@@ -1123,7 +1124,7 @@
 				<string>1CD0528E0623707200166675</string>
 			</array>
 			<key>WindowString</key>
-			<string>139 107 843 557 0 0 1280 778 </string>
+			<string>70 126 843 557 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
@@ -1193,7 +1194,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
