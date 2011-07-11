@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F5B013CB5891004E9008</string>
+						<string>9C11F5B213CB5D4D004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C3B483713C577B40015E8E2</string>
@@ -383,7 +383,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F5AF13CB5891004E9008</string>
+										<string>9C11F5B113CB5D4D004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -824,8 +824,8 @@
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
-		<string>9CD0E31A12115D9300A01347</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>9CD0E31A12115D9300A01347</string>
 	</array>
 	<key>WindowString</key>
 	<string>3 125 1280 653 0 0 1280 778 </string>

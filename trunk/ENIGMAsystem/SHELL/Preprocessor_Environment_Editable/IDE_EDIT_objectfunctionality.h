@@ -6125,8 +6125,6 @@ variant enigma::OBJ_oppeningcredits::myevent_create()
   {
     draw = 0;
     alarm[0]= 45;
-    alarm[1]=- 1;
-    alarm[2]=- 1;
     
   }
   ;
@@ -6141,6 +6139,7 @@ variant enigma::OBJ_oppeningcredits::myevent_alarm_0()
   {
     alarm[1]= 45;
     background_visible(1)= 1;
+    background_visible(3)= 1;
     
   }
   ;
@@ -6154,9 +6153,9 @@ variant enigma::OBJ_oppeningcredits::myevent_alarm_1()
 
   {
     alarm[2]= 45;
-    background_visible(1)= 0;
     background_visible(2)= 1;
-    show_message("called!");
+    background_visible(3)= 1;
+    background_visible(1)= 0;
     
   }
   ;
@@ -6170,7 +6169,6 @@ variant enigma::OBJ_oppeningcredits::myevent_alarm_2()
 
   {
     draw = .01;
-    show_message("this is called too");
     
   }
   ;
@@ -6195,6 +6193,7 @@ image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));
     if(draw > 0)
     {
       draw += .01;
+      draw_background_ext(29, 0, 0, 2, 2, 0, c_white, draw);
       enigmadraw_text(x, y, draw);
       
     }

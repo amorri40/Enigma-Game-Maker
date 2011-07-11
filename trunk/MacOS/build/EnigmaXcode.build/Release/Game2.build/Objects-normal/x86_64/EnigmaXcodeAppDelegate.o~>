@@ -1,6 +1,0 @@
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m: In function '-[EnigmaXcodeAppDelegate applicationShouldTerminate:]':
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:55: warning: 'EnigmaView' may not respond to '-terminateEnigma'
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:55: warning: (Messages without a matching method signature
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:55: warning: will be assumed to return 'id' and accept
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:55: warning: '...' as arguments.)
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m:56: warning: control reaches end of non-void function

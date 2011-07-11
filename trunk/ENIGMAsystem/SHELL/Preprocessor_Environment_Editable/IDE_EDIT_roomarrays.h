@@ -33,9 +33,9 @@ namespace enigma {
   roomstruct grd_rooms[10] = {
     //Room 1
     { 1, "title",  "",
-      0x33ff66, roomcreate1,
-      336, 224, 30,  false, {
-      { -1,   0, 0, 336, 224,   0, 0, 336, 224,   6,   140, 95,   -1, -1 },
+      0, roomcreate1,
+      336, 224, 30,  true, {
+      { -1,   0, 0, 336, 224,   0, 0, 480, 320,   6,   140, 95,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
@@ -44,14 +44,14 @@ namespace enigma {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
 }, {      { true,   false,   29,   0,   0,   0,   0,   true,   true,   false },
-      { false,   false,   25,   48,   32,   0,   0,   false,   false,   false },
+      { true,   false,   25,   48,   32,   0,   0,   false,   false,   false },
       { false,   false,   27,   48,   32,   0,   0,   false,   false,   false },
       { true,   false,   28,   51,   32,   0,   0,   false,   false,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   29,   0,   0,   0,   0,   false,   false,   true },
-      },      1,       (enigma::inst*)(int[]){101382,128,96,96,  0,0,0,0}
+      },      1,       (enigma::inst*)(int[]){101353,128,0,0,  0,0,0,0}
     },
     //Room 3
     { 3, "start_up_intro",  "",
@@ -314,5 +314,5 @@ namespace enigma {
   };
   
   int room_max = 9 + 1;
-  int maxid = 101382 + 1;
+  int maxid = 101357 + 1;
 } // Namespace enigma
