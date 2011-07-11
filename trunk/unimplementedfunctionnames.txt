@@ -2,6 +2,7 @@ action_another_room	U
 action_bounce	U
 action_change_object	U
 action_create_object_motion	U
+action_draw_background	U
 action_draw_life	U
 action_draw_line	U
 action_load_game	U
@@ -9,8 +10,17 @@ action_message	U
 action_path	U
 action_save_game	U
 action_set_friction	U
-action_set_gravity	U
-action_set_hspeed	U
+action_sprite_color	U
+action_sprite_transform	U
+background_get_height	U
+background_get_width	U
+d3d_draw_floor	U
+d3d_set_perspective	U
+d3d_set_projection_ortho	U
+draw_set_halign	U
+draw_set_valign	U
+enigma_floor	U
+enigmadraw_text	U
 enigmarandom	U
 enigmaround	U
 instance_activate_all	U
@@ -18,4 +28,5 @@ instance_deactivate_region	U
 message_alpha	U
 move_contact	U
 move_contact_solid	U
+tile_layer_depth	U
 

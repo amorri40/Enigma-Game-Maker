@@ -193,8 +193,8 @@ t1242688292
 s6412
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/API_Switchboard.h
-c000000004E153C420000000000000A66
-t1310014530
+c000000004E19D0DC0000000000000A66
+t1310314716
 s2662
 i"Platforms/Cocoa/include.h"
 i"Graphics_Systems/OpenGL/include.h"
@@ -677,8 +677,8 @@ i<string>
 i"file_manip.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/file_manip.h
-c000000004DDF05000000000000000E55
-t1306461440
+c000000004E16F1400000000000000E55
+t1310126400
 s3669
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/include.h
@@ -726,81 +726,81 @@ t1309558345
 s3552
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/GAME_SETTINGS.h
-c000000004E152E83000000000000098C
-t1310011011
+c000000004E19D0DF000000000000098C
+t1310314719
 s2444
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_events.h
-c000000004E152E830000000000000EBF
-t1310011011
-s3775
+c000000004E19D0DF000000000000159C
+t1310314719
+s5532
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_evparent.h
-c000000004E152E830000000000000BFE
-t1310011011
-s3070
+c000000004E19D0DF0000000000000DDB
+t1310314719
+s3547
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h
-c000000004E152E8300000000000009C8
-t1310011011
+c000000004E19D0DF00000000000009C8
+t1310314719
 s2504
 i"../Universal_System/fontstruct.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_globals.h
-c000000004E152E830000000000000B57
-t1310011011
-s2903
+c000000004E19D0DF00000000000009F3
+t1310314719
+s2547
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_inherited_locals.h
-c000000004E152E830000000000000000
-t1310011011
+c000000004E19D0DF0000000000000000
+t1310314719
 s0
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_object_switch.h
-c000000004E152E830000000000000A7D
-t1310011011
-s2685
+c000000004E19D0DF0000000000000E1A
+t1310314719
+s3610
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_objectaccess.h
-c000000004E152E830000000000001C62
-t1310011011
-s7266
+c000000004E19D0DF0000000000000A36
+t1310314719
+s2614
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_objectdeclarations.h
-c000000004E153C490000000000003661
-t1310014537
-s13921
+c000000004E19D0DF000000000000B14A
+t1310314719
+s45386
 i"../Universal_System/collisions_object.h"
 i"../Preprocessor_Environment_Editable/IDE_EDIT_inherited_locals.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h
-c000000004E152E830000000000003E9A
-t1310011011
-s16026
+c000000004E19D0DF0000000000003164
+t1310314719
+s12644
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_resourcenames.h
-c000000004E152E830000000000001008
-t1310011011
-s4104
+c000000004E19D0DF0000000000000ED2
+t1310314719
+s3794
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_roomarrays.h
-c000000004E152E8300000000000014E7
-t1310011011
-s5351
+c000000004E19D0DF0000000000003D14
+t1310314719
+s15636
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_roomcreates.h
-c000000004E152E83000000000000093F
-t1310011011
-s2367
+c000000004E19D0DF0000000000000A10
+t1310314719
+s2576
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_whitespace.h
-c000000004E152E7C000000000000010A
-t1310011004
-s266
+c000000004E19D0DC000000000000010E
+t1310314716
+s270
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/LIBINCLUDE.h
-c000000004E152E7C0000000000000A7A
-t1310011004
+c000000004E19D0DC0000000000000A7A
+t1310314716
 s2682
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/CallbackArrays.h
@@ -846,9 +846,9 @@ t1303334530
 s3656
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/actions.h
-c000000004E0117220000000000004231
-t1308694306
-s16945
+c000000004E199BAA0000000000004549
+t1310301098
+s17737
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/backgroundstruct.h
 c000000004DAF4E820000000000000D5D
@@ -892,9 +892,9 @@ t1308694306
 s2395
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/estring.h
-c000000004DDFFAB10000000000000C8C
-t1306524337
-s3212
+c000000004E1846D20000000000000C96
+t1310213842
+s3222
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/fileio.h
 c000000004DAF4E820000000000000C2E
@@ -1007,9 +1007,9 @@ i<string.h>
 i<stdlib.h>
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/mathnc.h
-c000000004E1526E80000000000001055
-t1310009064
-s4181
+c000000004E18455B00000000000010C4
+t1310213467
+s4292
 i<cmath>
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/multifunction_variant.h
@@ -1066,9 +1066,9 @@ t1307374187
 s2606
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Universal_System/roomsystem.h
-c000000004E0E464D0000000000000FFC
-t1309558349
-s4092
+c000000004E183DF9000000000000100A
+t1310211577
+s4106
 i"var4.h"
 i"multifunction_variant.h"
 
@@ -1137,9 +1137,9 @@ t1303663895
 s2933
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/unimplemented.h
-c000000004E15099A0000000000016970
-t1310001562
-s92528
+c000000004E199B580000000000017774
+t1310301016
+s96116
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/additional/al/include/al.h
 c000000004DAF4E86000000000000674B
@@ -2091,9 +2091,9 @@ i"EnigmaXcodeAppDelegate.h"
 i"iPhoneEnigmaView.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/iPhone/file_manip.cpp
-c000000004DDCA6970000000000000FC1
-t1306306199
-s4033
+c000000004E16F65C0000000000000FD0
+t1310127708
+s4048
 i<stdio.h>
 i<unistd.h>
 i<stdlib.h>
@@ -2119,9 +2119,9 @@ s2411
 i<UIKit/UIKit.h>
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/SHELLmain.cpp
-c000000004E1507FB00000000000014AC
-t1310001147
-s5292
+c000000004E153D9700000000000014C5
+t1310014871
+s5317
 i<stdlib.h>
 i<stddef.h>
 i<string>
@@ -2175,9 +2175,9 @@ i"Universal_System/instance_create.h"
 i"Universal_System/pseudo_components.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/CallbackArrays.cpp
-c000000004DAF4E82000000000000150E
-t1303334530
-s5390
+c000000004E1980E800000000000014CE
+t1310294248
+s5326
 i"CallbackArrays.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/ENIGMA_GLOBALS.cpp
@@ -2282,9 +2282,9 @@ i<algorithm>
 i<vector>
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/estring.cpp
-c000000004DDFFAA700000000000016CA
-t1306524327
-s5834
+c000000004E1846A70000000000001725
+t1310213799
+s5925
 i<string>
 i<cstdlib>
 i"var4.h"
@@ -2444,9 +2444,9 @@ i"object.h"
 i"../libEGMstd.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/planar_object.cpp
-c000000004DAF4E8200000000000014B8
-t1303334530
-s5304
+c000000004E19B81900000000000014C5
+t1310308377
+s5317
 i<math.h>
 i"object.h"
 i"var4.h"
@@ -2478,9 +2478,9 @@ i"var4.h"
 i"resource_data.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/roomsystem.cpp
-c000000004E0E464D00000000000029C5
-t1309558349
-s10693
+c000000004E1845F30000000000002A02
+t1310213619
+s10754
 i<map>
 i<math.h>
 i<string>
@@ -2509,9 +2509,9 @@ i"collisions_object.h"
 i"instance_system.h"
 
 N/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/soundinit.cpp
-c000000004DAF4E820000000000000C2B
-t1303334530
-s3115
+c000000004E1952EE0000000000000C4D
+t1310282478
+s3149
 i<string>
 i<stdio.h>
 i"../Audio_Systems/audio_mandatory.h"

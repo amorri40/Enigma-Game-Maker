@@ -94,6 +94,7 @@ namespace enigma
       
       instance->hspeed.rval.d += (instance->gravity) * cos(instance->gravity_direction * M_PI/180);
       instance->vspeed.rval.d += (instance->gravity) *-sin(instance->gravity_direction * M_PI/180);
+        
       
       if(instance->speed.rval.d<0)
         instance->direction.rval.d = fmod(instance->direction.rval.d + 180, 360),

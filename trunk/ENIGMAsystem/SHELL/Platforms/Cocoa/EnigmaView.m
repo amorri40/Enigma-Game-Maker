@@ -127,7 +127,7 @@ extern bool keyboard_check(int i);
 -(void) startTimerThread
 {
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-    NSRunLoop* runLoop = [NSRunLoop currentRunLoop];
+    runLoop = [NSRunLoop currentRunLoop];
     [[NSTimer scheduledTimerWithTimeInterval: DEFAULT_TIME_INTERVAL
                                       target: self
                                     selector: @selector(drawFrame)
@@ -139,7 +139,9 @@ extern bool keyboard_check(int i);
 }
 
 -(void) terminateEnigma {
-    [timerThread exit]; 
+    [runLoop cancelPerformSelectorsWithTarget:self];
+    [timerThread cancel]; 
+    
 }
 
 

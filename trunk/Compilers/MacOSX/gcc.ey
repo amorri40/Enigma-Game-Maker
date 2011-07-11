@@ -21,6 +21,6 @@ links: -lz -framework Cocoa
 
 Build-Extension: .app
 Run-output: ../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode
-Run-Program: open ./MacOS/build/Release/EnigmaXcode.app
+Run-Program: open ./MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode
 Run-Params:
 

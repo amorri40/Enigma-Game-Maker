@@ -33,10 +33,7 @@
 namespace enigma {
   rawfont rawfontdata[] = {
     {"EnigmaDefault", -1, "Dialog", 12, 0, 0, 32, 96},
-    {"font0", 0, "FuturaBlack BT", 22, -1, -1, 32, 96},
-    {"font1", 1, "AvantGarde Bk BT", 22, -1, -1, 32, 96},
-    {"font2", 2, "Times New Roman", 5, -1, 0, 32, 96},
   };
 
-  int rawfontcount = 4, rawfontmaxid = 2;
+  int rawfontcount = 1, rawfontmaxid = -1;
 }

@@ -2,9 +2,9 @@ cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -
 cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-g++ -c CocoaFunctions.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaFunctions.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-g++ -c CallbackArrays.cpp		-o .eobjs/MacOSX/MacOSX/Run/CallbackArrays.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
 make[3]: Nothing to be done for `static'.
@@ -25,6 +25,6 @@ In file included from SHELLmain.cpp:99:
 unimplemented.h:385:6: warning: #warning "ds_list_create not implemented"
 In file included from SHELLmain.cpp:99:
 unimplemented.h: In function ‘void show_debug_message(std::string)’:
-unimplemented.h:1287: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
-unimplemented.h:1287: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
+unimplemented.h:1285: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
+unimplemented.h:1285: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’
 Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode

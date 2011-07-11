@@ -44,6 +44,7 @@
    
 	BOOL opt, ctrl, command, shift;
     NSThread* timerThread;
+    NSRunLoop* runLoop;
 }
 
 - (id)initWithFrame:(NSRect) frameRect;

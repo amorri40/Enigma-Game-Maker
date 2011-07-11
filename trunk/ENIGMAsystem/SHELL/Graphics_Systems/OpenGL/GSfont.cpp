@@ -47,7 +47,7 @@ using namespace enigma;
 
 void draw_text(int x,int y,var vstring)
 {
-    string str = vstring;
+    string str = string(vstring);
   font *fnt = fontstructarray[currentfont];
 
   if (bound_texture != fnt->texture)
@@ -154,7 +154,7 @@ unsigned int string_width_ext_line_count(string str, int w)
 //The following is certainly not pretty, but this is the best way I thought of to replicate GM's function
 void draw_text_ext(int x,int y,var vstring, int sep, int w)
 {
-    string str = vstring;
+    string str = string(vstring);
   font *fnt = fontstructarray[currentfont];
 
   if (bound_texture != fnt->texture)
@@ -200,7 +200,7 @@ void draw_text_ext(int x,int y,var vstring, int sep, int w)
 
 void draw_text_transformed(double x,double y,var vstring,double xscale,double yscale,double rot)
 {
-    string str = vstring;
+    string str = string(vstring);
   if (currentfont == -1)
     return;
 
@@ -255,7 +255,7 @@ void draw_text_transformed(double x,double y,var vstring,double xscale,double ys
 
 void draw_text_ext_transformed(double x,double y,var vstring,int sep, int w, double xscale,double yscale,double rot)
 {
-    string str = vstring;
+    string str = string(vstring);
   if (currentfont == -1)
     return;
 
@@ -325,7 +325,7 @@ void draw_text_ext_transformed(double x,double y,var vstring,int sep, int w, dou
 
 void draw_text_transformed_color(double x,double y,var vstring,double xscale,double yscale,double rot,int c1,int c2,int c3,int c4,double a)
 {
-    string str = vstring;
+    string str = string(vstring);
   if (currentfont == -1)
     return;
 
@@ -392,7 +392,7 @@ void draw_text_transformed_color(double x,double y,var vstring,double xscale,dou
 
 void draw_text_ext_transformed_color(double x,double y,var vstring,int sep,int w,double xscale,double yscale,double rot,int c1,int c2,int c3,int c4,double a)
 {
-    string str = vstring;
+    string str = string(vstring);
   if (currentfont == -1)
     return;
 
@@ -470,7 +470,7 @@ void draw_text_ext_transformed_color(double x,double y,var vstring,int sep,int w
 
 void draw_text_color(int x,int y,var vstring,int c1,int c2,int c3,int c4,double a)
 {
-    string str = vstring;
+    string str = string(vstring);
   font *fnt = fontstructarray[currentfont];
 
   if (bound_texture != fnt->texture)
@@ -525,7 +525,7 @@ void draw_text_color(int x,int y,var vstring,int c1,int c2,int c3,int c4,double 
 
 void draw_text_ext_color(int x,int y,var vstring,int sep, int w, int c1,int c2,int c3,int c4,double a)
 {
-    string str = vstring;
+    string str = string(vstring);
   font *fnt = fontstructarray[currentfont];
 
   if (bound_texture != fnt->texture)
