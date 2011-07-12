@@ -1274,7 +1274,7 @@
 
 1303334609 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/reshandlers/refont.h
 
-1309995088 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.cpp
+1310395887 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/event_reader/event_parser.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string>
@@ -1416,7 +1416,7 @@
 	"JavaStruct.h"
 	"util/Image.h"
 
-1310280599 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
+1310471328 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
 	"../OS_Switchboard.h"
 	"../backend/EnigmaStruct.h"
 	"../general/darray.h"

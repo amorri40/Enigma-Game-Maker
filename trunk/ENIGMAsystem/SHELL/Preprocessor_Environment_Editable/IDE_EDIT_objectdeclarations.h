@@ -358,7 +358,6 @@ namespace enigma
     var inair;
     var jmp;
     var jog;
-    var jp;
     var on;
     var psh;
     var r;

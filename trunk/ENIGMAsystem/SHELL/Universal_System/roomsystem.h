@@ -66,6 +66,9 @@ namespace enigma
   struct inst {
     int id,obj,x,y;
   };
+    struct tile {
+        int id,bckid,bgx,bgy,depth,height,width,roomX,roomY;
+    };
   struct viewstruct
   {
     int start_vis;
@@ -98,6 +101,8 @@ namespace enigma
       
     int instancecount;
     inst *instances;
+      int tilecount;
+      tile *tiles;
     
     void gotome();
   };

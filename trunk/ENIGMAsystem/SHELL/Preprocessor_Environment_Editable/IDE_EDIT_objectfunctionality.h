@@ -170,7 +170,7 @@ variant enigma::OBJ_Player::myevent_create()
     instance_create(x - 16, y + 16, AngleLeft);
     instance_create(x + 16, y + 16, AngleRight);
     r =- 1;
-    image_speed = .5;
+    image_speed = 0.5;
     score = 0;
     enigma::varaccess_bonus(int(global))= 0;
     inair = 0;
@@ -365,6 +365,11 @@ if(action_if_variable(enigmawait, 0, 0))
     }
     
   }
+  
+  {
+    slep = 0;
+    
+  }
   ;
   
   return 0;
@@ -423,8 +428,16 @@ variant enigma::OBJ_Player::myevent_endstep()
     {
       gravity = .75;
       sp = 0;
-      enigma::varaccess_fixme_alarm(int(AngleLeft))(7)= 1;
-      enigma::varaccess_fixme_alarm(int(AngleRight))(7)= 1;
+      with(AngleLeft)
+      {
+        alarm[7]= 1;
+        
+      }
+      with(AngleRight)
+      {
+        alarm[7]= 1;
+        
+      }
       gravity = .75;
       angle = 0;
       
@@ -468,38 +481,22 @@ variant enigma::OBJ_Player::myevent_endstep()
   }
   
   {
-    if(r ==- 1)
-    {
-      if(place_meeting(x + cos((double)(radians - pi / (double) 2)), y - sin((double)(radians - pi / (double) 2)), rail2))
-        grinding = 1 && instance_create(x + 17 * (cos((double)(radians - pi / (double) 2))), y - 17 * (sin((double)(radians - pi / (double) 2))), spark);
-      else grinding = 0;
-      
-    }
-    if(r == 1)
-    {
-      if(place_meeting(x - cos((double)(radians + pi / (double) 2)), y + sin((double)(radians + pi / (double) 2)), rail2))
-        grinding = 1 && instance_create(x - 17 * (cos((double)(radians + pi / (double) 2))), y + 17 * (sin((double)(radians + pi / (double) 2))), spark);
-      else grinding = 0;
-      
-    }
-    if(place_meeting(x, y + 2, watersurface)&& abs(sp)> 8)
-      wateron = 1;
-    else wateron = 0;
-    if(skid == 1 && grinding == 0 && on == 0 && jmp == 0)
-    {
-      if(r ==- 1)
-        instance_create(x + 17 * (cos((double)(radians - pi / (double) 2))), y - 17 * (sin((double)(radians - pi / (double) 2))), dust);
-      else instance_create(x - 17 * (cos((double)(radians + pi / (double) 2))), y + 17 * (sin((double)(radians + pi / (double) 2))), dust);
-      
-    }
     
   }
   
   {
     if(! place_meeting(x + 17 * (cos((double)(radians - pi / (double) 2))), y - 17 * (sin((double)(radians - pi / (double) 2))), Block))
     {
-      enigma::varaccess_fixme_alarm(int(AngleLeft))(7)= 1;
-      enigma::varaccess_fixme_alarm(int(AngleRight))(7)= 1;
+      with(AngleLeft)
+      {
+        alarm[7]= 1;
+        
+      }
+      with(AngleRight)
+      {
+        alarm[7]= 1;
+        
+      }
       hspeed = hspd;
       vspeed = vspd;
       angle = 0;
@@ -523,45 +520,10 @@ variant enigma::OBJ_Player::myevent_endstep()
   }
   
   {
-    if(! place_free(x, y - 24)&& jmp == 1)
-    {
-      vspeed = 1;
-      
-    }
-    if(hspeed > 15)
-      hspeed = 15;
-    if(hspeed < - 15)
-      hspeed =- 15;
-    if(y > enigma::varaccess_wl(int(global))&& vspeed > 10)
-      vspeed = 10;
     
   }
   
   {
-    if(place_meeting(x + hspd, y, wall)&& enigma::varaccess_broken(int(icewall))== 0)
-    {
-      if(r ==- 1)
-      {
-        if(hspd > .01)
-          x = enigma::glaccess(int(other))-> x - 2;
-        if(hspd < - .01)
-          x = enigma::glaccess(int(other))-> x + 4;
-        
-      }
-      if(r == 1)
-      {
-        if(hspd < - .01)
-          x = enigma::glaccess(int(other))-> x + 4;
-        if(hspd > .01)
-          x = enigma::glaccess(int(other))-> x - 2;
-        
-      }
-      sp = 0;
-      hspeed = 0;
-      psh = 1;
-      
-    }
-    else psh = 0;
     
   }
   ;
@@ -741,7 +703,7 @@ variant enigma::OBJ_Player::myevent_globalleftbutton()
     enigma::varaccess_rings(int(global))= 0;
     
   }
-  action_current_room(0);
+  ;
   
   return 0;
 }
@@ -753,8 +715,7 @@ variant enigma::OBJ_Player::myevent_globalrightbutton()
     enigma::varaccess_rings(int(global))= 0;
     
   }
-  if(action_if_next_room())
-    action_next_room(5);
+  ;
   
   return 0;
 }
@@ -783,10 +744,6 @@ variant enigma::OBJ_Player::myevent_animationend()
   { const bool r = ($iip < image_index); $iip = image_index; if (r) return 0; }
 
   {
-    if(slep == 1)
-      image_index = 6;
-    if(stp == 1 && alarm[6] < 2 && slep == 0)
-      alarm[6]= 90;
     
   }
   ;
@@ -851,52 +808,9 @@ variant enigma::OBJ_Player::myevent_keypress_90()
 {
   
   {
-    if(jmp == 1 && instance_exists(electric_shield)== 1)
-    {
-      sound_play(8);
-      jmp = 2;
-      gravity = .75;
-      vspeed =- 10;
-      enigma::varaccess_fixme_alarm(int(electric_shield))(0)= 1;
-      
-    }
-    if(jmp == 1 && instance_exists(fire_shield)== 1)
-    {
-      sound_play(8);
-      jmp = 2;
-      gravity = .75;
-      hspeed =- 15 * r;
-      vspeed = 0;
-      enigma::varaccess_fixme_alarm(int(fire_shield))(0)= 1;
-      
-    }
-    if(jmp == 0 && inair == 0 && enigmawait == 0)
-    {
-      sound_play(jump);
-      hspeed = sp / (double)(5 / (double) 6);
-      jmp = 1;
-      gravity = .75;
-      if(r ==- 1)
-        jp = pi / (double) 2;
-      if(r == 1)
-        jp =- pi / (double) 2;
-      if(r ==- 1)
-      {
-        hspeed = 8 * (cos((double)(radians + jp)))+ hspd;
-        vspeed =- 8 * (sin((double)(radians + jp)))+ vspd;
-        
-      }
-      if(r == 1)
-      {
-        hspeed =- 8 * (cos((double)(radians + jp)))+ hspd;
-        vspeed = 8 * (sin((double)(radians + jp)))+ vspd;
-        
-      }
-      enigma::varaccess_fixme_alarm(int(AngleLeft))(7)= 1;
-      enigma::varaccess_fixme_alarm(int(AngleRight))(7)= 1;
-      sp = 0;
-      
-    }
+    vspeed =- 8;
+    gravity = 0;
+    show_message("vspeed:"+ toString(vspeed));
     
   }
   ;

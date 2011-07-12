@@ -59,6 +59,11 @@ static inline void draw_back()
   }
 }
 
+namespace enigma
+{
+    extern std::map<int,roomstruct*> roomdata;
+}
+
 void screen_redraw()
 {
   if (!view_enabled)
@@ -76,6 +81,14 @@ void screen_redraw()
     }
     draw_back();
     
+      //Basic drawing of tiles for debug
+      for (int tilei=0; tilei<enigma::roomdata[room]->tilecount; tilei++) {
+          tile t = enigma::roomdata[room]->tiles[tilei];
+      draw_background_part(t.bckid,t.bgx,t.bgx,t.width,t.height,t.roomX,t.roomY);
+      }
+      //end of tiles drawing
+      
+      
       for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
           for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
               enigma::instance_event_iterator->inst->myevent_draw();
@@ -122,6 +135,16 @@ void screen_redraw()
     }
     draw_back();
     
+      //Basic drawing of tiles for debug
+      
+      for (int tilei=0; tilei<enigma::roomdata[room]->tilecount; tilei++) {
+          tile t = enigma::roomdata[room]->tiles[tilei];
+          draw_background_part(t.bckid,t.bgx,t.bgy,t.width,t.height,t.roomX,t.roomY);
+         // printf("tile: id: %d x: %d y: %d width: %d height: %d roomX: %d roomY: %d \n",t.bckid,t.bgx,t.bgy,t.width,t.height,t.roomX,t.roomY);
+          //10001556,43,64,0,1000001,64,64,5824,320,
+      }
+      //end of tiles drawing
+      
     for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
       for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
         enigma::instance_event_iterator->inst->myevent_draw();
