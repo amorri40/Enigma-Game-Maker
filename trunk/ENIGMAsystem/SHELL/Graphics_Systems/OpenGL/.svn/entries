@@ -1,15 +1,15 @@
 10
 
 dir
-800
+809
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-06-30T20:50:50.637805Z
-798
-JoshDreamland
+2011-07-12T09:35:39.941165Z
+807
+tgmg
 has-props
 
 
@@ -33,7 +33,7 @@ has-props
 
 
 
-((conflict graphics_object.h file update deleted edited (version https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev 3 796 trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/graphics_object.h file) (version https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev 3 799 trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/graphics_object.h none)))
+()
 
 GSstdraw.cpp
 file
@@ -109,11 +109,11 @@ file
 
 
 
-2011-07-01T22:12:24.000000Z
-efe5392252f6f6e81f46832b7076bb7f
-2011-06-30T20:50:50.637805Z
-798
-JoshDreamland
+2011-07-12T10:00:29.000000Z
+a4d1481972b6038ff17ce8c7deeac087
+2011-07-07T13:28:35.016103Z
+801
+thedeusex
 
 
 
@@ -135,7 +135,7 @@ JoshDreamland
 
 
 
-13325
+14634
 
 GSd3d.cpp
 file
@@ -189,11 +189,11 @@ file
 
 
 
-2011-04-20T21:21:40.000000Z
-823c9c045f5311b041448df80923fdb3
-2010-12-10T19:10:48.059420Z
-548
-thedeusex
+2011-04-27T18:18:07.000000Z
+1fcf4f7fe08e1f690389606c8285bacd
+2011-07-12T09:25:58.280898Z
+806
+tgmg
 
 
 
@@ -215,7 +215,7 @@ thedeusex
 
 
 
-3799
+3792
 
 GSfont.h
 file
@@ -668,11 +668,11 @@ file
 
 
 
-2011-04-20T21:21:40.000000Z
-433a6a5fee4256b70ce57dc63e48294b
-2011-04-11T06:11:11.685590Z
-685
-joshdreamland
+2011-07-10T16:43:16.000000Z
+a042999b166dbebbe2091692625f80c0
+2011-07-12T09:25:58.280898Z
+806
+tgmg
 
 
 
@@ -694,7 +694,7 @@ joshdreamland
 
 
 
-16995
+18371
 
 GSfont.cpp
 file
@@ -702,33 +702,11 @@ file
 
 
 
-2011-06-06T15:43:28.000000Z
-9840035620d1522cd524debc5a158eae
-2011-06-05T06:02:18.998155Z
-763
-JoshDreamland
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-24159
+db0ea1a5fe1a113d7d2dea0854c27d19
+2011-07-07T13:28:35.016103Z
+801
+thedeusex
 
 GSstdraw.h
 file
@@ -770,10 +748,10 @@ file
 
 
 
-2011-04-20T21:21:40.000000Z
-a2b304aaa0956e061f1c81a784dc5b84
-2010-12-07T20:12:50.113364Z
-543
+2011-07-12T10:00:29.000000Z
+4cf521d9f67e831c5c1ba2d80b0a84b8
+2011-07-07T13:28:35.016103Z
+801
 thedeusex
 
 
@@ -796,7 +774,7 @@ thedeusex
 
 
 
-3895
+4074
 
 GSscreen.cpp
 file
@@ -804,11 +782,11 @@ file
 
 
 
-2011-07-01T22:12:24.000000Z
-d129a6c43aa47b2f20738d706ec91600
-2011-06-30T20:50:50.637805Z
-798
-JoshDreamland
+2011-07-02T00:15:03.000000Z
+28081de54407a285e2f4b413b05f4787
+2011-07-12T09:35:39.941165Z
+807
+tgmg
 
 
 
@@ -830,7 +808,7 @@ JoshDreamland
 
 
 
-6421
+6441
 
 GSbackground.cpp
 file
@@ -1174,38 +1152,4 @@ JoshDreamland
 
 
 3997
-
-graphics_object.h
-file
-796
-
-
-add
-2011-04-20T21:21:40.000000Z
-62e67f4564089939f8611f72b66ccced
-2011-03-11T18:41:47.615808Z
-669
-tgmg
-
-
-
-
-
-
-
-
-copied
-https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/graphics_object.h
-796
-
-
-
-
-
-
-
-
-
-
-5053
 

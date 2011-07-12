@@ -1,10 +1,12 @@
 cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL" GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o"
 cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c GScurves.cpp		-o .eobjs/MacOSX/MacOSX/Run/GScurves.o -s -O3 
+g++ -c GSfont.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSfont.o -s -O3 
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c fontinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/fontinit.o -s -O3 
+g++ -c fontstruct.cpp		-o .eobjs/MacOSX/MacOSX/Run/fontstruct.o -s -O3 
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
 make[3]: Nothing to be done for `static'.
@@ -19,8 +21,7 @@ make[2]: Nothing to be done for `this'.
 cd Widget_Systems/None/      && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
-mkdir -p .eobjs/MacOSX/MacOSX/
-gcc -c alarmcode.cpp -o .eobjs/MacOSX/MacOSX/alarmcode.o
+make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
 In file included from SHELLmain.cpp:99:
 unimplemented.h:385:6: warning: #warning "ds_list_create not implemented"

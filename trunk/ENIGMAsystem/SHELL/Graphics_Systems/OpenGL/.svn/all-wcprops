@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
+/svnroot/enigma-dev/!svn/ver/807/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 END
 GSstdraw.cpp
 K 25
@@ -19,7 +19,7 @@ GScurves.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GScurves.cpp
+/svnroot/enigma-dev/!svn/ver/801/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GScurves.cpp
 END
 GSd3d.cpp
 K 25
@@ -37,7 +37,7 @@ GSsprite.h
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svnroot/enigma-dev/!svn/ver/548/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.h
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.h
 END
 GSfont.h
 K 25
@@ -121,13 +121,13 @@ GSsprite.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.cpp
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSsprite.cpp
 END
 GSfont.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svnroot/enigma-dev/!svn/ver/763/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSfont.cpp
+/svnroot/enigma-dev/!svn/ver/801/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSfont.cpp
 END
 GSstdraw.h
 K 25
@@ -139,13 +139,13 @@ GScurves.h
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svnroot/enigma-dev/!svn/ver/543/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GScurves.h
+/svnroot/enigma-dev/!svn/ver/801/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GScurves.h
 END
 GSscreen.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
+/svnroot/enigma-dev/!svn/ver/807/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSscreen.cpp
 END
 GSbackground.cpp
 K 25
@@ -206,10 +206,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 97
 /svnroot/enigma-dev/!svn/ver/385/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/GSmiscextra.cpp
-END
-graphics_object.h
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svnroot/enigma-dev/!svn/ver/669/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL/graphics_object.h
 END

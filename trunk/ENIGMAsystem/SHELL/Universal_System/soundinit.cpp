@@ -67,7 +67,7 @@ namespace enigma
       unsigned size;
       fread(&size,1,4,exe);
       
-      char* fdata = new char[size+1];
+      char* fdata = new char[size];
       fread(fdata,1,size,exe);
       
       if (sound_add_from_buffer(id,fdata,size))

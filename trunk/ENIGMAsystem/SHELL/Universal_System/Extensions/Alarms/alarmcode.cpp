@@ -17,6 +17,5 @@ void action_set_alarm(int steps, int alarmno)
     recast_current_instance()->alarm[alarmno] = (steps);
 }
 namespace enigma {
-    
 extension_alarm::extension_alarm() { for (int i = 0; i < 12; i++) alarm[i] = -1; }
 }

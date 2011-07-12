@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/800/trunk/ENIGMAsystem/SHELL/Universal_System
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Universal_System
 END
 planar_object.cpp
 K 25
@@ -25,7 +25,7 @@ actions.h
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Universal_System/actions.h
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Universal_System/actions.h
 END
 transform_object.h
 K 25
@@ -79,7 +79,7 @@ fontstruct.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/796/trunk/ENIGMAsystem/SHELL/Universal_System/fontstruct.cpp
+/svnroot/enigma-dev/!svn/ver/803/trunk/ENIGMAsystem/SHELL/Universal_System/fontstruct.cpp
 END
 reflexive_types.cpp
 K 25
@@ -109,7 +109,7 @@ depth_draw.h
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Universal_System/depth_draw.h
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Universal_System/depth_draw.h
 END
 spriteinit.cpp
 K 25
@@ -121,7 +121,7 @@ fontinit.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/704/trunk/ENIGMAsystem/SHELL/Universal_System/fontinit.cpp
+/svnroot/enigma-dev/!svn/ver/801/trunk/ENIGMAsystem/SHELL/Universal_System/fontinit.cpp
 END
 instance_create.h
 K 25
@@ -427,7 +427,7 @@ soundinit.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svnroot/enigma-dev/!svn/ver/363/trunk/ENIGMAsystem/SHELL/Universal_System/soundinit.cpp
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Universal_System/soundinit.cpp
 END
 instance_system_frontend.h
 K 25
@@ -451,13 +451,13 @@ spritestruct.h
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Universal_System/spritestruct.h
+/svnroot/enigma-dev/!svn/ver/806/trunk/ENIGMAsystem/SHELL/Universal_System/spritestruct.h
 END
 fontstruct.h
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/704/trunk/ENIGMAsystem/SHELL/Universal_System/fontstruct.h
+/svnroot/enigma-dev/!svn/ver/801/trunk/ENIGMAsystem/SHELL/Universal_System/fontstruct.h
 END
 with.h
 K 25

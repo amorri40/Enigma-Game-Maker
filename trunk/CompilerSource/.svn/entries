@@ -1,15 +1,15 @@
 10
 
 dir
-800
+809
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-06-30T21:50:30.171822Z
-799
-JoshDreamland
+2011-07-12T09:58:57.535008Z
+809
+tgmg
 has-props
 
 
@@ -97,6 +97,9 @@ JoshDreamland
 filesystem
 dir
 
+syntax
+dir
+
 settings.h
 file
 
@@ -130,9 +133,6 @@ JoshDreamland
 
 
 3527
-
-syntax
-dir
 
 backend
 dir
@@ -211,6 +211,9 @@ ismavatar
 
 1010
 
+stupidity-buffer
+dir
+
 main.cpp
 file
 
@@ -244,9 +247,6 @@ JoshDreamland
 
 
 9721
-
-stupidity-buffer
-dir
 
 INSTALL
 file

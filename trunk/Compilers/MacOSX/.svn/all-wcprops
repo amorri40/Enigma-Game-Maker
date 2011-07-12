@@ -1,11 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/svnroot/enigma-dev/!svn/ver/737/trunk/Compilers/MacOSX
+/svnroot/enigma-dev/!svn/ver/808/trunk/Compilers/MacOSX
+END
+gcc-mingw32-intel.ey
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/enigma-dev/!svn/ver/808/trunk/Compilers/MacOSX/gcc-mingw32-intel.ey
 END
 gcc.ey
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svnroot/enigma-dev/!svn/ver/737/trunk/Compilers/MacOSX/gcc.ey
+/svnroot/enigma-dev/!svn/ver/808/trunk/Compilers/MacOSX/gcc.ey
 END

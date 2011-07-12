@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa
 END
 automake.sh
 K 25
@@ -19,13 +19,13 @@ EnigmaView.h
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/735/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.h
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.h
 END
 file_manip.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svnroot/enigma-dev/!svn/ver/769/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/file_manip.cpp
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/file_manip.cpp
 END
 CocoaDialog.cpp
 K 25
@@ -43,7 +43,7 @@ EnigmaView.m
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/769/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m
 END
 file_manip.h
 K 25
@@ -61,19 +61,19 @@ WindowFunctions.m
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/735/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.m
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.m
 END
 CocoaWindow.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/769/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.cpp
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.cpp
 END
 CocoaFunctions.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svnroot/enigma-dev/!svn/ver/769/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaFunctions.cpp
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaFunctions.cpp
 END
 XLIBthreads.h
 K 25
@@ -85,7 +85,7 @@ CocoaWindow.h
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/769/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.h
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.h
 END
 CocoaFunctions.h
 K 25
@@ -103,7 +103,7 @@ EnigmaXcodeAppDelegate.h
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/svnroot/enigma-dev/!svn/ver/735/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.h
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.h
 END
 include.h
 K 25
@@ -115,7 +115,7 @@ EnigmaXcodeAppDelegate.m
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/svnroot/enigma-dev/!svn/ver/735/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaXcodeAppDelegate.m
 END
 CocoaMain.cpp
 K 25

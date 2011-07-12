@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/iPhone
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/iPhone
 END
 automake.sh
 K 25
@@ -25,7 +25,7 @@ file_manip.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/372/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/file_manip.cpp
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/file_manip.cpp
 END
 CocoaDialog.cpp
 K 25
@@ -49,7 +49,7 @@ CocoaWindow.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svnroot/enigma-dev/!svn/ver/663/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/CocoaWindow.cpp
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/CocoaWindow.cpp
 END
 CocoaFunctions.cpp
 K 25
@@ -61,7 +61,7 @@ CocoaWindow.h
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svnroot/enigma-dev/!svn/ver/578/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/CocoaWindow.h
+/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms/iPhone/CocoaWindow.h
 END
 iPhone.xib
 K 25

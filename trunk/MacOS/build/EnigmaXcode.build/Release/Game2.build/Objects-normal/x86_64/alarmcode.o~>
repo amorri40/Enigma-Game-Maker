@@ -1,0 +1,44 @@
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../multifunction_variant.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../reflexive_types.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../instance_system.h:30,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:6,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:68:1: warning: "types_binary_bitwise_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../object.h:43,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:5,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:68:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../multifunction_variant.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../reflexive_types.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../instance_system.h:30,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:6,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:78:1: warning: "types_binary_assign_extrapolate_declare" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../object.h:43,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:5,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:78:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../multifunction_variant.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../reflexive_types.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../instance_system.h:30,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:6,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:130:1: warning: "types_binary_extrapolate_alldecc" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../object.h:43,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:5,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:130:1: warning: this is the location of the previous definition
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../multifunction_variant.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../reflexive_types.h:31,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../instance_system.h:30,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:6,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:133:1: warning: "types_binary_extrapolate_alldecce" redefined
+In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var4.h:36,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../object.h:43,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../recast.h:5,
+                 from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/alarmcode.cpp:5:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Universal_System/Extensions/Alarms/../../var_te.h:133:1: warning: this is the location of the previous definition
