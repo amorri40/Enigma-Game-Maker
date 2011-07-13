@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F7AC13CDD564004E9008</string>
+						<string>9C11F7B613CDDB48004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C11F6A813CD940F004E9008</string>
@@ -366,7 +366,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>data_structures.cpp</string>
+								<string>unimplemented.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -374,11 +374,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>data_structures.cpp</string>
+										<string>unimplemented.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F7AB13CDD564004E9008</string>
+										<string>9C11F7B513CDDB48004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -616,13 +616,13 @@
 											<string>9C11F6EC13CDB6CB004E9008</string>
 											<string>9C11F75B13CDCC51004E9008</string>
 											<string>9C11F75C13CDCC51004E9008</string>
-											<string>9C11F75D13CDCC51004E9008</string>
 											<string>9C11F75E13CDCC51004E9008</string>
 											<string>9C11F76A13CDCCA2004E9008</string>
 											<string>9C11F76B13CDCCA2004E9008</string>
 											<string>9C11F76C13CDCCA2004E9008</string>
 											<string>9C11F76E13CDCCA2004E9008</string>
-											<string>9C11F76F13CDCCA2004E9008</string>
+											<string>9C11F7B113CDDA7A004E9008</string>
+											<string>9C11F7B213CDDA7A004E9008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -820,15 +820,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9C11F7AD13CDD564004E9008</string>
 		<string>9C11F6A313CD93B0004E9008</string>
 		<string>9C11F6A413CD93B0004E9008</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9C11F6B613CD9583004E9008</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
 		<string>9CD0E31A12115D9300A01347</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>13 125 1280 653 0 0 1280 778 </string>
@@ -1065,6 +1064,8 @@
 							<key>Dock</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -1079,7 +1080,7 @@
 										<key>Frame</key>
 										<string>{{0, 0}, {1239, 346}}</string>
 										<key>RubberWindowFrame</key>
-										<string>83 -202 1239 646 0 0 1280 778 </string>
+										<string>41 45 1239 646 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -1091,8 +1092,6 @@
 							<string>346pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1105,7 +1104,7 @@
 								<key>Frame</key>
 								<string>{{0, 351}, {1239, 254}}</string>
 								<key>RubberWindowFrame</key>
-								<string>83 -202 1239 646 0 0 1280 778 </string>
+								<string>41 45 1239 646 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
@@ -1134,11 +1133,11 @@
 				<string>1CD0528E0623707200166675</string>
 			</array>
 			<key>WindowString</key>
-			<string>83 -202 1239 646 0 0 1280 778 </string>
+			<string>41 45 1239 646 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

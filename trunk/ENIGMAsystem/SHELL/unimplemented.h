@@ -435,15 +435,15 @@ int date_is_today(int date) {} // Returns whether the indicated date-time value 
 /*
  math
  */
-double enigma_min(double x, double y) {return 0;}
+double enigma_min(double x, double y) {return fmin(x,y);}
 double enigma_min(double x, double y, double z) { return enigma_min(x,enigma_min(y,z));}
 double enigma_min(double x, double y, double z,double a) { return enigma_min(x,enigma_min(y,z,a));}
-double enigma_max(double x, double y) {return 0;}
+double enigma_max(double x, double y) {return fmax(x, y);}
 double enigma_max(double x, double y, double z) { return enigma_max(x,enigma_max(y,z));}
 double enigma_max(double x, double y, double z,double a) { return enigma_max(x,enigma_max(y,z,a));}
-double mean(double x, double y) { return x;}
-double mean(double x, double y, double z) {return mean(x,mean(y,z));}
-double mean(double x, double y, double z,double a) {return mean(x,mean(y,z,a));}
+double mean(double x, double y) { return (x+y)/2;}
+double mean(double x, double y, double z) {return (x+y+z)/3;}
+double mean(double x, double y, double z,double a) {return (x+y+z+a)/4;}
 
 /*median by YellowAfterLife*/
 double median(double x)           { return x; }

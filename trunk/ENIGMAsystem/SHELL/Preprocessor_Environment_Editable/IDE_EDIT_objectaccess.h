@@ -39,45 +39,4 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 4 accessors
-  var  &varaccess__instance(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case obj_controller: return ((OBJ_obj_controller*)inst)->_instance;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_instance;
-    }
-    return dummy_0;
-  }
-  var  &varaccess__list(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case obj_controller: return ((OBJ_obj_controller*)inst)->_list;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_list;
-    }
-    return dummy_0;
-  }
-  var  &varaccess__xx(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case obj_controller: return ((OBJ_obj_controller*)inst)->_xx;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_xx;
-    }
-    return dummy_0;
-  }
-  var  &varaccess__yy(int x)
-  {
-    object_basic *inst = fetch_instance_by_int(x);
-    if (inst) switch (inst->object_index)
-    {
-      case obj_controller: return ((OBJ_obj_controller*)inst)->_yy;
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->_yy;
-    }
-    return dummy_0;
-  }
 } // namespace enigma

@@ -30,21 +30,29 @@
 
 enum //object names
 {
-  obj_controller = 0,
-  obj_ball = 1,
+  obj_turret = 0,
+  obj_ship = 1,
+  obj_controller = 2,
+  obj_ammo = 3,
+  obj_explosion = 4,
 };
-namespace enigma { size_t object_idmax = 2; }
+namespace enigma { size_t object_idmax = 5; }
 
 enum //sprite names
 {
-  spr_controller = 0,
+  spr_turret = 0,
+  spr_ship = 1,
+  spr_controller = 2,
+  spr_ammo = 3,
+  spr_explosion = 4,
 };
-namespace enigma { size_t sprite_idmax = 1; }
+namespace enigma { size_t sprite_idmax = 5; }
 
 enum //background names
 {
+  bck_sky = 0,
 };
-namespace enigma { size_t background_idmax = 0; }
+namespace enigma { size_t background_idmax = 1; }
 
 enum //font names
 {
@@ -64,8 +72,10 @@ namespace enigma { size_t path_idmax = 0; }
 
 enum //sound names
 {
+  snd_gun = 0,
+  snd_explosion = 1,
 };
-namespace enigma { size_t sound_idmax = 0; }
+namespace enigma { size_t sound_idmax = 2; }
 
 enum //room names
 {

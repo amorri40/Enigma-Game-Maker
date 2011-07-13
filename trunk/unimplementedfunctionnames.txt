@@ -1,5 +1,9 @@
+collision_circle	U
 draw_circle	F
 draw_fill	U
+draw_polygon_begin	U
+draw_polygon_end	U
+draw_polygon_vertex	U
 ds_list_add	U
 ds_list_create	U
 ds_list_find_value	U
@@ -7,7 +11,11 @@ ds_list_size	U
 ds_list_sort	U
 enigma_make_color	U
 enigma_max	U
+enigma_min	U
 enigmadraw_text	U
+enigmaround	U
+get_string	U
+message_caption	U
 window_get_region_height	U
 window_get_region_width	U
 
