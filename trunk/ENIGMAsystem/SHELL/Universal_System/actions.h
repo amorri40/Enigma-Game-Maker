@@ -68,7 +68,7 @@ inline void action_move_to(double xx,double yy) {
 inline void action_create_object(int object, double x, double y) {
     if (argument_relative) {
         enigma::object_planar* const inst = ((enigma::object_planar*)enigma::instance_event_iterator->inst);
-        instance_create(x+inst->x, y+inst->y, object);
+        instance_create(inst->x+x, inst->y+y, object);
     }
     else instance_create(x, y, object);
 }

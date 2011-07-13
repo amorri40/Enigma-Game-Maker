@@ -1487,7 +1487,7 @@
 	"../event_reader/event_parser.h"
 	"../../general/parse_basics.h"
 
-1308694320 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_room_data.cpp
+1310478643 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_room_data.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>

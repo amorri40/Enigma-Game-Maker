@@ -1,18 +1,4 @@
-action_create_object_motion	U
-action_draw_background	U
-action_path	U
-action_sprite_color	U
-action_sprite_transform	U
-background_get_height	U
-background_get_width	U
-d3d_draw_floor	U
-d3d_set_perspective	U
-d3d_set_projection_ortho	U
-draw_set_halign	U
-draw_set_valign	U
-enigma_floor	U
-enigmadraw_text	U
+action_set_friction	U
+action_show_info	U
 enigmarandom	U
-move_contact_solid	U
-tile_layer_depth	U
 
