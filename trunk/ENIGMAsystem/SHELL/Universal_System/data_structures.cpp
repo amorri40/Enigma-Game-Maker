@@ -28,7 +28,11 @@ int ds_list_size(int id) {return ds_lists[id].size();}
 
 void ds_list_sort(int id, bool ascend) {
     //Sorts the values in the list. When ascend is true the values are sorted in ascending order, otherwise in descending order.
-
+    if (ascend) {
+        sort (ds_lists[id].begin(), ds_lists[id].end()); }
+    else {
+        sort (ds_lists[id].begin(), ds_lists[id].end(), greater<int>());
+    }
 }
 
 var ds_list_find_value(int id, int pos) {
