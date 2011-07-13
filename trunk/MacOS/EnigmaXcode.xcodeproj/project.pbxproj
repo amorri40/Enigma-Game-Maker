@@ -375,6 +375,7 @@
 		9C0D01D91361E2A00083E470 /* highscore_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = highscore_functions.cpp; sourceTree = "<group>"; };
 		9C11F6F113CDC185004E9008 /* data_structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_structures.h; sourceTree = "<group>"; };
 		9C11F6F213CDC185004E9008 /* data_structures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data_structures.cpp; sourceTree = "<group>"; };
+		9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamemaker_compatibility.h; sourceTree = "<group>"; };
 		9C3829531215459C007B24C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C382B221215685D007B24C5 /* iPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhone-Info.plist"; sourceTree = "<group>"; };
 		9C3B47B613C567390015E8E2 /* instance_system_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_base.h; sourceTree = "<group>"; };
@@ -1248,6 +1249,7 @@
 				9CD0E1B71211552700A01347 /* SHELLmain.cpp */,
 				9CD0E1B81211552700A01347 /* Universal_System */,
 				9CD0E2D812115A8300A01347 /* API_Switchboard.h */,
+				9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */,
 			);
 			path = SHELL;
 			sourceTree = "<group>";

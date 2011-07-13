@@ -29,18 +29,9 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_obj_turret(x,y,idn);
+    new enigma::OBJ_obj_ball(x,y,idn);
   break;
 case 1:
-    new enigma::OBJ_obj_ship(x,y,idn);
-  break;
-case 2:
     new enigma::OBJ_obj_controller(x,y,idn);
-  break;
-case 3:
-    new enigma::OBJ_obj_ammo(x,y,idn);
-  break;
-case 4:
-    new enigma::OBJ_obj_explosion(x,y,idn);
   break;
 

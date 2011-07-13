@@ -95,6 +95,7 @@ extern int amain();
 #include "Universal_System/highscore_functions.h" 
 
 #include "Universal_System/data_structures.h"
+#include "gamemaker_compatibility.h"
 
 #ifndef ENIGMA_PARSER_RUN
 #define ENIGMA_WS_COCOA 1

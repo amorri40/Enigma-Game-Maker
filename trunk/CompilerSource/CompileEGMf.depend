@@ -1476,7 +1476,7 @@
 	"../event_reader/event_parser.h"
 	"../../parser/object_storage.h"
 
-1310290508 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
+1310547270 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>

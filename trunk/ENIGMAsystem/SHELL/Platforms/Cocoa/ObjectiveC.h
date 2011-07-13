@@ -42,6 +42,7 @@ extern "C" {
     void cocoa_flush_opengl();
     int cocoa_window_get_region_width();
     int cocoa_window_get_region_height();
+    
 #ifdef __cplusplus
 }
 #endif

@@ -20,8 +20,6 @@
 		activeSDKPreference = macosx10.6;
 		activeTarget = 8D1107260486CEB800E47090 /* Game2 */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* Game2 */,
-			9CEBA59C1213815F00FC1D14 /* EnigmaIphone */,
 		);
 		breakpoints = (
 			9C38297512154860007B24C5 /* GSspriteadd.cpp:46 */,
@@ -47,7 +45,7 @@
 			9C382AEA12156409007B24C5 /* GSspriteadd.cpp:168 */,
 			9C73D20E1215BFC600268302 /* CocoaFunctions.cpp:71 */,
 			9C73D2351215C1D800268302 /* spriteinit.cpp:61 */,
-			9C0D05EC136494A40083E470 /* EnigmaView.m:113 */,
+			9C0D05EC136494A40083E470 /* EnigmaView.m:112 */,
 			9C3B47EF13C56B160015E8E2 /* soundinit.cpp:48 */,
 			9C11F34113C97B2F004E9008 /* soundinit.cpp:50 */,
 			9C11F34913C97B5D004E9008 /* loading.cpp:97 */,
@@ -1072,6 +1070,45 @@
 			9C11F7B413CDDA7A004E9008 /* PBXTextBookmark */ = 9C11F7B413CDDA7A004E9008 /* PBXTextBookmark */;
 			9C11F7B513CDDB48004E9008 /* PBXTextBookmark */ = 9C11F7B513CDDB48004E9008 /* PBXTextBookmark */;
 			9C11F7B613CDDB48004E9008 /* PBXTextBookmark */ = 9C11F7B613CDDB48004E9008 /* PBXTextBookmark */;
+			9C11F7B813CDE6A9004E9008 /* PBXTextBookmark */ = 9C11F7B813CDE6A9004E9008 /* PBXTextBookmark */;
+			9C11F7B913CDE6A9004E9008 /* PBXTextBookmark */ = 9C11F7B913CDE6A9004E9008 /* PBXTextBookmark */;
+			9C11F7BA13CDE6A9004E9008 /* PBXTextBookmark */ = 9C11F7BA13CDE6A9004E9008 /* PBXTextBookmark */;
+			9C11F7BB13CDE6A9004E9008 /* PBXTextBookmark */ = 9C11F7BB13CDE6A9004E9008 /* PBXTextBookmark */;
+			9C11F7BC13CDE6A9004E9008 /* PBXTextBookmark */ = 9C11F7BC13CDE6A9004E9008 /* PBXTextBookmark */;
+			9C11F7BD13CDEA9C004E9008 /* PBXTextBookmark */ = 9C11F7BD13CDEA9C004E9008 /* PBXTextBookmark */;
+			9C11F7BE13CDEA9C004E9008 /* PBXTextBookmark */ = 9C11F7BE13CDEA9C004E9008 /* PBXTextBookmark */;
+			9C11F7BF13CDEA9C004E9008 /* PBXTextBookmark */ = 9C11F7BF13CDEA9C004E9008 /* PBXTextBookmark */;
+			9C11F7C413CDEAF0004E9008 /* PBXTextBookmark */ = 9C11F7C413CDEAF0004E9008 /* PBXTextBookmark */;
+			9C11F7C513CDEAF0004E9008 /* PBXTextBookmark */ = 9C11F7C513CDEAF0004E9008 /* PBXTextBookmark */;
+			9C11F7CA13CDEE2E004E9008 /* PBXTextBookmark */ = 9C11F7CA13CDEE2E004E9008 /* PBXTextBookmark */;
+			9C11F7CB13CDEE2E004E9008 /* PBXTextBookmark */ = 9C11F7CB13CDEE2E004E9008 /* PBXTextBookmark */;
+			9C11F7CC13CDEE2E004E9008 /* PBXTextBookmark */ = 9C11F7CC13CDEE2E004E9008 /* PBXTextBookmark */;
+			9C11F7CD13CDEE2E004E9008 /* PBXTextBookmark */ = 9C11F7CD13CDEE2E004E9008 /* PBXTextBookmark */;
+			9C11F7D513CDEE67004E9008 /* PBXTextBookmark */ = 9C11F7D513CDEE67004E9008 /* PBXTextBookmark */;
+			9C11F7D613CDEE67004E9008 /* PBXTextBookmark */ = 9C11F7D613CDEE67004E9008 /* PBXTextBookmark */;
+			9C11F7F213CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F213CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F313CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F313CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F413CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F413CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F513CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F513CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F613CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F613CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F713CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F713CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F813CDF079004E9008 /* PBXTextBookmark */ = 9C11F7F813CDF079004E9008 /* PBXTextBookmark */;
+			9C11F7F913CDF098004E9008 /* PBXTextBookmark */ = 9C11F7F913CDF098004E9008 /* PBXTextBookmark */;
+			9C11F7FA13CDF098004E9008 /* PBXTextBookmark */ = 9C11F7FA13CDF098004E9008 /* PBXTextBookmark */;
+			9C11F7FB13CDF098004E9008 /* PBXTextBookmark */ = 9C11F7FB13CDF098004E9008 /* PBXTextBookmark */;
+			9C11F7FC13CDF098004E9008 /* XCBuildMessageTextBookmark */ = 9C11F7FC13CDF098004E9008 /* XCBuildMessageTextBookmark */;
+			9C11F7FD13CDF098004E9008 /* PBXTextBookmark */ = 9C11F7FD13CDF098004E9008 /* PBXTextBookmark */;
+			9C11F7FE13CDF098004E9008 /* PBXTextBookmark */ = 9C11F7FE13CDF098004E9008 /* PBXTextBookmark */;
+			9C11F7FF13CDF098004E9008 /* PBXTextBookmark */ = 9C11F7FF13CDF098004E9008 /* PBXTextBookmark */;
+			9C11F80013CDF098004E9008 /* PBXTextBookmark */ = 9C11F80013CDF098004E9008 /* PBXTextBookmark */;
+			9C11F80113CDF0A1004E9008 /* PBXTextBookmark */ = 9C11F80113CDF0A1004E9008 /* PBXTextBookmark */;
+			9C11F80213CDF0A1004E9008 /* PBXTextBookmark */ = 9C11F80213CDF0A1004E9008 /* PBXTextBookmark */;
+			9C11F80313CDF0DA004E9008 /* PBXTextBookmark */ = 9C11F80313CDF0DA004E9008 /* PBXTextBookmark */;
+			9C11F80413CDF0DA004E9008 /* PBXTextBookmark */ = 9C11F80413CDF0DA004E9008 /* PBXTextBookmark */;
+			9C11F80513CDF0DA004E9008 /* PBXTextBookmark */ = 9C11F80513CDF0DA004E9008 /* PBXTextBookmark */;
+			9C11F80613CDF0DA004E9008 /* PBXTextBookmark */ = 9C11F80613CDF0DA004E9008 /* PBXTextBookmark */;
+			9C11F80713CDF11B004E9008 /* PBXTextBookmark */ = 9C11F80713CDF11B004E9008 /* PBXTextBookmark */;
+			9C11F80813CDF11B004E9008 /* PBXTextBookmark */ = 9C11F80813CDF11B004E9008 /* PBXTextBookmark */;
 			9C16DBF513B9889900F82EE5 = 9C16DBF513B9889900F82EE5 /* PBXTextBookmark */;
 			9C16DC2C13BACD8700F82EE5 = 9C16DC2C13BACD8700F82EE5 /* PBXTextBookmark */;
 			9C16DC3113BAD00600F82EE5 = 9C16DC3113BAD00600F82EE5 /* PBXTextBookmark */;
@@ -1585,9 +1622,9 @@
 	};
 	9C0D005B136066860083E470 /* unimplemented.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1720, 16926}}";
-			sepNavSelRange = "{31032, 10}";
-			sepNavVisRange = "{30338, 1651}";
+			sepNavIntBoundsRect = "{{0, 0}, {1503, 17394}}";
+			sepNavSelRange = "{84102, 0}";
+			sepNavVisRange = "{82528, 1578}";
 			sepNavWindowFrame = "{{15, 46}, {900, 727}}";
 		};
 	};
@@ -1667,7 +1704,7 @@
 		fRef = 9CD0E4881212908C00A01347 /* ObjectiveC.h */;
 		name = "ObjectiveC.h: 46";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 2737;
 		rType = 0;
 		vrLen = 718;
 		vrLoc = 1931;
@@ -1682,7 +1719,7 @@
 		vrLen = 1743;
 		vrLoc = 0;
 	};
-	9C0D05EC136494A40083E470 /* EnigmaView.m:113 */ = {
+	9C0D05EC136494A40083E470 /* EnigmaView.m:112 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1694,7 +1731,7 @@
 		functionName = "-drawFrame";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 113;
+		lineNumber = 112;
 		location = EnigmaXcode;
 		modificationTime = 332098978.274076;
 		originalNumberOfMultipleMatches = 1;
@@ -1812,7 +1849,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 87";
 		rLen = 0;
-		rLoc = 3093;
+		rLoc = 3197;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 2922;
@@ -1842,7 +1879,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 87";
 		rLen = 0;
-		rLoc = 3093;
+		rLoc = 3197;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 2922;
@@ -2419,7 +2456,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1314";
 		rLen = 0;
-		rLoc = 84323;
+		rLoc = 84103;
 		rType = 0;
 		vrLen = 1886;
 		vrLoc = 90645;
@@ -3494,7 +3531,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84175;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 93983;
@@ -3524,7 +3561,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84175;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 93983;
@@ -3554,7 +3591,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84175;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 93983;
@@ -3584,7 +3621,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84175;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 93983;
@@ -3841,7 +3878,7 @@
 		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
 		name = "SHELLmain.cpp: 122";
 		rLen = 78;
-		rLoc = 4736;
+		rLoc = 4773;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 4343;
@@ -4529,7 +4566,7 @@
 		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
 		name = "SHELLmain.cpp: 122";
 		rLen = 78;
-		rLoc = 4736;
+		rLoc = 4773;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 4306;
@@ -5540,8 +5577,8 @@
 	9C11F2CC13C8934E004E9008 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
-		rLen = 11;
-		rLoc = 84156;
+		rLen = 0;
+		rLoc = 84102;
 		rType = 0;
 	};
 	9C11F2CD13C8934E004E9008 /* PBXTextBookmark */ = {
@@ -5549,7 +5586,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1390";
 		rLen = 0;
-		rLoc = 84315;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 95104;
@@ -5569,7 +5606,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1390";
 		rLen = 0;
-		rLoc = 84315;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 95104;
@@ -6637,7 +6674,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1406";
 		rLen = 0;
-		rLoc = 84315;
+		rLoc = 84102;
 		rType = 0;
 		vrLen = 372;
 		vrLoc = 95744;
@@ -6922,7 +6959,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5002;
+		rLoc = 4997;
 		rType = 0;
 		vrLen = 825;
 		vrLoc = 4211;
@@ -6932,7 +6969,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 658;
 		vrLoc = 4383;
@@ -6952,7 +6989,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 4455;
@@ -7147,7 +7184,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 4455;
@@ -7424,7 +7461,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 178";
 		rLen = 0;
-		rLoc = 5525;
+		rLoc = 5520;
 		rType = 0;
 		vrLen = 319;
 		vrLoc = 5276;
@@ -7484,7 +7521,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 154";
 		rLen = 0;
-		rLoc = 5045;
+		rLoc = 5149;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 4317;
@@ -7768,7 +7805,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 4455;
@@ -7778,7 +7815,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 4455;
@@ -7923,7 +7960,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 4455;
@@ -7943,7 +7980,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 5008;
+		rLoc = 5003;
 		rType = 0;
 		vrLen = 572;
 		vrLoc = 4521;
@@ -8090,7 +8127,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 143";
 		rLen = 0;
-		rLoc = 5016;
+		rLoc = 5011;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 4383;
@@ -8120,7 +8157,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 4945;
+		rLoc = 4940;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 4211;
@@ -8130,7 +8167,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 4984;
+		rLoc = 4979;
 		rType = 0;
 		vrLen = 804;
 		vrLoc = 4211;
@@ -8150,7 +8187,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 142";
 		rLen = 0;
-		rLoc = 4984;
+		rLoc = 4979;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 4211;
@@ -9768,7 +9805,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 138";
 		rLen = 12;
-		rLoc = 4175;
+		rLoc = 4279;
 		rType = 0;
 		vrLen = 570;
 		vrLoc = 3754;
@@ -9868,7 +9905,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 138";
 		rLen = 12;
-		rLoc = 4175;
+		rLoc = 4279;
 		rType = 0;
 		vrLen = 356;
 		vrLoc = 2672;
@@ -9898,7 +9935,7 @@
 		fRef = 9CE2038C1212AA37006BDA4B /* CocoaFunctions.h */;
 		name = "CocoaFunctions.h: 40";
 		rLen = 0;
-		rLoc = 2496;
+		rLoc = 2538;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 1175;
@@ -9992,9 +10029,9 @@
 	};
 	9C11F6F213CDC185004E9008 /* data_structures.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 546}}";
-			sepNavSelRange = "{536, 0}";
-			sepNavVisRange = "{220, 1004}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 546}}";
+			sepNavSelRange = "{746, 12}";
+			sepNavVisRange = "{571, 653}";
 		};
 	};
 	9C11F72C13CDC97E004E9008 /* PBXTextBookmark */ = {
@@ -10283,7 +10320,7 @@
 		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
 		name = "SHELLmain.cpp: 97";
 		rLen = 0;
-		rLoc = 3972;
+		rLoc = 4009;
 		rType = 0;
 		vrLen = 674;
 		vrLoc = 3651;
@@ -10652,6 +10689,399 @@
 		vrLoc = 30338;
 	};
 	9C11F7B613CDDB48004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 361}}";
+			sepNavSelRange = "{448, 0}";
+			sepNavVisRange = "{0, 448}";
+		};
+	};
+	9C11F7B813CDE6A9004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 441";
+		rLen = 10;
+		rLoc = 31032;
+		rType = 0;
+		vrLen = 1651;
+		vrLoc = 30338;
+	};
+	9C11F7B913CDE6A9004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */;
+		name = "gamemaker_compatibility.h: 2";
+		rLen = 25;
+		rLoc = 7;
+		rType = 0;
+		vrLen = 377;
+		vrLoc = 0;
+	};
+	9C11F7BA13CDE6A9004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
+		name = "SHELLmain.cpp: 97";
+		rLen = 0;
+		rLoc = 4009;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 3650;
+	};
+	9C11F7BB13CDE6A9004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
+		name = "SHELLmain.cpp: 98";
+		rLen = 0;
+		rLoc = 3974;
+		rType = 0;
+		vrLen = 707;
+		vrLoc = 3612;
+	};
+	9C11F7BC13CDE6A9004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F7BD13CDEA9C004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1B71211552700A01347 /* SHELLmain.cpp */;
+		name = "SHELLmain.cpp: 98";
+		rLen = 0;
+		rLoc = 3974;
+		rType = 0;
+		vrLen = 707;
+		vrLoc = 3612;
+	};
+	9C11F7BE13CDEA9C004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */;
+		name = "gamemaker_compatibility.h: 15";
+		rLen = 0;
+		rLoc = 448;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	9C11F7BF13CDEA9C004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F7C413CDEAF0004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */;
+		name = "gamemaker_compatibility.h: 15";
+		rLen = 0;
+		rLoc = 448;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	9C11F7C513CDEAF0004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F7CA13CDEE2E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */;
+		name = "gamemaker_compatibility.h: 15";
+		rLen = 0;
+		rLoc = 448;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	9C11F7CB13CDEE2E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
+		name = "WindowFunctions.m: 118";
+		rLen = 1;
+		rLoc = 4353;
+		rType = 0;
+		vrLen = 518;
+		vrLoc = 3931;
+	};
+	9C11F7CC13CDEE2E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
+		name = "EnigmaView.m: 96";
+		rLen = 0;
+		rLoc = 3766;
+		rType = 0;
+		vrLen = 796;
+		vrLoc = 3134;
+	};
+	9C11F7CD13CDEE2E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 1848;
+	};
+	9C11F7D513CDEE67004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
+		name = "EnigmaView.m: 96";
+		rLen = 0;
+		rLoc = 3766;
+		rType = 0;
+		vrLen = 812;
+		vrLoc = 3136;
+	};
+	9C11F7D613CDEE67004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 1848;
+	};
+	9C11F7F213CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
+		name = "EnigmaView.m: 94";
+		rLen = 0;
+		rLoc = 3766;
+		rType = 0;
+		vrLen = 769;
+		vrLoc = 3364;
+	};
+	9C11F7F313CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
+		name = "WindowFunctions.m: 124";
+		rLen = 29;
+		rLoc = 4475;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 3985;
+	};
+	9C11F7F413CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E4881212908C00A01347 /* ObjectiveC.h */;
+		name = "ObjectiveC.h: 45";
+		rLen = 0;
+		rLoc = 2702;
+		rType = 0;
+		vrLen = 1211;
+		vrLoc = 1511;
+	};
+	9C11F7F513CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038C1212AA37006BDA4B /* CocoaFunctions.h */;
+		name = "CocoaFunctions.h: 40";
+		rLen = 0;
+		rLoc = 2538;
+		rType = 0;
+		vrLen = 1385;
+		vrLoc = 1175;
+	};
+	9C11F7F613CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 83";
+		rLen = 0;
+		rLoc = 3140;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 2769;
+	};
+	9C11F7F713CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 83";
+		rLen = 0;
+		rLoc = 3140;
+		rType = 0;
+		vrLen = 381;
+		vrLoc = 2774;
+	};
+	9C11F7F813CDF079004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F7F913CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F6F113CDC185004E9008 /* data_structures.h */;
+		name = "data_structures.h: 26";
+		rLen = 0;
+		rLoc = 1504;
+		rType = 0;
+		vrLen = 1942;
+		vrLoc = 173;
+	};
+	9C11F7FA13CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
+		name = "data_structures.cpp: 29";
+		rLen = 12;
+		rLoc = 746;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 571;
+	};
+	9C11F7FB13CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30512115C9B00A01347 /* IDE_EDIT_objectdeclarations.h */;
+		name = "IDE_EDIT_objectdeclarations.h: 174";
+		rLen = 0;
+		rLoc = 6910;
+		rType = 0;
+		vrLen = 1361;
+		vrLoc = 996;
+	};
+	9C11F7FC13CDF098004E9008 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'cocoa_get_working_directory' was not declared in this scope";
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 84;
+		rType = 1;
+	};
+	9C11F7FD13CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 83";
+		rLen = 0;
+		rLoc = 3136;
+		rType = 0;
+		vrLen = 254;
+		vrLoc = 2899;
+	};
+	9C11F7FE13CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E36F1211960600A01347 /* CocoaWindow.cpp */;
+		name = "CocoaWindow.cpp: 29";
+		rLen = 17;
+		rLoc = 1038;
+		rType = 0;
+		vrLen = 524;
+		vrLoc = 656;
+	};
+	9C11F7FF13CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		rLen = 17;
+		rLoc = 72219;
+		rType = 0;
+	};
+	9C11F80013CDF098004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 1285";
+		rLen = 0;
+		rLoc = 84102;
+		rType = 0;
+		vrLen = 1578;
+		vrLoc = 82528;
+	};
+	9C11F80113CDF0A1004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 81";
+		rLen = 0;
+		rLoc = 3079;
+		rType = 0;
+		vrLen = 385;
+		vrLoc = 2774;
+	};
+	9C11F80213CDF0A1004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F80313CDF0DA004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 81";
+		rLen = 0;
+		rLoc = 3079;
+		rType = 0;
+		vrLen = 385;
+		vrLoc = 2774;
+	};
+	9C11F80413CDF0DA004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
+		name = "WindowFunctions.m: 124";
+		rLen = 29;
+		rLoc = 4475;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 3983;
+	};
+	9C11F80513CDF0DA004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
+		name = "WindowFunctions.m: 127";
+		rLen = 0;
+		rLoc = 4584;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 3983;
+	};
+	9C11F80613CDF0DA004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
+		name = "instance.cpp: 53";
+		rLen = 0;
+		rLoc = 2709;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 1848;
+	};
+	9C11F80713CDF11B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */;
+		name = "WindowFunctions.m: 125";
+		rLen = 0;
+		rLoc = 4552;
+		rType = 0;
+		vrLen = 649;
+		vrLoc = 3952;
+	};
+	9C11F80813CDF11B004E9008 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 9CD0E1E51211552700A01347 /* instance.cpp */;
 		name = "instance.cpp: 53";
@@ -11385,7 +11815,7 @@
 		fRef = 9CE204221212B61A006BDA4B /* EnigmaView.m */;
 		name = "EnigmaView.m: 114";
 		rLen = 0;
-		rLoc = 4146;
+		rLoc = 4141;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 3775;
@@ -11445,7 +11875,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 87";
 		rLen = 0;
-		rLoc = 3093;
+		rLoc = 3197;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 2922;
@@ -13256,7 +13686,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1302";
 		rLen = 0;
-		rLoc = 84323;
+		rLoc = 84103;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 90704;
@@ -13612,9 +14042,9 @@
 	};
 	9CD0E1B71211552700A01347 /* SHELLmain.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1885}}";
-			sepNavSelRange = "{3972, 0}";
-			sepNavVisRange = "{3651, 674}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 2236}}";
+			sepNavSelRange = "{3974, 0}";
+			sepNavVisRange = "{3612, 707}";
 			sepNavWindowFrame = "{{162, 267}, {1002, 488}}";
 		};
 	};
@@ -13970,9 +14400,9 @@
 	};
 	9CD0E30512115C9B00A01347 /* IDE_EDIT_objectdeclarations.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1178, 5837}}";
-			sepNavSelRange = "{17133, 0}";
-			sepNavVisRange = "{5850, 1358}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2002}}";
+			sepNavSelRange = "{6910, 0}";
+			sepNavVisRange = "{996, 1361}";
 			sepNavWindowFrame = "{{15, 46}, {900, 727}}";
 		};
 	};
@@ -14023,9 +14453,9 @@
 	};
 	9CD0E36F1211960600A01347 /* CocoaWindow.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 5811}}";
-			sepNavSelRange = "{4969, 0}";
-			sepNavVisRange = "{4728, 452}";
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 5707}}";
+			sepNavSelRange = "{1038, 17}";
+			sepNavVisRange = "{656, 524}";
 			sepNavWindowFrame = "{{15, 67}, {750, 711}}";
 		};
 	};
@@ -14186,24 +14616,24 @@
 	};
 	9CD0E4881212908C00A01347 /* ObjectiveC.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 624}}";
-			sepNavSelRange = "{2694, 0}";
-			sepNavVisRange = "{1511, 1208}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 637}}";
+			sepNavSelRange = "{2702, 0}";
+			sepNavVisRange = "{1511, 1211}";
 		};
 	};
 	9CE2038C1212AA37006BDA4B /* CocoaFunctions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 559}}";
-			sepNavSelRange = "{2496, 0}";
-			sepNavVisRange = "{1175, 1343}";
+			sepNavSelRange = "{2538, 0}";
+			sepNavVisRange = "{1175, 1385}";
 			sepNavWindowFrame = "{{15, 67}, {836, 706}}";
 		};
 	};
 	9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 2236}}";
-			sepNavSelRange = "{4175, 12}";
-			sepNavVisRange = "{2672, 356}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 2314}}";
+			sepNavSelRange = "{3079, 0}";
+			sepNavVisRange = "{2774, 385}";
 			sepNavWindowFrame = "{{124, 59}, {1263, 698}}";
 		};
 	};
@@ -14301,9 +14731,9 @@
 	};
 	9CE204221212B61A006BDA4B /* EnigmaView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 3354}}";
-			sepNavSelRange = "{4984, 0}";
-			sepNavVisRange = "{4211, 835}";
+			sepNavIntBoundsRect = "{{0, 0}, {943, 2977}}";
+			sepNavSelRange = "{3766, 0}";
+			sepNavVisRange = "{3364, 769}";
 			sepNavWindowFrame = "{{15, 75}, {750, 703}}";
 		};
 	};
@@ -14580,9 +15010,9 @@
 	};
 	9CEBA5171212F4F400FC1D14 /* WindowFunctions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1612}}";
-			sepNavSelRange = "{4353, 1}";
-			sepNavVisRange = "{3906, 543}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 2093}}";
+			sepNavSelRange = "{4552, 0}";
+			sepNavVisRange = "{3952, 649}";
 		};
 	};
 	9CEBA59C1213815F00FC1D14 /* EnigmaIphone */ = {
@@ -15058,7 +15488,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 122";
 		rLen = 0;
-		rLoc = 4224;
+		rLoc = 4328;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 3525;

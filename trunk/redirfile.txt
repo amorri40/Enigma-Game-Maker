@@ -2,7 +2,9 @@ cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -
 cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c WindowFunctions.m		-o .eobjs/MacOSX/MacOSX/Run/WindowFunctions.o -s -O3 
+WindowFunctions.m: In function ‘cocoa_window_set_caption’:
+WindowFunctions.m:74: warning: ‘stringWithCString:length:’ is deprecated (declared at /System/Library/Frameworks/Foundation.framework/Headers/NSString.h:385)
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
@@ -21,7 +23,7 @@ make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
 make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
-In file included from SHELLmain.cpp:101:
+In file included from SHELLmain.cpp:102:
 unimplemented.h: In function ‘void show_debug_message(std::string)’:
 unimplemented.h:1174: warning: cannot pass objects of non-POD type ‘struct std::string’ through ‘...’; call will abort at runtime
 unimplemented.h:1174: warning: format ‘%s’ expects type ‘char*’, but argument 2 has type ‘int’

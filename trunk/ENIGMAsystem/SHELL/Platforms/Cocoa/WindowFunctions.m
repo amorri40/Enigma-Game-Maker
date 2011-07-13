@@ -115,9 +115,14 @@ void cocoa_flush_opengl() {
 }
 
 int cocoa_window_get_region_width() {
-    getWindowDimension(2);
+    return getWindowDimension(2);
 }
 int cocoa_window_get_region_height() {
-    getWindowDimension(3);
+    return getWindowDimension(3);
+}
+
+const char* cocoa_get_working_directory() {
+    NSBundle* bundle = [NSBundle mainBundle];
+    return [[bundle bundlePath] UTF8String];
 }
 

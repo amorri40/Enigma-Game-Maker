@@ -39,4 +39,204 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
+  var dummy_0; // Referenced by 20 accessors
+  var  &varaccess_argument1(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->argument1;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_enigmaheight(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->enigmaheight;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmaheight;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_enigmawidth(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->enigmawidth;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmawidth;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_file(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->file;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->file;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_group_amount(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->group_amount;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->group_amount;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_group_id(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->group_id;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->group_id;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_group_object(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->group_object;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->group_object;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_group_status(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->group_status;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->group_status;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_i(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->i;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->i;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_lines(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->lines;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->lines;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_name(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->name;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->name;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_object(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->object;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_object_numb(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->object_numb;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object_numb;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_object_x(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->object_x;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object_x;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_object_y(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->object_y;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->object_y;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_temp(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->temp;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->temp;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_temp_x(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->temp_x;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->temp_x;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_temp_y(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->temp_y;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->temp_y;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_xx(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->xx;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->xx;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_yy(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_controller: return ((OBJ_obj_controller*)inst)->yy;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->yy;
+    }
+    return dummy_0;
+  }
 } // namespace enigma

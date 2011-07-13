@@ -76,10 +76,13 @@ int loopy() {
 	return 0;
 }
 
-
+extern string working_directory;
 int init() {
+    working_directory=cocoa_get_working_directory();
 enigma::initialize_everything();
 	enigma::initkeymap();
+    
+    return 0;
 }
 
 

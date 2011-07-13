@@ -92,7 +92,6 @@
 	delegate.visible= YES;
 	//init();
     
-    
 }
 
 extern bool keyboard_check(int i);

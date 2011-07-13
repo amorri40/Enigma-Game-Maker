@@ -1283,12 +1283,6 @@ string get_open_filename(string filter, string fname){
     return "/Users/alasdairmorrison/Documents/Game Maker/64D general/64D Last 0to10/physics/physics_1.txt";
 }
 
-//These are due to regex (LGMUtility) errors
-#define enigmaround(args...) round(args)
-#define enigmapower(args...) power(args)
-#define enigmarandom(args...) random(args)
-#define enigmadraw_text(args...) draw_text(args)
-
 
 
 
