@@ -8,11 +8,11 @@ $(OBJECTS)/GScolors.o: GScolors.cpp OpenGLHeaders.h
 	$(CXX) -c GScolors.cpp		-o $(OBJECTS)/GScolors.o $(GFLAGS) $(ECPPFLAGS)
 $(OBJECTS)/GScurves.o: GScurves.cpp OpenGLHeaders.h GScolors.h
 	$(CXX) -c GScurves.cpp		-o $(OBJECTS)/GScurves.o $(GFLAGS) $(ECPPFLAGS)
-$(OBJECTS)/GSd3d.o: GSd3d.cpp OpenGLHeaders.h GSprmtvs.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/roomsystem.h ../../Universal_System/multifunction_variant.h
+$(OBJECTS)/GSd3d.o: GSd3d.cpp OpenGLHeaders.h GSprmtvs.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/roomsystem.h ../../Universal_System/multifunction_variant.h ../../Universal_System/backgroundstruct.h
 	$(CXX) -c GSd3d.cpp		-o $(OBJECTS)/GSd3d.o $(GFLAGS) $(ECPPFLAGS)
 $(OBJECTS)/GSenable.o: GSenable.cpp OpenGLHeaders.h
 	$(CXX) -c GSenable.cpp		-o $(OBJECTS)/GSenable.o $(GFLAGS) $(ECPPFLAGS)
-$(OBJECTS)/GSfont.o: GSfont.cpp OpenGLHeaders.h GScolors.h ../../Universal_System/fontstruct.h
+$(OBJECTS)/GSfont.o: GSfont.cpp OpenGLHeaders.h GScolors.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/fontstruct.h
 	$(CXX) -c GSfont.cpp		-o $(OBJECTS)/GSfont.o $(GFLAGS) $(ECPPFLAGS)
 $(OBJECTS)/GSmiscextra.o: GSmiscextra.cpp OpenGLHeaders.h
 	$(CXX) -c GSmiscextra.cpp		-o $(OBJECTS)/GSmiscextra.o $(GFLAGS) $(ECPPFLAGS)
@@ -20,7 +20,7 @@ $(OBJECTS)/GSprmtvs.o: GSprmtvs.cpp OpenGLHeaders.h
 	$(CXX) -c GSprmtvs.cpp		-o $(OBJECTS)/GSprmtvs.o $(GFLAGS) $(ECPPFLAGS)
 $(OBJECTS)/GSscreen.o: GSscreen.cpp OpenGLHeaders.h GSbackground.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/roomsystem.h ../../Universal_System/multifunction_variant.h ../../Universal_System/instance_system.h ../../Universal_System/reflexive_types.h ../../Universal_System/object.h ../../Universal_System/instance_system_base.h ../../Universal_System/graphics_object.h ../../Universal_System/planar_object.h ../../Universal_System/mathnc.h ../../Universal_System/spritestruct.h ../../Universal_System/depth_draw.h ../../Platforms/platforms_mandatory.h
 	$(CXX) -c GSscreen.cpp		-o $(OBJECTS)/GSscreen.o $(GFLAGS) $(ECPPFLAGS)
-$(OBJECTS)/GSsprite.o: GSsprite.cpp OpenGLHeaders.h ../../Universal_System/spritestruct.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/roomsystem.h ../../Universal_System/multifunction_variant.h
+$(OBJECTS)/GSsprite.o: GSsprite.cpp OpenGLHeaders.h ../../Universal_System/spritestruct.h ../../Universal_System/instance_system.h ../../Universal_System/var4.h ../../Universal_System/var_te.h ../../Universal_System/reflexive_types.h ../../Universal_System/multifunction_variant.h ../../Universal_System/object.h ../../Universal_System/instance_system_base.h ../../Universal_System/graphics_object.h ../../Universal_System/planar_object.h ../../Universal_System/mathnc.h ../../Universal_System/roomsystem.h
 	$(CXX) -c GSsprite.cpp		-o $(OBJECTS)/GSsprite.o $(GFLAGS) $(ECPPFLAGS)
 $(OBJECTS)/GSstdraw.o: GSstdraw.cpp OpenGLHeaders.h
 	$(CXX) -c GSstdraw.cpp		-o $(OBJECTS)/GSstdraw.o $(GFLAGS) $(ECPPFLAGS)

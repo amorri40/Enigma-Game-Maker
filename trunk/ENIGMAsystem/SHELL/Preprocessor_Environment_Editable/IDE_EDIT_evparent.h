@@ -38,7 +38,8 @@ namespace enigma
   if (image_single!=-1) {image_speed=0;image_index=image_single;} if (visible && sprite_index != -1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);image_index = fmod(image_index + image_speed, sprite_get_number(sprite_index));
     return 0;
     }
-    virtual void    myevent_keyboard() { } // No default Keyboard <key40> code.
+    virtual void    myevent_keypress() { } // No default Press <key40> code.
+    virtual variant myevent_mouseunknown() { return 0; } // No default Mouse Unknown (old? LGM doesn't even know!) code.
     virtual variant myevent_step()
     {
   enigma::propagate_locals(this);

@@ -30,24 +30,31 @@
 
 namespace enigma
 {
-  event_iter *event_create; // Defined in 2 objects
-  event_iter *event_draw; // Defined in 1 objects
-  event_iter *event_keyboard; // Defined in 4 objects
-  event_iter *event_step; // Defined in 1 objects
+  event_iter *event_create; // Defined in 1 objects
+  event_iter *event_draw; // Defined in 2 objects
+  event_iter *event_keypress; // Defined in 3 objects
+  event_iter *event_mouseunknown; // Defined in 1 objects
+  event_iter *event_step; // Defined in 0 objects
   int event_system_initialize()
   {
-    events = new event_iter[4]; // Allocated here; not really meant to change.
-    objects = new objectid_base[4]; // Allocated here; not really meant to change.
+    events = new event_iter[5]; // Allocated here; not really meant to change.
+    objects = new objectid_base[2]; // Allocated here; not really meant to change.
     event_create = events + 0;  event_create->name = "Create";
     event_draw = events + 1;  event_draw->name = "Draw";
-    event_keyboard = events + 2;  event_keyboard->name = "Keyboard <key40>";
-    event_step = events + 3;  event_step->name = "Step";
+    event_keypress = events + 2;  event_keypress->name = "Press <key40>";
+    event_mouseunknown = events + 3;  event_mouseunknown->name = "Mouse Unknown (old? LGM doesn't even know!)";
+    event_step = events + 4;  event_step->name = "Step";
     return 0;
   }
   int ENIGMA_events()
   {
-    for (instance_event_iterator = event_keyboard->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
-      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_keyboard();
+    for (instance_event_iterator = event_keypress->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_keypress();
+    
+    enigma::update_globals();
+    
+    for (instance_event_iterator = event_mouseunknown->next; instance_event_iterator != NULL; instance_event_iterator = instance_event_iterator->next)
+      ((enigma::event_parent*)(instance_event_iterator->inst))->myevent_mouseunknown();
     
     enigma::update_globals();
     

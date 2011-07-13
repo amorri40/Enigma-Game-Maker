@@ -30,6 +30,8 @@
 		9C0D005513605BEB0083E470 /* rectpack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D004E13605BEB0083E470 /* rectpack.cpp */; };
 		9C0D01DA1361E2A00083E470 /* highscore_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D01D91361E2A00083E470 /* highscore_functions.cpp */; };
 		9C0D01DB1361E2A00083E470 /* highscore_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D01D91361E2A00083E470 /* highscore_functions.cpp */; };
+		9C11F6F313CDC185004E9008 /* data_structures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */; };
+		9C11F6F413CDC185004E9008 /* data_structures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */; };
 		9C3829541215459C007B24C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3829531215459C007B24C5 /* CoreGraphics.framework */; };
 		9C382B231215685D007B24C5 /* iPhone-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C382B221215685D007B24C5 /* iPhone-Info.plist */; };
 		9C3B47BC13C567390015E8E2 /* multifunction_variant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */; };
@@ -371,6 +373,8 @@
 		9C0D005B136066860083E470 /* unimplemented.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimplemented.h; sourceTree = "<group>"; };
 		9C0D00C21360D68B0083E470 /* highscore_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = highscore_functions.h; sourceTree = "<group>"; };
 		9C0D01D91361E2A00083E470 /* highscore_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = highscore_functions.cpp; sourceTree = "<group>"; };
+		9C11F6F113CDC185004E9008 /* data_structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_structures.h; sourceTree = "<group>"; };
+		9C11F6F213CDC185004E9008 /* data_structures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data_structures.cpp; sourceTree = "<group>"; };
 		9C3829531215459C007B24C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C382B221215685D007B24C5 /* iPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhone-Info.plist"; sourceTree = "<group>"; };
 		9C3B47B613C567390015E8E2 /* instance_system_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_base.h; sourceTree = "<group>"; };
@@ -1916,6 +1920,8 @@
 				9CD0E2111211552700A01347 /* WITHconstructClose.h */,
 				9C0D00C21360D68B0083E470 /* highscore_functions.h */,
 				9C0D01D91361E2A00083E470 /* highscore_functions.cpp */,
+				9C11F6F113CDC185004E9008 /* data_structures.h */,
+				9C11F6F213CDC185004E9008 /* data_structures.cpp */,
 			);
 			path = Universal_System;
 			sourceTree = "<group>";
@@ -2365,6 +2371,7 @@
 				9C4A7D4213C4333E00D9534C /* graphics_object.cpp in Sources */,
 				9C3B47BC13C567390015E8E2 /* multifunction_variant.cpp in Sources */,
 				9C3B47BD13C567390015E8E2 /* resource_data.cpp in Sources */,
+				9C11F6F313CDC185004E9008 /* data_structures.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2523,6 +2530,7 @@
 				9C4A7D4313C4333F00D9534C /* graphics_object.cpp in Sources */,
 				9C3B47BE13C567390015E8E2 /* multifunction_variant.cpp in Sources */,
 				9C3B47BF13C567390015E8E2 /* resource_data.cpp in Sources */,
+				9C11F6F413CDC185004E9008 /* data_structures.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,15 +29,9 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_obj_camera(x,y,idn);
+    new enigma::OBJ_obj_controller(x,y,idn);
   break;
 case 1:
-    new enigma::OBJ_obj_enemy(x,y,idn);
-  break;
-case 2:
-    new enigma::OBJ_obj_friend(x,y,idn);
-  break;
-case 3:
-    new enigma::OBJ_obj_map(x,y,idn);
+    new enigma::OBJ_obj_ball(x,y,idn);
   break;
 

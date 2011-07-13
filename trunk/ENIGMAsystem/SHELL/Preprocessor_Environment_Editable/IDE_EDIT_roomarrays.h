@@ -32,10 +32,9 @@ namespace enigma {
   int room_loadtimecount = 1;
   roomstruct grd_rooms[1] = {
     //Room 0
-    { 0, "room0",  "",
-      0xc0c0c0, roomcreate0,
-      2000, 2000, 30,  true, {
-      { -1,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
+    { 0, "rm_1",  "Instance Nearest",
+      0x408000, roomcreate0,
+      800, 600, 30,  false, {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
@@ -43,7 +42,8 @@ namespace enigma {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-}, {      { true,   false,   0,   0,   0,   0,   0,   true,   true,   false },
+      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
+}, {      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
@@ -51,11 +51,11 @@ namespace enigma {
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      2,       (enigma::inst*)(int[]){100001,3,0,0,100002,0,1008,1008,  0,0,0,0}
+      },      1,       (enigma::inst*)(int[]){100001,0,0,0,  0,0,0,0}
       ,0,       (enigma::tile*)(int[]){  0,0,0,0,0,0,0,0,0}
     },
   };
   
   int room_max = 0 + 1;
-  int maxid = 100002 + 1;
+  int maxid = 100001 + 1;
 } // Namespace enigma

@@ -16,7 +16,7 @@ $(OBJECTS)/file_manip.o: file_manip.cpp
 $(OBJECTS):
 	-mkdir -p $(OBJECTS) || mkdir "$(OBJECTS)"
 
-this: $(OBJECTS) $(OBJECTS)/file_manip.o $(OBJECTS)/LINUXjoystick.o $(OBJECTS)/XLIBdialog.o $(OBJECTS)/XLIBmain.o $(OBJECTS)/XLIBthreads.o $(OBJECTS)/XLIBwindow.o 
+this: $(OBJECTS) $(OBJECTS)/LINUXjoystick.o $(OBJECTS)/XLIBdialog.o $(OBJECTS)/XLIBmain.o $(OBJECTS)/XLIBthreads.o $(OBJECTS)/XLIBwindow.o $(OBJECTS)/file_manip.o 
 
 clean:
 	-rm .eobjs/*/*/*/*
