@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F80813CDF11B004E9008</string>
+						<string>9C11F81313CDF622004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C11F6A813CD940F004E9008</string>
@@ -323,16 +323,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>33</integer>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>37</integer>
+									<integer>36</integer>
 									<integer>12</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 202}, {322, 594}}</string>
+							<string>{{0, 381}, {322, 594}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -381,7 +380,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F80713CDF11B004E9008</string>
+										<string>9C11F81213CDF622004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -482,7 +481,6 @@
 											<string>9C0ACEA51325374300AB1FCD</string>
 											<string>9C0ACEA61325374300AB1FCD</string>
 											<string>9C0ACEAD1325374300AB1FCD</string>
-											<string>9C0ACEB01325374300AB1FCD</string>
 											<string>9C0ACEB11325374300AB1FCD</string>
 											<string>9C0ACEEB1325451A00AB1FCD</string>
 											<string>9C0D00FC1360FB390083E470</string>
@@ -626,7 +624,7 @@
 											<string>9C11F7F413CDF079004E9008</string>
 											<string>9C11F7F513CDF079004E9008</string>
 											<string>9C11F80313CDF0DA004E9008</string>
-											<string>9C11F80413CDF0DA004E9008</string>
+											<string>9C11F81113CDF622004E9008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -826,11 +824,11 @@
 	<array>
 		<string>9C11F6A313CD93B0004E9008</string>
 		<string>9C11F6A413CD93B0004E9008</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9C11F6B613CD9583004E9008</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>9CD0E31A12115D9300A01347</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/EnigmaXcode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1068,8 +1066,6 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -1084,7 +1080,7 @@
 										<key>Frame</key>
 										<string>{{0, 0}, {1239, 346}}</string>
 										<key>RubberWindowFrame</key>
-										<string>15 132 1239 646 0 0 1280 778 </string>
+										<string>22 43 1239 646 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -1096,6 +1092,8 @@
 							<string>346pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1108,7 +1106,7 @@
 								<key>Frame</key>
 								<string>{{0, 351}, {1239, 254}}</string>
 								<key>RubberWindowFrame</key>
-								<string>15 132 1239 646 0 0 1280 778 </string>
+								<string>22 43 1239 646 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
@@ -1137,11 +1135,11 @@
 				<string>1CD0528E0623707200166675</string>
 			</array>
 			<key>WindowString</key>
-			<string>15 132 1239 646 0 0 1280 778 </string>
+			<string>22 43 1239 646 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

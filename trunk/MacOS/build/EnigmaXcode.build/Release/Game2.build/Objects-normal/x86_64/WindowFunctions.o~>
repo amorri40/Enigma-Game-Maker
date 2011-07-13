@@ -1,2 +1,0 @@
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.m: In function 'cocoa_window_set_caption':
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/MacOS/../ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.m:74: warning: 'stringWithCString:length:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:385)

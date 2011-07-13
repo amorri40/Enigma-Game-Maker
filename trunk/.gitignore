@@ -8,3 +8,7 @@ IDE_EDIT_*
 *.dat
 *.dep
 *.LinkFileList
+*.o~$
+*.o~>
+*.o~?
+*.dylib
