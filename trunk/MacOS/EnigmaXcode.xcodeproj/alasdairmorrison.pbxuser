@@ -1205,9 +1205,9 @@
 	};
 	9C0ACE1D13252E7300AB1FCD /* coll_funcs.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 1937}}";
-			sepNavSelRange = "{2929, 17}";
-			sepNavVisRange = "{2720, 299}";
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 1963}}";
+			sepNavSelRange = "{4437, 11}";
+			sepNavVisRange = "{4830, 896}";
 		};
 	};
 	9C0ACE1E13252E7300AB1FCD /* coll_funcs.h */ = {
@@ -12705,7 +12705,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {901, 2886}}";
 			sepNavSelRange = "{5052, 0}";
-			sepNavVisRange = "{4406, 1279}";
+			sepNavVisRange = "{4565, 1152}";
 		};
 	};
 	9CD0E1EA1211552700A01347 /* key_game_globals.h */ = {
@@ -12831,16 +12831,16 @@
 	};
 	9CD0E2031211552700A01347 /* spritestruct.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 3185}}";
-			sepNavSelRange = "{2627, 10}";
-			sepNavVisRange = "{2246, 553}";
+			sepNavIntBoundsRect = "{{0, 0}, {929, 3198}}";
+			sepNavSelRange = "{3419, 12}";
+			sepNavVisRange = "{2988, 493}";
 		};
 	};
 	9CD0E2041211552700A01347 /* spritestruct.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1020, 1053}}";
-			sepNavSelRange = "{2204, 0}";
-			sepNavVisRange = "{1764, 1130}";
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 1014}}";
+			sepNavSelRange = "{2381, 12}";
+			sepNavVisRange = "{1764, 876}";
 			sepNavWindowFrame = "{{15, 67}, {836, 706}}";
 		};
 	};

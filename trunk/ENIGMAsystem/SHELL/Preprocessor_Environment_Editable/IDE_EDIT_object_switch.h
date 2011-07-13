@@ -29,21 +29,15 @@
 //Editing it is a sign of a certain medical condition. We're not sure which one.
 
 case 0:
-    new enigma::OBJ_obj_smoke(x,y,idn);
+    new enigma::OBJ_obj_camera(x,y,idn);
   break;
 case 1:
-    new enigma::OBJ_obj_rocket(x,y,idn);
+    new enigma::OBJ_obj_enemy(x,y,idn);
+  break;
+case 2:
+    new enigma::OBJ_obj_friend(x,y,idn);
   break;
 case 3:
-    new enigma::OBJ_obj_block(x,y,idn);
-  break;
-case 4:
-    new enigma::OBJ_obj_bomb(x,y,idn);
-  break;
-case 5:
-    new enigma::OBJ_obj_wall_create(x,y,idn);
-  break;
-case 18:
-    new enigma::OBJ_obj_turret(x,y,idn);
+    new enigma::OBJ_obj_map(x,y,idn);
   break;
 

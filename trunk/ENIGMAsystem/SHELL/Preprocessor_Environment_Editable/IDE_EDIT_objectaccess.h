@@ -39,13 +39,24 @@ namespace enigma
     return ri ? ri : &ldummy;
   }
 
-  var dummy_0; // Referenced by 1 accessors
-  var  &varaccess_enigmaauto(int x)
+  var dummy_0; // Referenced by 2 accessors
+  var  &varaccess_brush_color(int x)
   {
     object_basic *inst = fetch_instance_by_int(x);
     if (inst) switch (inst->object_index)
     {
-      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->enigmaauto;
+      case obj_map: return ((OBJ_obj_map*)inst)->brush_color;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->brush_color;
+    }
+    return dummy_0;
+  }
+  var  &varaccess_pen_color(int x)
+  {
+    object_basic *inst = fetch_instance_by_int(x);
+    if (inst) switch (inst->object_index)
+    {
+      case obj_map: return ((OBJ_obj_map*)inst)->pen_color;
+      case global: return ((ENIGMA_global_structure*)ENIGMA_global_instance)->pen_color;
     }
     return dummy_0;
   }

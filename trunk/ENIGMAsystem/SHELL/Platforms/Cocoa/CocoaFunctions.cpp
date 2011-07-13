@@ -105,6 +105,8 @@ void key_release(int keycode) {
 	cocoa_keybdstatus[actualKey]=0;
 }
 
+extern double mouse_button;
+
 void mouse_press(int x, int y) {
     
     if (cocoa_mousestatus[mb_left-1]==1) {
@@ -115,6 +117,7 @@ void mouse_press(int x, int y) {
         cocoa_last_mousestatus[mb_left-1]=0; //handle mouse press
 		
 	}
+    mouse_button=mb_left;
     
 }
 
@@ -122,14 +125,17 @@ void mouse_press(int x, int y) {
 
 void mouse_release(int x, int y) {
 	cocoa_mousestatus[mb_left-1]=0;
+    mouse_button=mb_none;
 }
 
 void mouse_right_press(int x, int y) {
 	cocoa_mousestatus[mb_right-1]=1;
+    mouse_button=mb_right;
 }
 
 void mouse_right_release(int x, int y) {
 	cocoa_mousestatus[mb_right-1]=0;
+    mouse_button=mb_none;
 }
 
 void cocoa_io_handle() {

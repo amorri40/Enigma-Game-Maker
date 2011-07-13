@@ -34,7 +34,8 @@ namespace enigma {
     //Room 0
     { 0, "room0",  "",
       0xc0c0c0, roomcreate0,
-      640, 480, 50,  false, {
+      2000, 2000, 30,  true, {
+      { -1,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
@@ -42,8 +43,7 @@ namespace enigma {
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
       { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-      { 0,   0, 0, 640, 480,   0, 0, 640, 480,   -1,   32, 32,   -1, -1 },
-}, {      { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
+}, {      { true,   false,   0,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
@@ -51,11 +51,11 @@ namespace enigma {
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
       { false,   false,   -1,   0,   0,   0,   0,   true,   true,   false },
-      },      2,       (enigma::inst*)(int[]){100111,18,0,176,100110,5,0,0,  0,0,0,0}
+      },      2,       (enigma::inst*)(int[]){100001,3,0,0,100002,0,1008,1008,  0,0,0,0}
       ,0,       (enigma::tile*)(int[]){  0,0,0,0,0,0,0,0,0}
     },
   };
   
   int room_max = 0 + 1;
-  int maxid = 100111 + 1;
+  int maxid = 100002 + 1;
 } // Namespace enigma

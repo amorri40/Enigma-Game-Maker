@@ -1,4 +1,25 @@
 action_set_friction	U
 action_show_info	U
+draw_circle	F
+draw_rectangle	F
+draw_set_halign	U
+draw_set_valign	U
+draw_triangle	F
+enigma_floor	U
+enigma_make_color	U
+enigma_max	U
+enigma_min	U
+enigmadraw_text	U
 enigmarandom	U
+enigmaround	U
+get_integer	U
+get_open_filename	U
+get_save_filename	U
+message_caption	U
+show_info	U
+show_question	U
+sprite_create_from_screen	U
+sprite_delete	U
+sprite_set_offset	U
+variable_local_exists	U
 

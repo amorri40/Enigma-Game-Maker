@@ -15,7 +15,7 @@ make[3]: Nothing to be done for `static'.
 cd vorbis && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
 make[3]: Nothing to be done for `static'.
 cd Collision_Systems/BBox/ && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-g++ -c coll_funcs.cpp		-o .eobjs/MacOSX/MacOSX/Run/coll_funcs.o -s -O3 
+make[2]: Nothing to be done for `this'.
 cd Widget_Systems/None/      && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
