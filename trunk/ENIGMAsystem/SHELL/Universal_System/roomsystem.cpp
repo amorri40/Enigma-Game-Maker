@@ -43,6 +43,7 @@
 #include "planar_object.h"
 
 #include "roomsystem.h"
+#include "depth_draw.h"
 
 int room_first  = 0;
 int room_last   = 0;
@@ -90,6 +91,14 @@ namespace enigma
       //background_stretch? = backs[i].stretch;
     }
     //Backgrounds end
+      
+      //TGMG tiles start
+      drawing_depths[t.depth].tiles.empty();
+      for (int tilei=0; tilei<enigma::roomdata[room]->tilecount; tilei++) {
+          tile t = enigma::roomdata[room]->tiles[tilei];
+          drawing_depths[t.depth].tiles.push_back(enigma::roomdata[room]->tiles[tilei]);
+      }
+      //TGMG tiles end
     
     view_enabled = views_enabled;
     

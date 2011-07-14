@@ -26,7 +26,8 @@
 \********************************************************************************/
 
 #include "var4.h"
-
+#ifndef room_system_h
+#define room_system_h
 int room_goto(int roomind);
 int room_restart();
 int room_goto_absolute(int index);
@@ -118,3 +119,4 @@ namespace enigma { struct roomv: multifunction_variant {
   void function();
 }; }
 extern enigma::roomv room;
+#endif

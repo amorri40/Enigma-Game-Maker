@@ -434,8 +434,9 @@ outputFile.open("unimplementedfunctionnames.txt");
    for ( std::map< string, char, std::less< char > >::const_iterator iter = unimplemented_function_list.begin();
       iter != unimplemented_function_list.end(); ++iter )
       {
-          if(!(std::string::npos != iter->first.find("enigma")))
-          outputFile << iter->first << '\t' << iter->second << '\n';}
+          //if(!(std::string::npos != iter->first.find("enigma")))
+          outputFile << iter->first << '\t' << iter->second << '\n';
+          }
 
    outputFile << endl;
    outputFile.close();

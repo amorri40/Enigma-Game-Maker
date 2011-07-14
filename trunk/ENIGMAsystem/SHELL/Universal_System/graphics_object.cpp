@@ -51,6 +51,7 @@ namespace enigma
   void depthv::init(double d,object_basic* who) {
     myiter = drawing_depths[rval.d = floor(d)].draw_events->add_inst(who);
   }
+  
   void depthv::remove() {
      drawing_depths[rval.d].draw_events->unlink(myiter);
      if (instance_event_iterator == myiter)
