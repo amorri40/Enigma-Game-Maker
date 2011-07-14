@@ -3,7 +3,7 @@
  To use, simply write: #include "../unimplemented.h" In enigma definitions (whitespace)
  Useful for testing games with features disabled, testing enimga parser, implementing prototype functions 
  */
-
+#include <stdio.h>
 
 
 //Need macro for debug which writes function name to terminal and whether it returns a value (easy way to see used functions for a game)
@@ -1171,7 +1171,7 @@ void mouse_wait() {
 
 /* Bacteria functions */
 void show_debug_message(string str) {
-printf("Debug message: %s \n",str);
+printf("Debug message: %s \n",str.c_str());
 }
 
 

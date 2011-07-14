@@ -4,7 +4,7 @@ make[2]: Nothing to be done for `this'.
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 make[2]: Nothing to be done for `this'.
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c data_structures.cpp		-o .eobjs/MacOSX/MacOSX/Run/data_structures.o -s -O3 
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
 make[3]: Nothing to be done for `static'.

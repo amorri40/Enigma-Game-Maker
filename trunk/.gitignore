@@ -12,3 +12,4 @@ IDE_EDIT_*
 *.o~>
 *.o~?
 *.dylib
+*.gz

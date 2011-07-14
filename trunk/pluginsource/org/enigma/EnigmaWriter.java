@@ -854,7 +854,8 @@ public final class EnigmaWriter
 					numberOfBraces++;
 					break;
 				case Action.ACT_CODE:
-					code.append("{"+args.get(0).getVal()+"\n}").append(nl);
+					//code.append("{"+args.get(0).getVal()+"\n}").append(nl); //why did I add the '{' again retest 64D
+					code.append("{"+args.get(0).getVal()+"/**/\n}").append(nl);
 					break;
 				case Action.ACT_ELSE:
 				{

@@ -1194,6 +1194,68 @@
 			9C11F8F613CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F613CEFBC3004E9008 /* PBXTextBookmark */;
 			9C11F8F713CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F713CEFBC3004E9008 /* PBXTextBookmark */;
 			9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */;
+			9C11F8FD13CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F8FD13CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F8FE13CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F8FE13CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F8FF13CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F8FF13CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F90013CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F90013CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F90113CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F90113CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F90213CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F90213CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F90313CEFCD7004E9008 /* PBXTextBookmark */ = 9C11F90313CEFCD7004E9008 /* PBXTextBookmark */;
+			9C11F90513CF0B6F004E9008 /* PBXTextBookmark */ = 9C11F90513CF0B6F004E9008 /* PBXTextBookmark */;
+			9C11F90613CF0B6F004E9008 /* PBXTextBookmark */ = 9C11F90613CF0B6F004E9008 /* PBXTextBookmark */;
+			9C11F90713CF0B6F004E9008 /* PBXTextBookmark */ = 9C11F90713CF0B6F004E9008 /* PBXTextBookmark */;
+			9C11F90813CF0B6F004E9008 /* PBXTextBookmark */ = 9C11F90813CF0B6F004E9008 /* PBXTextBookmark */;
+			9C11F90913CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90913CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90A13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90A13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90B13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90B13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90C13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90C13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90D13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90D13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90E13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90E13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F90F13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F90F13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91013CF0B70004E9008 /* XCBuildMessageTextBookmark */ = 9C11F91013CF0B70004E9008 /* XCBuildMessageTextBookmark */;
+			9C11F91113CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91113CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91213CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91213CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91313CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91313CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91413CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91413CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91513CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91513CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91613CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91613CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91713CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91713CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91813CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91813CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91913CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91913CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91A13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91A13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91B13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91B13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91C13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91C13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91D13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91D13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91E13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91E13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F91F13CF0B70004E9008 /* PBXTextBookmark */ = 9C11F91F13CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F92013CF0B70004E9008 /* PBXTextBookmark */ = 9C11F92013CF0B70004E9008 /* PBXTextBookmark */;
+			9C11F92113CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92113CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92213CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92213CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92313CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92313CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92413CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92413CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92513CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92513CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92613CF0B8D004E9008 /* PBXTextBookmark */ = 9C11F92613CF0B8D004E9008 /* PBXTextBookmark */;
+			9C11F92713CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92713CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92813CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92813CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92913CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92913CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92A13CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92A13CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92B13CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92B13CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92C13CF0CFF004E9008 /* PBXTextBookmark */ = 9C11F92C13CF0CFF004E9008 /* PBXTextBookmark */;
+			9C11F92D13CF12D5004E9008 /* PBXTextBookmark */ = 9C11F92D13CF12D5004E9008 /* PBXTextBookmark */;
+			9C11F92E13CF12D5004E9008 /* PBXTextBookmark */ = 9C11F92E13CF12D5004E9008 /* PBXTextBookmark */;
+			9C11F92F13CF12D5004E9008 /* PBXTextBookmark */ = 9C11F92F13CF12D5004E9008 /* PBXTextBookmark */;
+			9C11F93013CF12D5004E9008 /* PBXTextBookmark */ = 9C11F93013CF12D5004E9008 /* PBXTextBookmark */;
+			9C11F93113CF212E004E9008 /* PBXTextBookmark */ = 9C11F93113CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93213CF212E004E9008 /* PBXTextBookmark */ = 9C11F93213CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93313CF212E004E9008 /* PBXTextBookmark */ = 9C11F93313CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93413CF212E004E9008 /* PBXTextBookmark */ = 9C11F93413CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93513CF212E004E9008 /* PBXTextBookmark */ = 9C11F93513CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93613CF212E004E9008 /* PBXTextBookmark */ = 9C11F93613CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93713CF212E004E9008 /* PBXTextBookmark */ = 9C11F93713CF212E004E9008 /* PBXTextBookmark */;
+			9C11F93C13CF21F0004E9008 /* PBXTextBookmark */ = 9C11F93C13CF21F0004E9008 /* PBXTextBookmark */;
+			9C11F93D13CF21F0004E9008 /* PBXTextBookmark */ = 9C11F93D13CF21F0004E9008 /* PBXTextBookmark */;
+			9C11F93E13CF21F0004E9008 /* PBXTextBookmark */ = 9C11F93E13CF21F0004E9008 /* PBXTextBookmark */;
+			9C11F93F13CF21F0004E9008 /* PBXTextBookmark */ = 9C11F93F13CF21F0004E9008 /* PBXTextBookmark */;
 			9C16DBF513B9889900F82EE5 = 9C16DBF513B9889900F82EE5 /* PBXTextBookmark */;
 			9C16DC2C13BACD8700F82EE5 = 9C16DC2C13BACD8700F82EE5 /* PBXTextBookmark */;
 			9C16DC3113BAD00600F82EE5 = 9C16DC3113BAD00600F82EE5 /* PBXTextBookmark */;
@@ -1714,9 +1776,9 @@
 	};
 	9C0D005B136066860083E470 /* unimplemented.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1178, 18447}}";
-			sepNavSelRange = "{78644, 0}";
-			sepNavVisRange = "{78282, 605}";
+			sepNavIntBoundsRect = "{{0, 0}, {964, 18356}}";
+			sepNavSelRange = "{79917, 0}";
+			sepNavVisRange = "{79642, 684}";
 			sepNavWindowFrame = "{{15, 46}, {900, 727}}";
 		};
 	};
@@ -2548,7 +2610,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1314";
 		rLen = 0;
-		rLoc = 84103;
+		rLoc = 84129;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -2558,7 +2620,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 247";
 		rLen = 0;
-		rLoc = 17897;
+		rLoc = 17915;
 		rType = 0;
 		vrLen = 1384;
 		vrLoc = 16371;
@@ -2588,7 +2650,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 247";
 		rLen = 0;
-		rLoc = 17897;
+		rLoc = 17915;
 		rType = 0;
 		vrLen = 1384;
 		vrLoc = 16371;
@@ -2638,7 +2700,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 882";
 		rLen = 0;
-		rLoc = 64614;
+		rLoc = 64632;
 		rType = 0;
 		vrLen = 534;
 		vrLoc = 72710;
@@ -2723,7 +2785,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 343";
 		rLen = 0;
-		rLoc = 24311;
+		rLoc = 24329;
 		rType = 0;
 		vrLen = 1909;
 		vrLoc = 22297;
@@ -2753,7 +2815,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 347";
 		rLen = 0;
-		rLoc = 24638;
+		rLoc = 24656;
 		rType = 0;
 		vrLen = 1630;
 		vrLoc = 22297;
@@ -2783,7 +2845,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 211";
 		rLen = 0;
-		rLoc = 15324;
+		rLoc = 15342;
 		rType = 0;
 		vrLen = 1909;
 		vrLoc = 14369;
@@ -2813,7 +2875,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 533";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 41528;
@@ -2853,7 +2915,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 533";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 41528;
@@ -2863,7 +2925,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 534";
 		rLen = 0;
-		rLoc = 32893;
+		rLoc = 32911;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 41774;
@@ -2893,7 +2955,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 535";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 985;
 		vrLoc = 41774;
@@ -2923,7 +2985,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 535";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -2953,7 +3015,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 440";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 33682;
@@ -2983,7 +3045,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 440";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 33682;
@@ -3013,7 +3075,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 440";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 33682;
@@ -3043,7 +3105,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 440";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 33682;
@@ -3073,7 +3135,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 902";
 		rLen = 0;
-		rLoc = 64070;
+		rLoc = 64088;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 72987;
@@ -3103,7 +3165,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 466";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 34937;
@@ -3133,7 +3195,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 469";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 34937;
@@ -3163,7 +3225,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 469";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 34978;
@@ -3193,7 +3255,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 469";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 34978;
@@ -3223,7 +3285,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 469";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 34978;
@@ -3253,7 +3315,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 469";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 34978;
@@ -3283,7 +3345,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1021";
 		rLen = 0;
-		rLoc = 72163;
+		rLoc = 72181;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 81788;
@@ -3313,7 +3375,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1021";
 		rLen = 0;
-		rLoc = 72162;
+		rLoc = 72180;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 81788;
@@ -3343,7 +3405,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 569";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 43015;
@@ -3373,7 +3435,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 569";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 43015;
@@ -3403,7 +3465,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 569";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 43015;
@@ -3433,7 +3495,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 569";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 43015;
@@ -3463,7 +3525,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 569";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 43015;
@@ -3493,7 +3555,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 71";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2703;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 1983;
@@ -3523,7 +3585,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 71";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2703;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 1983;
@@ -3553,7 +3615,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 64197;
+		rLoc = 64215;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 74450;
@@ -3583,7 +3645,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 64197;
+		rLoc = 64215;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 74450;
@@ -3613,7 +3675,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 64197;
+		rLoc = 64215;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 74450;
@@ -3623,7 +3685,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -3653,7 +3715,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -3683,7 +3745,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -3713,7 +3775,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1385";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -3743,7 +3805,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 119";
 		rLen = 0;
-		rLoc = 8830;
+		rLoc = 8848;
 		rType = 0;
 		vrLen = 2645;
 		vrLoc = 6759;
@@ -3773,7 +3835,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 119";
 		rLen = 0;
-		rLoc = 8830;
+		rLoc = 8848;
 		rType = 0;
 		vrLen = 2741;
 		vrLoc = 6759;
@@ -3803,7 +3865,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 924";
 		rLen = 0;
-		rLoc = 63727;
+		rLoc = 63745;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 74446;
@@ -3833,7 +3895,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 924";
 		rLen = 0;
-		rLoc = 63727;
+		rLoc = 63745;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 74446;
@@ -3863,7 +3925,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 924";
 		rLen = 0;
-		rLoc = 63727;
+		rLoc = 63745;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 74446;
@@ -3893,7 +3955,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 924";
 		rLen = 0;
-		rLoc = 63727;
+		rLoc = 63745;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 74446;
@@ -4075,7 +4137,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 924";
 		rLen = 0;
-		rLoc = 63727;
+		rLoc = 63745;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 74446;
@@ -4105,7 +4167,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 952";
 		rLen = 0;
-		rLoc = 64646;
+		rLoc = 64664;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 75519;
@@ -4145,7 +4207,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 952";
 		rLen = 0;
-		rLoc = 64646;
+		rLoc = 64664;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 75519;
@@ -4155,7 +4217,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 153";
 		rLen = 0;
-		rLoc = 10482;
+		rLoc = 10500;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 9916;
@@ -4185,7 +4247,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 165";
 		rLen = 0;
-		rLoc = 10600;
+		rLoc = 10618;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 9916;
@@ -4215,7 +4277,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 165";
 		rLen = 0;
-		rLoc = 10600;
+		rLoc = 10618;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 10068;
@@ -4245,7 +4307,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 165";
 		rLen = 0;
-		rLoc = 10600;
+		rLoc = 10618;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 10068;
@@ -4275,7 +4337,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 165";
 		rLen = 0;
-		rLoc = 10600;
+		rLoc = 10618;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 10068;
@@ -4325,7 +4387,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 398";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 3861;
 		vrLoc = 26132;
@@ -4335,7 +4397,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 803";
 		rLen = 0;
-		rLoc = 53412;
+		rLoc = 53430;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 63773;
@@ -4394,7 +4456,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 803";
 		rLen = 0;
-		rLoc = 53412;
+		rLoc = 53430;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 63773;
@@ -4440,7 +4502,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 803";
 		rLen = 0;
-		rLoc = 53412;
+		rLoc = 53430;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 63773;
@@ -4486,7 +4548,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 803";
 		rLen = 0;
-		rLoc = 53412;
+		rLoc = 53430;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 63773;
@@ -5670,7 +5732,7 @@
 		isa = PBXTextBookmark;
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 	};
 	9C11F2CD13C8934E004E9008 /* PBXTextBookmark */ = {
@@ -5678,7 +5740,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1390";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -5698,7 +5760,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1390";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -5718,7 +5780,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 277";
 		rLen = 0;
-		rLoc = 18604;
+		rLoc = 18622;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 17969;
@@ -5738,7 +5800,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 277";
 		rLen = 0;
-		rLoc = 18604;
+		rLoc = 18622;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 17969;
@@ -5826,7 +5888,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 277";
 		rLen = 0;
-		rLoc = 18604;
+		rLoc = 18622;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 17969;
@@ -5846,7 +5908,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 265";
 		rLen = 0;
-		rLoc = 18102;
+		rLoc = 18120;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 17141;
@@ -5866,7 +5928,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 265";
 		rLen = 0;
-		rLoc = 18102;
+		rLoc = 18120;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 17141;
@@ -5886,7 +5948,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 265";
 		rLen = 0;
-		rLoc = 18102;
+		rLoc = 18120;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 17141;
@@ -5906,7 +5968,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18201;
+		rLoc = 18219;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 17270;
@@ -5926,7 +5988,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18201;
+		rLoc = 18219;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 17453;
@@ -5946,7 +6008,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -5966,7 +6028,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -5986,7 +6048,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6006,7 +6068,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6026,7 +6088,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6046,7 +6108,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6066,7 +6128,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6086,7 +6148,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 17453;
@@ -6106,7 +6168,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 17594;
@@ -6126,7 +6188,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 17795;
@@ -6146,7 +6208,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 17802;
@@ -6184,7 +6246,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 582;
 		vrLoc = 17870;
@@ -6222,7 +6284,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 17904;
@@ -6242,7 +6304,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 269";
 		rLen = 0;
-		rLoc = 18190;
+		rLoc = 18208;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 17904;
@@ -6766,7 +6828,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1406";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -7663,7 +7725,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1174";
 		rLen = 0;
-		rLoc = 76895;
+		rLoc = 76913;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -8537,7 +8599,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 233";
 		rLen = 47;
-		rLoc = 16497;
+		rLoc = 16515;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 16187;
@@ -9028,7 +9090,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1242";
 		rLen = 18;
-		rLoc = 79014;
+		rLoc = 79032;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -9903,7 +9965,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1242";
 		rLen = 18;
-		rLoc = 79014;
+		rLoc = 79032;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -9913,7 +9975,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 63335;
+		rLoc = 63353;
 		rType = 0;
 		vrLen = 1247;
 		vrLoc = 74301;
@@ -9933,7 +9995,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 63340;
+		rLoc = 63358;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 74301;
@@ -9953,7 +10015,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 934";
 		rLen = 0;
-		rLoc = 63340;
+		rLoc = 63358;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 74301;
@@ -10043,7 +10105,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 933";
 		rLen = 0;
-		rLoc = 63340;
+		rLoc = 63358;
 		rType = 0;
 		vrLen = 1209;
 		vrLoc = 74254;
@@ -10053,7 +10115,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 938";
 		rLen = 0;
-		rLoc = 63583;
+		rLoc = 63601;
 		rType = 0;
 		vrLen = 1405;
 		vrLoc = 74280;
@@ -10083,7 +10145,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 933";
 		rLen = 14;
-		rLoc = 63308;
+		rLoc = 63326;
 		rType = 0;
 		vrLen = 1405;
 		vrLoc = 74280;
@@ -10093,7 +10155,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 938";
 		rLen = 0;
-		rLoc = 63570;
+		rLoc = 63588;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 74280;
@@ -10117,9 +10179,9 @@
 	};
 	9C11F6F213CDC185004E9008 /* data_structures.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 546}}";
-			sepNavSelRange = "{746, 12}";
-			sepNavVisRange = "{571, 653}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 611}}";
+			sepNavSelRange = "{240, 0}";
+			sepNavVisRange = "{0, 761}";
 		};
 	};
 	9C11F72C13CDC97E004E9008 /* PBXTextBookmark */ = {
@@ -10176,7 +10238,7 @@
 		isa = PBXTextBookmark;
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		rLen = 0;
-		rLoc = 9223372036854775808;
+		rLoc = 1246;
 		rType = 0;
 	};
 	9C11F73213CDC97E004E9008 /* PBXTextBookmark */ = {
@@ -10184,7 +10246,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 28";
 		rLen = 12;
-		rLoc = 746;
+		rLoc = 767;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 263;
@@ -10324,7 +10386,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 480";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 2399;
 		vrLoc = 43361;
@@ -10351,7 +10413,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 31";
 		rLen = 0;
-		rLoc = 1223;
+		rLoc = 1244;
 		rType = 0;
 		vrLen = 627;
 		vrLoc = 221;
@@ -10360,7 +10422,7 @@
 		isa = PBXTextBookmark;
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 	};
 	9C11F74C13CDCB18004E9008 /* PBXTextBookmark */ = {
@@ -10368,7 +10430,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 480";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 31587;
@@ -10398,7 +10460,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 381";
 		rLen = 0;
-		rLoc = 24847;
+		rLoc = 24865;
 		rType = 0;
 		vrLen = 1675;
 		vrLoc = 24102;
@@ -10418,7 +10480,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 22";
 		rLen = 0;
-		rLoc = 600;
+		rLoc = 621;
 		rType = 0;
 		vrLen = 750;
 		vrLoc = 94;
@@ -10510,7 +10572,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 22";
 		rLen = 0;
-		rLoc = 600;
+		rLoc = 621;
 		rType = 0;
 		vrLen = 749;
 		vrLoc = 94;
@@ -10520,7 +10582,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 718;
 		vrLoc = 145;
@@ -10540,7 +10602,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 32";
 		rLen = 0;
-		rLoc = 1223;
+		rLoc = 1244;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 221;
@@ -10550,7 +10612,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 480";
 		rLen = 0;
-		rLoc = 32930;
+		rLoc = 32948;
 		rType = 0;
 		vrLen = 905;
 		vrLoc = 31950;
@@ -10560,7 +10622,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 18";
 		rLen = 0;
-		rLoc = 495;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 152;
@@ -10580,7 +10642,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 20";
 		rLen = 0;
-		rLoc = 567;
+		rLoc = 588;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 145;
@@ -10600,7 +10662,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 145;
@@ -10620,7 +10682,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 767;
 		vrLoc = 148;
@@ -10640,7 +10702,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 152;
@@ -10660,7 +10722,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 153;
@@ -10680,7 +10742,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 202;
@@ -10700,7 +10762,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 184;
@@ -10720,7 +10782,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 903;
 		vrLoc = 220;
@@ -10740,7 +10802,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 19";
 		rLen = 0;
-		rLoc = 536;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 1004;
 		vrLoc = 220;
@@ -10749,7 +10811,7 @@
 		isa = PBXTextBookmark;
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		rLen = 10;
-		rLoc = 31032;
+		rLoc = 31050;
 		rType = 0;
 	};
 	9C11F7B313CDDA7A004E9008 /* PBXTextBookmark */ = {
@@ -10757,7 +10819,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 441";
 		rLen = 10;
-		rLoc = 31032;
+		rLoc = 31050;
 		rType = 0;
 		vrLen = 1661;
 		vrLoc = 30338;
@@ -10777,7 +10839,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 441";
 		rLen = 10;
-		rLoc = 31032;
+		rLoc = 31050;
 		rType = 0;
 		vrLen = 1651;
 		vrLoc = 30338;
@@ -10804,7 +10866,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 441";
 		rLen = 10;
-		rLoc = 31032;
+		rLoc = 31050;
 		rType = 0;
 		vrLen = 1651;
 		vrLoc = 30338;
@@ -11044,7 +11106,7 @@
 		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
 		name = "data_structures.cpp: 29";
 		rLen = 12;
-		rLoc = 746;
+		rLoc = 767;
 		rType = 0;
 		vrLen = 653;
 		vrLoc = 571;
@@ -11091,7 +11153,7 @@
 		isa = PBXTextBookmark;
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		rLen = 17;
-		rLoc = 72219;
+		rLoc = 72237;
 		rType = 0;
 	};
 	9C11F80013CDF098004E9008 /* PBXTextBookmark */ = {
@@ -11099,7 +11161,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1285";
 		rLen = 0;
-		rLoc = 84102;
+		rLoc = 84128;
 		rType = 0;
 		vrLen = 1578;
 		vrLoc = 82528;
@@ -11259,7 +11321,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1204";
 		rLen = 18;
-		rLoc = 80934;
+		rLoc = 80960;
 		rType = 0;
 		vrLen = 1104;
 		vrLoc = 80274;
@@ -11307,7 +11369,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1204";
 		rLen = 18;
-		rLoc = 80934;
+		rLoc = 80960;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 80368;
@@ -11508,7 +11570,7 @@
 		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
 		name = "GSscreen.cpp: 150";
 		rLen = 0;
-		rLoc = 7323;
+		rLoc = 7342;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 6066;
@@ -11548,7 +11610,7 @@
 		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
 		name = "GSscreen.cpp: 152";
 		rLen = 0;
-		rLoc = 7315;
+		rLoc = 7334;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 6208;
@@ -11672,7 +11734,7 @@
 		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
 		name = "GSscreen.cpp: 153";
 		rLen = 0;
-		rLoc = 7300;
+		rLoc = 7319;
 		rType = 0;
 		vrLen = 1103;
 		vrLoc = 6442;
@@ -11712,7 +11774,7 @@
 		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
 		name = "GSscreen.cpp: 159";
 		rLen = 0;
-		rLoc = 7290;
+		rLoc = 7309;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 6467;
@@ -11832,7 +11894,7 @@
 		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
 		name = "GSscreen.cpp: 152";
 		rLen = 0;
-		rLoc = 7259;
+		rLoc = 7309;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 6315;
@@ -12008,6 +12070,619 @@
 		vrLoc = 0;
 	};
 	9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F8FD13CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
+		name = "roomsystem.cpp: 110";
+		rLen = 0;
+		rLoc = 4695;
+		rType = 0;
+		vrLen = 1359;
+		vrLoc = 4200;
+	};
+	9C11F8FE13CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */;
+		name = "IDE_EDIT_objectfunctionality.h: 1529";
+		rLen = 0;
+		rLoc = 45286;
+		rType = 0;
+		vrLen = 784;
+		vrLoc = 44738;
+	};
+	9C11F8FF13CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E81211552700A01347 /* instance_system.cpp */;
+		rLen = 0;
+		rLoc = 235;
+		rType = 1;
+	};
+	9C11F90013CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E81211552700A01347 /* instance_system.cpp */;
+		name = "instance_system.cpp: 234";
+		rLen = 0;
+		rLoc = 9154;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 8727;
+	};
+	9C11F90113CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2718;
+		vrLoc = 0;
+	};
+	9C11F90213CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F90313CEFCD7004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F90513CF0B6F004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E81211552700A01347 /* instance_system.cpp */;
+		name = "instance_system.cpp: 234";
+		rLen = 0;
+		rLoc = 9154;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 8698;
+	};
+	9C11F90613CF0B6F004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F90713CF0B6F004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F90813CF0B6F004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F90913CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */;
+		name = "IDE_EDIT_objectfunctionality.h: 7041";
+		rLen = 0;
+		rLoc = 175655;
+		rType = 0;
+		vrLen = 366;
+		vrLoc = 14299;
+	};
+	9C11F90A13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 11;
+		rLoc = 2482;
+		rType = 0;
+		vrLen = 748;
+		vrLoc = 1848;
+	};
+	9C11F90B13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FE1211552700A01347 /* roomsystem.h */;
+		name = "roomsystem.h: 70";
+		rLen = 0;
+		rLoc = 3306;
+		rType = 0;
+		vrLen = 463;
+		vrLoc = 2888;
+	};
+	9C11F90C13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F76D13CDCCA2004E9008 /* stl_vector.h */;
+		name = "stl_vector.h: 123";
+		rLen = 0;
+		rLoc = 4233;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 3973;
+	};
+	9C11F90D13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 35";
+		rLen = 0;
+		rLoc = 2497;
+		rType = 0;
+		vrLen = 451;
+		vrLoc = 2267;
+	};
+	9C11F90E13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
+		name = "roomsystem.cpp: 280";
+		rLen = 0;
+		rLoc = 9409;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 4096;
+	};
+	9C11F90F13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
+		name = "CocoaFunctions.cpp: 111";
+		rLen = 0;
+		rLoc = 3667;
+		rType = 0;
+		vrLen = 319;
+		vrLoc = 3445;
+	};
+	9C11F91013CF0B70004E9008 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Braces around scalar initializer for type 'int'";
+		fRef = 9CD0E30812115C9B00A01347 /* IDE_EDIT_roomarrays.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 237;
+		rType = 1;
+	};
+	9C11F91113CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30812115C9B00A01347 /* IDE_EDIT_roomarrays.h */;
+		name = "IDE_EDIT_roomarrays.h: 243";
+		rLen = 0;
+		rLoc = 48499;
+		rType = 0;
+		vrLen = 2831;
+		vrLoc = 43476;
+	};
+	9C11F91213CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0ACE891325314700AB1FCD /* IDE_EDIT_events.h */;
+		name = "IDE_EDIT_events.h: 124";
+		rLen = 0;
+		rLoc = 7021;
+		rType = 0;
+		vrLen = 1461;
+		vrLoc = 1577;
+	};
+	9C11F91313CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30812115C9B00A01347 /* IDE_EDIT_roomarrays.h */;
+		name = "IDE_EDIT_roomarrays.h: 78";
+		rLen = 60;
+		rLoc = 5263;
+		rType = 0;
+		vrLen = 1625;
+		vrLoc = 4346;
+	};
+	9C11F91413CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
+		name = "GSscreen.cpp: 92";
+		rLen = 14;
+		rLoc = 3918;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 3610;
+	};
+	9C11F91513CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1F81211552700A01347 /* planar_object.cpp */;
+		name = "planar_object.cpp: 91";
+		rLen = 0;
+		rLoc = 4311;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 3717;
+	};
+	9C11F91613CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30512115C9B00A01347 /* IDE_EDIT_objectdeclarations.h */;
+		name = "IDE_EDIT_objectdeclarations.h: 148";
+		rLen = 5;
+		rLoc = 8843;
+		rType = 0;
+		vrLen = 1177;
+		vrLoc = 8306;
+	};
+	9C11F91713CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1DD1211552700A01347 /* IDE_edit_instancode.h */;
+		name = "IDE_edit_instancode.h: 34";
+		rLen = 15;
+		rLoc = 2258;
+		rType = 0;
+		vrLen = 766;
+		vrLoc = 1765;
+	};
+	9C11F91813CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C4A7D4113C4333E00D9534C /* graphics_object.h */;
+		name = "graphics_object.h: 48";
+		rLen = 0;
+		rLoc = 2627;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 2398;
+	};
+	9C11F91913CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 1117";
+		rLen = 0;
+		rLoc = 78662;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 78282;
+	};
+	9C11F91A13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E81211552700A01347 /* instance_system.cpp */;
+		name = "instance_system.cpp: 47";
+		rLen = 57;
+		rLoc = 2648;
+		rType = 0;
+		vrLen = 704;
+		vrLoc = 2574;
+	};
+	9C11F91B13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C3B47B613C567390015E8E2 /* instance_system_base.h */;
+		name = "instance_system_base.h: 51";
+		rLen = 10;
+		rLoc = 2820;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 2584;
+	};
+	9C11F91C13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 42";
+		rLen = 11;
+		rLoc = 2677;
+		rType = 0;
+		vrLen = 927;
+		vrLoc = 1932;
+	};
+	9C11F91D13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C4A7D4013C4333E00D9534C /* graphics_object.cpp */;
+		name = "graphics_object.cpp: 34";
+		rLen = 23;
+		rLoc = 2311;
+		rType = 0;
+		vrLen = 810;
+		vrLoc = 2191;
+	};
+	9C11F91E13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 37";
+		rLen = 14;
+		rLoc = 2578;
+		rType = 0;
+		vrLen = 1420;
+		vrLoc = 1176;
+	};
+	9C11F91F13CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FE1211552700A01347 /* roomsystem.h */;
+		rLen = 10;
+		rLoc = 3703;
+		rType = 0;
+	};
+	9C11F92013CF0B70004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FE1211552700A01347 /* roomsystem.h */;
+		name = "roomsystem.h: 92";
+		rLen = 0;
+		rLoc = 3716;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 3661;
+	};
+	9C11F92113CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1E81211552700A01347 /* instance_system.cpp */;
+		name = "instance_system.cpp: 234";
+		rLen = 0;
+		rLoc = 9154;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 8698;
+	};
+	9C11F92213CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */;
+		name = "IDE_EDIT_objectfunctionality.h: 1529";
+		rLen = 0;
+		rLoc = 45286;
+		rType = 0;
+		vrLen = 791;
+		vrLoc = 44734;
+	};
+	9C11F92313CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */;
+		name = "IDE_EDIT_objectfunctionality.h: 1518";
+		rLen = 0;
+		rLoc = 44897;
+		rType = 0;
+		vrLen = 723;
+		vrLoc = 48301;
+	};
+	9C11F92413CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F92513CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F92613CF0B8D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F92713CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */;
+		name = "IDE_EDIT_objectfunctionality.h: 7130";
+		rLen = 0;
+		rLoc = 177358;
+		rType = 0;
+		vrLen = 442;
+		vrLoc = 47335;
+	};
+	9C11F92813CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1841211552700A01347 /* GSscreen.h */;
+		name = "GSscreen.h: 2";
+		rLen = 0;
+		rLoc = 1;
+		rType = 0;
+		vrLen = 1;
+		vrLoc = 0;
+	};
+	9C11F92913CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
+		name = "GSscreen.cpp: 152";
+		rLen = 0;
+		rLoc = 7021;
+		rType = 0;
+		vrLen = 1190;
+		vrLoc = 6112;
+	};
+	9C11F92A13CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F92B13CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F92C13CF0CFF004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F92D13CF12D5004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
+		name = "GSscreen.cpp: 152";
+		rLen = 0;
+		rLoc = 7021;
+		rType = 0;
+		vrLen = 1190;
+		vrLoc = 6112;
+	};
+	9C11F92E13CF12D5004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F92F13CF12D5004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F93013CF12D5004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F93113CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1831211552700A01347 /* GSscreen.cpp */;
+		name = "GSscreen.cpp: 152";
+		rLen = 0;
+		rLoc = 7021;
+		rType = 0;
+		vrLen = 1190;
+		vrLoc = 6112;
+	};
+	9C11F93213CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C11F6F213CDC185004E9008 /* data_structures.cpp */;
+		name = "data_structures.cpp: 13";
+		rLen = 0;
+		rLoc = 240;
+		rType = 0;
+		vrLen = 761;
+		vrLoc = 0;
+	};
+	9C11F93313CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 1204";
+		rLen = 18;
+		rLoc = 80960;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 80274;
+	};
+	9C11F93413CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 6";
+		rLen = 0;
+		rLoc = 270;
+		rType = 0;
+		vrLen = 1121;
+		vrLoc = 0;
+	};
+	9C11F93513CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F93613CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F93713CF212E004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F93C13CF21F0004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
+		name = "unimplemented.h: 1174";
+		rLen = 0;
+		rLoc = 79917;
+		rType = 0;
+		vrLen = 684;
+		vrLoc = 79642;
+	};
+	9C11F93D13CF21F0004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F93E13CF21F0004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F93F13CF21F0004E9008 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
 		name = "alarmcode.cpp: 12";
@@ -14612,7 +15287,7 @@
 		fRef = 9C0D005B136066860083E470 /* unimplemented.h */;
 		name = "unimplemented.h: 1302";
 		rLen = 0;
-		rLoc = 84103;
+		rLoc = 84129;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 84106;
@@ -14888,14 +15563,14 @@
 	};
 	9CD0E1831211552700A01347 /* GSscreen.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1363, 2106}}";
-			sepNavSelRange = "{7259, 0}";
-			sepNavVisRange = "{6315, 1020}";
+			sepNavIntBoundsRect = "{{0, 0}, {1363, 2275}}";
+			sepNavSelRange = "{7021, 0}";
+			sepNavVisRange = "{6112, 1190}";
 		};
 	};
 	9CD0E1841211552700A01347 /* GSscreen.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 436}}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 354}}";
 			sepNavSelRange = "{1, 0}";
 			sepNavVisRange = "{0, 1}";
 		};
@@ -15097,9 +15772,9 @@
 	};
 	9CD0E1E81211552700A01347 /* instance_system.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1178, 2977}}";
-			sepNavSelRange = "{2648, 57}";
-			sepNavVisRange = "{2574, 704}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 3042}}";
+			sepNavSelRange = "{9154, 0}";
+			sepNavVisRange = "{8698, 706}";
 		};
 	};
 	9CD0E1EA1211552700A01347 /* key_game_globals.h */ = {
@@ -15205,14 +15880,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {999, 3744}}";
 			sepNavSelRange = "{4695, 0}";
-			sepNavVisRange = "{4096, 1463}";
+			sepNavVisRange = "{4200, 1359}";
 		};
 	};
 	9CD0E1FE1211552700A01347 /* roomsystem.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1976}}";
-			sepNavSelRange = "{4281, 0}";
-			sepNavVisRange = "{3768, 514}";
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 1625}}";
+			sepNavSelRange = "{3716, 0}";
+			sepNavVisRange = "{3661, 416}";
 			sepNavWindowFrame = "{{340, 52}, {836, 706}}";
 		};
 	};
@@ -15341,9 +16016,9 @@
 	};
 	9CD0E30612115C9B00A01347 /* IDE_EDIT_objectfunctionality.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 91377}}";
-			sepNavSelRange = "{175655, 0}";
-			sepNavVisRange = "{14299, 366}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 92625}}";
+			sepNavSelRange = "{177358, 0}";
+			sepNavVisRange = "{47335, 442}";
 			sepNavWindowFrame = "{{283, 50}, {900, 727}}";
 		};
 	};
@@ -15357,9 +16032,9 @@
 	};
 	9CD0E30812115C9B00A01347 /* IDE_EDIT_roomarrays.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {4331, 3159}}";
-			sepNavSelRange = "{5263, 60}";
-			sepNavVisRange = "{4346, 1625}";
+			sepNavIntBoundsRect = "{{0, 0}, {4303, 2847}}";
+			sepNavSelRange = "{48499, 0}";
+			sepNavVisRange = "{43476, 2831}";
 		};
 	};
 	9CD0E30912115C9B00A01347 /* IDE_EDIT_roomcreates.h */ = {
