@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svnroot/enigma-dev/!svn/ver/805/trunk/ENIGMAsystem/SHELL/Platforms
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms
 END
 platforms_mandatory.h
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/platforms_mandatory.h
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/platforms_mandatory.h
 END

@@ -1185,6 +1185,15 @@
 			9C11F8E713CEF13D004E9008 /* PBXTextBookmark */ = 9C11F8E713CEF13D004E9008 /* PBXTextBookmark */;
 			9C11F8E813CEF13D004E9008 /* PBXTextBookmark */ = 9C11F8E813CEF13D004E9008 /* PBXTextBookmark */;
 			9C11F8E913CEF13D004E9008 /* PBXTextBookmark */ = 9C11F8E913CEF13D004E9008 /* PBXTextBookmark */;
+			9C11F8F013CEF81B004E9008 /* PBXTextBookmark */ = 9C11F8F013CEF81B004E9008 /* PBXTextBookmark */;
+			9C11F8F113CEF81B004E9008 /* PBXTextBookmark */ = 9C11F8F113CEF81B004E9008 /* PBXTextBookmark */;
+			9C11F8F213CEF81B004E9008 /* PBXTextBookmark */ = 9C11F8F213CEF81B004E9008 /* PBXTextBookmark */;
+			9C11F8F313CEF81B004E9008 /* PBXTextBookmark */ = 9C11F8F313CEF81B004E9008 /* PBXTextBookmark */;
+			9C11F8F413CEF81B004E9008 /* PBXTextBookmark */ = 9C11F8F413CEF81B004E9008 /* PBXTextBookmark */;
+			9C11F8F513CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F513CEFBC3004E9008 /* PBXTextBookmark */;
+			9C11F8F613CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F613CEFBC3004E9008 /* PBXTextBookmark */;
+			9C11F8F713CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F713CEFBC3004E9008 /* PBXTextBookmark */;
+			9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */ = 9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */;
 			9C16DBF513B9889900F82EE5 = 9C16DBF513B9889900F82EE5 /* PBXTextBookmark */;
 			9C16DC2C13BACD8700F82EE5 = 9C16DC2C13BACD8700F82EE5 /* PBXTextBookmark */;
 			9C16DC3113BAD00600F82EE5 = 9C16DC3113BAD00600F82EE5 /* PBXTextBookmark */;
@@ -1777,7 +1786,7 @@
 		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
 		name = "roomsystem.cpp: 324";
 		rLen = 0;
-		rLoc = 10334;
+		rLoc = 10367;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 9157;
@@ -7604,7 +7613,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 154";
 		rLen = 0;
-		rLoc = 5149;
+		rLoc = 5146;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 4317;
@@ -9884,7 +9893,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 138";
 		rLen = 12;
-		rLoc = 4279;
+		rLoc = 4276;
 		rType = 0;
 		vrLen = 570;
 		vrLoc = 3754;
@@ -9984,7 +9993,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 138";
 		rLen = 12;
-		rLoc = 4279;
+		rLoc = 4276;
 		rType = 0;
 		vrLen = 356;
 		vrLoc = 2672;
@@ -11909,6 +11918,96 @@
 		vrLoc = 0;
 	};
 	9C11F8E913CEF13D004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F8F013CEF81B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
+		name = "roomsystem.cpp: 279";
+		rLen = 0;
+		rLoc = 9409;
+		rType = 0;
+		vrLen = 816;
+		vrLoc = 8552;
+	};
+	9C11F8F113CEF81B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
+		name = "roomsystem.cpp: 110";
+		rLen = 0;
+		rLoc = 4660;
+		rType = 0;
+		vrLen = 1149;
+		vrLoc = 4029;
+	};
+	9C11F8F213CEF81B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F8F313CEF81B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F8F413CEF81B004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
+		name = "alarmcode.cpp: 12";
+		rLen = 40;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	9C11F8F513CEFBC3004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CD0E1FD1211552700A01347 /* roomsystem.cpp */;
+		name = "roomsystem.cpp: 110";
+		rLen = 0;
+		rLoc = 4695;
+		rType = 0;
+		vrLen = 1463;
+		vrLoc = 4096;
+	};
+	9C11F8F613CEFBC3004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1B13BE98BD009DE5FB /* depth_draw.h */;
+		name = "depth_draw.h: 45";
+		rLen = 0;
+		rLoc = 2716;
+		rType = 0;
+		vrLen = 2768;
+		vrLoc = 0;
+	};
+	9C11F8F713CEFBC3004E9008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9CF95F1A13BE98BD009DE5FB /* depth_draw.cpp */;
+		name = "depth_draw.cpp: 36";
+		rLen = 0;
+		rLoc = 2503;
+		rType = 0;
+		vrLen = 2596;
+		vrLoc = 0;
+	};
+	9C11F8F813CEFBC3004E9008 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 9CFD9A9513B2C174009575DD /* alarmcode.cpp */;
 		name = "alarmcode.cpp: 12";
@@ -15104,9 +15203,9 @@
 	};
 	9CD0E1FD1211552700A01347 /* roomsystem.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {999, 4511}}";
-			sepNavSelRange = "{4296, 0}";
-			sepNavVisRange = "{3671, 1438}";
+			sepNavIntBoundsRect = "{{0, 0}, {999, 3744}}";
+			sepNavSelRange = "{4695, 0}";
+			sepNavVisRange = "{4096, 1463}";
 		};
 	};
 	9CD0E1FE1211552700A01347 /* roomsystem.h */ = {
@@ -15465,9 +15564,9 @@
 	};
 	9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 2613}}";
-			sepNavSelRange = "{3136, 0}";
-			sepNavVisRange = "{2899, 258}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2652}}";
+			sepNavSelRange = "{3667, 0}";
+			sepNavVisRange = "{3445, 319}";
 			sepNavWindowFrame = "{{124, 59}, {1263, 698}}";
 		};
 	};
@@ -16322,7 +16421,7 @@
 		fRef = 9CE2038D1212AA37006BDA4B /* CocoaFunctions.cpp */;
 		name = "CocoaFunctions.cpp: 122";
 		rLen = 0;
-		rLoc = 4328;
+		rLoc = 4325;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 3525;

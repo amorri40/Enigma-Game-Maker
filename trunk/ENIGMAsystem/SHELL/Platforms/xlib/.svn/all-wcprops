@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/xlib
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/xlib
 END
 XLIBdialog.cpp
 K 25
@@ -25,7 +25,7 @@ XLIBmain.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBmain.cpp
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBmain.cpp
 END
 file_manip.cpp
 K 25
@@ -43,7 +43,7 @@ XLIBwindow.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBwindow.cpp
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBwindow.cpp
 END
 XLIBmain.h
 K 25
@@ -73,7 +73,7 @@ XLIBwindow.h
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/606/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBwindow.h
+/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/xlib/XLIBwindow.h
 END
 Makefile
 K 25

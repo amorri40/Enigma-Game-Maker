@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Platforms/Android/Info
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/Android/Info
 END
 platform_info.h
 K 25
@@ -13,5 +13,5 @@ About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/753/trunk/ENIGMAsystem/SHELL/Platforms/Android/Info/About.ey
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/Android/Info/About.ey
 END

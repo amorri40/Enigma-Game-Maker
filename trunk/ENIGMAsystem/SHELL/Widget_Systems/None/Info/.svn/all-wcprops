@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Widget_Systems/None/Info
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Widget_Systems/None/Info
 END
 widget_info.h
 K 25
@@ -13,5 +13,5 @@ About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Widget_Systems/None/Info/About.ey
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Widget_Systems/None/Info/About.ey
 END

@@ -1,16 +1,16 @@
 10
 
 dir
-809
+813
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/pluginsource/org/enigma/messages
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-06-22T01:50:44.357568Z
-790
+2011-07-12T23:31:38.010841Z
+810
 ismavatar
-
+has-props
 
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2011-06-21T22:11:11.000000Z
-6b4f01088485826fdda1353104107a65
-2011-06-10T20:47:26.954191Z
-778
+2011-07-14T09:52:01.000000Z
+597b54a34030fe87374f384b80409116
+2011-07-12T23:31:38.010841Z
+810
 ismavatar
 
 
@@ -58,7 +58,7 @@ ismavatar
 
 
 
-5640
+5401
 
 Messages.java
 file
@@ -100,10 +100,10 @@ file
 
 
 
-2011-06-22T14:42:20.000000Z
-281e1f2691be3061a7b85adc153bf0c7
-2011-06-22T01:50:44.357568Z
-790
+2011-07-14T09:52:01.000000Z
+da53f00e39707159ebce40de804afbf0
+2011-07-12T23:31:38.010841Z
+810
 ismavatar
 
 
@@ -126,7 +126,7 @@ ismavatar
 
 
 
-6205
+5899
 
 messages_es_MX.properties
 file
@@ -134,10 +134,10 @@ file
 
 
 
-2011-06-22T14:42:20.000000Z
-281e1f2691be3061a7b85adc153bf0c7
-2011-06-22T01:50:44.357568Z
-790
+2011-07-14T09:52:01.000000Z
+da53f00e39707159ebce40de804afbf0
+2011-07-12T23:31:38.010841Z
+810
 ismavatar
 
 
@@ -160,5 +160,5 @@ ismavatar
 
 
 
-6205
+5899
 

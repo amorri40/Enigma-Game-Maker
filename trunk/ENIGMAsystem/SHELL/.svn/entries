@@ -1,15 +1,15 @@
 10
 
 dir
-809
+813
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-12T09:35:39.941165Z
-807
-tgmg
+2011-07-14T04:47:50.378067Z
+813
+JoshDreamland
 has-props
 
 
@@ -63,6 +63,9 @@ tgmg
 
 1711
 
+Developer
+dir
+
 automake-all.sh
 file
 
@@ -96,12 +99,6 @@ has-props
 
 
 455
-
-Developer
-dir
-
-Graphics_Systems
-dir
 
 initialize.h
 file
@@ -137,6 +134,9 @@ JoshDreamland
 
 2186
 
+Graphics_Systems
+dir
+
 Audio_Systems
 dir
 
@@ -146,10 +146,10 @@ file
 
 
 
-2011-07-01T22:12:29.000000Z
-f4c4e911139abe693ce98a2ddd67874f
-2011-06-30T21:50:30.171822Z
-799
+2011-07-14T09:52:00.000000Z
+06f230387d6a02a979c1f6a9f593dcb3
+2011-07-14T04:47:50.378067Z
+813
 JoshDreamland
 
 
@@ -172,7 +172,7 @@ JoshDreamland
 
 
 
-31675
+31738
 
 libEGMstd.cpp
 file
@@ -215,16 +215,10 @@ file
 
 
 
-b4efefb1c0c4fa78006a1dab799c3591
-2011-06-30T20:50:50.637805Z
-798
+742022d0d9626fbfb553defb6b885809
+2011-07-13T03:50:46.262724Z
+811
 JoshDreamland
-
-Makefiles
-dir
-
-Deprecated
-dir
 
 libEGMstd.h
 file
@@ -259,6 +253,12 @@ retroxyz
 
 
 2933
+
+Deprecated
+dir
+
+Makefiles
+dir
 
 Preprocessor_Environment_Editable
 dir

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svnroot/enigma-dev/!svn/ver/809/trunk/CompilerSource/compiler
+/svnroot/enigma-dev/!svn/ver/813/trunk/CompilerSource/compiler
 END
 compile_includes.cpp
 K 25
@@ -49,7 +49,7 @@ compile.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/809/trunk/CompilerSource/compiler/compile.cpp
+/svnroot/enigma-dev/!svn/ver/813/trunk/CompilerSource/compiler/compile.cpp
 END
 compile.h
 K 25

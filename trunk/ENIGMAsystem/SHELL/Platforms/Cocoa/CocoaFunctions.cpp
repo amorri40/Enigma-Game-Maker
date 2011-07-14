@@ -108,7 +108,7 @@ void key_release(int keycode) {
 	cocoa_keybdstatus[actualKey]=0;
 }
 
-extern double mouse_button;
+extern int mouse_button;
 
 void mouse_press(int x, int y) {
     

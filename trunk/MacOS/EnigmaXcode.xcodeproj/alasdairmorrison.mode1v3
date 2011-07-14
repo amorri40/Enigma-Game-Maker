@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F8E713CEF13D004E9008</string>
+						<string>9C11F8F613CEFBC3004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C11F88913CE225B004E9008</string>
@@ -256,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F8E813CEF13D004E9008</string>
+						<string>9C11F8F713CEFBC3004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C11F88813CE224C004E9008</string>
@@ -296,7 +296,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>9C11F8E913CEF13D004E9008</string>
+						<string>9C11F8F813CEFBC3004E9008</string>
 						<key>history</key>
 						<array>
 							<string>9C11F86F13CE0F30004E9008</string>
@@ -462,7 +462,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9C11F8E613CEF13D004E9008</string>
+										<string>9C11F8F513CEFBC3004E9008</string>
 										<key>history</key>
 										<array>
 											<string>9CD0E3BA12125F8500A01347</string>
@@ -707,7 +707,7 @@
 											<string>9C11F8B713CEEE57004E9008</string>
 											<string>9C11F8B913CEEE57004E9008</string>
 											<string>9C11F8E013CEF11B004E9008</string>
-											<string>9C11F8E113CEF11B004E9008</string>
+											<string>9C11F8F013CEF81B004E9008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -933,14 +933,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>roomsystem.cpp</string>
+								<string>IDE_EDIT_roomarrays.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -957,6 +955,8 @@
 							<string>274pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1151,12 +1151,14 @@
 							<key>Dock</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>depth_draw.cpp</string>
+										<string>roomsystem.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1165,7 +1167,7 @@
 										<key>Frame</key>
 										<string>{{0, 0}, {1239, 346}}</string>
 										<key>RubberWindowFrame</key>
-										<string>314 -35 1239 646 0 0 1280 778 </string>
+										<string>86 19 1239 646 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -1177,8 +1179,6 @@
 							<string>346pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1191,7 +1191,7 @@
 								<key>Frame</key>
 								<string>{{0, 351}, {1239, 254}}</string>
 								<key>RubberWindowFrame</key>
-								<string>314 -35 1239 646 0 0 1280 778 </string>
+								<string>86 19 1239 646 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
@@ -1220,7 +1220,7 @@
 				<string>1CD0528E0623707200166675</string>
 			</array>
 			<key>WindowString</key>
-			<string>314 -35 1239 646 0 0 1280 778 </string>
+			<string>86 19 1239 646 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>

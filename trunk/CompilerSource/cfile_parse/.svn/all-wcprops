@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/cfile_parse
+/svnroot/enigma-dev/!svn/ver/812/trunk/CompilerSource/cfile_parse
 END
 macro_functions.h
 K 25
@@ -25,7 +25,7 @@ type_resolver.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/enigma-dev/!svn/ver/588/trunk/CompilerSource/cfile_parse/type_resolver.cpp
+/svnroot/enigma-dev/!svn/ver/812/trunk/CompilerSource/cfile_parse/type_resolver.cpp
 END
 auxilary_gml.h
 K 25
@@ -87,17 +87,17 @@ svn:wc:ra_dav:version-url
 V 87
 /svnroot/enigma-dev/!svn/ver/540/trunk/CompilerSource/cfile_parse/template_handlers.cpp
 END
-cfile_parse_calls.h
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svnroot/enigma-dev/!svn/ver/787/trunk/CompilerSource/cfile_parse/cfile_parse_calls.h
-END
 keyword_operator.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 86
 /svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/cfile_parse/keyword_operator.cpp
+END
+cfile_parse_calls.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/enigma-dev/!svn/ver/787/trunk/CompilerSource/cfile_parse/cfile_parse_calls.h
 END
 expev_macros.h
 K 25
@@ -117,17 +117,17 @@ svn:wc:ra_dav:version-url
 V 76
 /svnroot/enigma-dev/!svn/ver/547/trunk/CompilerSource/cfile_parse/auxilary.h
 END
-expression_evaluator_settings.h
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/cfile_parse/expression_evaluator_settings.h
-END
 parsein.h
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svnroot/enigma-dev/!svn/ver/293/trunk/CompilerSource/cfile_parse/parsein.h
+END
+expression_evaluator_settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/cfile_parse/expression_evaluator_settings.h
 END
 type_resolver.h
 K 25
@@ -153,17 +153,17 @@ svn:wc:ra_dav:version-url
 V 88
 /svnroot/enigma-dev/!svn/ver/411/trunk/CompilerSource/cfile_parse/cfile_parse_macros.cpp
 END
-cfile_parse.h
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svnroot/enigma-dev/!svn/ver/342/trunk/CompilerSource/cfile_parse/cfile_parse.h
-END
 value.h
 K 25
 svn:wc:ra_dav:version-url
 V 72
 /svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/cfile_parse/value.h
+END
+cfile_parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/342/trunk/CompilerSource/cfile_parse/cfile_parse.h
 END
 cparse_components.cpp
 K 25

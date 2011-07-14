@@ -1,15 +1,15 @@
 10
 
 dir
-809
+813
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox/Info
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-05-21T22:39:16.974181Z
-754
-joshdreamland
+2011-07-12T23:31:38.010841Z
+810
+ismavatar
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2011-05-22T00:53:54.000000Z
-3f0fc0b6794300de326370b19e374573
-2011-05-21T22:39:16.974181Z
-754
-joshdreamland
+2011-07-14T09:51:59.000000Z
+34f5a6dde37eddec8b4f41dd2cf94486
+2011-07-12T23:31:38.010841Z
+810
+ismavatar
 
 
 
@@ -58,7 +58,7 @@ joshdreamland
 
 
 
-172
+207
 
 collision_info.h
 file

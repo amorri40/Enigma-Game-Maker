@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox/Info
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox/Info
 END
 About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/754/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox/Info/About.ey
+/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox/Info/About.ey
 END
 collision_info.h
 K 25
