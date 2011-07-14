@@ -10,6 +10,7 @@
 //#include "data_structures.h"
 #include <vector>
 #include "var4.h"
+#include <algorithm>
 
 std::vector< std::vector<var> > ds_lists;
 using namespace std;

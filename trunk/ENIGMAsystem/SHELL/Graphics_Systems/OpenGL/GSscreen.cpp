@@ -140,17 +140,20 @@ void screen_redraw()
     
       
     for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++) {
-        //first loop instances
-      for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
-        enigma::instance_event_iterator->inst->myevent_draw();
         
-        //now loop tiles TGMG
+        //loop tiles TGMG
         for(std::vector<tile>::size_type i = 0; i !=  dit->second.tiles.size(); i++) {
             /* std::cout << someVector[i]; ... */
             tile t = dit->second.tiles[i];
             draw_background_part(t.bckid,t.bgx,t.bgy,t.width,t.height,t.roomX,t.roomY);
         }
         //end loop tiles TGMG
+        
+        //loop instances
+      for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
+        enigma::instance_event_iterator->inst->myevent_draw();
+        
+       
         
     }
         
