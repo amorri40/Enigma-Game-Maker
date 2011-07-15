@@ -102,6 +102,7 @@ extern bool keyboard_check(int i);
     {
         
         [[self openGLContext] makeCurrentContext];
+        terminated=false;
         init();
         first = NO; 
         if ([[NSApp keyWindow] makeFirstResponder:self] ) 
@@ -109,8 +110,12 @@ extern bool keyboard_check(int i);
         else 
             NSLog( @"self is not first responder"); 
     }
-	
+	if (!terminated)
     loopy();
+    else {
+        exit(0);
+    }
+
 	//[self flushOpenGL];
 }
 
@@ -138,6 +143,8 @@ extern bool keyboard_check(int i);
 }
 
 -(void) terminateEnigma {
+    NSLog(@"terminateEnigma called");
+    terminated=true;
     [runLoop cancelPerformSelectorsWithTarget:self];
     [timerThread cancel]; 
     

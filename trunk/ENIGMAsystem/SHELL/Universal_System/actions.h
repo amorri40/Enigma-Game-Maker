@@ -474,12 +474,7 @@ void action_restart_game();
 
 
 inline bool action_if_collision(double x, double y,int object) {
-    if (argument_relative) {
-        enigma::object_graphics* const inst = ((enigma::object_graphics*)enigma::instance_event_iterator->inst);
-        return !action_if_empty(inst->x+x,inst->y+y,object);
-    }
-    else
-        return !action_if_empty(x,y,object);
+        return !action_if_empty(x,y,object); //Already takes argument_relative into account
 }
 
 
