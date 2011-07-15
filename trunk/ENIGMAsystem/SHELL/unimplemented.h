@@ -1109,12 +1109,7 @@ void action_webpage(string address) {}
     // move_wrap(0,0,0);
 }*/
 
-/*
- Action if collision at position
- */
-bool action_if_collision(double x, double y,int object) {
-	return !action_if_empty(x,y,object);
-}
+
 
 bool action_if_health(double value, int operation) {return 0;}
 bool action_if_life(double value, int operation) {return 0;}

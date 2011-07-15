@@ -458,3 +458,14 @@ void game_restart() { //RELOCATE ME
 
 void action_restart_game();
 #define action_restart_game game_restart
+
+
+bool action_if_collision(double x, double y,int object) {
+    if (argument_relative) {
+        enigma::object_graphics* const inst = ((enigma::object_graphics*)enigma::instance_event_iterator->inst);
+        return !action_if_empty(inst->x+x,inst->y+y,object);
+    }
+    else
+        return !action_if_empty(x,y,object);
+}
+
