@@ -1045,6 +1045,7 @@ void action_save_game(string filename) {}
 
 void action_set_cursor(int sprite, int cursor) { 
     //cursor_sprite=sprite;
+    //cursor is whether it is shown
 }
 
 /*void action_set_friction(double newfriction) {
@@ -1176,9 +1177,7 @@ void action_change_object(int changeInto, int performEvents) {
 
 ///////// Asteroids
 
-void action_set_friction(double newfriction) {
-	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->friction=newfriction;
-}
+
 
 void action_sprite_transform(double hscale, double vscale, double rotation, int mirror) {
 	//image_xscale=hscale; image_yscale=vscale; image_angle=rotation; imageyscale=-1;

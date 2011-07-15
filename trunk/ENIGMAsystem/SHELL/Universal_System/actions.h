@@ -137,6 +137,14 @@ inline void action_set_gravity(double direction,double newgravity) {
     }
 }
 
+inline void action_set_friction(double newfriction) {
+	if (argument_relative) {
+        ((enigma::object_graphics*)enigma::instance_event_iterator->inst)->friction+=newfriction;
+    } else {
+        ((enigma::object_graphics*)enigma::instance_event_iterator->inst)->friction=newfriction;
+    }
+}
+
 
 inline void action_draw_score(double x,double y, string caption) {
     if (argument_relative) {
