@@ -947,10 +947,7 @@ void MCI_command(var str) {}
 
 extern bool argument_relative;
 
-void action_another_room(int room, int transition) {
-	//transition_kind=transition;
-	room_goto(room);
-} 
+
 //void action_bounce(int precisely, int against) {}
 void action_cd_pause() {}
 void action_cd_play(double firstTrack,double lastTrack) {}

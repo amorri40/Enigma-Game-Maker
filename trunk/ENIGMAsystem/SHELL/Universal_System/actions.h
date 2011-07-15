@@ -374,6 +374,11 @@ inline void action_next_room(int transition) {
     room_goto_next();
 }
 
+inline void action_another_room(int room, int transition) {
+	//transition_kind=transition;
+	room_goto(room);
+} 
+
 inline void action_font(int font,int align) {
     draw_set_font(font); 
     // draw_set_halign(align);
@@ -468,4 +473,6 @@ inline bool action_if_collision(double x, double y,int object) {
     else
         return !action_if_empty(x,y,object);
 }
+
+
 

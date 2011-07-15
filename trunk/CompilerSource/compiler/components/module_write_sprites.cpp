@@ -49,27 +49,27 @@ int module_write_sprites(EnigmaStruct *es, FILE *gameModule)
 {
   // Now we're going to add sprites
   edbg << es->spriteCount << " Adding Sprites to Game Module: " << flushl;
-  
+
   //Magic Number
   fwrite("sprn",4,1,gameModule);
-  
+
   //Indicate how many
   int sprite_count = es->spriteCount;
   fwrite(&sprite_count,4,1,gameModule);
-  
+
   int sprite_maxid = 0;
   for (int i = 0; i < sprite_count; i++)
     if (es->sprites[i].id > sprite_maxid)
       sprite_maxid = es->sprites[i].id;
   fwrite(&sprite_maxid,4,1,gameModule);
-  
+
   for (int i = 0; i < sprite_count; i++)
   {
     writei(es->sprites[i].id,gameModule); //id
-    
+
     // Track how many subImages we're copying
     int subCount = es->sprites[i].subImageCount;
-    
+
     int swidth = 0, sheight = 0;
     for (int ii = 0; ii < subCount; ii++)
     {
@@ -84,9 +84,9 @@ int module_write_sprites(EnigmaStruct *es, FILE *gameModule)
     }
     if (!(swidth and sheight and subCount)) {
       user << "Subimages of sprite `" << es->sprites[i].name << "' have zero size." << flushl;
-      return 14;
+      //return 14; //TGMG
     }
-    
+
     writei(swidth, gameModule); //width
     writei(sheight,gameModule); //height
     writei(es->sprites[i].originX,gameModule); //xorig
@@ -95,9 +95,9 @@ int module_write_sprites(EnigmaStruct *es, FILE *gameModule)
     writei(es->sprites[i].bbBottom,gameModule); //BBox Bottom
     writei(es->sprites[i].bbLeft,gameModule);   //BBox Left
     writei(es->sprites[i].bbRight,gameModule);  //BBox Right
-    
+
     writei(subCount,gameModule); //subimages
-    
+
     for (int ii = 0;ii < subCount; ii++)
     {
       //strans = es->sprites[i].subImages[ii].transColor, fwrite(&idttrans,4,1,exe); //Transparent color
@@ -107,7 +107,7 @@ int module_write_sprites(EnigmaStruct *es, FILE *gameModule)
       writei(0,gameModule);
     }
   }
- 
+
   edbg << "Done writing sprites." << flushl;
   return 0;
 }
