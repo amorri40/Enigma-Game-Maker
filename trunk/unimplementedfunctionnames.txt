@@ -1,4 +1,3 @@
-action_if_collision	U
 display_set_size	U
 enigmadraw_text	U
 enigmarandom	U

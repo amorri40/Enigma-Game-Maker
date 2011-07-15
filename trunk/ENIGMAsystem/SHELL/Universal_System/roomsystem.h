@@ -103,8 +103,8 @@ namespace enigma
       
     int instancecount;
     inst *instances;
-      int tilecount;
-      tile *tiles;
+    int tilecount;
+    tile *tiles;
     
     void gotome();
   };

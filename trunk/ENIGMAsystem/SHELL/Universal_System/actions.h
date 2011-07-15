@@ -411,7 +411,7 @@ void move_wrap(bool hor, bool vert, double margin)
     }
 } //RELOCATE ME
 
-void action_wrap(int direction) {
+inline void action_wrap(int direction) {
     if (direction == 0)
         move_wrap(1,0,0);
     if (direction == 1)
@@ -420,7 +420,7 @@ void action_wrap(int direction) {
         move_wrap(1,1,0);
 }
 
-void action_set_motion(double dir,double nspeed) {
+inline void action_set_motion(double dir,double nspeed) {
     enigma::object_graphics* const inst = ((enigma::object_graphics*)enigma::instance_event_iterator->inst);
     if (argument_relative) {
         inst->hspeed+= (nspeed) * cos(degtorad((dir))); 
@@ -452,7 +452,7 @@ void motion_add(double newdirection, double newspeed) //RELOCATE ME
 }
 //#define motion_add(newdirection,newspeed) hspeed+= (newspeed) * cos(degtorad((newdirection))); vspeed-= (newspeed) * sin(degtorad((newdirection)));
 
-void game_restart() { //RELOCATE ME
+inline void game_restart() { //RELOCATE ME
     room_goto_first();
 }
 
@@ -460,7 +460,7 @@ void action_restart_game();
 #define action_restart_game game_restart
 
 
-bool action_if_collision(double x, double y,int object) {
+inline bool action_if_collision(double x, double y,int object) {
     if (argument_relative) {
         enigma::object_graphics* const inst = ((enigma::object_graphics*)enigma::instance_event_iterator->inst);
         return !action_if_empty(inst->x+x,inst->y+y,object);

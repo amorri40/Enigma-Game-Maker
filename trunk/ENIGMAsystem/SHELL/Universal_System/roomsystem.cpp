@@ -49,7 +49,7 @@ int room_speed  = 60;
 int room_width  = 640;
 int room_height = 480;
 int room_persistent = 0;
-var room_caption = "ENIGMA Engine"; /* changed to var to remove ambig error */
+var room_caption = "ENIGMA Engine";
 
 int background_color = 16777215;
 int background_showcolor=1;
@@ -105,14 +105,13 @@ namespace enigma
     }
     //Backgrounds end
       
-      //TGMG tiles start
+      //Tiles start
       drawing_depths.clear();
-      //drawing_depths[t.depth].tiles.clear();
       for (int tilei=0; tilei<enigma::roomdata[room]->tilecount; tilei++) {
           tile t = enigma::roomdata[room]->tiles[tilei];
           drawing_depths[t.depth].tiles.push_back(enigma::roomdata[room]->tiles[tilei]);
       }
-      //TGMG tiles end
+      //Tiles end
     
     view_enabled = views_enabled;
     

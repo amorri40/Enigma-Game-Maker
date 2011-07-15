@@ -53,9 +53,11 @@ namespace enigma
   }
   
   void depthv::remove() {
+      if (myiter) { //TGMG
      drawing_depths[rval.d].draw_events->unlink(myiter);
      if (instance_event_iterator == myiter)
        instance_event_iterator = myiter->prev;
+      }
      myiter = NULL;
   }
   depthv::~depthv() {}

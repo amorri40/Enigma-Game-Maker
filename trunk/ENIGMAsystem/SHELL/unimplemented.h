@@ -14,10 +14,9 @@
 /*
 Fonts and Text functions
 */
-//void draw_set_halign(int halign) {}
-void draw_set_valign(int valign) {}
-int string_width_ext(string str, string sep, int w) {}//Width of the string in the current font as it would be drawn using the draw_text_ext() function. Can be used for precisely positioning graphics.
-int string_height_ext(string str, string sep, int w) {}//
+
+int string_width_ext(string str, string sep, int w) {return 0;}//Width of the string in the current font as it would be drawn using the draw_text_ext() function. Can be used for precisely positioning graphics.
+int string_height_ext(string str, string sep, int w) {return 0;}//
 void draw_text_ext(int x, int y, string str, string sep, int w) {}
 //void draw_text_color(int x, int y, string str, int c1, int c2, int c3, int c4, double alpha) {}
 void draw_text_ext_color(int x, int y, string str, string sep, int w, int c1, int c2, int c3, int c4, int alpha) {
@@ -1179,9 +1178,7 @@ void action_change_object(int changeInto, int performEvents) {
 } //warning don't use in a with statement! (massive memory leak)
 
 ///////// Asteroids
-void draw_set_halign(int halign) {}
-//void keyboard_wait() {}
-//void io_clear() {}
+
 void action_set_friction(double newfriction) {
 	((enigma::object_graphics*)enigma::instance_event_iterator->inst)->friction=newfriction;
 }

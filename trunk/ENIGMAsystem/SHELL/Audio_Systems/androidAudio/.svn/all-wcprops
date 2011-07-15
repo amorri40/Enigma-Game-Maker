@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Audio_Systems/androidAudio
+/svnroot/enigma-dev/!svn/ver/814/trunk/ENIGMAsystem/SHELL/Audio_Systems/androidAudio
 END
 AndroidAudio.cpp
 K 25
@@ -13,7 +13,7 @@ AndroidAudio.h
 K 25
 svn:wc:ra_dav:version-url
 V 99
-/svnroot/enigma-dev/!svn/ver/457/trunk/ENIGMAsystem/SHELL/Audio_Systems/androidAudio/AndroidAudio.h
+/svnroot/enigma-dev/!svn/ver/814/trunk/ENIGMAsystem/SHELL/Audio_Systems/androidAudio/AndroidAudio.h
 END
 Makefile
 K 25

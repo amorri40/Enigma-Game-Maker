@@ -1,15 +1,15 @@
 10
 
 dir
-813
+816
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-12T23:31:38.010841Z
-810
-ismavatar
+2011-07-14T23:13:27.443706Z
+815
+thedeusex
 has-props
 
 
@@ -223,10 +223,10 @@ file
 
 
 
-2011-05-16T18:34:06.000000Z
-d1d8c7f8cb84be945e271f448c96f57c
-2011-05-03T21:26:11.590301Z
-743
+2011-07-15T14:20:18.000000Z
+8619b87b3b210f2a537d30b34976a1f3
+2011-07-14T23:13:27.443706Z
+815
 thedeusex
 
 
@@ -249,7 +249,7 @@ thedeusex
 
 
 
-3623
+3922
 
 GSscreen.h
 file
@@ -427,33 +427,11 @@ file
 
 
 
-2011-04-20T21:21:40.000000Z
-c91d1cd43f991dd517dc18ff2ae0c7ca
-2010-04-03T00:34:50.070987Z
-96
-joshdreamland
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3563
+6d71c893fab01a7d6293a46d129ead12
+2011-07-14T16:33:09.915375Z
+814
+tgmg
 
 Config
 dir
@@ -668,11 +646,33 @@ file
 
 
 
-
-db0ea1a5fe1a113d7d2dea0854c27d19
-2011-07-07T13:28:35.016103Z
-801
+2011-07-15T14:20:12.000000Z
+dfc8451c8486c599b308bafdd20a73c5
+2011-07-14T23:13:27.443706Z
+815
 thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+45598
 
 GSsprite.cpp
 file
@@ -850,10 +850,10 @@ file
 
 
 
-2011-07-02T00:15:03.000000Z
-28081de54407a285e2f4b413b05f4787
-2011-07-12T09:35:39.941165Z
-807
+2011-07-15T14:20:43.000000Z
+356b8f0c183b66ea43e718d950e93034
+2011-07-14T16:33:09.915375Z
+814
 tgmg
 
 
@@ -876,7 +876,7 @@ tgmg
 
 
 
-6441
+7206
 
 Info
 dir
@@ -989,11 +989,11 @@ file
 
 
 
-2011-04-20T21:21:40.000000Z
-a6e96d6c6da14c9c9594aad764893ebb
-2011-04-11T06:11:11.685590Z
-685
-joshdreamland
+2011-07-15T14:19:25.000000Z
+660f782833bf195dd685e15e0bd212f2
+2011-07-14T23:13:27.443706Z
+815
+thedeusex
 
 
 
@@ -1015,7 +1015,7 @@ joshdreamland
 
 
 
-7957
+8322
 
 GSenable.h
 file

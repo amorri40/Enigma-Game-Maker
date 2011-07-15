@@ -822,15 +822,15 @@ public final class EnigmaWriter
 
 	public static boolean actionDemise = false;
 
-	static int numberOfBraces=0; //gm ignores the brace actions
-	static int numberOfIfs=0; //gm allows multipe else actions after 1 if >.<
+	static int numberOfBraces=0; //gm ignores brace actions which are in the wrong place or missing
+	static int numberOfIfs=0; //gm allows multipe else actions after 1 if, so its important to track the number
 	
 	public static String getActionsCode(ActionContainer ac)
 		{
 		final String nl = System.getProperty("line.separator"); //$NON-NLS-1$
 		StringBuilder code = new StringBuilder();
 		
-		numberOfBraces=0;//reset number of braces
+		numberOfBraces=0;
 		numberOfIfs=0;
 		
 		for (Action act : ac.actions)
@@ -854,8 +854,7 @@ public final class EnigmaWriter
 					numberOfBraces++;
 					break;
 				case Action.ACT_CODE:
-					//code.append("{"+args.get(0).getVal()+"\n}").append(nl); //why did I add the '{' again retest 64D
-					code.append("{"+args.get(0).getVal()+"/**/\n}").append(nl);
+					code.append("{"+args.get(0).getVal()+"/**/\n}").append(nl); //surround with '{'
 					break;
 				case Action.ACT_ELSE:
 				{
@@ -889,36 +888,8 @@ public final class EnigmaWriter
 					if (apto != org.lateralgm.resources.GmObject.OBJECT_SELF)
 						{
 						if (la.question)
-							{ /*
-							if (!actionDemise)
-								{
-								//								String mess = "Warning, you have a D&D action which is unsupported by this compiler."
-								//										+ " This and future unsupported D&D actions will be discarded. (Question + Applies To"
-								//										+ " in moment/event " + ac.toString() + " in library ";
-								String library = (la.parent == null || la.parent.tabCaption.isEmpty()) ? Integer.toString(la.parentId)
-										: la.parent.tabCaption;
-								//								if (la.parent == null || la.parent.tabCaption.length() == 0)
-								//									mess += la.parentId;
-								//								else
-								//									mess += la.parent.tabCaption;
-								System.out.println("=== Unsupported action!!!!: "+la.name);
-								String action;
-								if (la.name==null) 
-									action = Integer.toString(la.id);
-								else
-								action = la.name.length() == 0 ? Integer.toString(la.id) : la.name;
-								//								mess += " action " + (la.name.length() == 0 ? la.id : la.name) + ")";
-								if (ac !=null && library !=null && action !=null) {
-								
-									String mess="EnigmaWriter UNSUPPORTED_DND_QA"+ac.toString()+"library:"+library+" action:"+action;
-								//JOptionPane.showMessageDialog(null,mess);
-									System.out.println(mess);
-								}
-								actionDemise = true;
-								}
-							continue;*/
-							
-							//TGMG start
+							{ 
+							/* Question action using with statement */
 							if (apto == org.lateralgm.resources.GmObject.OBJECT_OTHER)
 								code.append("with (other) "); //$NON-NLS-1$
 							else
@@ -926,11 +897,6 @@ public final class EnigmaWriter
 								code.append("with (").append(apto.get().getName()).append(") "); //$NON-NLS-1$ //$NON-NLS-2$
 								else
 									code.append("/*null with!*/"); //$NON-NLS-1$
-							//TGMG end
-							
-							
-							
-							
 							
 							} else {
 						if (apto == org.lateralgm.resources.GmObject.OBJECT_OTHER)
@@ -987,7 +953,6 @@ public final class EnigmaWriter
 				code.append("\n}");
 			}
 		}
-		System.out.println("###########code:"+code.toString());
 		return code.toString();
 		}
 
