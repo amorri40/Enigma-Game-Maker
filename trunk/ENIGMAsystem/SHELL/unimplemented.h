@@ -274,7 +274,6 @@ Rooms
 */
 bool room_exists(int ind) {return false;}
 string room_get_name(int ind) {return "";}
-void room_goto_previous() {}
 
 void room_set_width(int ind, int w) {}
 void room_set_height(int ind, int h) {}
@@ -460,9 +459,9 @@ Using dlls
 */
 #ifdef ENIGMA_WS_COCOA
 int external_define(string dll, string name, int calltype, int restype, int argnumb, ...) { return 0;}
-variant external_call(/*int eid, */variant args, ...) { return 0;}
+variant external_call(/*int eid, */variant args, ...) { return var(0);}
 void external_free(string dll) {}
-var execute_string(variant args, ...) {} //can only have 1 argument, the string to execute!
+var execute_string(variant args, ...){return 0;} //can only have 1 argument, the string to execute!
 void execute_file(string fname) {}
 //void script_execute(variant args, ...) {}
 

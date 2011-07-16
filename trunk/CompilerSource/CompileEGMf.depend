@@ -1016,7 +1016,7 @@
 	"../general/parse_basics.h"
 	"expression_evaluator.h"
 
-1303334612 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/type_resolver.cpp
+1310664564 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/cfile_parse/type_resolver.cpp
 	<map>
 	<stack>
 	<string>
@@ -1065,7 +1065,7 @@
 
 1303334591 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/syncheck.h
 
-1303334594 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.h
+1310776941 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.h
 	"object_storage.h"
 
 1308694320 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/backend/EnigmaStruct.h
@@ -1208,7 +1208,7 @@
 	"../compile_common.h"
 	"../../backend/ideprint.h"
 
-1303334608 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/module_write_sprites.cpp
+1310743119 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/module_write_sprites.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1238,7 +1238,7 @@
 	<vector>
 	<map>
 
-1307374826 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/parse_secondary.cpp
+1310776941 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/parse_secondary.cpp
 	<stdio.h>
 	<iostream>
 	"../../backend/ideprint.h"
@@ -1250,7 +1250,7 @@
 	"../compile_common.h"
 	"../event_reader/event_parser.h"
 
-1309995060 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_defragged_events.cpp
+1310659945 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_defragged_events.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1416,7 +1416,7 @@
 	"JavaStruct.h"
 	"util/Image.h"
 
-1310471328 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
+1310664564 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/compile.cpp
 	"../OS_Switchboard.h"
 	"../backend/EnigmaStruct.h"
 	"../general/darray.h"
@@ -1476,7 +1476,7 @@
 	"../event_reader/event_parser.h"
 	"../../parser/object_storage.h"
 
-1310547270 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
+1310818773 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_object_data.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1487,7 +1487,7 @@
 	"../event_reader/event_parser.h"
 	"../../general/parse_basics.h"
 
-1310478643 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_room_data.cpp
+1310776941 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/compiler/components/write_room_data.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -1529,7 +1529,7 @@
 
 1303334606 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/settings-parse/parse_ide_settings.h
 
-1308798187 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/collect_variables.cpp
+1310664564 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/collect_variables.cpp
 	<map>
 	<string>
 	<iostream>
@@ -1551,10 +1551,11 @@
 	<vector>
 	"../backend/ideprint.h"
 
-1309558350 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.cpp
+1310776941 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser.cpp
 	<map>
 	<string>
 	<iostream>
+	<vector>
 	<stdio.h>
 	"../externs/externs.h"
 	"parser_components.h"
@@ -1572,7 +1573,7 @@
 1303334594 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/collect_variables.h
 	"object_storage.h"
 
-1308798187 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser_components.cpp
+1310776941 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/parser/parser_components.cpp
 	<string>
 	<iostream>
 	<cstdio>
@@ -1622,7 +1623,7 @@
 1308694328 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/settings.cpp
 	"settings.h"
 
-1308694320 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/syntax.cpp
+1310777094 source:/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/syntax.cpp
 	<map>
 	<string>
 	<cstdlib>
@@ -1640,5 +1641,5 @@
 
 1306381072 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/chkfunction.h
 
-1303334591 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/syntaxtools.h
+1310776941 /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/CompilerSource/syntax/syntaxtools.h
 

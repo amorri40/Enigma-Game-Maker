@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svnroot/enigma-dev/!svn/ver/814/trunk/CompilerSource
+/svnroot/enigma-dev/!svn/ver/817/trunk/CompilerSource
 END
 genmake.sh
 K 25
@@ -61,5 +61,5 @@ standalone_main.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/standalone_main.cpp
+/svnroot/enigma-dev/!svn/ver/817/trunk/CompilerSource/standalone_main.cpp
 END

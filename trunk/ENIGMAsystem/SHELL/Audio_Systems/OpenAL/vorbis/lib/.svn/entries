@@ -1,7 +1,7 @@
 10
 
 dir
-816
+817
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/vorbis/lib
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
@@ -638,6 +638,9 @@ JoshDreamland
 
 13102
 
+modes
+dir
+
 os.h
 file
 
@@ -671,9 +674,6 @@ JoshDreamland
 
 
 5113
-
-modes
-dir
 
 synthesis.c
 file
@@ -709,40 +709,6 @@ JoshDreamland
 
 5167
 
-bitrate.c
-file
-
-
-
-
-2011-04-20T21:21:53.000000Z
-695387350208778592efcffac4821880
-2010-08-03T16:21:17.419229Z
-304
-JoshDreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8560
-
 codebook.h
 file
 
@@ -776,6 +742,40 @@ JoshDreamland
 
 
 5077
+
+bitrate.c
+file
+
+
+
+
+2011-04-20T21:21:53.000000Z
+695387350208778592efcffac4821880
+2010-08-03T16:21:17.419229Z
+304
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8560
 
 info.c
 file
@@ -811,6 +811,9 @@ JoshDreamland
 
 18788
 
+books
+dir
+
 Makefile
 file
 
@@ -844,9 +847,6 @@ JoshDreamland
 
 
 4787
-
-books
-dir
 
 bitrate.h
 file
@@ -950,40 +950,6 @@ JoshDreamland
 
 71686
 
-smallft.h
-file
-
-
-
-
-2011-04-20T21:21:53.000000Z
-7c001ccdc17e66d11e6bf081c5422214
-2010-08-03T16:21:17.419229Z
-304
-JoshDreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1286
-
 window.c
 file
 
@@ -1017,6 +983,40 @@ JoshDreamland
 
 
 128689
+
+smallft.h
+file
+
+
+
+
+2011-04-20T21:21:53.000000Z
+7c001ccdc17e66d11e6bf081c5422214
+2010-08-03T16:21:17.419229Z
+304
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1286
 
 lookup_data.h
 file
