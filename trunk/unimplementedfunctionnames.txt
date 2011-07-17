@@ -1,13 +1,2 @@
-display_set_size	U
 enigmadraw_text	U
-enigmarandom	U
-enigmaround	U
-get_string	U
-message_background	U
-message_position	U
-message_size	U
-show_info	U
-show_question	U
-sound_global_volume	U
-sound_stop_all	U
 

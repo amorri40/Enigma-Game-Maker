@@ -1,15 +1,15 @@
 10
 
 dir
-817
+819
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-14T16:33:09.915375Z
-814
-tgmg
+2011-07-16T23:52:05.067660Z
+818
+joshdreamland
 has-props
 
 
@@ -134,11 +134,33 @@ file
 
 
 
+2011-07-17T00:03:04.000000Z
+a7ec88fc7e956087606f60531d935175
+2011-07-16T23:52:05.067660Z
+818
+joshdreamland
 
-29e3c33fbe61bb35cee6994be4d966e5
-2011-07-14T16:33:09.915375Z
-814
-tgmg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6336
 
 include.h
 file

@@ -21,4 +21,10 @@ make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
 make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
-Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode
+In file included from SHELLmain.cpp:113:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In member function ‘virtual variant enigma::OBJ_obj_cannon::myevent_draw()’:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:67: error: switch quantity not an integer
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In member function ‘variant enigma::OBJ_obj_cannon::myevent_keyrelease_32()’:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:92: error: switch quantity not an integer
+make[1]: *** [link] Error 1
+make: *** [Game] Error 2
