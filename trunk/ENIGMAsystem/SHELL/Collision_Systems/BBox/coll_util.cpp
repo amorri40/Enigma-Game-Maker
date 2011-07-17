@@ -116,7 +116,7 @@ bool collide_bbox_line(const enigma::object_collisions* inst, double ox, double 
 
 bool collide_bbox_bbox(const enigma::object_collisions* inst1, double ox1, double oy1, const enigma::object_collisions* inst2, double ox2, double oy2)
 {
-return (ox1+inst1->bbox_left < ox2+inst2->bbox_right
+  return (ox1+inst1->bbox_left < ox2+inst2->bbox_right
        && ox2+inst2->bbox_left < ox1+inst1->bbox_right
        && oy1+inst1->bbox_top  < oy2+inst2->bbox_bottom
        && oy2+inst2->bbox_top  < oy1+inst1->bbox_bottom);

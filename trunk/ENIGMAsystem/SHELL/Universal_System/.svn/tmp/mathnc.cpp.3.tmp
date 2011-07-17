@@ -59,6 +59,18 @@ double cos(const var& x)               { return cos((double)x); }
 double tan(const var& x)               { return tan((double)x); }
 
 
+<<<<<<< .mine
+
+double sqrt(const var& val) {
+    return sqrt(double(val));
+}
+
+//double log10(double x){return log10(x);}
+//double sin(double x){return sin(x);}
+//double cos(double x){return cos(x);}
+//double tan(double x){return tan(x);}
+=======
+>>>>>>> .r820
 double round(double x)            { return lrint(x); }
 double sqr(double x)              { return x*x;      }
 double power(double x,double p)   { return pow(x,p); }
@@ -260,3 +272,6 @@ double random(double n) //Do not fix. Based off of Delphi prng
 int random_set_seed(int seed){return enigma::Random_Seed=seed;}
 int random_get_seed(){return enigma::Random_Seed;}
 int randomize(){return enigma::Random_Seed=random32();}
+
+
+

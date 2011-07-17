@@ -293,6 +293,12 @@ int compile_writeObjectData(EnigmaStruct* es, parsed_object* global)
               wto << "      x = enigma_genericconstructor_newinst_x, y = enigma_genericconstructor_newinst_y;\n";
 
           wto << "      enigma::constructor(this);\n";
+          //TGMG roomstart event
+          if (event_used_by_something("gamestart"))
+            wto << "      myevent_gamestart();";
+          if (event_used_by_something("roomstart"))
+            wto << "      myevent_roomstart();";
+          //TGMG roomstart event
           if (event_used_by_something("create"))
             wto << "      myevent_create();";
           wto << "\n    }\n";
