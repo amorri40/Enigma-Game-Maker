@@ -1,10 +1,15 @@
 cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL" GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o"
 cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c GSd3d.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSd3d.o -s -O3 
+g++ -c GSscreen.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSscreen.o -s -O3 
+g++ -c GSsprite.cpp		-o .eobjs/MacOSX/MacOSX/Run/GSsprite.o -s -O3 
+g++ -c OPENGLStd.cpp		-o .eobjs/MacOSX/MacOSX/Run/OPENGLStd.o -s -O3 
 cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c CocoaFunctions.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaFunctions.o -s -O3 
+g++ -c CocoaMain.cpp		-o .eobjs/MacOSX/MacOSX/Run/CocoaMain.o -s -O3 
 cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
+g++ -c loading.cpp		-o .eobjs/MacOSX/MacOSX/Run/loading.o -s -O3 
+g++ -c roomsystem.cpp		-o .eobjs/MacOSX/MacOSX/Run/roomsystem.o -s -O3 
 cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
 cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
 make[3]: Nothing to be done for `static'.

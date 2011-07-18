@@ -48,8 +48,8 @@
 #error ln2math and stop including this damn header.
 #endif
 
-double abs(struct variant& x);
-double abs(struct var& x);
+double abs(const variant& x);
+double abs(const var& x);
 
 double sqrt(const var& val);
 
@@ -122,20 +122,19 @@ double direction_difference(double dir1,double dir2);
 double point_direction(double x1,double y1,double x2,double y2);
 double point_distance(double x1, double y1, double x2, double y2);
 
-#include "dynamic_args.h"
-/*double max(...), max(const enigma::varargs &t);
+#include "dynamic_args.h"*double max(...), max(const enigma::varargs &t);
 #define max(args...) max((varargs(),args))
 
 double min(...), min(const enigma::varargs &t);
 #define min(args...) min((varargs(),args))
 
-double median(...), median(const enigma::varargs &t);
+/*double median(...), median(const enigma::varargs &t);
 #define median(args...) median((varargs(),args))
 
 double mean(...), mean(const enigma::varargs &t);
-#define mean(args...) mean((varargs(),args))
+#define mean(args...) mean((varargs(),args))*/
 
-*/
+
 
 // These macros are to stop (call of overloaded is ambiguous) errors
 #define ceil(arg) ceil((double)(arg))

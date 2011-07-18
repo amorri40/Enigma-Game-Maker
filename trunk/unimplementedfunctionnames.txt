@@ -1,2 +1,26 @@
-enigmadraw_text	U
+action_change_object	U
+action_effect	U
+action_message	U
+action_path	U
+clipboard_set_text	U
+d3d_draw_floor	U
+d3d_draw_wall	U
+d3d_set_projection_ortho	U
+draw_circle	F
+draw_polygon_begin	U
+draw_polygon_end	U
+draw_polygon_vertex	U
+draw_rectangle	F
+draw_triangle	F
+effect_create_above	U
+enigma_max	U
+enigma_min	U
+execute_string	U
+get_color	U
+instance_change	U
+mean	U
+move_snap	U
+object_is_ancestor	U
+room_goto_previous	U
+show_info	U
 
