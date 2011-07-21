@@ -25,158 +25,170 @@
 **                                                                              **
 \********************************************************************************/
 
+#include <string>
+#include "OpenGLHeaders.h"
+#include "GSbackground.h"
+#include "GSd3d.h"
+
 using namespace std;
 
-#include <Windows.h>
-
-#include "OpenGLHeaders.h"
-#include "GSprmtvs.h"
-#include <string>
 #include "../../Universal_System/var4.h"
+
+#define __GETR(x) (((unsigned int)x & 0x0000FF))
+#define __GETG(x) (((unsigned int)x & 0x00FF00) >> 8)
+#define __GETB(x) (((unsigned int)x & 0xFF0000) >> 16)
+
 #include "../../Universal_System/roomsystem.h"
-#include <math.h>
+#include "../../Universal_System/instance_system.h"
+#include "../../Universal_System/graphics_object.h"
+#include "../../Universal_System/depth_draw.h"
+#include "../../Platforms/platforms_mandatory.h"
 
-bool d3dMode = false;
+using namespace enigma;
 
-int d3d_start()
+static inline void draw_back()
 {
-    // Enable depth buffering
-	glEnable(GL_DEPTH_TEST);
-	glDisable(GL_CULL_FACE);
-
-    // Reset projection and model matrices
-	glMatrixMode(GL_PROJECTION);
-    glClearColor(0, 0, 0, 0);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    glLoadIdentity();
-
-	// Setup a projection
-	glMatrixMode(GL_PROJECTION);
-	gluPerspective(40, view_wview[view_current] / view_hview[view_current], 1, 10);
-
-    // Start with disabled lighting
-	glDisable(GL_LIGHTING);
-
-    return 0;
-}
-
-int d3d_end()
-{
-    d3dMode = false;
-    glDisable(GL_DEPTH_TEST);
-    glOrtho(-1, room_width, -1, room_height, 0, 1);
-
-    return 0;
-}
-
-int d3d_set_hidden(int enable)
-{
-
-    return 0;
-}
-
-int d3d_set_lighting(int enable)
-{
-    if (enable)
-        glEnable(GL_LIGHTING);
-    else
-        glDisable(GL_LIGHTING);
-
-    return 0;
-}
-
-int d3d_set_fog(int enable, int color, int start, int end)
-{
-    if (enable)
+    //Draw backgrounds
+    for (int back_current=0; back_current<7; back_current++)
     {
-        glEnable(GL_FOG);
-        glFogi(GL_FOG_MODE, 1);
-        glFogf(GL_FOG_DENSITY, 0.35f);
-        glFogf(GL_FOG_START, start);
-        glFogf(GL_FOG_END, end);
-    } else
-        glDisable(GL_FOG);
-
-    return 0;
-}
-
-int d3d_set_culling(int enable)
-{
-    if (enable)
-        glEnable(GL_CULL_FACE);
-    else
-        glDisable(GL_CULL_FACE);
-
-    return 0;
-}
-
-int d3d_set_perspective(int enable)
-{
-    if (enable)
-    {
-        glMatrixMode(GL_PROJECTION);
-        gluPerspective(40, view_wview[view_current] / view_hview[view_current], 1, 100);
+        if (background_visible[back_current] == 1)
+        {
+            // if (background_stretched) draw_background_stretched(back, x, y, w, h);
+            draw_background_tiled(background_index[back_current], background_x[back_current], background_y[back_current]);
+        }
+    // background_foreground, background_index, background_x, background_y, background_htiled,
+    // background_vtiled, background_hspeed, background_vspeed;
     }
-    else
-    {
+}
 
+namespace enigma
+{
+    extern std::map<int,roomstruct*> roomdata;
+}
+
+void screen_redraw()
+{
+    if (d3dMode == true)
+    {
+        if (background_showcolor)
+        {
+            int clearcolor = ((int)background_color) & 0x00FFFFFF;
+            glClearColor(__GETR(clearcolor) / 255.0, __GETG(clearcolor) / 255.0, __GETB(clearcolor) / 255.0, 1);
+        }
+
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
+        {
+            for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
+                enigma::instance_event_iterator->inst->myevent_draw();
+        }
+
+        return;
     }
 
-    return 0;
-}
+    if (!view_enabled)
+    {
+        glViewport(0, 0, window_get_width(), window_get_height()); // Possible bug
+        glLoadIdentity();
+        glScaled(1, -1, 1);
+        glOrtho(-1, room_width, -1, room_height, 0, 1); // possible bug
 
-int d3d_primitive_begin(int kind)
-{
-    glBegin(kind);
-    return 0;
-}
+        if (background_showcolor)
+        {
+            int clearcolor = ((int)background_color) & 0x00FFFFFF;
+            glClearColor(__GETR(clearcolor) / 255.0, __GETG(clearcolor) / 255.0, __GETB(clearcolor) / 255.0, 1);
+            glClear(GL_COLOR_BUFFER_BIT);
+        }
 
-int d3d_vertex(double x, double y, double z)
-{
-    glVertex3d(x,y,z);
-    return 0;
-}
+        draw_back();
 
-int d3d_primitive_end()
-{
-    glEnd();
-    return 0;
-}
+        for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
+        {
+            //loop tiles
+            for(std::vector<tile>::size_type i = 0; i !=  dit->second.tiles.size(); i++)
+            {
+                tile t = dit->second.tiles[i];
+                draw_background_part(t.bckid, t.bgx, t.bgy, t.width, t.height, t.roomX, t.roomY);
+            }
 
-int d3d_set_projection(double xfrom,double yfrom,double zfrom,double xto,
-                       double yto,double zto,double xup,double yup,double zup)
-{
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-	gluLookAt(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup);
+            for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
+                enigma::instance_event_iterator->inst->myevent_draw();
+        }
+    } else {
+        for (view_current = 0; view_current < 7; view_current++)
+        {
+            if (view_visible[(int)view_current])
+            {
+                int vc = (int)view_current;
+                int vob = (int)view_object[vc];
 
-    return 0;
-}
+                if (vob != -1)
+                {
+                    object_basic *instanceexists = fetch_instance_by_int(vob);
 
-int d3d_set_projection_ortho(int x, int y, int width, int height, int angle)
-{
-    //glOrtho(x,x + width,y,y + height,0,1);
-    return 0;
-}
+                    if (instanceexists)
+                    {
+                        object_planar* vobr = (object_planar*)instanceexists;
 
-int d3d_draw_wall(double x1, double y1, double z1, double x2, double y2, double z2, int texId, int hrep, int vrep)
-{
-    glBegin(GL_QUADS);
+                        int vobx = (int)(vobr->x), voby = (int)(vobr->y);
 
-    glVertex3f(x1, y1, z1);
-    glVertex3f(x2, y1, z2);
-    glVertex3f(x1, y2, z1);
-    glVertex3f(x2, y2, z2);
+                        //int bbl=*vobr.x+*vobr.bbox_left,bbr=*vobr.x+*vobr.bbox_right,bbt=*vobr.y+*vobr.bbox_top,bbb=*vobr.y+*vobr.bbox_bottom;
+                        //if (bbl<view_xview[vc]+view_hbor[vc]) view_xview[vc]=bbl-view_hbor[vc];
 
-    glEnd();
+                        if (vobx < view_xview[vc] + view_hborder[vc])
+                            view_xview[vc] = vobx - view_hborder[vc];
+                        else if (vobx > view_xview[vc] + view_wview[vc] - view_hborder[vc])
+                            view_xview[vc] = vobx + view_hborder[vc] - view_wview[vc];
 
-    return 0;
-}
+                        if (voby < view_yview[vc] + view_vborder[vc])
+                            view_yview[vc] = voby - view_vborder[vc];
+                        else if (voby > view_yview[vc] + view_hview[vc] - view_vborder[vc])
+                            view_yview[vc] = voby + view_vborder[vc] - view_hview[vc];
 
-int d3d_draw_floor(double x1, double y1, double z1, double x2, double y2, double z2, int texId, int hrep, int vrep)
-{
+                        if (view_xview[vc] < 0)
+                            view_xview[vc] = 0;
+                        else if (view_xview[vc] > room_width - view_wview[vc])
+                            view_xview[vc] = room_width - view_wview[vc];
 
+                        if (view_yview[vc] < 0)
+                            view_yview[vc] = 0;
+                        else if (view_yview[vc] > room_height - view_hview[vc])
+                            view_yview[vc] = room_height - view_hview[vc];
+                    }
+                }
 
-    return 0;
+                glViewport((int)view_xport[vc], (int)view_yport[vc], (int)view_wport[vc], (int)view_hport[vc]);
+                glLoadIdentity();
+                glScaled(1, -1, 1);
+                glOrtho(view_xview[vc] - 1, view_wview[vc] + view_xview[vc], view_yview[vc] - 1, view_hview[vc] + view_yview[vc], 0, 1); // possible bug
+
+                if (background_showcolor)
+                {
+                    int clearcolor = ((int)background_color) & 0x00FFFFFF;
+                    glClearColor(__GETR(clearcolor) / 255.0, __GETG(clearcolor) / 255.0, __GETB(clearcolor) / 255.0, 1);
+                    glClear(GL_COLOR_BUFFER_BIT);
+                }
+
+                draw_back();
+
+                for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
+                {
+                    //loop tiles
+                    for(std::vector<tile>::size_type i = 0; i !=  dit->second.tiles.size(); i++)
+                    {
+                        tile t = dit->second.tiles[i];
+                        if (t.roomX + t.width < view_xview[vc] || t.roomY + t.height < view_yview[vc] || t.roomX > view_xview[vc] + view_wview[vc] || t.roomY > view_yview[vc] + view_hview[vc])
+                            continue;
+
+                        draw_background_part(t.bckid, t.bgx, t.bgy, t.width, t.height, t.roomX, t.roomY);
+                    }
+
+                    //loop instances
+                    for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
+                        enigma::instance_event_iterator->inst->myevent_draw();
+                }
+            }
+        }
+    }
 }
