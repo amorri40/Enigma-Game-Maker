@@ -21,4 +21,14 @@ make[2]: Nothing to be done for `this'.
 cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
 make[2]: Nothing to be done for `extension'.
 g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
-Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode
+In file included from SHELLmain.cpp:113:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In member function ‘virtual variant enigma::OBJ_obj_box::myevent_draw()’:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:710: error: ‘d3d_draw_block’ was not declared in this scope
+In file included from SHELLmain.cpp:116:
+Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h: At global scope:
+Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h:41: warning: large integer implicitly truncated to unsigned type
+Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h:41: warning: large integer implicitly truncated to unsigned type
+Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h:41: warning: large integer implicitly truncated to unsigned type
+Preprocessor_Environment_Editable/IDE_EDIT_fontinfo.h:41: warning: large integer implicitly truncated to unsigned type
+make[1]: *** [link] Error 1
+make: *** [Game] Error 2

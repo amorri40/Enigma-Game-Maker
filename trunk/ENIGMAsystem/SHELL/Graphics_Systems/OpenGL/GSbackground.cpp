@@ -25,6 +25,8 @@
  **                                                                              **
  \********************************************************************************/
 
+#include <cstddef>
+
 #include <math.h>
 #include "OpenGLHeaders.h"
 #include "../../Universal_System/backgroundstruct.h"
@@ -512,7 +514,7 @@ int draw_background_general(int back,double left,double top,double width,double 
 int background_get_texture(int backId)
 {
     // Probably not how this should be done, works for now
-    return (int)enigma::backgroundstructarray[backId];
+    return (size_t)(enigma::backgroundstructarray[backId]);
 }
 
 // Probably wrong file

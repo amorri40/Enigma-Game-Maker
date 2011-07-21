@@ -378,6 +378,7 @@
 		9C11F7B713CDE668004E9008 /* gamemaker_compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamemaker_compatibility.h; sourceTree = "<group>"; };
 		9C3829531215459C007B24C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C382B221215685D007B24C5 /* iPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhone-Info.plist"; sourceTree = "<group>"; };
+		9C39C0C813D7B6610006ED18 /* GSd3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSd3d.h; sourceTree = "<group>"; };
 		9C3B47B613C567390015E8E2 /* instance_system_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_base.h; sourceTree = "<group>"; };
 		9C3B47B713C567390015E8E2 /* instance_system_frontend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instance_system_frontend.h; sourceTree = "<group>"; };
 		9C3B47B813C567390015E8E2 /* multifunction_variant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multifunction_variant.cpp; sourceTree = "<group>"; };
@@ -1785,6 +1786,7 @@
 		9CD0E16D1211552700A01347 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				9C39C0C813D7B6610006ED18 /* GSd3d.h */,
 				9CBA43E91394B586008375A8 /* GSd3d.cpp */,
 				9CBA3B0D13833C8B008375A8 /* include.h */,
 				9CBA3B0313832B22008375A8 /* OpenGLHeaders.h */,

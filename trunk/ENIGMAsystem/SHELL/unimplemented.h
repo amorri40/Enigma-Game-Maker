@@ -319,7 +319,7 @@ void d3d_set_projection_ext(double xfrom, double yfrom, double zfrom, double xto
 void d3d_draw_cylinder(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat, int closed, int steps) {}
 void d3d_draw_cone(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat, int closed, int steps) {}
 void d3d_draw_ellipsoid(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat, int steps) {}
-void d3d_draw_wall(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
+//void d3d_draw_wall(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
 void d3d_draw_floor(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
 
 int d3d_model_create() {}
@@ -372,7 +372,7 @@ void d3d_primitive_begin_texture(int kind, int texid) {}
 void d3d_vertex_texture(double x, double y, double z, double xtex, double ytex) {}
 void d3d_vertex_texture_color(double x, double y, double z, double xtex, double ytex, double col, double alpha) {}
 
-
+void d3d_set_shading(bool smooth) {}
 
 
 /*
