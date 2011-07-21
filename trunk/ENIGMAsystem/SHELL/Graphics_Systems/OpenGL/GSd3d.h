@@ -25,22 +25,24 @@
 **                                                                              **
 \********************************************************************************/
 
+extern bool d3dMode;
+
 int d3d_start();
 int d3d_end();
+int d3d_set_perspective(int enable);
+int d3d_set_hidden(int enable);
+
+int d3d_set_lighting(int enable);
+int d3d_set_culling(int enable);
+
+int d3d_set_fog(int enable, int color, int start, int end);
+
 int d3d_primitive_begin(int kind);
 int d3d_vertex(double x, double y, double z);
 int d3d_primitive_end();
 int d3d_set_projection(double xfrom,double yfrom,double zfrom,double xto,
                        double yto,double zto,double xup,double yup,double zup);
-void texture_set_interpolation(bool linear);
-void texture_set_repeat(int repeat);
-void d3d_draw_block(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) ;
-void d3d_set_fog(bool enable, int color, double start, double end);
-void d3d_set_shading(bool smooth);
-void d3d_set_culling(bool cull);
-void d3d_set_lighting(bool enable);
-void d3d_set_hidden(bool enable);
+int d3d_set_projection_ortho(int x, int y, int width, int height, int angle);
 
-int background_get_texture(int back);
-
-
+int d3d_draw_wall(double x1, double y1, double z1, double x2, double y2, double z2, int texId, int hrep, int vrep);
+int d3d_draw_floor(double x1, double y1, double z1, double x2, double y2, double z2, int texId, int hrep, int vrep);
