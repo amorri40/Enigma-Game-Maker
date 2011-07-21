@@ -57,7 +57,7 @@ int room_count();
 
 extern int view_current;
 extern int view_enabled;
-typedef variant rvt[8];
+typedef var rvt;
 extern rvt view_hborder, view_hport, view_hspeed, view_hview, view_object, view_vborder, view_visible,
            view_vspeed, view_wport, view_wview, view_xport, view_xview, view_yport, view_yview,view_angle;
 
@@ -118,6 +118,7 @@ namespace enigma
 
 #include "multifunction_variant.h"
 namespace enigma { struct roomv: multifunction_variant {
+  INHERIT_OPERATORS()
   void function();
 }; }
 extern enigma::roomv room;

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svnroot/enigma-dev/!svn/ver/820/trunk/CompilerSource
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource
 END
 genmake.sh
 K 25
@@ -25,7 +25,7 @@ main.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/main.cpp
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/main.cpp
 END
 settings.h
 K 25
@@ -43,7 +43,7 @@ CompileEGMf.cbp
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/CompileEGMf.cbp
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/CompileEGMf.cbp
 END
 main.h
 K 25
@@ -55,11 +55,11 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svnroot/enigma-dev/!svn/ver/789/trunk/CompilerSource/Makefile
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/Makefile
 END
 standalone_main.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/817/trunk/CompilerSource/standalone_main.cpp
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/standalone_main.cpp
 END

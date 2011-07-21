@@ -1,14 +1,14 @@
 10
 
 dir
-820
+822
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource/syntax
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-16T00:39:32.588821Z
-817
+2011-07-20T07:33:56.368009Z
+822
 JoshDreamland
 
 
@@ -100,11 +100,33 @@ file
 
 
 
-
-c472ffb739d52c8d95ab38cdb2fca02f
-2011-07-16T00:39:32.588821Z
-817
+2011-07-20T13:41:45.000000Z
+bf7a7b0352fc5b8dbbb8f5eac5b806e8
+2011-07-20T07:33:56.368009Z
+822
 JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20881
 
 syncheck.h
 file
@@ -112,44 +134,10 @@ file
 
 
 
-2011-04-20T21:23:11.000000Z
-d9fc2cdb56422c1534b36f100e80654e
-2010-04-03T00:34:50.070987Z
-96
-joshdreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2363
-
-syntaxtools.h
-file
-
-
-
-
-2011-07-16T00:42:21.000000Z
-06039a1b1929b976a29ceae1ae3ba3de
-2011-07-16T00:39:32.588821Z
-817
+2011-07-20T12:46:08.000000Z
+23ce9ad014e0ad2c27c1f5f5262271be
+2011-07-20T07:33:56.368009Z
+822
 JoshDreamland
 
 
@@ -172,7 +160,41 @@ JoshDreamland
 
 
 
-16967
+2337
+
+syntaxtools.h
+file
+
+
+
+
+2011-07-20T12:46:08.000000Z
+1d55456f79d715c863b9bd72c9689fec
+2011-07-20T07:33:56.368009Z
+822
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4413
 
 checkfile.cpp
 file
@@ -180,11 +202,11 @@ file
 
 
 
-2011-04-20T21:23:11.000000Z
-654232c76678fd190364b0b415cba519
-2010-04-03T02:59:57.355062Z
-98
-ismavatar
+2011-07-20T12:46:08.000000Z
+d4dea0b728fc14ed51181431ab2160e3
+2011-07-20T07:33:56.368009Z
+822
+JoshDreamland
 
 
 

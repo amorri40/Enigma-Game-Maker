@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svnroot/enigma-dev/!svn/ver/798/trunk/CompilerSource/general
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/general
 END
 bettersystem.h
 K 25
@@ -39,6 +39,12 @@ svn:wc:ra_dav:version-url
 V 73
 /svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/textfile.cpp
 END
+macro_integration.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/general/macro_integration.cpp
+END
 string.cpp
 K 25
 svn:wc:ra_dav:version-url
@@ -56,6 +62,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 71
 /svnroot/enigma-dev/!svn/ver/96/trunk/CompilerSource/general/textfile.h
+END
+macro_integration.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/general/macro_integration.h
 END
 bettersystem.cpp
 K 25

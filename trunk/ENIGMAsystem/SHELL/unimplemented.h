@@ -15,14 +15,10 @@
 Fonts and Text functions
 */
 
-int string_width_ext(string str, string sep, int w) {return 0;}//Width of the string in the current font as it would be drawn using the draw_text_ext() function. Can be used for precisely positioning graphics.
-int string_height_ext(string str, string sep, int w) {return 0;}//
-void draw_text_ext(int x, int y, string str, string sep, int w) {}
+//int string_width_ext(string str, string sep, int w) {return 0;}//int string_height_ext(string str, string sep, int w) {return 0;}//
+//void draw_text_ext(int x, int y, string str, string sep, int w) {}
 //void draw_text_color(int x, int y, string str, int c1, int c2, int c3, int c4, double alpha) {}
-void draw_text_ext_color(int x, int y, string str, string sep, int w, int c1, int c2, int c3, int c4, int alpha) {
-
-} //Similar to draw_text_ext() but with colored vertices.
-
+//void draw_text_ext_color(int x, int y, string str, string sep, int w, int c1, int c2, int c3, int c4, int alpha) {} 
 /*
 Input
 */
@@ -101,7 +97,7 @@ bool show_question(string str) {}// Displays a question; returns true when the u
 void message_background(int back){}// Sets the background image for the pop-up box for any of the functions above. back must be one of the backgrounds defined in the game. If back is partially transparent so is the message image (only for Windows 2000 or later).
 void message_alpha(double alpha){}// Sets the alpha translucence for the pop-up box for any of the functions above. alpha must lie between 0 (completely translucent) and 1 (not translucent) (only for Windows 2000 or later).
 void message_button(int spr){}// Sets the sprite used for the buttons in the pop-up box. spr must be a sprite consisting of three images, the first indicates the button when it is not pressed and the mouse is far away, the second indicates the button when the mouse is above it but not pressed and the third is the button when it is pressed.
-void message_text_font(string name, int size, double color, int style){}// Sets the font for the text in the pop-up box. (This is a normal Windows font, not one of the font resources you can out in your game!) style indicates the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).
+void message_text_font(var name, var size, var color, var style){}// Sets the font for the text in the pop-up box. (This is a normal Windows font, not one of the font resources you can out in your game!) style indicates the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).
 void message_button_font(string name, int size, double color, int style){}// Sets the font for the buttons in the pop-up box. style indicates the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).
 void message_input_font(string name, int size, double color, int style){}// Sets the font for the input field in the pop-up box. style indicates the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).
 void message_mouse_color(double col){}// Sets the color of the font for the buttons in the pop-up box when the mouse is above it.
@@ -469,6 +465,7 @@ void execute_file(string fname) {}
 //#define script_execute(script,argument0,argument1,argument2,argument3,argument4) script((argument0),(argument1),(argument2),(argument3),(argument4))
 //#define script_execute(script) script_execute("script")
 
+void set_program_priority(double priority) {}
 
 int window_handle() {return 0;}
 void window_set_showborder(bool show){}
@@ -647,6 +644,9 @@ int sound_get_kind(int ind) {}//Returns the kind of the sound with the given ind
 bool sound_get_preload(int ind) {}//Returns whether the sound with the given index has preload set.
 
 void sound_volume(int sound, float value) {
+    
+}
+void sound_effect_set(int snd, int effect) {
     
 }
 
@@ -906,11 +906,10 @@ void mp_grid_add_rectangle(int gid, int left, int top, int right, int bottom) {}
 void mp_grid_add_instances(int gid, int obj, int prec) {} //Marks all cells that intersect an instance of the indicated object as being forbidden. You can also use an individual instance by making obj the id of the instance. Also you can use the keyword all to indicate all instances of all objects. prec indicates whether precise collision checking must be used (will only work if precise checking is enabled for the sprite used by the instance).
 bool mp_grid_path(int gid, int path, int xstart, int ystart, int xgoal, int ygoal, int allowdiag) {} //Computes a path through the grid. path must indicate an existing path that will be replaced by the computer path. xstart and ystart indicate the start of the path and xgoal and ygoal the goal. allowdiag indicates whether diagonal moves are allowed instead of just horizontal or vertical. The function returns whether it succeeded in finding a path. (Note that the path is independent of the current instance; It is a path through the g rid, not a path for a specific instance.) 
 void mp_grid_draw(int gid) {} //
-
-void mp_linear_step(int x, int y, int stepsize, int checkall) {}
-void mp_linear_step_object(int x, int y, int stepsize, int obj) {}
-void mp_potential_step(int x, int y, int stepsize, int checkall) {}
-void mp_potential_step_object(int x, int y, int stepsize, int obj) {}
+bool mp_linear_step(int x, int y, int stepsize, int checkall) {return false;}
+bool mp_linear_step_object(int x, int y, int stepsize, int obj) {return false;}
+bool mp_potential_step(int x, int y, int stepsize, int checkall) {return false;}
+bool mp_potential_step_object(int x, int y, int stepsize, int obj) {return false;}
 void mp_potential_settings(int maxrot, int rotstep, int ahead, int onspot) {}
 
 /*

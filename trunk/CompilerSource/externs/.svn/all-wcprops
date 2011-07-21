@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/externs
 END
 ext_iteration.cpp
 K 25
@@ -31,5 +31,5 @@ externs.h
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/675/trunk/CompilerSource/externs/externs.h
+/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/externs/externs.h
 END
