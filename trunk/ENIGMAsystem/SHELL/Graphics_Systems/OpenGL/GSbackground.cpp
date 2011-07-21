@@ -508,3 +508,20 @@ int draw_background_general(int back,double left,double top,double width,double 
   glPopAttrib();
   return 0;
 }
+
+int background_get_texture(int backId)
+{
+    // Probably not how this should be done, works for now
+    return (int)enigma::backgroundstructarray[backId];
+}
+
+// Probably wrong file
+int texture_set_interpolation(int enable)
+{
+    if (enable)
+        glEnable(GL_INTERPOLATE);
+    else
+        glDisable(GL_INTERPOLATE);
+    return 0;
+}
+
