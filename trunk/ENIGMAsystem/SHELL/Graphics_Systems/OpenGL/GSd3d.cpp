@@ -36,7 +36,7 @@ using namespace std;
 #include "../../Universal_System/roomsystem.h"
 #include <math.h>
 
-bool d3dMode = true;
+bool d3dMode = false;
 
 int d3d_start()
 {
