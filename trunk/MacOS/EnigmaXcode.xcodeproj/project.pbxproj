@@ -2231,6 +2231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD0E2221211552700A01347 /* alure.cpp in Sources */,
+				9CD0E2991211552800A01347 /* GSsurface.cpp in Sources */,
 				9CD0E2241211552700A01347 /* buffer.cpp in Sources */,
 				9CD0E2261211552700A01347 /* istream.cpp in Sources */,
 				9CE203B21212AE37006BDA4B /* CocoaFunctions.h in Sources */,
@@ -2314,7 +2315,6 @@
 				9CD0E2951211552800A01347 /* GSscreen.cpp in Sources */,
 				9CD0E2961211552800A01347 /* GSsprite.cpp in Sources */,
 				9CD0E2981211552800A01347 /* GSstdraw.cpp in Sources */,
-				9CD0E2991211552800A01347 /* GSsurface.cpp in Sources */,
 				9CD0E29B1211552800A01347 /* OPENGLStd.cpp in Sources */,
 				9CD0E29C1211552800A01347 /* libEGMstd.cpp in Sources */,
 				9CD0E2AF1211552800A01347 /* SHELLmain.cpp in Sources */,

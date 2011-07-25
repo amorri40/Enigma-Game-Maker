@@ -261,6 +261,8 @@ void sprite_replace(int ind, string fname, int imgnumb, bool precise, bool trans
     
 }
 
+void sprite_replace_alpha(int ind, string fname, int imgnumb, bool precise, bool preload, int xorig, int yorig) {}
+
 void sprite_add_from_surface(int ind, int id, int x, int y, int w, int h) {
     
 }
@@ -277,7 +279,8 @@ void room_set_caption(int ind, var str) {}
 void room_set_persistent(int ind, bool val) {}
 void room_set_code(int ind, string str) {}
 void room_set_background_color(int ind, int col, bool show) {}
-
+int room_instance_add(int ind, int x, int y, int obj) {return 0;}
+void room_instance_clear(int ind) {}
 
 void game_save(string str) {}//Saves the game to the file with name string.
 void game_load(string str) {}//Loads the game from the file with name string.
@@ -320,7 +323,8 @@ void d3d_draw_cylinder(int x1, int y1, int z1, int x2, int y2, int z2, int texid
 void d3d_draw_cone(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat, int closed, int steps) {}
 void d3d_draw_ellipsoid(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat, int steps) {}
 //void d3d_draw_wall(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
-void d3d_draw_floor(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
+//void d3d_draw_floor(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat) {}
+void d3d_draw_block(int x1, int y1, int z1, int x2, int y2, int z2, int texid, int hrepeat, int vrepeat)  {}
 
 int d3d_model_create() {}
 void d3d_model_destroy(int ind) {}
@@ -472,7 +476,9 @@ void window_set_showborder(bool show){}
 void window_default() {}
 void window_set_stayontop(bool stay) {}
 void screen_wait_vsync() {}
-
+void window_set_region_scale(double scale, bool adaptwindow) {}
+int window_get_cursor()  {return 0;}
+void window_set_region_size(int w, int h, bool adaptwindow) {}
 #endif
 
 /*
@@ -638,10 +644,10 @@ void sound_background_tempo(double factor) {}
 void sound_set_search_directory(string dir) {}
 
 void sound_delete(int index) {}
-bool sound_exists(int ind) {}//Returns whether a sound with the given index exists.
-string sound_get_name(int ind) {}//Returns the name of the sound with the given index.
-int sound_get_kind(int ind) {}//Returns the kind of the sound with the given index (0=normal, 1=background, 2=3d, 3=mmplayer).
-bool sound_get_preload(int ind) {}//Returns whether the sound with the given index has preload set.
+bool sound_exists(int ind) {return false;}//Returns whether a sound with the given index exists.
+string sound_get_name(int ind) {return "";}//Returns the name of the sound with the given index.
+int sound_get_kind(int ind) {return 0;}//Returns the kind of the sound with the given index (0=normal, 1=background, 2=3d, 3=mmplayer).
+bool sound_get_preload(int ind) {return false;}//Returns whether the sound with the given index has preload set.
 
 void sound_volume(int sound, float value) {
     
@@ -649,6 +655,9 @@ void sound_volume(int sound, float value) {
 void sound_effect_set(int snd, int effect) {
     
 }
+
+bool sound_replace(int index, string fname, int kind, bool preload) {return false;}
+bool sound_replace(int index, string fname, int kind, int preload,int unknown) {return false;}
 
 /*
 Paths
@@ -695,9 +704,9 @@ void path_shift(int ind, int xshift, int yshift) {}//Shifts the path over the gi
 
 /* Surfaces
  */
-int surface_create(int w, int h) {
+/*int surface_create(int w, int h) {
     return 0;
-}
+}*/
 void surface_free(int surfid) {} 
 bool surface_exists(var surfid){
     return 0;
@@ -713,11 +722,14 @@ int surface_get_texture(int surfid) {
     return 0;
 }
 
-void surface_set_target(int surfid) {}
-void surface_reset_target() {}
-int surface_getpixel(int sid, int x, int y) {}
+//void surface_set_target(int surfid) {}
+//void surface_reset_target() {}
+int surface_getpixel(int sid, int x, int y) {return 0;}
 
-void draw_surface(int sid, int x, int y) {} //  Draws the surface at position (x,y). (Without color blending and no alpha transparency.)
+void surface_copy(int destination, int x, int y, int source) {}
+void surface_copy_part(int destination, int x, int y, int source, int xs, int ys, int ws, int hs) {}
+
+//void draw_surface(int sid, int x, int y) {} //  Draws the surface at position (x,y). (Without color blending and no alpha transparency.)
 void draw_surface_stretched(int sid, int x, int y, int w, int h) {} // Draws the surface stretched to the indicated region.
 void draw_surface_tiled(int sid, int x, int y) {} // Draws the surface tiled so that it fills the entire room.
 void draw_surface_part(int sid, int left, int top, int width, int height, int x, int y) {} // Draws the indicated part of the surface with its origin at position (x,y).
@@ -735,6 +747,7 @@ void texture_set_blending(bool blend) {} //Indicates whether to use blending wit
 
 int texture_get_width(int texid) {return 1;} 
 int texture_get_height(int texid) {return 1;} 
+void texture_set_repeat(int repeat) {}
 
 /*
  Backgrounds
@@ -827,8 +840,14 @@ void draw_polygon_end() {}
 void draw_pixel(float x,float y) {}
 void draw_arrow(float x1, float y1, float x2, float y2, float line_size);
 void action_draw_rectangle(float x1, float x2, float y1, float y2) {}
+void draw_roundrect(float x1, float x2, float y1, float y2) {}
 void action_fill_color(double col) {}
 void file_write_string(string str) {}
+void file_write_real(double value) {}
+double file_read_real() {
+    return 0;
+}
+void file_readln() {}
 void file_writeln() {}
 void file_close() {}
 void file_open_write(string fname) {}
@@ -1269,6 +1288,17 @@ string get_open_filename(string filter, string fname){
     return "/Users/alasdairmorrison/Documents/Game Maker/64D general/64D Last 0to10/physics/physics_1.txt";
 }
 
-
-
-
+/* Mplay */
+void mplay_message_send_guaranteed(int player, int id, var val) {}
+int mplay_session_status() {return 0;}
+int mplay_connect_status() {return 0;}
+int mplay_player_find() {return 0;}
+void mplay_session_end() {}
+void mplay_end() {}
+void mplay_init_tcpip(string addr) {}
+int mplay_session_find() {return 0;}
+void mplay_session_join(int numb, string playername) {}
+void mplay_session_create(string sesname, int playnumb, string playername) {}
+bool mplay_message_receive(int player) {return false;}
+int mplay_message_id() {return 0;}
+var mplay_message_value() {return 0;}

@@ -26,7 +26,7 @@ int ds_list_find_index(int id, variant val) {return 0;} //Find the position stor
 var ds_list_find_value(int id, int pos); 
 void ds_list_sort(int id, bool ascend); //Sorts the values in the list. When ascend is true the values are sorted in ascending order, otherwise in descending order.
 void ds_list_shuffle(int id) {} //Shuffles the values in the list such that they end up in a random order.
-void ds_list_write(int id) {} //Turns the data structure into a string and returns this string. The string can then be used to e.g. save it to a file. This provides an easy mechanism for saving data structures.
+string ds_list_write(int id) { return "";} //Turns the data structure into a string and returns this string. The string can then be used to e.g. save it to a file. This provides an easy mechanism for saving data structures.
 void ds_list_read(int id, string str) {} //Reads the data structure from the given string (as created by the previous call).
 
 

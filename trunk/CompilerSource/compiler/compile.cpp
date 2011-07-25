@@ -69,6 +69,15 @@ using namespace std;
 #include "../general/bettersystem.h"
 #include "event_reader/event_parser.h"
 
+
+//TGMG start
+#include <fstream>
+#include <iostream>
+
+std::map <string, char> unimplemented_function_list;
+//TGMG end
+
+
 inline void writei(int x, FILE *f) {
   fwrite(&x,4,1,f);
 }
@@ -100,7 +109,7 @@ void clear_ide_editables()
                "#include \"Audio_Systems/" + (extensions::targetAPI.audioSys)         + "/include.h\"\n"
                "#include \"Collision_Systems/" + (extensions::targetAPI.collisionSys) + "/include.h\"\n"
                "#include \"Widget_Systems/" + (extensions::targetAPI.widgetSys)       + inc;
-
+    
     const string incg = "#include \"", impl = "/implement.h\"\n";
     f2write += "\n// Extensions selected by user\n";
     for (unsigned i = 0; i < parsed_extensions.size(); i++)
@@ -111,7 +120,7 @@ void clear_ide_editables()
       if (parsed_extensions[i].implements != "")
         f2write += incg + parsed_extensions[i].pathname + impl;
     }
-
+  
   if (f2comp != f2write)
   {
     wto.open("ENIGMAsystem/SHELL/API_Switchboard.h",ios_base::out);
@@ -138,13 +147,6 @@ void clear_ide_editables()
     wto << '\n';
   wto.close();
 }
-
-//TGMG start
-#include <fstream>
-#include <iostream>
-
-std::map <string, char> unimplemented_function_list;
-//TGMG end
 
 // modes: 0=run, 1=debug, 2=build, 3=compile
 enum { emode_run, emode_debug, emode_build, emode_compile, emode_rebuild };
@@ -230,7 +232,7 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
   for (int i = 0; i < es->backgroundCount; i++)
     quickmember_variable(globals_scope,builtin_type__int,es->backgrounds[i].name);
 
-  edbg << "Copying path names [kidding, these are totally not implemented :P] [" << es->pathCount << "]" << flushl;
+  edbg << "Copying path names [" << es->pathCount << "]" << flushl;
   for (int i = 0; i < es->pathCount; i++)
     quickmember_variable(globals_scope,builtin_type__int,es->paths[i].name);
 
@@ -327,7 +329,7 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
   edbg << "Writing resource names and maxima" << flushl;
   wto.open("ENIGMAsystem/SHELL/Preprocessor_Environment_Editable/IDE_EDIT_resourcenames.h",ios_base::out);
     wto << license;
-
+    
     max = 0;
     wto << "enum //object names\n{\n";
     for (po_i i = parsed_objects.begin(); i != parsed_objects.end(); i++) {
@@ -348,7 +350,7 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
       if (es->backgrounds[i].id >= max) max = es->backgrounds[i].id + 1;
       wto << "  " << es->backgrounds[i].name << " = " << es->backgrounds[i].id << ",\n";
     } wto << "};\nnamespace enigma { size_t background_idmax = " << max << "; }\n\n";
-
+    
     max = 0;
     wto << "enum //font names\n{\n";
     for (int i = 0; i < es->fontCount; i++) {
@@ -356,14 +358,14 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
       wto << "  " << es->fonts[i].name << " = " << es->fonts[i].id << ",\n";
     } wto << "};\nnamespace enigma { size_t font_idmax = " << max << "; }\n\n";
 
-
+    
     max = 0;
 	wto << "enum //timeline names\n{\n";
 	for (int i = 0; i < es->timelineCount; i++) {
 	    if (es->timelines[i].id >= max) max = es->timelines[i].id + 1;
         wto << "  " << es->timelines[i].name << " = " << es->timelines[i].id << ",\n";
 	} wto << "};\nnamespace enigma { size_t timeline_idmax = " << max << "; }\n\n";
-
+    
     max = 0;
 	wto << "enum //path names\n{\n";
 	for (int i = 0; i < es->pathCount; i++) {
@@ -371,18 +373,18 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
         wto << "  " << es->paths[i].name << " = " << es->paths[i].id << ",\n";
 	} wto << "};\nnamespace enigma { size_t path_idmax = " << max << "; }\n\n";
 
-
+    
     max = 0;
     wto << "enum //sound names\n{\n";
     for (int i = 0; i < es->soundCount; i++) {
       if (es->sounds[i].id >= max) max = es->sounds[i].id + 1;
       wto << "  " << es->sounds[i].name << " = " << es->sounds[i].id << ",\n";
     } wto << "};\nnamespace enigma { size_t sound_idmax = " <<max << "; }\n\n";
-
+    
     max = 0;
     wto << "enum //room names\n{\n";
     for (int i = 0; i < es->roomCount; i++) {
-         if (es->rooms[i].id >= max) max = es->rooms[i].id + 1;
+      if (es->rooms[i].id >= max) max = es->rooms[i].id + 1;
       wto << "  " << es->rooms[i].name << " = " << es->rooms[i].id << ",\n";
     }
     wto << "};\nnamespace enigma { size_t room_idmax = " <<max << "; }\n\n";
@@ -411,11 +413,11 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
   edbg << "Writing local accessors" << flushl;
   res = compile_writeObjAccess(parsed_objects, &EGMglobal);
   irrr();
-
+  
   edbg << "Writing font data" << flushl;
   res = compile_writeFontInfo(es);
   irrr();
-
+  
   edbg << "Writing room data" << flushl;
   res = compile_writeRoomData(es,&EGMglobal);
   irrr();
@@ -426,31 +428,27 @@ dllexport int compileEGMf(EnigmaStruct *es, const char* exe_filename, int mode)
   res = compile_writeGlobals(es,&EGMglobal);
   irrr();
 
-
 //TGMG start
-ofstream outputFile;
-outputFile.open("unimplementedfunctionnames.txt");
-
-      // outputFile << "<>pairs contains:\nKey\tValue\n";
-
-   // use const_iterator to walk through elements of pairs
-   for ( std::map< string, char, std::less< char > >::const_iterator iter = unimplemented_function_list.begin();
-      iter != unimplemented_function_list.end(); ++iter )
-      {
-          //if(!(std::string::npos != iter->first.find("enigma")))
-          outputFile << iter->first << '\t' << iter->second << '\n';
-          }
-
-   outputFile << endl;
-   outputFile.close();
+    ofstream outputFile;
+    outputFile.open("unimplementedfunctionnames.txt");
+    
+    // use const_iterator to walk through elements of pairs
+    for ( std::map< string, char, std::less< char > >::const_iterator iter = unimplemented_function_list.begin();
+         iter != unimplemented_function_list.end(); ++iter )
+    {
+        //if(!(std::string::npos != iter->first.find("enigma")))
+        outputFile << iter->first << '\t' << iter->second << '\n';
+    }
+    
+    outputFile << endl;
+    outputFile.close();
 //TGMG end
-
 
   /**  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     Segment two: Now that the game has been exported as C++ and raw
     resources, our task is to compile the game itself via GNU Make.
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/
-
+  
   idpr("Adding resources...",90);
   string desstr = "./ENIGMAsystem/SHELL/design_game" + extensions::targetOS.buildext;
   string gameFname = mode == emode_build ? desstr.c_str() : (desstr = exe_filename, exe_filename); // We will be using this first to write, then to run
@@ -459,14 +457,14 @@ outputFile.open("unimplementedfunctionnames.txt");
 
   string gflags = "-s -O3";
   string make = "Game ";
-
+  
   string glinks = extensions::targetAPI.windowLinks;
     if (extensions::targetAPI.graphicsLinks  != "") glinks += " " + extensions::targetAPI.graphicsLinks;
     if (extensions::targetAPI.audioLinks     != "") glinks += " " + extensions::targetAPI.audioLinks;
     if (extensions::targetAPI.widgetLinks    != "") glinks += " " + extensions::targetAPI.widgetLinks;
     if (extensions::targetAPI.collisionLinks != "") glinks += " " + extensions::targetAPI.collisionLinks;
     if (extensions::targetAPI.networkLinks   != "") glinks += " " + extensions::targetAPI.networkLinks;
-
+  
   make += "GMODE=Run ";
   make += "GFLAGS=\"" + gflags + "\" ";
   make += "CFLAGS=\"" + TOPLEVEL_cflags + "\" ";
@@ -475,10 +473,10 @@ outputFile.open("unimplementedfunctionnames.txt");
   make += "GRAPHICS=" + extensions::targetAPI.graphicsSys + " ";
   make += "WIDGETS="  + extensions::targetAPI.widgetSys + " ";
   make += "PLATFORM=" + extensions::targetAPI.windowSys + " ";
-
+  
   string compilepath = CURRENT_PLATFORM_NAME "/" + extensions::targetOS.identifier;
   make += "COMPILEPATH=" + compilepath + " ";
-
+  
   string extstr = "EXTENSIONS=\"", extlinks = "EXTLINKS=\"";
   if (parsed_extensions.size())
   {
@@ -490,9 +488,9 @@ outputFile.open("unimplementedfunctionnames.txt");
       extlinks += " " + parsed_extensions[i].pathname + objdir;
   }
   make += extstr + "\" " + extlinks + "\" ";
-
-
-  string mfgfn = gameFname;
+  
+  
+  string mfgfn = gameFname; 
   for (size_t i = 0; i < mfgfn.length(); i++)
     if (mfgfn[i] == '\\') mfgfn[i] = '/';
   make += string("OUTPUTNAME=\"") + mfgfn + "\" ";
@@ -532,11 +530,11 @@ outputFile.open("unimplementedfunctionnames.txt");
     have an option in the config file to pass them to some resource
     linker sometime in the future.
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/
-
+  
   #if OS_ANDROID
     "ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/libs/armeabi/libndkEnigmaGame.so";
   #endif
-
+  
   FILE *gameModule;
   int resourceblock_start = 0;
   cout << "`" << extensions::targetOS.resfile << "` == '$exe': " << (extensions::targetOS.resfile == "$game"?"true":"FALSE") << endl;
@@ -547,10 +545,10 @@ outputFile.open("unimplementedfunctionnames.txt");
       user << "Failed to append resources to the game. Did compile actually succeed?" << flushl;
       idpr("Failed to add resources.",-1); return 12;
     }
-
+    
     fseek(gameModule,0,SEEK_END); //necessary on Windows for no reason.
     resourceblock_start = ftell(gameModule);
-
+    
     if (resourceblock_start < 128) {
       user << "Compiled game is clearly not a working module; cannot continue" << flushl;
       idpr("Failed to add resources.",-1); return 13;
@@ -582,7 +580,7 @@ outputFile.open("unimplementedfunctionnames.txt");
   module_write_sounds(es,gameModule);
 
   module_write_backgrounds(es,gameModule);
-
+  
   module_write_fonts(es,gameModule);
 
   // Tell where the resources start
@@ -603,7 +601,7 @@ outputFile.open("unimplementedfunctionnames.txt");
     int gameres = e_execs(rprog, rparam);
     user << "Game returned " << gameres << "\n";
   }
-
+ 
   idpr("Done.", 100);
   return 0;
 };

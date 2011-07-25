@@ -59,13 +59,15 @@ import javax.swing.JToolBar;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import org.enigma.YamlParser.YamlNode;
 import org.enigma.backend.EnigmaCallbacks;
 import org.enigma.backend.EnigmaDriver;
 import org.enigma.backend.EnigmaSettings;
 import org.enigma.backend.EnigmaStruct;
 import org.enigma.backend.EnigmaDriver.SyntaxError;
 import org.enigma.messages.Messages;
+import org.enigma.utility.EnigmaBuildReader;
+import org.enigma.utility.YamlParser;
+import org.enigma.utility.YamlParser.YamlNode;
 import org.lateralgm.components.ErrorDialog;
 import org.lateralgm.components.GMLTextArea;
 import org.lateralgm.components.impl.CustomFileFilter;
@@ -505,7 +507,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		{
 		if (!assertReady()) return;
 
-		if (es.targets.get(TargetHandler.ids[0]) == null
+		if (es.targets.get(TargetHandler.COMPILER) == null
 				|| es.targets.get(TargetHandler.ids[1]) == null)
 			{
 			JOptionPane.showMessageDialog(null,Messages.getString("EnigmaRunner.UNABLE_SETTINGS_NULL")); //$NON-NLS-1$
@@ -518,7 +520,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		File outname = null;
 		try
 			{
-			String outputexe = es.targets.get(TargetHandler.ids[0]).outputexe;
+			String outputexe = es.targets.get(TargetHandler.COMPILER).outputexe;
 			if (!outputexe.equals("$tempfile")) //$NON-NLS-1$
 				outname = new File(outputexe);
 			else if (mode < MODE_DESIGN) //run/debug
@@ -565,7 +567,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			{
 			try
 				{
-				EnigmaReader.readChanges(outname);
+				EnigmaBuildReader.readChanges(outname);
 				}
 			catch (Exception e)
 				{

@@ -67,11 +67,12 @@ import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
 
 import org.enigma.TargetHandler.TargetSelection;
-import org.enigma.YamlParser.YamlContent;
-import org.enigma.YamlParser.YamlElement;
-import org.enigma.YamlParser.YamlNode;
 import org.enigma.backend.EnigmaSettings;
 import org.enigma.messages.Messages;
+import org.enigma.utility.YamlParser;
+import org.enigma.utility.YamlParser.YamlContent;
+import org.enigma.utility.YamlParser.YamlElement;
+import org.enigma.utility.YamlParser.YamlNode;
 import org.lateralgm.compare.CollectionComparator;
 import org.lateralgm.compare.MapComparator;
 import org.lateralgm.compare.ObjectComparator;
@@ -90,6 +91,8 @@ public class EnigmaSettingsFrame extends MDIFrame implements ActionListener,Focu
 	{
 	private static final long serialVersionUID = 1L;
 	private static final ImageIcon CODE_ICON = LGM.getIconForKey("Resource.SCRIPT"); //$NON-NLS-1$
+	private static final String[] labels = { "Compiler: ","Platform: ","Graphics: ","Audio: ",
+			"Collision: ","Widgets: " };
 
 	private final EnigmaSettings oldEs;
 	private EnigmaSettings es;
@@ -466,7 +469,6 @@ public class EnigmaSettingsFrame extends MDIFrame implements ActionListener,Focu
 		SequentialGroup vg = layout.createSequentialGroup();
 		final int pref = GroupLayout.PREFERRED_SIZE;
 
-		String[] labels = { "Compiler: ","Platform: ","Graphics: ","Audio: ","Collision: ","Widgets: " };
 		JComponent[] targs = initializeTargets();
 
 		for (int i = 0; i < targs.length; i++)
@@ -691,7 +693,7 @@ public class EnigmaSettingsFrame extends MDIFrame implements ActionListener,Focu
 			targets.put(targs[i] = new JComboBox(new TargetCombo()),TargetHandler.ids[i]);
 
 		//now populate them
-		userPicks.put(TargetHandler.ids[0],TargetHandler.defaults.get(TargetHandler.ids[0]));
+		userPicks.put(TargetHandler.COMPILER,TargetHandler.defaults.get(TargetHandler.COMPILER));
 		targs[0].setFont(targs[0].getFont().deriveFont(Font.BOLD));
 		populateTargets();
 

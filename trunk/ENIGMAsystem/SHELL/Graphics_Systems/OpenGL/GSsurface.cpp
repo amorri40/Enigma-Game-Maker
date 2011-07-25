@@ -37,12 +37,13 @@ int draw_surface(double id, double x, double y)
 
 //#include <OpenGL/glew.h>
 #include "OpenGLHeaders.h"
+#include <cstddef>
 
 extern int room_width, room_height;
-/*
-PFNGLBINDFRAMEBUFFEREXTPROC      glBindFramebufferEXT;
-PFNGLGENFRAMEBUFFERSEXTPROC      glGenFramebuffersEXT;
-PFNGLFRAMEBUFFERTEXTURE2DEXTPROC glFramebufferTexture2DEXT;
+//#ifdef ENIGMA_WS_COCOA
+//PFNGLBINDFRAMEBUFFEREXTPROC      glBindFramebufferEXT;
+//PFNGLGENFRAMEBUFFERSEXTPROC      glGenFramebuffersEXT;
+//PFNGLFRAMEBUFFERTEXTURE2DEXTPROC glFramebufferTexture2DEXT;
 
 namespace enigma
 {
@@ -183,4 +184,4 @@ int draw_surface(double id, double x, double y)
 
     return 0;
 }
-*/
+//#endif

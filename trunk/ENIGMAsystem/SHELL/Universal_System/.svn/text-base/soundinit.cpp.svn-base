@@ -48,7 +48,7 @@ namespace enigma
     int nullhere;
     
     fread(&nullhere,4,1,exe);
-    if (nullhere != *(int*)"sndn")
+    if (nullhere != *(int*)"SND ")
       return;
     
     // Determine how many sprites we have
