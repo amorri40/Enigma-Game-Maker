@@ -1,15 +1,15 @@
 10
 
 dir
-834
+843
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Graphics_Systems/OpenGL
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-27T16:53:01.052242Z
-834
-JoshDreamland
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 has-props
 
 
@@ -223,11 +223,11 @@ file
 
 
 
-2011-08-31T05:55:49.000000Z
-bad07af4eea99f85ed864fa336849f4e
-2011-07-25T09:53:45.513059Z
-831
-polygoned
+2011-08-31T06:26:05.000000Z
+969538cb9dd06cb5b96ce25aabf12407
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 
 
 
@@ -249,7 +249,7 @@ polygoned
 
 
 
-3926
+3976
 
 GSscreen.h
 file
@@ -640,40 +640,6 @@ thedeusex
 
 5631
 
-GSfont.cpp
-file
-
-
-
-
-2011-08-31T05:55:49.000000Z
-19ada596c19ccca0899b9d5e8ddc3497
-2011-07-25T09:53:45.513059Z
-831
-polygoned
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-45660
-
 GSsprite.cpp
 file
 
@@ -707,6 +673,40 @@ tgmg
 
 
 18371
+
+GSfont.cpp
+file
+
+
+
+
+2011-08-31T06:26:05.000000Z
+ef1606d0ecc6e67bbf9b9c77660a2c83
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+45683
 
 GSstdraw.h
 file
@@ -776,17 +776,17 @@ thedeusex
 
 4074
 
-GSd3d.h
+GSscreen.cpp
 file
 
 
 
 
-2011-04-20T21:21:40.000000Z
-224ebc9f194d0bbb41029e2279762668
-2010-09-21T15:23:59.392942Z
-466
-r9k
+2011-07-15T14:20:43.000000Z
+356b8f0c183b66ea43e718d950e93034
+2011-07-14T16:33:09.915375Z
+814
+tgmg
 
 
 
@@ -808,7 +808,7 @@ r9k
 
 
 
-2460
+7206
 
 GSbackground.cpp
 file
@@ -844,17 +844,17 @@ joshdreamland
 
 16643
 
-GSscreen.cpp
+GSd3d.h
 file
 
 
 
 
-2011-07-15T14:20:43.000000Z
-356b8f0c183b66ea43e718d950e93034
-2011-07-14T16:33:09.915375Z
-814
-tgmg
+2011-04-20T21:21:40.000000Z
+224ebc9f194d0bbb41029e2279762668
+2010-09-21T15:23:59.392942Z
+466
+r9k
 
 
 
@@ -876,7 +876,7 @@ tgmg
 
 
 
-7206
+2460
 
 Info
 dir

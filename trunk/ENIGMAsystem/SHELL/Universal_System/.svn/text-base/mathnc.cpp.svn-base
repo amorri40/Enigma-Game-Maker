@@ -106,7 +106,7 @@ double point_distance(double x1,double y1,double x2,double y2)  { return hypot(x
 #include <list>
 double max(const enigma::varargs &t)
 {
-  register double ret = 0, tst;
+  register double ret = -DBL_MAX, tst;
   for (int i = 0; i < t.argc; i++)
     if ((tst = t.get(i)) > ret)
       ret = tst;
@@ -145,6 +145,15 @@ double mean(const enigma::varargs &t)
 variant choose(const enigma::varargs& args) {
    return args.get(rand() % args.argc);
 };
+
+#ifdef ENIGMA_PARSER_RUN
+  #define max(args...) max((enigma::varargs(),args))
+  #define min(args...) min((enigma::varargs(),args))
+  #define median(args...) median((enigma::varargs(),args))
+  #define mean(args...) mean((enigma::varargs(),args))
+  #define choose(x...) choose((enigma::varargs(), x))
+  #define globalvar global var
+#endif
 
 // For added randomness
 // ...................................................

@@ -1,13 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Universal_System
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System
 END
 move_functions.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 93
 /svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Universal_System/move_functions.cpp
+END
+motion_planning.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/motion_planning.h
+END
+pathstruct.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/pathstruct.cpp
 END
 planar_object.cpp
 K 25
@@ -26,6 +38,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 85
 /svnroot/enigma-dev/!svn/ver/279/trunk/ENIGMAsystem/SHELL/Universal_System/events.cpp
+END
+motion_planning_struct.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/motion_planning_struct.h
 END
 actions.h
 K 25
@@ -97,7 +115,13 @@ var4_lua.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/270/trunk/ENIGMAsystem/SHELL/Universal_System/var4_lua.cpp
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/var4_lua.cpp
+END
+pathinit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/pathinit.cpp
 END
 roomsystem.cpp
 K 25
@@ -129,6 +153,12 @@ svn:wc:ra_dav:version-url
 V 87
 /svnroot/enigma-dev/!svn/ver/826/trunk/ENIGMAsystem/SHELL/Universal_System/fontinit.cpp
 END
+motion_planning.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/motion_planning.cpp
+END
 instance_create.h
 K 25
 svn:wc:ra_dav:version-url
@@ -139,13 +169,19 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Universal_System/Makefile
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/Makefile
 END
 lua_table.h
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Universal_System/lua_table.h
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/lua_table.h
+END
+motion_planning_struct.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/motion_planning_struct.cpp
 END
 dynamic_args.cpp
 K 25
@@ -235,7 +271,7 @@ loading.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/818/trunk/ENIGMAsystem/SHELL/Universal_System/loading.cpp
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/loading.cpp
 END
 instance_system.h
 K 25
@@ -325,7 +361,7 @@ mathnc.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Universal_System/mathnc.cpp
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/mathnc.cpp
 END
 IMGloading.cpp
 K 25
@@ -361,7 +397,7 @@ var4.h
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/822/trunk/ENIGMAsystem/SHELL/Universal_System/var4.h
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/var4.h
 END
 darray.cpp
 K 25
@@ -374,6 +410,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 91
 /svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Universal_System/CallbackArrays.h
+END
+path_functions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/path_functions.cpp
 END
 var_te.h
 K 25
@@ -429,6 +471,12 @@ svn:wc:ra_dav:version-url
 V 93
 /svnroot/enigma-dev/!svn/ver/826/trunk/ENIGMAsystem/SHELL/Universal_System/backgroundinit.cpp
 END
+pathstruct.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/pathstruct.h
+END
 planar_object.h
 K 25
 svn:wc:ra_dav:version-url
@@ -469,7 +517,7 @@ mathnc.h
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Universal_System/mathnc.h
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/mathnc.h
 END
 spritestruct.h
 K 25
@@ -505,7 +553,7 @@ resinit.h
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svnroot/enigma-dev/!svn/ver/685/trunk/ENIGMAsystem/SHELL/Universal_System/resinit.h
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/resinit.h
 END
 reflexive_types.h
 K 25
@@ -542,6 +590,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 93
 /svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Universal_System/key_game_globals.h
+END
+path_functions.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/843/trunk/ENIGMAsystem/SHELL/Universal_System/path_functions.h
 END
 imap.h
 K 25

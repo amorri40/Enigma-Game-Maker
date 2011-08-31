@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/xlib
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Platforms/xlib
 END
 XLIBdialog.cpp
 K 25
@@ -19,7 +19,7 @@ LINUXjoystick.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svnroot/enigma-dev/!svn/ver/787/trunk/ENIGMAsystem/SHELL/Platforms/xlib/LINUXjoystick.cpp
+/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Platforms/xlib/LINUXjoystick.cpp
 END
 XLIBmain.cpp
 K 25

@@ -1,14 +1,14 @@
 10
 
 dir
-834
+843
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/pluginsource/org/enigma
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-25T03:38:01.984484Z
-830
+2011-08-11T22:26:38.383162Z
+838
 ismavatar
 has-props
 
@@ -60,40 +60,6 @@ has-props
 
 6589
 
-enigma.png
-file
-
-
-
-
-2011-04-20T21:21:01.000000Z
-85c4372787939b9494b7ac88ae6ee2da
-2009-08-05T18:11:58.829550Z
-13
-ismavatar
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3506
-
 lgm1.png
 file
 
@@ -127,6 +93,40 @@ has-props
 
 
 4579
+
+enigma.png
+file
+
+
+
+
+2011-04-20T21:21:01.000000Z
+85c4372787939b9494b7ac88ae6ee2da
+2009-08-05T18:11:58.829550Z
+13
+ismavatar
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3506
 
 backend
 dir
@@ -208,10 +208,10 @@ file
 
 
 
-2011-07-21T20:50:21.000000Z
-1eff61a55975d4ba65ba7a45e843b3a5
-2011-07-21T17:48:08.550026Z
-827
+2011-08-31T06:22:52.000000Z
+b9632dc17cf7e0dbf76a65228e03d79d
+2011-08-11T22:26:38.383162Z
+838
 ismavatar
 
 
@@ -234,7 +234,7 @@ ismavatar
 
 
 
-13404
+13462
 
 EnigmaUpdater.java
 file
@@ -273,18 +273,6 @@ ismavatar
 messages
 dir
 
-EnigmaCli.java
-file
-
-
-
-
-
-74deaa07d54c546a0bdd79c1f82e3c56
-2011-07-25T03:38:01.984484Z
-830
-ismavatar
-
 EnigmaThread.java
 file
 
@@ -318,6 +306,18 @@ ismavatar
 
 
 4197
+
+EnigmaCli.java
+file
+
+
+
+
+
+c35a2ee698c00313630a2745490c2181
+2011-08-11T22:26:38.383162Z
+838
+ismavatar
 
 syntax.png
 file
@@ -393,10 +393,10 @@ file
 
 
 
-2011-07-21T20:50:21.000000Z
-124e5fbec679393cbdad1ef97236c6f4
-2011-07-21T02:57:23.741000Z
-826
+2011-08-31T06:22:52.000000Z
+76833b70be7e55dcce401827d4e0523e
+2011-08-11T22:26:38.383162Z
+838
 ismavatar
 
 
@@ -419,7 +419,7 @@ ismavatar
 
 
 
-28625
+30312
 
 EnigmaWriter.java
 file
@@ -432,4 +432,38 @@ d86367b86ce3c070ee79ed797d7a5097
 2011-07-21T02:57:23.741000Z
 826
 ismavatar
+
+SettingsHandler.java
+file
+
+
+
+
+2011-08-31T06:22:52.000000Z
+e2b8143d6fc11ad4b6443b06fdafc88b
+2011-08-11T22:26:38.383162Z
+838
+ismavatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5272
 

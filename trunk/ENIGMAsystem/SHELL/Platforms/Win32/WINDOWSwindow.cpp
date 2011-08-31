@@ -34,6 +34,33 @@ using namespace std;
 #include <unistd.h> //usleep
 #include "../../Universal_System/CallbackArrays.h" // For those damn vk_ constants.
 
+bool resizeableWindow = false;
+char* currentCursor = IDC_ARROW;
+
+enum {
+  cr_default    = 0,
+  cr_none       = -1,
+  cr_arrow      = -2,
+  cr_cross      = -3,
+  cr_beam       = -4,
+  cr_size_nesw  = -6,
+  cr_size_ns    = -7,
+  cr_size_nwse  = -8,
+  cr_size_we    = -9,
+  cr_uparrow    = -10,
+  cr_hourglass  = -11,
+  cr_drag       = -12,
+  cr_nodrop     = -13,
+  cr_hsplit     = -14,
+  cr_vsplit     = -15,
+  cr_multidrag  = -16,
+  cr_sqlwait    = -17,
+  cr_no         = -18,
+  cr_appstart   = -19,
+  cr_help       = -20,
+  cr_handpoint  = -21,
+  cr_size_all   = -22
+};
 
 namespace enigma
 {
@@ -44,7 +71,13 @@ namespace enigma
   {
     RECT c;
     GetWindowRect(hWnd,&c);
-    AdjustWindowRect(&c, WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE | WS_SIZEBOX, FALSE);
+
+    if(resizeableWindow) {
+        AdjustWindowRect(&c, WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE | WS_SIZEBOX, FALSE);
+    } else {
+        AdjustWindowRect(&c, WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE, FALSE);
+    }
+
     SetWindowPos(hWndParent,NULL,c.left,c.top,c.right-c.left,c.bottom-c.top,SWP_NOZORDER);
   }
 }
@@ -175,13 +208,13 @@ void window_set_rectangle(int x, int y, int width, int height)
 void window_center()
 {
     RECT window;
-    GetWindowRect(enigma::hWnd,&window);
+    GetWindowRect(enigma::hWndParent,&window);
 
     int tmp_wind_width = window.right - window.left;
     int tmp_wind_height = window.bottom - window.top;
-    int screen_width = GetSystemMetrics(SM_CXBORDER);
-    int screen_height = GetSystemMetrics(SM_CYBORDER);
-    SetWindowPos(enigma::hWnd, HWND_TOP, (screen_width-tmp_wind_width)/2, (screen_height-tmp_wind_height)/2, 0, 0, SWP_NOSIZE|SWP_NOACTIVATE|SWP_DRAWFRAME);
+    int screen_width = GetSystemMetrics(SM_CXSCREEN);
+    int screen_height = GetSystemMetrics(SM_CYSCREEN);
+    SetWindowPos(enigma::hWndParent, HWND_TOP, (screen_width-tmp_wind_width)/2, (screen_height-tmp_wind_height)/2, 0, 0, SWP_NOSIZE|SWP_NOACTIVATE|SWP_DRAWFRAME);
 }
 
 void window_default()
@@ -275,16 +308,84 @@ window_views_mouse_get_y()
 window_views_mouse_set(x,y)
 */
 
-/*
+
 int window_set_cursor(int curs)
 {
-    switch (cursor)
+    switch (curs)
     {
-       SetCursor(LoadCursor(NULL, IDC_ARROW)); return 0;
-       SetCursor(LoadCursor(NULL, IDC_APPSTART)); return 0;
+        case cr_default:
+            currentCursor = IDC_ARROW; return 1;
+            break;
+        case cr_none:
+            currentCursor = NULL; return 1;
+            break;
+        case cr_arrow:
+            currentCursor = IDC_ARROW; return 1;
+            break;
+        case cr_cross:
+            currentCursor = IDC_CROSS; return 1;
+            break;
+        case cr_beam:
+            currentCursor = IDC_IBEAM; return 1;
+            break;
+        case cr_size_nesw:
+            currentCursor = IDC_SIZENESW; return 1;
+            break;
+        case cr_size_ns:
+            currentCursor = IDC_SIZENS; return 1;
+            break;
+        case cr_size_nwse:
+            currentCursor = IDC_SIZENWSE; return 1;
+            break;
+        case cr_size_we:
+            currentCursor = IDC_SIZEWE; return 1;
+            break;
+        case cr_uparrow:
+            currentCursor = IDC_UPARROW; return 1;
+            break;
+        case cr_hourglass:
+            currentCursor = IDC_WAIT; return 1;
+            break;
+        case cr_drag:
+            // Delphi-made?
+            break;
+        case cr_nodrop:
+            currentCursor = IDC_NO; return 1;
+            break;
+        case cr_hsplit:
+            // Delphi-made?
+            currentCursor = IDC_SIZENS; return 1;
+            break;
+        case cr_vsplit:
+            // Delphi-made?
+            currentCursor = IDC_SIZEWE; return 1;
+            break;
+        case cr_multidrag:
+            currentCursor = IDC_SIZEALL; return 1;
+            break;
+        case cr_sqlwait:
+            // DEAR GOD WHY
+            currentCursor = IDC_WAIT; return 1;
+            break;
+        case cr_no:
+            currentCursor = IDC_NO; return 1;
+            break;
+        case cr_appstart:
+            currentCursor = IDC_APPSTARTING; return 1;
+            break;
+        case cr_help:
+            currentCursor = IDC_HELP; return 1;
+            break;
+        case cr_handpoint:
+            currentCursor = IDC_HAND; return 1;
+            break;
+        case cr_size_all:
+            currentCursor = IDC_SIZEALL; return 1;
+            break;
     }
+    return 0;
 }
-*/
+
 /*
 int window_get_curor()
 {
@@ -388,16 +489,8 @@ void io_handle()
   enigma::input_push();
   while (PeekMessage (&msg, NULL, 0, 0, PM_REMOVE))
   {
-    if (msg.message == WM_QUIT)
-    {
-      PostQuitMessage(0);
-      break;
-    }
-    else
-    {
-      TranslateMessage (&msg);
-      DispatchMessage (&msg);
-    }
+    TranslateMessage (&msg);
+    DispatchMessage (&msg);
   }
   enigma::update_globals();
 }

@@ -1,15 +1,15 @@
 10
 
 dir
-834
+843
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Win32
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-27T16:53:01.052242Z
-834
-JoshDreamland
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 has-props
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-cbbe39a0a4a4ba74e3f6343360893f77
-2011-01-31T04:39:28.888350Z
-636
-joshdreamland
+2011-08-31T06:21:47.000000Z
+f0a42011e17cab3cfbc15ea079a1f364
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 
 
 
@@ -58,7 +58,7 @@ joshdreamland
 
 
 
-6384
+6661
 
 file_manip.cpp
 file
@@ -66,11 +66,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-32c8a196b22719a6617b898157375a7a
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-08-31T06:21:47.000000Z
+e8cb2f9bb40102df05a838400e6f8afa
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 
 
 
@@ -92,75 +92,7 @@ ismavatar
 
 
 
-3710
-
-WINDOWSfonts.cpp
-file
-
-
-
-
-2011-04-21T11:37:41.000000Z
-1aee47f25d9229a067a72ac5dde763c7
-2011-04-21T06:34:54.513600Z
-710
-joshdreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6431
-
-WINDOWSmain.h
-file
-
-
-
-
-2011-04-20T21:22:04.000000Z
-7ebcbd7999c226346215975721840d54
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2308
+5033
 
 WINDOWSshow_error.cpp
 file
@@ -196,16 +128,50 @@ r9k
 
 2741
 
-WINDOWSstd.cpp
+WINDOWSmain.h
 file
 
 
 
 
 2011-04-20T21:22:04.000000Z
-82fa985b688b98a098b86af00af3f1be
-2011-04-18T06:50:45.802487Z
-701
+7ebcbd7999c226346215975721840d54
+2010-10-04T14:31:07.739207Z
+484
+ismavatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2308
+
+WINDOWSfonts.cpp
+file
+
+
+
+
+2011-04-21T11:37:41.000000Z
+1aee47f25d9229a067a72ac5dde763c7
+2011-04-21T06:34:54.513600Z
+710
 joshdreamland
 
 
@@ -228,7 +194,7 @@ joshdreamland
 
 
 
-3865
+6431
 
 externals.cpp
 file
@@ -264,17 +230,17 @@ ismavatar
 
 6243
 
-WINDOWScallback.cpp
+WINDOWSstd.cpp
 file
 
 
 
 
 2011-04-20T21:22:04.000000Z
-bacb4575fe0b09b1590ce88ffb5ccb78
-2010-12-18T22:56:52.759906Z
-575
-JoshDreamland
+82fa985b688b98a098b86af00af3f1be
+2011-04-18T06:50:45.802487Z
+701
+joshdreamland
 
 
 
@@ -296,7 +262,41 @@ JoshDreamland
 
 
 
-5376
+3865
+
+WINDOWScallback.cpp
+file
+
+
+
+
+2011-08-31T06:21:47.000000Z
+a549a92865dd3c7f7ec61d90d53d4029
+2011-07-30T21:31:15.124113Z
+837
+dazappa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5537
 
 file_manip.h
 file
@@ -366,39 +366,8 @@ joshdreamland
 
 2378
 
-WINDOWSStd.h
-file
-
-
-
-
-2011-04-20T21:22:04.000000Z
-6c1f9c30ef99528491cebda623d6ed08
-2010-10-27T00:22:42.481780Z
-516
-joshdreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2574
+Info
+dir
 
 externals.h
 file
@@ -434,8 +403,39 @@ ismavatar
 
 2743
 
-Info
-dir
+WINDOWSStd.h
+file
+
+
+
+
+2011-04-20T21:22:04.000000Z
+6c1f9c30ef99528491cebda623d6ed08
+2010-10-27T00:22:42.481780Z
+516
+joshdreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2574
 
 WINDOWScallback.h
 file
@@ -477,11 +477,11 @@ file
 
 
 
-2011-08-31T05:55:49.000000Z
-54f67d3d5a8464731f3e9160efaf3ba7
-2011-07-25T09:53:45.513059Z
-831
-polygoned
+2011-08-31T06:21:47.000000Z
+9359d84d253c9dc7b5548079dcbada31
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 
 
 
@@ -503,7 +503,7 @@ polygoned
 
 
 
-12623
+15316
 
 ffi
 dir
@@ -514,11 +514,11 @@ file
 
 
 
-2011-08-31T05:55:49.000000Z
-48217fb251d7e79e366e4f4750bcc8c4
-2011-07-25T09:53:45.513059Z
-831
-polygoned
+2011-08-31T06:21:47.000000Z
+d7cb27f7b0178a9bd863181874667e19
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 
 
 
@@ -540,7 +540,7 @@ polygoned
 
 
 
-4046
+4142
 
 include.h
 file
@@ -548,11 +548,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-47d750196eb6315633dd3ccc9f63a56f
-2011-04-19T03:09:19.741203Z
-704
-joshdreamland
+2011-08-31T06:21:47.000000Z
+62ea9c0bd2d70ff4bef512d43b8fc9f5
+2011-07-30T21:31:15.124113Z
+837
+dazappa
 
 
 
@@ -574,7 +574,7 @@ joshdreamland
 
 
 
-25
+48
 
 Makefile
 file

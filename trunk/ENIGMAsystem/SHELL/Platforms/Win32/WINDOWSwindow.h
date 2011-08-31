@@ -25,6 +25,9 @@
 **                                                                              **
 \********************************************************************************/
 
+extern bool resizeableWindow;
+extern char* currentCursor;
+
 enum {
   cr_default    = 0,
   cr_none       = -1,
@@ -85,6 +88,7 @@ int  window_default();
 int  window_mouse_get_x();
 int  window_mouse_get_y();
 void window_mouse_set(int x,int y);
+int window_set_cursor(int curs);
 void window_set_fullscreen(const bool full);
 int  window_get_fullscreen();
 //int window_set_cursor(double c);

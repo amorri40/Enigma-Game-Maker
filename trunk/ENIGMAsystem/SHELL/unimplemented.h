@@ -664,9 +664,9 @@ Paths
 */
 void path_start(int path, double speed, int endaction, bool absolute) {}
 void path_end() {}
-int path_add() {
+/*int path_add() {
     return 0; 
-}
+}*/
 
 bool path_exists(int ind) {}//Returns whether a path with the given index exists.
 string path_get_name(int ind) {}//Returns the name of the path with the given index.

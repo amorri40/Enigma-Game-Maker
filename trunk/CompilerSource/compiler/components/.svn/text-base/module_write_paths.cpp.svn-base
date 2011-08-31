@@ -49,7 +49,7 @@ inline void writei(int x, FILE *f) {
 int module_write_paths(EnigmaStruct *es, FILE *gameModule)
 {
   // Now we're going to add paths
-  edbg << es->pathCount << " Adding Fonts to Game Module: " << flushl;
+  edbg << es->pathCount << " Adding Paths to Game Module: " << flushl;
 
   //Magic Number
   fwrite("PTH ",4,1,gameModule);
@@ -67,7 +67,7 @@ int module_write_paths(EnigmaStruct *es, FILE *gameModule)
   for (int i = 0; i < path_count; i++)
   {
     writei(es->paths[i].id,gameModule); //id
-    
+
     writei(es->paths[i].smooth,gameModule);
     writei(es->paths[i].closed,gameModule);
     writei(es->paths[i].precision,gameModule);
@@ -75,6 +75,7 @@ int module_write_paths(EnigmaStruct *es, FILE *gameModule)
 
     // Track how many path points we're copying
     int pointCount = es->paths[i].pointCount;
+    writei(pointCount,gameModule);
 
     for (int ii = 0; ii < pointCount; ii++)
     {

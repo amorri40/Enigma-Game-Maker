@@ -1,15 +1,15 @@
 10
 
 dir
-834
+843
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Universal_System
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-27T16:53:01.052242Z
-834
-JoshDreamland
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 has-props
 
 
@@ -60,6 +60,74 @@ JoshDreamland
 
 18970
 
+motion_planning.h
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+f72088afb724e8ab172b91c411606c07
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3301
+
+pathstruct.cpp
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+f00d314b82a2c028d8b1729af9aac765
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11270
+
 planar_object.cpp
 file
 
@@ -93,40 +161,6 @@ polygoned
 
 
 5271
-
-collisions_object.cpp
-file
-
-
-
-
-2011-04-20T21:22:10.000000Z
-272e57aa48ca8c517c5ea5adf69ea6f6
-2010-04-11T22:40:54.176050Z
-132
-joshdreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2563
 
 events.cpp
 file
@@ -162,6 +196,74 @@ JoshDreamland
 
 3671
 
+collisions_object.cpp
+file
+
+
+
+
+2011-04-20T21:22:10.000000Z
+272e57aa48ca8c517c5ea5adf69ea6f6
+2010-04-11T22:40:54.176050Z
+132
+joshdreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2563
+
+motion_planning_struct.h
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+a7fcda8e8820926c2ffe79fbc7e0e7bd
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3001
+
 actions.h
 file
 
@@ -195,40 +297,6 @@ JoshDreamland
 
 
 22840
-
-compression.h
-file
-
-
-
-
-2011-04-20T21:22:10.000000Z
-fb6801e9465f857f26c26ebd933f3189
-2010-04-03T00:34:50.070987Z
-96
-joshdreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2608
 
 transform_object.h
 file
@@ -264,17 +332,17 @@ JoshDreamland
 
 2747
 
-fileio.cpp
+compression.h
 file
 
 
 
 
 2011-04-20T21:22:10.000000Z
-5149d5f73c65b89d61c7cf6117bc1923
-2010-06-02T06:28:43.815052Z
-251
-JoshDreamland
+fb6801e9465f857f26c26ebd933f3189
+2010-04-03T00:34:50.070987Z
+96
+joshdreamland
 
 
 
@@ -296,7 +364,7 @@ JoshDreamland
 
 
 
-9553
+2608
 
 terminal_io.h
 file
@@ -332,50 +400,16 @@ JoshDreamland
 
 2317
 
-highscore_functions.h
+fileio.cpp
 file
 
 
 
 
-2011-08-31T05:56:24.000000Z
-19d58c362a92dee8cba0f9ed7fee0540
-2011-07-27T13:33:14.210467Z
-833
-polygoned
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3606
-
-instance_system.cpp
-file
-
-
-
-
-2011-07-01T22:12:29.000000Z
-1667bb3f12058ac5b2d92c3c55b0d7e4
-2011-06-30T21:50:30.171822Z
-799
+2011-04-20T21:22:10.000000Z
+5149d5f73c65b89d61c7cf6117bc1923
+2010-06-02T06:28:43.815052Z
+251
 JoshDreamland
 
 
@@ -398,7 +432,7 @@ JoshDreamland
 
 
 
-9404
+9553
 
 globalupdate.h
 file
@@ -434,17 +468,17 @@ JoshDreamland
 
 2289
 
-fontstruct.cpp
+instance_system.cpp
 file
 
 
 
 
-2011-07-12T10:00:29.000000Z
-327046a1cec92d99f8480aacd8bb852c
-2011-07-08T21:01:13.276286Z
-803
-thedeusex
+2011-07-01T22:12:29.000000Z
+1667bb3f12058ac5b2d92c3c55b0d7e4
+2011-06-30T21:50:30.171822Z
+799
+JoshDreamland
 
 
 
@@ -466,7 +500,41 @@ thedeusex
 
 
 
-7574
+9404
+
+highscore_functions.h
+file
+
+
+
+
+2011-08-31T05:56:24.000000Z
+19d58c362a92dee8cba0f9ed7fee0540
+2011-07-27T13:33:14.210467Z
+833
+polygoned
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3606
 
 spritestruct.cpp
 file
@@ -501,6 +569,40 @@ JoshDreamland
 
 
 9387
+
+fontstruct.cpp
+file
+
+
+
+
+2011-07-12T10:00:29.000000Z
+327046a1cec92d99f8480aacd8bb852c
+2011-07-08T21:01:13.276286Z
+803
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7574
 
 reflexive_types.cpp
 file
@@ -542,10 +644,10 @@ file
 
 
 
-2011-04-20T21:22:10.000000Z
-1ec5c448496372d54d2246d1257b0024
-2010-06-24T18:34:18.503942Z
-270
+2011-08-31T06:23:17.000000Z
+4744edc977999fbd4d5df4a50259624d
+2011-08-12T00:01:33.078119Z
+839
 JoshDreamland
 
 
@@ -568,7 +670,41 @@ JoshDreamland
 
 
 
-3345
+3475
+
+pathinit.cpp
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+d9c8a6d1ab09c2409d79cf476ab07be3
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3420
 
 roomsystem.cpp
 file
@@ -718,6 +854,40 @@ ismavatar
 
 6796
 
+motion_planning.cpp
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+f3f9003b52b50bfb769bb823f6735989
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11939
+
 instance_create.h
 file
 
@@ -759,10 +929,10 @@ file
 
 
 
-4441e86e61129d5e7309eb4c423c4b3b
-2011-07-27T16:53:01.052242Z
-834
-JoshDreamland
+628d1c0cec0068a42acbafdb3d4038a5
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 
 lua_table.h
 file
@@ -770,10 +940,10 @@ file
 
 
 
-2011-07-01T22:12:29.000000Z
-a20e1ff03206f78dd03b51ece7ee532f
-2011-06-30T20:50:50.637805Z
-798
+2011-08-31T06:23:17.000000Z
+b17b17a5b6f682d128c664d1a95ea90c
+2011-08-12T00:01:33.078119Z
+839
 JoshDreamland
 
 
@@ -796,7 +966,41 @@ JoshDreamland
 
 
 
-7559
+7569
+
+motion_planning_struct.cpp
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+7c5d2fe651099be7c74307b5ab7103fe
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11925
 
 dynamic_args.cpp
 file
@@ -1104,16 +1308,16 @@ joshdreamland
 
 2457
 
-pseudo_components.h
+events.h
 file
 
 
 
 
-2011-06-21T22:11:46.000000Z
-bc69d6c3039f8f7221a8a2eb9c337299
-2011-06-20T19:41:02.390170Z
-787
+2011-04-20T21:22:10.000000Z
+fc61c6f603bb4972172ef395e06247f0
+2010-12-10T05:37:17.212900Z
+547
 JoshDreamland
 
 
@@ -1136,7 +1340,7 @@ JoshDreamland
 
 
 
-226
+10799
 
 collisions_object.h
 file
@@ -1172,16 +1376,16 @@ joshdreamland
 
 2792
 
-events.h
+pseudo_components.h
 file
 
 
 
 
-2011-04-20T21:22:10.000000Z
-fc61c6f603bb4972172ef395e06247f0
-2010-12-10T05:37:17.212900Z
-547
+2011-06-21T22:11:46.000000Z
+bc69d6c3039f8f7221a8a2eb9c337299
+2011-06-20T19:41:02.390170Z
+787
 JoshDreamland
 
 
@@ -1204,7 +1408,7 @@ JoshDreamland
 
 
 
-10799
+226
 
 WITHconstructClose.h
 file
@@ -1274,17 +1478,17 @@ JoshDreamland
 
 30542
 
-loading.cpp
+switch_stuff.h
 file
 
 
 
 
-2011-07-17T00:03:04.000000Z
-c3871e4357755aba440e80e7008adf2e
-2011-07-16T23:52:05.067660Z
-818
-joshdreamland
+2011-07-16T00:42:20.000000Z
+2ffc9a0bde4da54cf1e166d5703f5dce
+2011-07-16T00:39:32.588821Z
+817
+JoshDreamland
 
 
 
@@ -1306,7 +1510,7 @@ joshdreamland
 
 
 
-4354
+330
 
 instance_system.h
 file
@@ -1342,17 +1546,17 @@ JoshDreamland
 
 2615
 
-switch_stuff.h
+loading.cpp
 file
 
 
 
 
-2011-07-16T00:42:20.000000Z
-2ffc9a0bde4da54cf1e166d5703f5dce
-2011-07-16T00:39:32.588821Z
-817
-JoshDreamland
+2011-08-31T06:26:20.000000Z
+9f5d7dd8f34097b0af019da3daa1eaad
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 
 
 
@@ -1374,7 +1578,10 @@ JoshDreamland
 
 
 
-330
+4337
+
+Extensions
+dir
 
 CallbackArrays.cpp
 file
@@ -1410,8 +1617,39 @@ JoshDreamland
 
 5453
 
-Extensions
-dir
+resource_data.cpp
+file
+
+
+
+
+2011-06-06T15:29:47.000000Z
+9088e6b490a018881c3d6d096745aee2
+2011-06-06T00:52:28.055935Z
+765
+JoshDreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3874
 
 estring.h
 file
@@ -1446,40 +1684,6 @@ JoshDreamland
 
 
 3246
-
-resource_data.cpp
-file
-
-
-
-
-2011-06-06T15:29:47.000000Z
-9088e6b490a018881c3d6d096745aee2
-2011-06-06T00:52:28.055935Z
-765
-JoshDreamland
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3874
 
 depth_draw.cpp
 file
@@ -1549,40 +1753,6 @@ JoshDreamland
 
 4791
 
-backgroundstruct.h
-file
-
-
-
-
-2011-04-20T21:22:10.000000Z
-92413cd846c083252dc56164148b5614
-2010-09-27T23:04:37.831877Z
-479
-tgmg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3421
-
 syntax_quirks.h
 file
 
@@ -1616,6 +1786,40 @@ JoshDreamland
 
 
 907
+
+backgroundstruct.h
+file
+
+
+
+
+2011-04-20T21:22:10.000000Z
+92413cd846c083252dc56164148b5614
+2010-09-27T23:04:37.831877Z
+479
+tgmg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3421
 
 rectpack.cpp
 file
@@ -1731,16 +1935,16 @@ joshdreamland
 
 2496
 
-mathnc.cpp
+dnd.h
 file
 
 
 
 
-2011-08-31T06:01:56.000000Z
-8f852341a385f1d7aef4e0d1aee25729
-2011-07-27T16:53:01.052242Z
-834
+2011-06-21T22:11:46.000000Z
+474738232d90cb6c029f4d2df3006d40
+2011-06-20T19:41:02.390170Z
+787
 JoshDreamland
 
 
@@ -1763,7 +1967,7 @@ JoshDreamland
 
 
 
-11335
+31
 
 IMGloading.cpp
 file
@@ -1799,17 +2003,17 @@ JoshDreamland
 
 4423
 
-dnd.h
+mathnc.cpp
 file
 
 
 
 
-2011-06-21T22:11:46.000000Z
-474738232d90cb6c029f4d2df3006d40
-2011-06-20T19:41:02.390170Z
-787
-JoshDreamland
+2011-08-31T06:26:20.000000Z
+25759dcdcf1b3d8fe7d1b60cab6cbda2
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 
 
 
@@ -1831,41 +2035,7 @@ JoshDreamland
 
 
 
-31
-
-object.h
-file
-
-
-
-
-2011-07-15T14:22:51.000000Z
-11904296ecaf098ec7cdc035ca0ecebb
-2011-07-14T16:33:09.915375Z
-814
-tgmg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3163
+11685
 
 estring.cpp
 file
@@ -1900,6 +2070,40 @@ JoshDreamland
 
 
 5787
+
+object.h
+file
+
+
+
+
+2011-07-15T14:22:51.000000Z
+11904296ecaf098ec7cdc035ca0ecebb
+2011-07-14T16:33:09.915375Z
+814
+tgmg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3163
 
 data_structures.cpp
 file
@@ -1975,10 +2179,10 @@ file
 
 
 
-2011-07-20T12:46:08.000000Z
-d340b0f72b9ac4892286330ac893dd80
-2011-07-20T07:33:56.368009Z
-822
+2011-08-31T06:23:18.000000Z
+12f27fae81ad846f82fd51045a725e6c
+2011-08-12T00:01:33.078119Z
+839
 JoshDreamland
 
 
@@ -2001,7 +2205,7 @@ JoshDreamland
 
 
 
-12427
+12491
 
 darray.cpp
 file
@@ -2073,6 +2277,40 @@ JoshDreamland
 
 
 4347
+
+path_functions.cpp
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+a5256c9e9615843ed82739159c31f3a4
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11736
 
 resource_data.h
 file
@@ -2380,6 +2618,40 @@ ismavatar
 
 5092
 
+pathstruct.h
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+6666f45975f501de3a66b15e7f2297dd
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3452
+
 planar_object.h
 file
 
@@ -2591,9 +2863,9 @@ file
 
 
 
-fcd9b884e74acd0cbe80f83230b8e240
-2011-07-27T16:53:01.052242Z
-834
+c0b3ccfc78541ca67e959e6b8fc3f1c9
+2011-08-12T00:01:33.078119Z
+839
 JoshDreamland
 
 fontstruct.h
@@ -2772,11 +3044,11 @@ file
 
 
 
-2011-04-20T21:22:10.000000Z
-5c078da8f31cc7ba6f5b51cd8d37d786
-2011-04-11T06:11:11.685590Z
-685
-joshdreamland
+2011-08-31T06:26:20.000000Z
+0be0e4ce2d6ac71d6fa31f8d9f6efdf9
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
 
 
 
@@ -2798,7 +3070,7 @@ joshdreamland
 
 
 
-2348
+2382
 
 reflexive_types.h
 file
@@ -2981,6 +3253,40 @@ JoshDreamland
 
 
 4192
+
+path_functions.h
+file
+
+
+
+
+2011-08-31T06:26:20.000000Z
+c64bf22bb0e427e637913a1a13fff73a
+2011-08-14T16:49:26.076319Z
+843
+thedeusex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3961
 
 imap.h
 file
