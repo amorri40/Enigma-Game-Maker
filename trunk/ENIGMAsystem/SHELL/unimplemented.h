@@ -73,16 +73,16 @@ void move_wrap(int hor, int vert, int margin) {}
 
 void move_random(int hsnap, int vsnap) {}
 
-void move_contact_solid(double dir, double maxdist) {}//Moves the instance in the direction until a contact position with a solid object is reached. If there is no collision at the current position, the instance is placed just before a collision occurs. If there already is a collision the instance is not moved. You can specify the maximal distance to move (use a negative number for an arbitrary distance).
-void move_contact_all(double dir, double maxdist) {}//Same as the previous function but this time you stop at a contact with any object, not just solid objects.
+//void move_contact_solid(double dir, double maxdist) {}//Moves the instance in the direction until a contact position with a solid object is reached. If there is no collision at the current position, the instance is placed just before a collision occurs. If there already is a collision the instance is not moved. You can specify the maximal distance to move (use a negative number for an arbitrary distance).
+//void move_contact_all(double dir, double maxdist) {}//Same as the previous function but this time you stop at a contact with any object, not just solid objects.
 void move_outside_solid(double dir, double maxdist) {}//Moves the instance in the direction until it no longer lies within a solid object. If there is no collision at the current position the instance is not moved. You can specify the maximal distance to move (use a negative number for an arbitrary distance).
-void move_outside_all(double dir, double maxdist) {}//Same as the previous function but this time you move until outside any object, not just solid objects.
+//void move_outside_all(double dir, double maxdist) {}//Same as the previous function but this time you move until outside any object, not just solid objects.
 //double distance_to_point(int x, int y) {return 0;}//Returns the distance of the bounding box of the current instance to (x,y).
 //double distance_to_object(int obj) { return 0;}//Returns the distance of the instance to the nearest instance of object obj.
 void move_snap(int hsnap, int vsnap) {}
 //void move_towards_point(int x, int y, double sp) {}
-void move_bounce_solid(bool adv) {}
-void move_bounce_all(bool adv) {}
+//void move_bounce_solid(bool adv) {}
+//void move_bounce_all(bool adv) {}
 
 
 
@@ -861,9 +861,9 @@ int font_get_size(int ind)  {}
 #define action_draw_font(arg1,arg2,arg3,arg4,arg5,arg6,arg7) action_draw_font(arg1)
 
 
-int irandom_range(int i, int j) {}
+//int irandom_range(int i, int j) {}
 int enigma_make_color(int r, int g, int b) {} 
-void move_contact(double x) {}
+//void move_contact(double x) {}
 void move_bounce(double x) {}
 
 int ev_create=0;
@@ -973,21 +973,21 @@ void action_cd_present() {}
 void action_cd_resume() {}
 void action_cd_stop() {}
 
-void action_create_object_motion(int object,double x, double y,double speed, double direction) {}
+//void action_create_object_motion(int object,double x, double y,double speed, double direction) {}
 
-void action_create_object_random(int object1, int object2, int object3,int object4, double x, double y) {
+/*void action_create_object_random(int object1, int object2, int object3,int object4, double x, double y) {
     //instance_create(x,y,choose(object1,object2,object3,object4));
-}
+}*/
 
-void action_draw_arrow(double x1, double y1, double x2, double y2, double tipSize) {}
-void action_draw_background(int background,double x, double y, int tiled) {}
+//void action_draw_arrow(double x1, double y1, double x2, double y2, double tipSize) {}
+//void action_draw_background(int background,double x, double y, int tiled) {}
 
-void action_draw_ellipse(double x1, double y1, double x2, double y2, int filled) {
+/*void action_draw_ellipse(double x1, double y1, double x2, double y2, int filled) {
 	draw_ellipse(x1, y1, x2, y2, filled);
-}
-void action_draw_ellipse_gradient(double x1,double y1,double x2,double y2, int color1, int color2) {
+}*/
+/*void action_draw_ellipse_gradient(double x1,double y1,double x2,double y2, int color1, int color2) {
 	//draw_ellipse_color(x1, y1, x2, y2, color1, color2, false);
-}
+}*/
 void action_draw_gradient_hor(double x1,double y1,double x2,double y2,double color1,double color2) {
 	draw_rectangle_color(x1, y1, x2, y2, color1, color2, color1, color2, false);
 }
@@ -995,11 +995,11 @@ void action_draw_gradient_vert(double x1,double y1,double x2,double y2,double co
 	draw_rectangle_color(x1, y1, x2, y2, color1, color1, color2, color2, false);
 }
 
-void action_draw_life(double x,double y, string caption) {}
+//void action_draw_life(double x,double y, string caption) {}
 
-void action_draw_line(double x1,double y1,double x2,double y2) {}
+//void action_draw_line(double x1,double y1,double x2,double y2) {}
 
-void action_draw_text_transformed(string text,double x,double y,double horScale,double verScale, double angle) {}
+//void action_draw_text_transformed(string text,double x,double y,double horScale,double verScale, double angle) {}
 void action_draw_variable(var variable,double x,double y) {}
 void action_effect(int type,double x,double y,double size,double color,int where) {}
 
@@ -1011,7 +1011,7 @@ void action_fullscreen(int action) {
      if (action ==1) {window_set_fullscreen(false);}
      if (action ==2) {window_set_fullscreen(true);}*/
 }
-void action_highscore_clear() {}
+//void action_highscore_clear() {}
 void action_inherited() { //event_inherited(); 
 }
 
@@ -1019,9 +1019,9 @@ void action_kill_position(double x,double y) {}
 void action_linear_step(double x,double y,double speed,int stopAt) {}
 void action_load_game(string filename) {}
 
-void action_message(string message) {
+/*void action_message(string message) {
 	show_message(message);
-}
+}*/
 
 //void action_move_contact(double direction,double maximum, int against) {}
 
@@ -1046,10 +1046,10 @@ void action_path_position(double position) {}
 void action_path_speed(double speed) {}
 //void action_potential_step(double x,double y,double speed,int avoid) {}
 
-void action_previous_room(int transition) {
+/*void action_previous_room(int transition) {
 	//transition_kind=transition;
 	//room_goto_previous();
-}
+}*/
 
 void action_replace_background(int background,string filename) {}
 void action_replace_sound(int sound, string filename) {}
@@ -1091,9 +1091,9 @@ void action_show_video(string filename,int fullscreen,int loop) {
     //splash_show_video(filename,fullscreen,loop); 
 } 
 
-void action_snap(double hor,double vert) { 
+/*void action_snap(double hor,double vert) { 
     //move_snap(hor,vert); 
-}
+}*/
 
 void action_snapshot(string filename) { screen_save(filename); }
 
@@ -1125,16 +1125,16 @@ void action_webpage(string address) {}
 
 
 
-bool action_if_health(double value, int operation) {return 0;}
-bool action_if_life(double value, int operation) {return 0;}
-bool action_if_mouse(int button) {return 0;}
+//bool action_if_health(double value, int operation) {return 0;}
+//bool action_if_life(double value, int operation) {return 0;}
+//bool action_if_mouse(int button) {return 0;}
 
-bool action_if_previous_room() {
+/*bool action_if_previous_room() {
     return room_previous(room) != -1;
-}
+}*/
 
 bool action_if_question(string question) {return 0;}
-bool action_if_score(double value, int operation) {return 0;}
+//bool action_if_score(double value, int operation) {return 0;}
 
 
 /*bool action_if_variable(const variant &v1, const variant &v2, int op) { switch (op) {
@@ -1206,7 +1206,7 @@ void action_sprite_transform(double hscale, double vscale, double rotation, int 
 }
 
 
-void action_move_random(double snapHor,double snapVer) {} 
+//void action_move_random(double snapHor,double snapVer) {} 
 
 void action_sprite_color(double color, double  opacity) {
 	//image_blend=color; image_alpha = opacity;
@@ -1217,8 +1217,8 @@ void action_sprite_color(double color, double  opacity) {
 ///
 ///// explosion.gmd
 ///
-void show_info() {}
-void action_show_info() {show_info();}
+//void show_info() {}
+//void action_show_info() {show_info();}
 
 /////////////
 /// Mistify

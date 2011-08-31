@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/Win32
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/Win32
 END
 WINDOWSmain.cpp
 K 25
@@ -15,11 +15,11 @@ svn:wc:ra_dav:version-url
 V 88
 /svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/file_manip.cpp
 END
-WINDOWSshow_error.cpp
+WINDOWSfonts.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 95
-/svnroot/enigma-dev/!svn/ver/489/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSshow_error.cpp
+V 90
+/svnroot/enigma-dev/!svn/ver/710/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSfonts.cpp
 END
 WINDOWSmain.h
 K 25
@@ -27,23 +27,23 @@ svn:wc:ra_dav:version-url
 V 87
 /svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSmain.h
 END
-WINDOWSfonts.cpp
+WINDOWSshow_error.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 90
-/svnroot/enigma-dev/!svn/ver/710/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSfonts.cpp
-END
-externals.cpp
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/externals.cpp
+V 95
+/svnroot/enigma-dev/!svn/ver/489/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSshow_error.cpp
 END
 WINDOWSstd.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 88
 /svnroot/enigma-dev/!svn/ver/701/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSstd.cpp
+END
+externals.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/externals.cpp
 END
 WINDOWScallback.cpp
 K 25
@@ -63,17 +63,17 @@ svn:wc:ra_dav:version-url
 V 88
 /svnroot/enigma-dev/!svn/ver/710/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSfonts.h
 END
-externals.h
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/externals.h
-END
 WINDOWSStd.h
 K 25
 svn:wc:ra_dav:version-url
 V 86
 /svnroot/enigma-dev/!svn/ver/516/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSStd.h
+END
+externals.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/externals.h
 END
 WINDOWScallback.h
 K 25
@@ -85,13 +85,13 @@ WINDOWSwindow.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/638/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSwindow.cpp
+/svnroot/enigma-dev/!svn/ver/831/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSwindow.cpp
 END
 WINDOWSwindow.h
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSwindow.h
+/svnroot/enigma-dev/!svn/ver/831/trunk/ENIGMAsystem/SHELL/Platforms/Win32/WINDOWSwindow.h
 END
 include.h
 K 25
@@ -103,5 +103,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Makefile
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Makefile
 END

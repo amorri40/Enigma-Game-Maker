@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/parser
+/svnroot/enigma-dev/!svn/ver/834/trunk/CompilerSource/parser
 END
 object_storage.h
 K 25
@@ -43,7 +43,7 @@ parser.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/822/trunk/CompilerSource/parser/parser.cpp
+/svnroot/enigma-dev/!svn/ver/834/trunk/CompilerSource/parser/parser.cpp
 END
 collect_variables.cpp
 K 25

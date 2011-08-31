@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svnroot/enigma-dev/!svn/ver/811/trunk/ENIGMAsystem/SHELL/Platforms/xlib
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/xlib
 END
 XLIBdialog.cpp
 K 25
@@ -79,5 +79,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Makefile
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Makefile
 END

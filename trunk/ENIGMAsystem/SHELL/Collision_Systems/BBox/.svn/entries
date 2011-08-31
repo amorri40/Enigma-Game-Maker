@@ -1,15 +1,15 @@
 10
 
 dir
-827
+834
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Collision_Systems/BBox
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-16T23:52:05.067660Z
-818
-joshdreamland
+2011-07-27T16:53:01.052242Z
+834
+JoshDreamland
 has-props
 
 
@@ -273,10 +273,10 @@ file
 
 
 
-2011-07-01T22:11:51.000000Z
-d114dc0fc6daf5787f7f9f1b89be6e6e
-2011-06-30T20:50:50.637805Z
-798
+2011-08-31T05:56:45.000000Z
+34ae249f84db1a64f88c09b3ff3b025c
+2011-07-27T16:53:01.052242Z
+834
 JoshDreamland
 
 
@@ -299,7 +299,7 @@ JoshDreamland
 
 
 
-2210
+2114
 
 coll_funcs.h
 file

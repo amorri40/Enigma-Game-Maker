@@ -1,19 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/821/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa
-END
-automake.sh
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/automake.sh
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa
 END
 main.m
 K 25
 svn:wc:ra_dav:version-url
 V 80
 /svnroot/enigma-dev/!svn/ver/371/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/main.m
+END
+automake.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/automake.sh
 END
 EnigmaView.h
 K 25
@@ -33,17 +33,17 @@ svn:wc:ra_dav:version-url
 V 89
 /svnroot/enigma-dev/!svn/ver/371/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaDialog.cpp
 END
-WindowFunctions.h
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svnroot/enigma-dev/!svn/ver/420/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.h
-END
 EnigmaView.m
 K 25
 svn:wc:ra_dav:version-url
 V 86
 /svnroot/enigma-dev/!svn/ver/821/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/EnigmaView.m
+END
+WindowFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/420/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/WindowFunctions.h
 END
 file_manip.h
 K 25
@@ -67,7 +67,7 @@ CocoaWindow.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svnroot/enigma-dev/!svn/ver/821/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.cpp
+/svnroot/enigma-dev/!svn/ver/831/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.cpp
 END
 CocoaFunctions.cpp
 K 25
@@ -85,7 +85,7 @@ CocoaWindow.h
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/814/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.h
+/svnroot/enigma-dev/!svn/ver/831/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/CocoaWindow.h
 END
 CocoaFunctions.h
 K 25
@@ -127,5 +127,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svnroot/enigma-dev/!svn/ver/814/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/Makefile
+/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/Cocoa/Makefile
 END
