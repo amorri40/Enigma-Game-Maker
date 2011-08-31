@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include
+/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/additional/al/include
 END
 al.h
 K 25
@@ -19,7 +19,7 @@ alc.h
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svnroot/enigma-dev/!svn/ver/314/trunk/ENIGMAsystem/additional/al/include/alc.h
+/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/additional/al/include/alc.h
 END
 efx-creative.h
 K 25

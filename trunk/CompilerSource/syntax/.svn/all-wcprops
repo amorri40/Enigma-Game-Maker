@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svnroot/enigma-dev/!svn/ver/842/trunk/CompilerSource/syntax
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/syntax
 END
 chkfunction.h
 K 25
@@ -19,7 +19,7 @@ syntax.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/842/trunk/CompilerSource/syntax/syntax.cpp
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/syntax/syntax.cpp
 END
 syncheck.h
 K 25

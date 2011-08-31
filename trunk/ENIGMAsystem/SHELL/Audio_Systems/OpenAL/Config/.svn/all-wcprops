@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/604/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Config
+/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Config
 END
 cocoa.ey
 K 25
@@ -19,5 +19,5 @@ win32.ey
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svnroot/enigma-dev/!svn/ver/484/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Config/win32.ey
+/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/Config/win32.ey
 END

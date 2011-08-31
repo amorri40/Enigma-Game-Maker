@@ -1,15 +1,15 @@
 10
 
 dir
-843
+858
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-08-14T16:49:26.076319Z
-843
-thedeusex
+2011-08-30T19:49:39.140653Z
+858
+ismavatar
 has-props
 
 
@@ -97,6 +97,9 @@ JoshDreamland
 filesystem
 dir
 
+syntax
+dir
+
 settings.h
 file
 
@@ -131,9 +134,6 @@ JoshDreamland
 
 3527
 
-syntax
-dir
-
 backend
 dir
 
@@ -146,11 +146,11 @@ file
 
 
 
-2011-07-20T12:46:09.000000Z
-838dcfa2f8319e82c1db6877d7e2e536
-2011-07-20T07:33:56.368009Z
-822
-JoshDreamland
+2011-08-31T06:31:16.000000Z
+f863629cea01e6086e139d435486c9a7
+2011-08-14T19:41:47.449138Z
+844
+thedeusex
 
 
 
@@ -172,7 +172,7 @@ JoshDreamland
 
 
 
-10273
+10338
 
 parser
 dir
@@ -211,6 +211,9 @@ ismavatar
 
 1010
 
+stupidity-buffer
+dir
+
 main.cpp
 file
 
@@ -244,9 +247,6 @@ JoshDreamland
 
 
 9721
-
-stupidity-buffer
-dir
 
 INSTALL
 file

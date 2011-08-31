@@ -1,15 +1,15 @@
 10
 
 dir
-843
+858
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/CompilerSource/syntax
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-08-13T22:23:33.217875Z
-842
-JoshDreamland
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
 
 
 
@@ -100,11 +100,11 @@ file
 
 
 
-2011-08-31T06:25:33.000000Z
-4373e7ef3bd7141bde34b7d755ee634f
-2011-08-13T22:23:33.217875Z
-842
-JoshDreamland
+2011-08-31T06:34:53.000000Z
+c69e3a95988c24f167245ef43db239af
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
 
 
 
@@ -126,7 +126,7 @@ JoshDreamland
 
 
 
-27317
+27894
 
 syncheck.h
 file

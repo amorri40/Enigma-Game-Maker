@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/settings-parse
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/settings-parse
 END
 crawler.cpp
 K 25
@@ -25,17 +25,17 @@ eyaml.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/791/trunk/CompilerSource/settings-parse/eyaml.cpp
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/settings-parse/eyaml.cpp
 END
 parse_ide_settings.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/792/trunk/CompilerSource/settings-parse/parse_ide_settings.cpp
+/svnroot/enigma-dev/!svn/ver/846/trunk/CompilerSource/settings-parse/parse_ide_settings.cpp
 END
 eyaml.h
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svnroot/enigma-dev/!svn/ver/598/trunk/CompilerSource/settings-parse/eyaml.h
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/settings-parse/eyaml.h
 END

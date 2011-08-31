@@ -144,9 +144,9 @@ namespace syncheck
     token(TT t, unsigned m, string ct, pt p,pt l,bool s,bool bnf,bool ol,int ml): type(t), content(ct), pos(p), length(l), separator(s), breakandfollow(bnf), operatorlike(ol), macrolevel(ml), match(m), ext(NULL) {}
     token(TT t, externs *ex, string ct, pt p,pt l,bool s,bool bnf,bool ol,int ml): type(t), content(ct), pos(p), length(l), separator(s), breakandfollow(bnf), operatorlike(ol), macrolevel(ml), match(0), ext(ex) {}
     operator string() { 
-      char buf[12]; sprintf(buf,"%lu",pos);
+      char buf[12]; sprintf(buf,"%lu",(long unsigned)pos);
       string str = string(TTN[type]) + "{" + buf + ", ";
-      sprintf(buf,"%lu",length); str += buf; str += ", ";
+      sprintf(buf,"%lu",(long unsigned)length); str += buf; str += ", ";
       str += separator ? "separated, " : "unseparated, ";
       str += breakandfollow ? "breakandfollow, " : "nobreak, ";
       str += operatorlike ? "operatorlike, " : "notoperator, ";
@@ -584,7 +584,8 @@ namespace syncheck
             unsigned params = 0, exceeded_at = 0;
             const unsigned minarg = lex[i].ext->parameter_count_min();
             const unsigned maxarg = lex[i].ext->parameter_count_max();
-            for (unsigned ii = i+2; ii < lex[i+1].match; ii++)
+            const unsigned lm = lex[i+1].match;
+            for (unsigned ii = i+2; ii < lm; ii++)
             {
               if (lex[ii].type == TT_COMMA) {
                 contented = false;
@@ -597,8 +598,14 @@ namespace syncheck
                 ii = lex[ii].match;
             }
             params += contented;
-            if (exceeded_at)
-              return (syerr = "Too many arguments to function `" + lex[i].content + "': provided " + tostring(params) + " of " + tostring(maxarg) + ".", pos);
+            if (!lex[i].ext->refstack.is_varargs()) {
+              if (exceeded_at)
+                return (syerr = "Too many arguments to function `" + lex[i].content + "': provided " + tostring(params) + ", allowed " + tostring(maxarg) + ".", lex[exceeded_at].pos);
+              if (params > maxarg)
+                return (syerr = "Too many arguments to function `" + lex[i].content + "': provided " + tostring(params) + ", allowed " + tostring(maxarg) + ".", lex[lm].pos);
+            }
+            if (params < minarg)
+              return (syerr = "Too few arguments to function `" + lex[i].content + "': provided " + tostring(params) + ", required " + tostring(minarg) + ".", lex[lm].pos);
           }
           break;
         default: ;

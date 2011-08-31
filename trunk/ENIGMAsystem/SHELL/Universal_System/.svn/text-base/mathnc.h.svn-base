@@ -55,9 +55,9 @@ int random_set_seed(int seed);
 int random_get_seed();
 int randomize();
 int random_integer(int x);
-inline int irandom(int x);
-inline double random_range(double x1, double x2);
-inline double irandom_range(double x1, double x2);
+inline int irandom(int x) {return int(random(x + 1));}  //Mark made this inclusive of x...
+double random_range(double x1, double x2) {return x1 + random(x2 - x1);}
+double irandom_range(int x1, int x2) {return x1 + irandom(x2 - x1);}
 unsigned int random32();
 double mtrandom();
 int mtrandom_seed(int x);
@@ -122,23 +122,14 @@ double direction_difference(double dir1,double dir2);
 double point_direction(double x1,double y1,double x2,double y2);
 double point_distance(double x1, double y1, double x2, double y2);
 
-#include "dynamic_args.h"
-double max(...), max(const enigma::varargs &t);
-double min(...), min(const enigma::varargs &t);
-double median(...), median(const enigma::varargs &t);
-double mean(...), mean(const enigma::varargs &t);
-
-variant choose(...);
+double max(const enigma::varargs &t);
+double min(const enigma::varargs &t);
+double min(double x, double y);
+double max(double x, double y);
+double median(const enigma::varargs &t);
+double mean(const enigma::varargs &t);
 variant choose(const enigma::varargs& args);
 // TODO: Make the compiler do this shit automatically so we can lose the
 //       stdargs declaration and the hackish define that fucks with everything
-#ifdef ENIGMA_PARSER_RUN
-  #define max(args...) max((enigma::varargs(),args))
-  #define min(args...) min((enigma::varargs(),args))
-  #define median(args...) median((enigma::varargs(),args))
-  #define mean(args...) mean((enigma::varargs(),args))
-  #define choose(x...) choose((enigma::varargs(), x))
-  #define globalvar global var
-#endif
 
 #endif // ENIGMA_MATHNC

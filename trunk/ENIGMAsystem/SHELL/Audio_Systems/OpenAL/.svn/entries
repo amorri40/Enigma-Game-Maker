@@ -1,15 +1,15 @@
 10
 
 dir
-843
+858
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-07-12T23:31:38.010841Z
-810
-ismavatar
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
 has-props
 
 
@@ -72,11 +72,11 @@ file
 
 
 
-2011-06-21T22:09:58.000000Z
-51158971718522841167d756d5c2dbc3
-2011-06-13T07:08:53.726860Z
-780
-ismavatar
+2011-08-31T06:34:50.000000Z
+097baf3e1a166c2ce0cc2d4ecdfb8042
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
 
 
 
@@ -98,7 +98,41 @@ ismavatar
 
 
 
-5013
+7250
+
+wrap_oal.cpp
+file
+
+
+
+
+2011-08-31T06:34:50.000000Z
+2403ee5ec6c5ec4d3f8b337135d0584e
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11276
 
 dumb
 dir
@@ -174,6 +208,40 @@ JoshDreamland
 
 2544
 
+wrap_oal.h
+file
+
+
+
+
+2011-08-31T06:34:50.000000Z
+1488ed7d14eb536b1a9186ca2ec2839a
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9450
+
 Info
 dir
 
@@ -186,11 +254,11 @@ file
 
 
 
-2011-07-01T22:12:24.000000Z
-4c320679dd961332a85aa6e7fd5befdb
-2011-06-30T20:50:50.637805Z
-798
-JoshDreamland
+2011-08-31T06:34:50.000000Z
+2e0b9b83f7283110adbcf4009b5e9d50
+2011-08-20T06:09:59.103328Z
+851
+joshdreamland
 
 
 
@@ -212,5 +280,5 @@ JoshDreamland
 
 
 
-872
+1111
 

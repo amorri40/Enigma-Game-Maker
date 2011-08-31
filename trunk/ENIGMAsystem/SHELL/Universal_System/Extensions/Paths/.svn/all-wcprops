@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths
+/svnroot/enigma-dev/!svn/ver/846/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths
 END
 path.png
 K 25
@@ -15,15 +15,33 @@ svn:wc:ra_dav:version-url
 V 103
 /svnroot/enigma-dev/!svn/ver/788/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/implement.h
 END
+paths.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/846/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/paths.cpp
+END
 About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 100
 /svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/About.ey
 END
+include.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/enigma-dev/!svn/ver/846/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/include.h
+END
 path.svg
 K 25
 svn:wc:ra_dav:version-url
 V 100
 /svnroot/enigma-dev/!svn/ver/839/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/path.svg
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/enigma-dev/!svn/ver/846/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/Paths/Makefile
 END

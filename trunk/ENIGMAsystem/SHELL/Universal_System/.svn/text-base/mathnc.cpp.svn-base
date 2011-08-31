@@ -104,6 +104,9 @@ double point_distance(double x1,double y1,double x2,double y2)  { return hypot(x
 #include "dynamic_args.h"
 #include <float.h> //maxiumum values for certain datatypes. Useful for min()
 #include <list>
+double min(double x, double y) { return x < y ? x : y; }
+double max(double x, double y) { return x > y ? x : y; }
+
 double max(const enigma::varargs &t)
 {
   register double ret = -DBL_MAX, tst;
@@ -268,19 +271,6 @@ double random(double n) //Do not fix. Based off of Delphi prng
 	enigma::Random_Seed=random32();
 	return rval;
 }
-
-int irandom(int x) {return int(random(x + 1));}  //Mark made this inclusive of x...
-
-double random_range(double x1, double x2)
-{
-    return x1 + random(x2 - x1);
-}
-
-double irandom_range(int x1, int x2)
-{
-    return x1 + irandom(x2 - x1);
-}
-
 
 int random_set_seed(int seed){return enigma::Random_Seed=seed;}
 int random_get_seed(){return enigma::Random_Seed;}

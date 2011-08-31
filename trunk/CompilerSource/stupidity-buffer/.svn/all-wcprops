@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svnroot/enigma-dev/!svn/ver/758/trunk/CompilerSource/stupidity-buffer
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/stupidity-buffer
 END
 ENIGMA.exe
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/758/trunk/CompilerSource/stupidity-buffer/ENIGMA.exe
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/stupidity-buffer/ENIGMA.exe
 END
 elogo.svg
 K 25
@@ -31,13 +31,13 @@ Stupidity-Buffer.cbp
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/757/trunk/CompilerSource/stupidity-buffer/Stupidity-Buffer.cbp
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/stupidity-buffer/Stupidity-Buffer.cbp
 END
 main.cc
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/757/trunk/CompilerSource/stupidity-buffer/main.cc
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/stupidity-buffer/main.cc
 END
 enigma.ico
 K 25
@@ -55,5 +55,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svnroot/enigma-dev/!svn/ver/757/trunk/CompilerSource/stupidity-buffer/Makefile
+/svnroot/enigma-dev/!svn/ver/851/trunk/CompilerSource/stupidity-buffer/Makefile
 END
