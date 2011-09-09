@@ -35,7 +35,6 @@ int room_goto_absolute(int index);
 int room_goto_first();
 int room_goto_previous();
 int room_goto_next();
-int room_goto_previous();
 int room_next(int num);
 int room_previous(int num);
 

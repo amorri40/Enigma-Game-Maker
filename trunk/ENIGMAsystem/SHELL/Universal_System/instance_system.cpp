@@ -233,10 +233,7 @@ namespace enigma
   void unlink_main(pinstance_list_iterator whop)
   {
     inst_iter *a = whop->w->second;
-    if (a->prev) 
-    {a->prev->next = a->next;
-        
-    }
+    if (a->prev) a->prev->next = a->next;
     if (a->next) a->next->prev = a->prev;
     instance_list.erase(whop->w);
   }

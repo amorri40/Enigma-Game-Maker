@@ -35,12 +35,12 @@ int draw_surface(double id, double x, double y)
 
 \******************************************************************************/
 
-//#include <OpenGL/glew.h>
+#ifdef TARGET_OS_MAC
 #include "OpenGLHeaders.h"
 #include <cstddef>
 
 extern int room_width, room_height;
-//#ifdef ENIGMA_WS_COCOA
+
 //PFNGLBINDFRAMEBUFFEREXTPROC      glBindFramebufferEXT;
 //PFNGLGENFRAMEBUFFERSEXTPROC      glGenFramebuffersEXT;
 //PFNGLFRAMEBUFFERTEXTURE2DEXTPROC glFramebufferTexture2DEXT;
@@ -184,4 +184,4 @@ int draw_surface(double id, double x, double y)
 
     return 0;
 }
-//#endif
+#endif

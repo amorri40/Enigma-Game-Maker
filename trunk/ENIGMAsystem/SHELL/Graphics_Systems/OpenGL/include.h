@@ -4,7 +4,7 @@
 
 #include "GSfont.h"
 #include "GScurves.h"
-//#ifdef ENIGMA_WS_COCOA
+#ifdef TARGET_OS_MAC
 #include "GSsurface.h"
-//#endif
+#endif
 
