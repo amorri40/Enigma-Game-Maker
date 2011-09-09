@@ -271,7 +271,7 @@ void sprite_add_from_surface(int ind, int id, int x, int y, int w, int h) {
 Rooms
 */
 bool room_exists(int ind) {return false;}
-string room_get_name(int ind) {return "";}
+//string room_get_name(int ind) {return "";}
 
 void room_set_width(int ind, int w) {}
 void room_set_height(int ind, int h) {}
@@ -382,6 +382,7 @@ void d3d_set_shading(bool smooth) {}
 /*
  date functions
  */
+/*
 int date_current_datetime() {} // Returns the date-time value that corresponds to the current moment.
 int date_current_date() {} // Returns the date-time value that corresponds to the current date only (ignoring the time).
 int date_current_time() {} // Returns the date-time value that corresponds to the current time only (ignoring the date).
@@ -429,7 +430,7 @@ int date_days_in_month(int date) {} // Returns the number of days in the month i
 int date_days_in_year(int date) {} // Returns the number of days in the year indicated by the date-time value.
 int date_leap_year(int date) {} // Returns whether the year indicated by the date-time value is a leap year.
 int date_is_today(int date) {} // Returns whether the indicated date-time value is on today.
-
+*/
 /*
  math
  */

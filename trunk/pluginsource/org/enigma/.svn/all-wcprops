@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svnroot/enigma-dev/!svn/ver/838/trunk/pluginsource/org/enigma
-END
-EFileWriter.java
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svnroot/enigma-dev/!svn/ver/830/trunk/pluginsource/org/enigma/EFileWriter.java
+/svnroot/enigma-dev/!svn/ver/868/trunk/pluginsource/org/enigma
 END
 lgm_enigma.png
 K 25
@@ -26,6 +20,24 @@ K 25
 svn:wc:ra_dav:version-url
 V 72
 /svnroot/enigma-dev/!svn/ver/51/trunk/pluginsource/org/enigma/enigma.png
+END
+EFileReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/867/trunk/pluginsource/org/enigma/EFileReader.java
+END
+EnigmaFrame.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/810/trunk/pluginsource/org/enigma/EnigmaFrame.java
+END
+EFileWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/enigma-dev/!svn/ver/867/trunk/pluginsource/org/enigma/EFileWriter.java
 END
 TargetHandler.java
 K 25
@@ -61,13 +73,7 @@ EnigmaRunner.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svnroot/enigma-dev/!svn/ver/826/trunk/pluginsource/org/enigma/EnigmaRunner.java
-END
-EnigmaFrame.java
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svnroot/enigma-dev/!svn/ver/810/trunk/pluginsource/org/enigma/EnigmaFrame.java
+/svnroot/enigma-dev/!svn/ver/868/trunk/pluginsource/org/enigma/EnigmaRunner.java
 END
 EnigmaSettingsFrame.java
 K 25

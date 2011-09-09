@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 47
-/svnroot/enigma-dev/!svn/ver/851/trunk/Autoconf
-END
-MinGW.exe
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svnroot/enigma-dev/!svn/ver/321/trunk/Autoconf/MinGW.exe
+/svnroot/enigma-dev/!svn/ver/861/trunk/Autoconf
 END
 wingcc_template.eyt
 K 25

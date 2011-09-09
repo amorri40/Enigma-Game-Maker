@@ -1,52 +1,34 @@
-cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -lopengl32 -lglu32" GFLAGS="-s -O3" GRAPHICS=OpenGLES PLATFORM=Android COMPILEPATH=MacOSX/Android OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension Universal_System/Extensions/Timelines/Extension Universal_System/Extensions/Paths/Extension Universal_System/Extensions/MotionPlanning/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/Android/*.o Universal_System/Extensions/Timelines/.eobjs/MacOSX/Android/*.o Universal_System/Extensions/Paths/.eobjs/MacOSX/Android/*.o Universal_System/Extensions/MotionPlanning/.eobjs/MacOSX/Android/*.o"
-rm Platforms/Android/EnigmaAndroidGame/obj/local*/* # First of all, delete objects
-rm: Platforms/Android/EnigmaAndroidGame/obj/local/armeabi: is a directory
-make[1]: [game] Error 1 (ignored)
-cd Platforms/Android/EnigmaAndroidGame/jni && /Users/alasdairmorrison/Documents/AndroidSDK/crystax/ndk-build
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/SHELLmain.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/CallbackArrays.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/actions.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/backgroundinit.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/depth_draw.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/dynamic_args.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/estring.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/fontinit.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/fontstruct.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/globalupdate.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/graphics_object.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/highscore_functions.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/instance.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/instance_system.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/loading.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/mathnc.cpp
-Compile++ thumb: ndkEnigmaGame <= /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp
-In file included from /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:28:
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../Graphics_Systems/OpenGL/OpenGLHeaders.h:35:21: error: GL/gl.h: No such file or directory
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../Graphics_Systems/OpenGL/OpenGLHeaders.h:36:22: error: GL/glu.h: No such file or directory
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp: In function 'void mp_grid_draw_neighbours(unsigned int, int, int, int)':
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:257: error: 'GL_TEXTURE_2D' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:257: error: 'glBindTexture' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:263: error: 'GL_CURRENT_BIT' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:263: error: 'glPushAttrib' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:264: error: 'GL_QUADS' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:264: error: 'glBegin' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:265: error: 'glColor4f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:268: error: 'glVertex2f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:273: error: 'glEnd' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:274: error: 'glPopAttrib' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp: In function 'void mp_grid_draw(unsigned int, int, unsigned int)':
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:284: error: 'GL_TEXTURE_2D' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:284: error: 'glBindTexture' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:286: error: 'GL_CURRENT_BIT' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:286: error: 'glPushAttrib' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:287: error: 'GL_QUADS' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:287: error: 'glBegin' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:293: error: 'glColor4f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:295: error: 'glColor4f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:298: error: 'glColor4f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:301: error: 'glVertex2f' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:307: error: 'glEnd' was not declared in this scope
-/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/motion_planning.cpp:308: error: 'glPopAttrib' was not declared in this scope
-make[2]: *** [/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/obj/local/armeabi/objs/ndkEnigmaGame/../../../../../SHELL/Universal_System/motion_planning.o] Error 1
-make[1]: *** [game] Error 2
-make: *** [Game] Error 2
+cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL" GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension Universal_System/Extensions/Timelines/Extension Universal_System/Extensions/Paths/Extension Universal_System/Extensions/MotionPlanning/Extension Universal_System/Extensions/DateTime/Extension Universal_System/Extensions/DataStructures/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Timelines/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Paths/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/MotionPlanning/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DateTime/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DataStructures/.eobjs/MacOSX/MacOSX/*.o"
+cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+make[2]: Nothing to be done for `this'.
+cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+make[2]: Nothing to be done for `this'.
+cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+make[2]: Nothing to be done for `this'.
+cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+cd alure  && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
+make[3]: Nothing to be done for `static'.
+cd dumb   && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
+make[3]: Nothing to be done for `static'.
+cd ogg    && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
+make[3]: Nothing to be done for `static'.
+cd vorbis && /usr/bin/make static DEST="../.eobjs/MacOSX/MacOSX/Run" ECFLAGS="" ECPPFLAGS=""
+make[3]: Nothing to be done for `static'.
+cd Collision_Systems/BBox/ && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+make[2]: Nothing to be done for `this'.
+cd Widget_Systems/None/      && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
+make[2]: Nothing to be done for `this'.
+cd Universal_System/Extensions/Alarms && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+cd Universal_System/Extensions/Timelines && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+cd Universal_System/Extensions/Paths && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+cd Universal_System/Extensions/MotionPlanning && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+cd Universal_System/Extensions/DateTime && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+cd Universal_System/Extensions/DataStructures && /usr/bin/make extension COMPILEPATH="MacOSX/MacOSX"
+make[2]: Nothing to be done for `extension'.
+g++ SHELLmain.cpp libEGMstd.cpp Graphics_Systems/OpenGL/.eobjs/MacOSX/MacOSX/Run/*.o Platforms/Cocoa/.eobjs/MacOSX/MacOSX/Run/*.o Universal_System/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.o Collision_Systems/BBox/.eobjs/MacOSX/MacOSX/Run/*.o Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/*.a Audio_Systems/OpenAL/.eobjs/MacOSX/MacOSX/Run/libogg.a Widget_Systems/None/.eobjs/MacOSX/MacOSX/Run/*.o -lz -framework Cocoa -lz -framework Cocoa -framework OpenGL -framework OpenAL Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Timelines/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Paths/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/MotionPlanning/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DateTime/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DataStructures/.eobjs/MacOSX/MacOSX/*.o -o "/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode"
+Built to /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode

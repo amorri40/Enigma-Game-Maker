@@ -1,14 +1,14 @@
 10
 
 dir
-858
+868
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/pluginsource/org/enigma
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-08-11T22:26:38.383162Z
-838
+2011-09-09T01:10:49.187962Z
+868
 ismavatar
 has-props
 
@@ -131,6 +131,40 @@ has-props
 backend
 dir
 
+EFileReader.java
+file
+
+
+
+
+2011-09-09T14:47:28.000000Z
+e00e23eff8eae1d9fe01621c9552eb64
+2011-09-06T04:25:03.037119Z
+867
+ismavatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+30825
+
 EnigmaFrame.java
 file
 
@@ -171,10 +205,10 @@ file
 
 
 
-2011-08-31T05:55:24.000000Z
-f7767a98a1ac4c89e0acdbb6acfc13ec
-2011-07-25T03:38:01.984484Z
-830
+2011-09-09T14:47:28.000000Z
+ae4dae9cdffcc479948eeb4be0fed9ef
+2011-09-06T04:25:03.037119Z
+867
 ismavatar
 
 
@@ -197,7 +231,7 @@ ismavatar
 
 
 
-17423
+22149
 
 utility
 dir
@@ -359,10 +393,10 @@ file
 
 
 
-2011-07-21T20:50:21.000000Z
-4939a2308915b9f9e5f9fa2617b432a0
-2011-07-21T02:57:23.741000Z
-826
+2011-09-09T14:47:38.000000Z
+aed8ff420bbd5cc4a9962257870e42b9
+2011-09-09T01:10:49.187962Z
+868
 ismavatar
 
 
@@ -385,7 +419,7 @@ ismavatar
 
 
 
-26349
+26389
 
 EnigmaSettingsFrame.java
 file

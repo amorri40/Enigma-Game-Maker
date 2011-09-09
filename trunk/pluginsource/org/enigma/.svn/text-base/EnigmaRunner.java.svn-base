@@ -217,7 +217,8 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 				File gccey = new File(new File("Compilers",TargetHandler.getOS()),"gcc.ey"); //$NON-NLS-1$ //$NON-NLS-2$
 				YamlNode n = YamlParser.parse(gccey);
 				make = n.getMC("Make"); //or OOB  //$NON-NLS-1$
-				path = n.getMC("Path",""); //$NON-NLS-1$ //$NON-NLS-2$
+				path = n.getMC("Path",new String()); //$NON-NLS-1$
+				if (path == null) path = new String();
 				//replace starting \ with root
 				if (make.startsWith("\\")) make = new File("/").getAbsolutePath() + make.substring(1); //$NON-NLS-1$ //$NON-NLS-2$
 				}
