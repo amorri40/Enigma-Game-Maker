@@ -70,7 +70,6 @@ int module_write_sounds(EnigmaStruct *es, FILE *gameModule)
   for (int i = 0; i < sound_count; i++)
   {
     unsigned sndsz = es->sounds[i].size;
-      printf("size: %d",es->sounds[i].size);
     if (!sndsz) {
       user << "Sound `" << es->sounds[i].name << "' has no size. It will be omitted from the game." << flushl;
       continue;

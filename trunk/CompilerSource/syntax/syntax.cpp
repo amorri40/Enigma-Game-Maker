@@ -83,11 +83,11 @@ namespace syncheck
     TT_S_CATCH,         // catch
     TT_S_DO,            // do
     TT_S_NEW,           // new
-    
+
     TT_IMPLICIT_SEMICOLON,
     TT_ERROR = -1
   };
-  
+
   const char* TTN[] = {
     "TT_VARNAME",
     "TT_SEMICOLON",
@@ -132,18 +132,18 @@ namespace syncheck
     TT type;
     string content;
     pt pos, length;
-    bool separator,      // Separator is true for, ie, any of "; , { ( [  }". 
+    bool separator,      // Separator is true for, ie, any of "; , { ( [  }".
          breakandfollow, // Break and follow is true for "] )" and strings/varnames/digits.
          operatorlike;   // Operator like is true for OPERATOR, ASSOP, (, [, and statements expecting an expression.
     int macrolevel;
     unsigned match;
     externs* ext;
-    
+
     token(): type(TT_ERROR) {}
     token(TT t, string ct, pt p,pt l,bool s,bool bnf,bool ol,int ml): type(t), content(ct), pos(p), length(l), separator(s), breakandfollow(bnf), operatorlike(ol), macrolevel(ml), match(0), ext(NULL) {}
     token(TT t, unsigned m, string ct, pt p,pt l,bool s,bool bnf,bool ol,int ml): type(t), content(ct), pos(p), length(l), separator(s), breakandfollow(bnf), operatorlike(ol), macrolevel(ml), match(m), ext(NULL) {}
     token(TT t, externs *ex, string ct, pt p,pt l,bool s,bool bnf,bool ol,int ml): type(t), content(ct), pos(p), length(l), separator(s), breakandfollow(bnf), operatorlike(ol), macrolevel(ml), match(0), ext(ex) {}
-    operator string() { 
+    operator string() {
       char buf[12]; sprintf(buf,"%lu",(long unsigned)pos);
       string str = string(TTN[type]) + "{" + buf + ", ";
       sprintf(buf,"%lu",(long unsigned)length); str += buf; str += ", ";
@@ -154,10 +154,10 @@ namespace syncheck
       return str + "}";
     }
   };
-  
+
   string syerr;
   vector<token> lex;
-  
+
   struct open_parenth_info {
     unsigned ind;
     int macrolevel;
@@ -180,14 +180,14 @@ namespace syncheck
     ops.pop_back();
     return pt(-1);
   }
-  
+
   #include "syntaxtools.h"
-  
+
   map<string,int> scripts;
   void addscr(string name) {
     scripts[name]++;
   }
-  
+
   #define superPos (mymacroind ? mymacrostack[0].pos : pos)
   #define ptrace() for (unsigned i = 0; i < lex.size(); i++) cout << (string)lex[i] << "\t\t" << endl
   #define lexlast (lex.size()-1)
@@ -196,14 +196,14 @@ namespace syncheck
     pt pos = 0;
     unsigned mymacroind = 0;
     macro_stack_t mymacrostack;
-    lex.clear(); 
+    lex.clear();
     lex.push_back(token(TT_IMPLICIT_SEMICOLON, ";", superPos, 0, true, false, false, mymacroind));
-          
-    
+
+
     syerr = "No error";
     vector<open_parenth_info> open_parenths; // Any open brace, bracket, or parenthesis
-    
-    // First, collapse everything into a massive lex vector, 
+
+    // First, collapse everything into a massive lex vector,
     // Doing minor syntax checking along the way
     for (;;)
     {
@@ -213,18 +213,18 @@ namespace syncheck
           mymacrostack[--mymacroind].release(code,pos);
         else break; continue;
       }
-      
+
       if (is_useless(code[pos])) {
         while (is_useless(code[++pos]));
         continue;
       }
-      
+
       if (is_letter(code[pos]))
       {
         const pt spos = pos;
         while (is_letterd(code[++pos]));
         const string name = code.substr(spos,pos-spos);
-        
+
         // First, check if it's a macro.
         maciter mi = macros.find(name);
         if (mi != macros.end())
@@ -247,9 +247,9 @@ namespace syncheck
           }
           continue;
         }
-        
+
         not_a_macro:
-        if (is_wordop(name)) { //this is actually a word-based operator, such as `and', `or', and `not' 
+        if (is_wordop(name)) { //this is actually a word-based operator, such as `and', `or', and `not'
           bool unary = name[0] == 'n'; //not is the only unary word operator.
           if (unary and (!lex[lexlast].separator and !lex[lexlast].operatorlike)) {
             syerr = "Unexpected unary keyword `not'";
@@ -262,7 +262,7 @@ namespace syncheck
           lex.push_back(token(unary ? TT_UNARYPRE : TT_OPERATOR, name, superPos, name.length(), false, false, true, mymacroind));
           continue;
         }
-        
+
         if (shared_object_locals.find(name) == shared_object_locals.end())
         {
           if (find_extname(name, 0xFFFFFFFF))
@@ -278,15 +278,15 @@ namespace syncheck
               }
               continue;
             }
-            
+
             if (lex[lexlast].breakandfollow)
               lex.push_back(token(TT_IMPLICIT_SEMICOLON, ";", superPos, 0, true, false, false, mymacroind));
-            
+
             if (ext_retriever_var->flags & EXTFLAG_NAMESPACE) {
               lex.push_back(token(TT_NAMESPACE, ext_retriever_var, name, superPos, name.length(), false, false, false, mymacroind));
               continue;
             }
-            
+
             if (ext_retriever_var->is_function()) {
               lex.push_back(token(TT_FUNCTION, ext_retriever_var, name, superPos, name.length(), false, true, false, mymacroind));
               continue;
@@ -295,7 +295,7 @@ namespace syncheck
             lex.push_back(token(TT_VARNAME, ext_retriever_var, name, superPos, name.length(), false, true, false, mymacroind));
             continue;
           }
-          
+
           if (is_statement(name)) // Our control statements
           {
             if (!lex[lexlast].separator and !lex[lexlast].operatorlike)
@@ -316,11 +316,11 @@ namespace syncheck
         }
         if (lex[lexlast].breakandfollow)
           lex.push_back(token(TT_IMPLICIT_SEMICOLON, ";", superPos, 0, true, false, false, mymacroind));
-        
+
         lex.push_back(token(TT_VARNAME, name, superPos, name.length(), false, true, false, mymacroind));
         continue;
       }
-      
+
       if (is_digit(code[pos]))
       {
         if (!lex[lexlast].separator and !lex[lexlast].operatorlike) {
@@ -331,7 +331,7 @@ namespace syncheck
         lex.push_back(token(TT_DIGIT, code.substr(spos,pos-spos), superPos, pos-spos, false, true, false, mymacroind));
         continue;
       }
-      
+
       switch (code[pos]) {
         case ';':
             lex.push_back(token(TT_SEMICOLON, ";", superPos, 1, true, false, false, mymacroind));
@@ -364,7 +364,7 @@ namespace syncheck
             while (is_hexdigit(code[++pos]));
             lex.push_back(token(TT_DIGIT, code.substr(spos,pos-spos+1), superPos, pos-spos, false, true, false, mymacroind));
           } continue;
-          
+
         pt open_error;
         case '{':
             if (lex[lexlast].type == TT_OPERATOR)
@@ -403,11 +403,11 @@ namespace syncheck
             open_error = pop_open_parenthesis(open_parenths, lex, superPos, lexlast, '(', "closing parenthesis");
             if (open_error != pt(-1)) return open_error;
           pos++; continue;
-        
+
         case '.': // We can't really do checking on this yet. It's one of the reasons we have two passes.
             lex.push_back(token(TT_DECIMAL, ".", superPos, 1, false, true, false, mymacroind)); ++pos;
           break;
-        
+
         pt spos;
         case '"':
             spos = pos;
@@ -439,7 +439,7 @@ namespace syncheck
               while (code[++pos]!='\'');
             lex.push_back(token(TT_STRING, code.substr(spos,pos-spos+1), superPos, pos-spos, false, true, false, mymacroind));
           pos++; break;
-        
+
         case '?':
             if (!lex.size() or lex[lexlast].separator or lex[lexlast].operatorlike) {
               syerr = "Primary expression expected before ternary operator";
@@ -448,7 +448,7 @@ namespace syncheck
             lex.push_back(token(TT_TERNARY, "?", superPos, 1, false, true, true, mymacroind));
             pos++;
           break;
-        
+
         int sz;
         case '+': case '-':
             sz = 1 + (code[pos+1] == code[pos] and setting::use_incrementals);
@@ -511,7 +511,7 @@ namespace syncheck
               while (++pos < code.length() and (code[pos] != '/' or code[pos-1] != '*'));
               pos++; continue;
             }
-        case '%': 
+        case '%':
             if (!lex.size() or lex[lexlast].separator or lex[lexlast].operatorlike) {
               syerr = "Primary expression expected before operator";
               return superPos;
@@ -521,7 +521,7 @@ namespace syncheck
             else
               lex.push_back(token(TT_OPERATOR, "%=", superPos, 1, false, false, true, mymacroind)), ++pos;
           break;
-        
+
         case '!':
             if (code[pos+1] == '=') {
               lex.push_back(token(TT_OPERATOR, "!=", superPos, 2, false, false, true, mymacroind)), pos += 2;
@@ -536,7 +536,7 @@ namespace syncheck
               return superPos;
             }
           break;
-        
+
         case '=':
             if (!lex.size() or lex[lexlast].separator or lex[lexlast].operatorlike) {
               syerr = "Primary expression expected before operator";
@@ -547,32 +547,34 @@ namespace syncheck
               return superPos;
             }
             sz = (code[pos+1] == '=') + 1;
-            lex.push_back(token(sz==2 ? TT_OPERATOR : TT_ASSOP, string(sz,'='), superPos, sz, false, false, true, mymacroind)), pos += sz; 
+            lex.push_back(token(sz==2 ? TT_OPERATOR : TT_ASSOP, string(sz,'='), superPos, sz, false, false, true, mymacroind)), pos += sz;
           break;
         default:
             syerr = "Unexpected symbol `" + code.substr(pos,1) + "': unknown to compiler";
           return superPos;
       }
     }
-    
+
     if (open_parenths.size()) {
       const char p = open_parenths.rbegin()->type;
       syerr = "Unterminated " + string (p == '(' ? "parenthesis" : p == '[' ? "bracket" : p == '{' ? "brace" : "triangle bracket")
               + " at this point";
       return lex[open_parenths.rbegin()->ind].pos;
     }
-    
+
     for (size_t i = 0; i < lex.size(); i++) {
       cout << lex[i].content << " ";
-      switch (lex[i].type) 
+      switch (lex[i].type)
       {
         case TT_VARNAME:
           if (lex[i+1].type == TT_BEGINPARENTH)
           {
+            /*TGMG start (removes missing function check)
             syerr = "Unknown function or script `" + lex[i].content + "'";
             if (lex[lex[i+1].match+1].type == TT_DECIMAL)
               syerr += ": use semicolon to separate object ID and variable name.";
             return lex[i].pos;
+            TGMG end */
           }
           break;
         case TT_FUNCTION:
@@ -611,7 +613,7 @@ namespace syncheck
         default: ;
       }
     }
-    
+
     return -1;
   }
 }

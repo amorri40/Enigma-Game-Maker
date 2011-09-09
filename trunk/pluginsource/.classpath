@@ -5,9 +5,9 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/SvnKit"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JNA"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/LGM16b4"/>
-	<classpathentry kind="lib" path="/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/lgm16b4.jar"/>
 	<classpathentry kind="lib" path="/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/plugins/shared/jna.jar"/>
 	<classpathentry kind="lib" path="/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/branches/polymask/Autoconf/svnkit.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LGMUtility"/>
+	<classpathentry kind="lib" path="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/lgm16b4.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
