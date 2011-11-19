@@ -33,5 +33,5 @@
 #define PRIMDEPTH2 6
 #define AUTOLOCALS 0
 #define MODE3DVARS 0
-void ABORT_ON_ALL_ERRORS() {  }
+void ABORT_ON_ALL_ERRORS() { }
 

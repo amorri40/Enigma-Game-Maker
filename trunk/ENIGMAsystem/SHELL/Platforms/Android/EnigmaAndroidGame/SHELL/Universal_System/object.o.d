@@ -1,5 +1,5 @@
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/obj/local/armeabi/objs/ndkEnigmaGame/../../../../../SHELL/Universal_System/object.o: \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.cpp \
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/obj/local/armeabi/objs/ndkEnigmaGame/../../../../../SHELL/Universal_System/object.o: \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.cpp \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/math.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -20,12 +20,12 @@
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/linux/limits.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
  /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/machine/limits.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/reflexive_types.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/multifunction_variant.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.h \
- /Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../libEGMstd.h
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/reflexive_types.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/multifunction_variant.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.h \
+ /Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../libEGMstd.h
 
 /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/math.h:
 
@@ -67,14 +67,14 @@
 
 /Users/alasdairmorrison/Documents/AndroidSDK/crystax/build/platforms/android-8/arch-arm/usr/include/machine/limits.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var4.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/var_te.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/reflexive_types.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/reflexive_types.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/multifunction_variant.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/multifunction_variant.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/object.h:
 
-/Users/alasdairmorrison/EnigmaNEWSYSTEM/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../libEGMstd.h:
+/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/ENIGMAsystem/SHELL/Platforms/Android/EnigmaAndroidGame/jni/../../../../../SHELL/Universal_System/../libEGMstd.h:

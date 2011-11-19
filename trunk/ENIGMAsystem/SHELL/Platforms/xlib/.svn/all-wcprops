@@ -31,7 +31,7 @@ file_manip.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/251/trunk/ENIGMAsystem/SHELL/Platforms/xlib/file_manip.cpp
+/svnroot/enigma-dev/!svn/ver/869/trunk/ENIGMAsystem/SHELL/Platforms/xlib/file_manip.cpp
 END
 LINUXjoystick.h
 K 25
@@ -79,5 +79,5 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svnroot/enigma-dev/!svn/ver/834/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Makefile
+/svnroot/enigma-dev/!svn/ver/869/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Makefile
 END

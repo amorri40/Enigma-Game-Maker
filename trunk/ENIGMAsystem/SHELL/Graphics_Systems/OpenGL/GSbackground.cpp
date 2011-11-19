@@ -516,7 +516,7 @@ int background_get_texture(int backId)
     // Probably not how this should be done, works for now
     return (size_t)(enigma::backgroundstructarray[backId]);
 }
-
+/*
 // Probably wrong file
 int texture_set_interpolation(int enable)
 {
@@ -526,4 +526,4 @@ int texture_set_interpolation(int enable)
         glDisable(GL_INTERPOLATE);
     return 0;
 }
-
+*/

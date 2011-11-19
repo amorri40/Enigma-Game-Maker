@@ -31,6 +31,17 @@ dir
 
 androidAudio
 dir
+
+
+
+delete
+
+AndroidAudio
+dir
+
+
+
+add
 
 audio_mandatory.h
 file

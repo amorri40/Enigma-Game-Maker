@@ -8,3 +8,4 @@
 /trunk/MacOS/build/EnigmaXcode.build/Release/Game2.build/Objects-normal/x86_64/EnigmaXcode
 /trunk/MacOS/build/Release/EnigmaXcode.app.dSYM/Contents/Resources/DWARF/EnigmaXcode
 *.o.d
+*.svn-base

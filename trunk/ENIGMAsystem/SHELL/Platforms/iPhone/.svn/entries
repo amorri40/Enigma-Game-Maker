@@ -26,40 +26,6 @@ has-props
 
 726d713c-bd1a-46cb-9ef0-1b6e075168bb
 
-main.m
-file
-
-
-
-
-2011-04-20T21:22:05.000000Z
-19e8cf141d4bfd074261810c6e0bae51
-2010-08-25T17:01:21.648647Z
-372
-tgmg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2411
-
 automake.sh
 file
 
@@ -94,16 +60,16 @@ has-props
 
 1403
 
-file_manip.cpp
+main.m
 file
 
 
 
 
-2011-07-08T12:21:48.000000Z
-89a1cd55bba8164bdee28fc76c9ed7d1
-2011-07-12T08:37:46.597108Z
-805
+2011-04-20T21:22:05.000000Z
+19e8cf141d4bfd074261810c6e0bae51
+2010-08-25T17:01:21.648647Z
+372
 tgmg
 
 
@@ -126,7 +92,7 @@ tgmg
 
 
 
-4048
+2411
 
 iPhoneEnigmaView.h
 file
@@ -162,6 +128,40 @@ tgmg
 
 2628
 
+file_manip.cpp
+file
+
+
+
+
+2011-07-08T12:21:48.000000Z
+89a1cd55bba8164bdee28fc76c9ed7d1
+2011-07-12T08:37:46.597108Z
+805
+tgmg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4048
+
 CocoaDialog.cpp
 file
 
@@ -196,40 +196,6 @@ tgmg
 
 2337
 
-iPhoneEnigmaView.m
-file
-
-
-
-
-2011-04-20T21:22:05.000000Z
-8b28f58e914e66568659cb3fd3c80ceb
-2010-09-19T06:37:46.336554Z
-459
-tgmg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5436
-
 file_manip.h
 file
 
@@ -263,6 +229,40 @@ tgmg
 
 
 3669
+
+iPhoneEnigmaView.m
+file
+
+
+
+
+2011-04-20T21:22:05.000000Z
+8b28f58e914e66568659cb3fd3c80ceb
+2010-09-19T06:37:46.336554Z
+459
+tgmg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5436
 
 Info
 dir
@@ -369,16 +369,16 @@ tgmg
 
 5552
 
-CocoaFunctions.h
+iPhone.xib
 file
 
 
 
 
 2011-04-20T21:22:05.000000Z
-561ccffb28da395fe15d52dbc4503d24
-2010-09-19T06:37:46.336554Z
-459
+baf1ae356c75e63e129f03f4adcaed2c
+2010-08-25T17:01:21.648647Z
+372
 tgmg
 
 
@@ -401,7 +401,7 @@ tgmg
 
 
 
-2343
+25319
 
 ObjectiveC.h
 file
@@ -437,16 +437,16 @@ tgmg
 
 2286
 
-iPhone.xib
+CocoaFunctions.h
 file
 
 
 
 
 2011-04-20T21:22:05.000000Z
-baf1ae356c75e63e129f03f4adcaed2c
-2010-08-25T17:01:21.648647Z
-372
+561ccffb28da395fe15d52dbc4503d24
+2010-09-19T06:37:46.336554Z
+459
 tgmg
 
 
@@ -469,7 +469,7 @@ tgmg
 
 
 
-25319
+2343
 
 EnigmaXcodeAppDelegate.h
 file
@@ -613,7 +613,7 @@ file
 
 
 
-2011-07-01T22:12:24.000000Z
+2011-07-13T12:47:55.000000Z
 72f0dbdce8bf9b9bdb4b8d32293219a1
 2011-06-30T20:50:50.637805Z
 798

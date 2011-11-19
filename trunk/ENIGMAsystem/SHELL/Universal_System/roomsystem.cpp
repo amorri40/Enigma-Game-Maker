@@ -246,7 +246,7 @@ int room_goto_previous()
     errcheck((int)room.rval.d,"Going to next room from invalid room. wat");
 
     rit = enigma::roomorder[rit->order - 1];
-    errcheck(rit->order-1,"Going to next room after last");
+    errcheck(rit->order-1,"Going to previous room after first");
 
     rit->gotome();
     return 0;

@@ -3,6 +3,7 @@
 #define __DEC64_DEN__ 0.000000000000001E-383DD
 #define __CHAR_BIT__ 8
 #define __WCHAR_MAX__ 2147483647
+#define __NO_MATH_INLINES 1
 #define __DBL_DENORM_MIN__ 4.9406564584124654e-324
 #define __FLT_EVAL_METHOD__ 0
 #define __DBL_MIN_10_EXP__ (-307)
@@ -11,7 +12,7 @@
 #define __DEC64_MAX_EXP__ 384
 #define __SHRT_MAX__ 32767
 #define __LDBL_MAX__ 1.18973149535723176502e+4932L
-#define __APPLE_CC__ 5646
+#define __APPLE_CC__ 5658
 #define __UINTMAX_TYPE__ long unsigned int
 #define __DEC32_EPSILON__ 1E-6DF
 #define __block __attribute__((__blocks__(byref)))
@@ -61,7 +62,7 @@
 #define __DEC_EVAL_METHOD__ 2
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "4.2.1 (Apple Inc. build 5646) (dot 1)"
+#define __VERSION__ "4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)"
 #define __DEC64_EPSILON__ 1E-15DD
 #define __DEC128_MIN_EXP__ (-6143)
 #define __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ 1068
@@ -121,6 +122,7 @@
 #define __DEC128_MANT_DIG__ 34
 #define __LDBL_MIN_10_EXP__ (-4931)
 #define __SSE_MATH__ 1
+#define __llvm__ 1
 #define __GNUC_GNU_INLINE__ 1
 #define __private_extern__ extern
 #define __SSE3__ 1
