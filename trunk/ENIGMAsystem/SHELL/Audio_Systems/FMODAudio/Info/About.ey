@@ -1,0 +1,12 @@
+%e-yaml
+---
+
+Name: FMOD
+Identifier: FMODAudio
+Description: Play sounds using FMOD on Windows.
+Author: icuurd12b42, Harijs Grînbergs
+
+Depends:
+	Build-platforms: Windows
+Represents:
+

@@ -9,3 +9,6 @@
 /trunk/MacOS/build/Release/EnigmaXcode.app.dSYM/Contents/Resources/DWARF/EnigmaXcode
 *.o.d
 *.svn-base
+all-wcprops
+.svn
+entries

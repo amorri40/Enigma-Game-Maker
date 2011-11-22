@@ -1,15 +1,15 @@
 10
 
 dir
-868
+948
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Audio_Systems/OpenAL/alure
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-08-20T06:09:59.103328Z
-851
-joshdreamland
+2011-10-01T02:53:26.342313Z
+912
+rpjohnst
 has-props
 
 
@@ -25,40 +25,6 @@ has-props
 
 
 726d713c-bd1a-46cb-9ef0-1b6e075168bb
-
-automake.sh
-file
-
-
-
-
-2011-04-20T21:21:59.000000Z
-782c7617cd75332a7c2e301d59b3a66c
-2011-01-24T01:09:53.836208Z
-614
-JoshDreamland
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-995
 
 streamplay.cpp
 file
@@ -276,10 +242,10 @@ file
 
 
 
-2011-07-01T22:12:24.000000Z
-625ad2082f8f037b54169ed9b13490c4
-2011-06-30T20:50:50.637805Z
-798
+2011-11-22T03:10:48.000000Z
+4d0c4bd7dd8d3021a68ccface4b8d20f
+2011-09-16T05:26:39.828366Z
+874
 JoshDreamland
 
 
@@ -302,7 +268,7 @@ JoshDreamland
 
 
 
-8138
+8158
 
 config.h
 file
@@ -378,11 +344,11 @@ file
 
 
 
-2011-07-13T12:47:55.000000Z
-4fb3f24b1a7161b51a7de63fd6d87e7d
-2011-01-24T01:09:53.836208Z
-614
-JoshDreamland
+2011-11-22T03:10:48.000000Z
+f95d6125a1483c261552e19cce200b66
+2011-10-01T02:53:26.342313Z
+912
+rpjohnst
 
 
 
@@ -404,5 +370,5 @@ JoshDreamland
 
 
 
-2553
+56
 
