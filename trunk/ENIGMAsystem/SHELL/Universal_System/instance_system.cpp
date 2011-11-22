@@ -1,6 +1,6 @@
 /********************************************************************************\
 **                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
+**  Copyright (C) 2008-2011 Josh Ventura                                        **
 **                                                                              **
 **  This file is a part of the ENIGMA Development Environment.                  **
 **                                                                              **
@@ -26,6 +26,7 @@
 \********************************************************************************/
 
 #include <map>
+#include <set>
 #include <math.h>
 #include <vector>
 #include <string>
@@ -34,6 +35,7 @@
 #include <stdio.h>
 
 #include "instance_system.h"
+#include "instance_system_frontend.h"
 
 using namespace std;
 
@@ -45,10 +47,59 @@ namespace enigma
   objectid_base::objectid_base(): inst_iter(NULL,NULL,this), count(0) {}
   event_iter::event_iter(string n): inst_iter(NULL,NULL,this), name(n) {}
   event_iter::event_iter(): inst_iter(NULL,NULL,this) {}
-
-  inst_iter *event_iter::add_inst(object_basic* inst)
+  
+  
+  /*------ New iterator system --------------------------------*\
+  \*-----------------------------------------------------------*/
+  
+    set<iterator*> central_iterator_cache;
+    typedef set<iterator*>::iterator central_iterator_cache_iterator;
+    
+    object_basic* iterator::operator*() { return it->inst; }
+    object_basic* iterator::operator->() { return it->inst; }
+    
+    void iterator::addme() { central_iterator_cache.insert(this); }
+    
+    iterator::operator bool() { return it; }
+    iterator &iterator::operator++()    { it = it->next; return *this; }
+    iterator  iterator::operator++(int) { iterator ret(it,temp); it = it->next; return ret; }
+    iterator &iterator::operator--()    { it = it->prev; return *this; }
+    iterator  iterator::operator--(int) { iterator ret(it,temp); it = it->prev; return ret; }
+    
+    const iterator &iterator::operator=(iterator& other)       { if (temp) delete it; it = other.it; temp = other.temp; other.temp = false; return other; }
+    const iterator &iterator::operator=(const iterator& other) { if (temp) delete it; it = other.it; temp = false; return other; }
+    const iterator &iterator::operator=(inst_iter* niter)      { if (temp) delete it; it = niter; temp = false; return *this; }
+    const iterator &iterator::operator=(object_basic* object)  { if (temp) delete it; it = new inst_iter(object,NULL,NULL); temp = true; return *this; }
+    
+    iterator::iterator(inst_iter*_it, bool tmp): it(_it), temp(tmp) { addme(); }
+    iterator::iterator(const iterator&other): it(other.it?new inst_iter(*other.it):NULL), temp(true) { addme(); }
+    iterator::iterator(iterator&other): it(other.it), temp(other.temp) { other.temp = NULL; }
+    iterator::iterator(object_basic*ob): it(new inst_iter(ob,NULL,NULL)), temp(true) { }
+    iterator::iterator(): it(NULL), temp(true) { }
+    iterator:: ~iterator() {
+      central_iterator_cache.erase(this);
+      if (temp) delete it;
+    }
+    
+    void update_iterators_for_destroy(const iterator& dd)
+    {
+      for (central_iterator_cache_iterator it = central_iterator_cache.begin();
+           it != central_iterator_cache.end(); ++it)
+      {
+        if ((*it)->it->next == dd.it)
+          (*it)->it->next = dd.it->next;
+        else if ((*it)->it->prev == dd.it)
+          (*it)->it->prev = dd.it->prev;
+      }
+    }
+  
+  
+  /*------Iterator methods ------------------------------------*\
+  \*-----------------------------------------------------------*/
+  
+  inst_iter *event_iter::add_inst(object_basic* ninst)
   {
-    inst_iter *a = new inst_iter(inst,NULL,prev);
+    inst_iter *a = new inst_iter(ninst,NULL,prev);
     if (prev) prev->next = a;
     else next = a;
     return prev = a;
@@ -61,9 +112,9 @@ namespace enigma
     if (prev == which) prev = which->prev;
   }
 
-  inst_iter *objectid_base::add_inst(object_basic* inst)
+  inst_iter *objectid_base::add_inst(object_basic* ninst)
   {
-    inst_iter *a = new inst_iter(inst,NULL,prev);
+    inst_iter *a = new inst_iter(ninst,NULL,prev);
     if (prev) prev->next = a;
     else next = a;
     return prev = a;
@@ -110,11 +161,11 @@ namespace enigma
 
   temp_event_scope::temp_event_scope(object_basic* ninst): oinst(instance_event_iterator->inst), oiter(instance_event_iterator)
     { instance_event_iterator = &dummy_event_iterator; instance_event_iterator->inst = ninst; }
-  temp_event_scope::~temp_event_scope() { instance_event_iterator->inst = oinst; instance_event_iterator = oiter; }
+  temp_event_scope::~temp_event_scope() { instance_event_iterator = oiter; instance_event_iterator->inst = oinst; }
 
   /* **  Methods ** */
   // Retrieve the first instance on the complete list.
-  inst_iter* instance_list_first()
+  iterator instance_list_first()
   {
     iliter a = instance_list.begin();
     return a != instance_list.end() ? a->second : NULL;
@@ -128,8 +179,8 @@ namespace enigma
       case self:
       case local:  return instance_event_iterator ? instance_event_iterator->inst : NULL;
       case other:  return instance_other;
-      case all: {  inst_iter *i = instance_list_first();
-                   return  i ? i->inst : NULL; }
+      case all: {  iterator i = instance_list_first();
+                   return  i ? *i : NULL; }
       case global: return ENIGMA_global_instance;
       case noone:
          default:  return NULL;
@@ -141,18 +192,23 @@ namespace enigma
     iliter a = instance_list.find(x);
     return a != instance_list.end() ? a->second->inst : NULL;
   }
-  inst_iter dummy_iterator(NULL,NULL,NULL);
-  inst_iter* fetch_inst_iter_by_int(int x)
+  object_basic* fetch_instance_by_id(int x)
+  {
+    iliter a = instance_list.find(x);
+    return a != instance_list.end() ? a->second->inst : NULL;
+  }
+  
+  iterator fetch_inst_iter_by_int(int x)
   {
     if (x < 0) switch (x) // Keyword-based lookup
     {
       case self:
       case local:  return instance_event_iterator;
-      case other:  return instance_other ? (dummy_iterator.inst = instance_other, &dummy_iterator) : NULL;
+      case other:  return instance_other ? iterator(instance_other) : iterator();
       case all:    return instance_list_first();
       case global: return &ENIGMA_global_instance_iterator;
       case noone:
-         default:  return NULL;
+         default:  return iterator();
     }
 
     if (x < 100000) // Object-index-based lookup
@@ -160,12 +216,12 @@ namespace enigma
 
     // ID-based lookup
     iliter a = instance_list.find(x);
-    return a != instance_list.end() ? (dummy_iterator.inst = a->second->inst, &dummy_iterator) : NULL;
+    return a != instance_list.end() ? iterator(a->second->inst) : iterator();
   }
-  inst_iter* fetch_inst_iter_by_id(int x)
+  iterator fetch_inst_iter_by_id(int x)
   {
     if (x < 100000)
-      return NULL;
+      return iterator();
 
     iliter a = instance_list.find(x);
     return a != instance_list.end() ? a->second : NULL;
@@ -237,7 +293,4 @@ namespace enigma
     if (a->next) a->next->prev = a->prev;
     instance_list.erase(whop->w);
   }
-
-  //This is the universal create event code
-  void constructor(object_basic* instance);
 }

@@ -1,33 +1,24 @@
-/********************************************************************************\
- **                                                                              **
- **  Copyright (C) 2008 Josh Ventura                                             **
- **                                                                              **
- **  This file is a part of the ENIGMA Development Environment.                  **
- **                                                                              **
- **                                                                              **
- **  ENIGMA is free software: you can redistribute it and/or modify it under the **
- **  terms of the GNU General Public License as published by the Free Software   **
- **  Foundation, version 3 of the license or any later version.                  **
- **                                                                              **
- **  This application and its source code is distributed AS-IS, WITHOUT ANY      **
- **  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
- **  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
- **  details.                                                                    **
- **                                                                              **
- **  You should have recieved a copy of the GNU General Public License along     **
- **  with this code. If not, see <http://www.gnu.org/licenses/>                  **
- **                                                                              **
- **  ENIGMA is an environment designed to create games and other programs with a **
- **  high-level, fully compilable language. Developers of ENIGMA or anything     **
- **  associated with ENIGMA are in no way responsible for its users or           **
- **  applications created by its users, or damages caused by the environment     **
- **  or programs made in the environment.                                        **
- **                                                                              **
- \********************************************************************************/
+/** Copyright (C) 2008-2011 Josh Ventura
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <string>
 #include "OpenGLHeaders.h"
 #include "GSbackground.h"
+#include "GSscreen.h"
 #include "GSd3d.h"
 
 using namespace std;
@@ -43,6 +34,7 @@ using namespace std;
 #include "../../Universal_System/graphics_object.h"
 #include "../../Universal_System/depth_draw.h"
 #include "../../Platforms/platforms_mandatory.h"
+#include "../graphics_mandatory.h"
 
 using namespace enigma;
 
@@ -67,26 +59,7 @@ namespace enigma
 }
 
 void screen_redraw()
-{
-    if (d3dMode == true)
-    {
-        if (background_showcolor)
-        {
-            int clearcolor = ((int)background_color) & 0x00FFFFFF;
-            glClearColor(__GETR(clearcolor) / 255.0, __GETG(clearcolor) / 255.0, __GETB(clearcolor) / 255.0, 1);
-        }
-        
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
-        for (enigma::diter dit = drawing_depths.rbegin(); dit != drawing_depths.rend(); dit++)
-        {
-            for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
-                enigma::instance_event_iterator->inst->myevent_draw();
-        }
-        
-        return;
-    }
-    
+{   
     if (!view_enabled)
     {
         glViewport(0, 0, window_get_width(), window_get_height()); // Possible bug
@@ -98,7 +71,7 @@ void screen_redraw()
         {
             int clearcolor = ((int)background_color) & 0x00FFFFFF;
             glClearColor(__GETR(clearcolor) / 255.0, __GETG(clearcolor) / 255.0, __GETB(clearcolor) / 255.0, 1);
-            glClear(GL_COLOR_BUFFER_BIT);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         }
         
         draw_back();
@@ -115,7 +88,9 @@ void screen_redraw()
             for (enigma::instance_event_iterator = dit->second.draw_events->next; enigma::instance_event_iterator != NULL; enigma::instance_event_iterator = enigma::instance_event_iterator->next)
                 enigma::instance_event_iterator->inst->myevent_draw();
         }
-    } else {
+    }
+    else
+    {
         for (view_current = 0; view_current < 7; view_current++)
         {
             if (view_visible[(int)view_current])

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/svnroot/enigma-dev/!svn/ver/866/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures
 END
 datastructures.png
 K 25
@@ -19,7 +19,7 @@ About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/svnroot/enigma-dev/!svn/ver/866/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures/About.ey
+/svnroot/enigma-dev/!svn/ver/876/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures/About.ey
 END
 include.h
 K 25
@@ -37,7 +37,7 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/svnroot/enigma-dev/!svn/ver/866/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures/Makefile
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/DataStructures/Makefile
 END
 data_structures.cpp
 K 25

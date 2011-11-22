@@ -1,21 +1,19 @@
-/*
- * Copyright (C) 2008 IsmAvatar <cmagicj@nni.com>
- *
- * This file is part of ENIGMA.
- *
- * ENIGMA is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * ENIGMA is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License (COPYING) for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
+/** Copyright (C) 2008-2011 IsmAvatar <cmagicj@nni.com>, Josh Ventura
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 //This file has been modified beyond recognition by Josh @ Dreamland
 //under the pretense that it would be better compatible with ENIGMA
@@ -23,26 +21,30 @@
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #include <stdio.h>
+#include <string>
 
+#include "../platforms_mandatory.h"
+
+#include "XLIBmain.h"
 #include "XLIBwindow.h"
 #include "LINUXjoystick.h"
 
 #include "../../Universal_System/var4.h"
 #include "../../Universal_System/CallbackArrays.h"
 #include "../../Universal_System/roomsystem.h"
+#include "../../Universal_System/loading.h"
 
 namespace enigma
 {
   extern char keymap[256];
   extern char usermap[256];
   void ENIGMA_events(void); //TODO: Synchronize this with Windows by putting these two in a single header.
-  extern int initialize_everything();
   
   namespace x11
   {
-    extern Display *disp;
-    extern GLXDrawable win;
-    extern Atom wm_delwin;
+    Display *disp;
+    Window win;
+    Atom wm_delwin;
     
     int handleEvents()
     {
@@ -123,7 +125,6 @@ using namespace enigma::x11;
 
 namespace enigma
 {
-  void initkeymap();
   void input_initialize()
   {
     //Clear the input arrays
@@ -156,7 +157,8 @@ namespace enigma
 int main(int argc,char** argv)
 {
   // Copy our parameters
-	enigma::parameters=new char* [argc];
+	enigma::parameters = new string[argc];
+	enigma::parameterc = argc;
 	for (int i=0; i<argc; i++)
 		enigma::parameters[i]=argv[i];
 	enigma::initkeymap();
@@ -175,7 +177,7 @@ int main(int argc,char** argv)
 	Window root = DefaultRootWindow(disp);
 
 	// Prepare openGL
-	GLint att[] = { GLX_RGBA, GLX_DOUBLEBUFFER, None };
+	GLint att[] = { GLX_RGBA, GLX_DOUBLEBUFFER, GLX_DEPTH_SIZE, 24, None };
 	XVisualInfo *vi = glXChooseVisual(disp,0,att);
 	if(!vi){
 		printf("GLFail\n");
@@ -211,6 +213,7 @@ int main(int argc,char** argv)
 
 	//apply context
 	glXMakeCurrent(disp,win,glxc); //flushes
+	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT|GL_ACCUM_BUFFER_BIT|GL_STENCIL_BUFFER_BIT);
 
 	/* XEvent e;//wait for server to report our display request
 	do {

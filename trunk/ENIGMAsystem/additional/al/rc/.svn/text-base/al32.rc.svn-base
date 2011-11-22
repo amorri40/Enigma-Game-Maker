@@ -1,2 +1,0 @@
-oal32 10 OpenAL32.dll
-woal  10 wrap_oal.dll

@@ -1,41 +1,29 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
-/*
-#ifdef CODEBLOX
-#  include <GL/glee.h>
-#else
-#  include <../additional/glee/GLee.h>
-#endif*/
+/** Copyright (C) 2008-2011 Josh Ventura
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
+
+#include <iostream>
 #include <string>
+
 #include "OpenGLHeaders.h"
 using namespace std;
+#include "OPENGLStd.h"
 #include "../../Universal_System/var4.h"
 #include "../../Universal_System/roomsystem.h" // Room dimensions.
-
+#include "../graphics_mandatory.h" // Room dimensions.
 namespace enigma
 {
   unsigned bound_texture=0;
@@ -52,22 +40,27 @@ namespace enigma
       if (!(glBindFramebufferEXT and glGenFramebuffersEXT and glFramebufferTexture2DEXT))
         MessageBox(0,"Additional drawing surfaces cannot be created. Extension unsupported by graphics card","Error",MB_OK);
     #endif
+
+    #ifdef _WIN32
+      GLenum err = glewInit();
+      if (GLEW_OK != err)
+      {
+        std::cout<<"GLEW ERROR!"<<std::endl;
+      }
+      std::cout<<"GLEW LOADED!"<<std::endl;
+    #endif
     //enigma::pbo_isgo=GL_ARB_pixel_buffer_object;
     glMatrixMode(GL_PROJECTION);
       glClearColor(0,0,0,0);
     glMatrixMode(GL_MODELVIEW);
       glLoadIdentity();
-      glLoadIdentity();
 
       glViewport(0,0,(int)room_width,(int)room_height);
-      glOrtho(-1,room_width,-1,room_height,0,1);
+      glOrtho(-1,(int)room_width,-1,(int)room_height,0,1);
       glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
       glDisable(GL_DEPTH_TEST);
       glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-      glClearDepth(1.0);
-
-      glDepthFunc(GL_LEQUAL); //FIXME: Calling this after disabling depth test?
 
       glEnable(GL_BLEND);
       glEnable(GL_ALPHA_TEST);
@@ -81,7 +74,7 @@ namespace enigma
 }
 
 // Stolen entirely from the documentation and thrown into a switch() structure.
-const char* draw_get_graphics_error()
+string draw_get_graphics_error()
 {
   GLenum err = glGetError();
   switch (err)

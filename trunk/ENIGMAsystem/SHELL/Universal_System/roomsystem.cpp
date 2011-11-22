@@ -1,6 +1,6 @@
 /********************************************************************************\
 **                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
+**  Copyright (C) 2008-2011 Josh Ventura                                        **
 **                                                                              **
 **  This file is a part of the ENIGMA Development Environment.                  **
 **                                                                              **
@@ -35,6 +35,7 @@
 #include "ENIGMA_GLOBALS.h" // TODO: Do away with this sloppy infestation permanently!
 
 #include "../Platforms/platforms_mandatory.h"
+#include "../Widget_Systems/widgets_mandatory.h"
 #include "../libEGMstd.h"
 #include "instance_system.h"
 #include "instance.h"
@@ -71,13 +72,13 @@ namespace enigma
   {
     //Destroy all objects
     enigma::nodestroy=1;
-    for (enigma::inst_iter *it = enigma::instance_list_first(); it != NULL; it = it->next)
+    for (enigma::iterator it = enigma::instance_list_first(); it; ++it)
     {
-      it->inst->myevent_roomend();
+      it->myevent_roomend();
       #ifdef ISCONTROLLER_persistent
-      if (!it->inst->persistent)
+      if (!it->persistent)
       #endif
-      instance_destroy(it->inst->id);
+      instance_destroy(it->id);
     }
     enigma::nodestroy = 0;
 
@@ -165,7 +166,6 @@ namespace enigma
 
 
 //Implement the "room" global before we continue
-int room_goto(int roomind);
 
 void enigma::roomv::function() {
   room_goto((int)rval.d);
@@ -246,7 +246,7 @@ int room_goto_previous()
     errcheck((int)room.rval.d,"Going to next room from invalid room. wat");
 
     rit = enigma::roomorder[rit->order - 1];
-    errcheck(rit->order-1,"Going to previous room after first");
+    errcheck(rit->order-1,"Going to next room after last");
 
     rit->gotome();
     return 0;

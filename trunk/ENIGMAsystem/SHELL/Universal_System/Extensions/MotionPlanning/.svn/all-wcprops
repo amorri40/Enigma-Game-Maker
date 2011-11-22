@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/MotionPlanning
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/MotionPlanning
 END
 mp.png
 K 25
@@ -37,7 +37,7 @@ Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/svnroot/enigma-dev/!svn/ver/851/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/MotionPlanning/Makefile
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Universal_System/Extensions/MotionPlanning/Makefile
 END
 mp.cpp
 K 25

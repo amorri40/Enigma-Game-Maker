@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Info
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Info
 END
 platform_info.h
 K 25
@@ -13,5 +13,5 @@ About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Info/About.ey
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Platforms/xlib/Info/About.ey
 END

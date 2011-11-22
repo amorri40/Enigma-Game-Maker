@@ -1,15 +1,15 @@
 10
 
 dir
-868
+948
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/ENIGMAsystem/SHELL/Platforms/Win32/ffi
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-11-09T20:33:52.457472Z
+942
+JoshDreamland
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-561ef61f05b0020c607509990b2627bd
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-11-22T03:51:57.000000Z
+14c1f7aebbfc39f17a9b79f9a421478e
+2011-11-09T20:33:52.457472Z
+942
+JoshDreamland
 has-props
 
 
@@ -58,7 +58,7 @@ has-props
 
 
 
-2969
+3518
 
 ffi.h
 file
@@ -66,11 +66,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-4a09240f8232824eef37b390ee22395e
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-11-22T03:51:57.000000Z
+a5a5260a279fea89c38d738208775063
+2011-11-09T20:33:52.457472Z
+942
+JoshDreamland
 has-props
 
 
@@ -92,7 +92,7 @@ has-props
 
 
 
-10885
+11560
 
 libFFI.a
 file
@@ -100,11 +100,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-9495285d9c487116c78874de639c6ca2
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-11-22T03:51:57.000000Z
+958d8ce098f2501dc00f0637490b605d
+2011-11-09T20:33:52.457472Z
+942
+JoshDreamland
 has-props
 
 
@@ -126,7 +126,7 @@ has-props
 
 
 
-25974
+96050
 
 readme.txt
 file
@@ -134,11 +134,11 @@ file
 
 
 
-2011-04-20T21:22:04.000000Z
-815deb3859d8bbb73b1b712e14ea1f92
-2010-10-04T14:31:07.739207Z
-484
-ismavatar
+2011-11-22T03:51:57.000000Z
+4f30e7fbf7a123ef8c8f0986700ac0bf
+2011-11-09T20:33:52.457472Z
+942
+JoshDreamland
 has-props
 
 
@@ -160,5 +160,5 @@ has-props
 
 
 
-589
+629
 

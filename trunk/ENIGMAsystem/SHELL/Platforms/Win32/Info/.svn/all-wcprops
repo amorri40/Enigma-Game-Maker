@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Info
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Info
+END
+game_info.rc.template
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/enigma-dev/!svn/ver/874/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Info/game_info.rc.template
 END
 platform_info.h
 K 25
@@ -13,5 +19,5 @@ About.ey
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/810/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Info/About.ey
+/svnroot/enigma-dev/!svn/ver/912/trunk/ENIGMAsystem/SHELL/Platforms/Win32/Info/About.ey
 END

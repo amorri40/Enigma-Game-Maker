@@ -4,7 +4,7 @@ have run into, despite the fact that aside from ENIGMA, I can't think of any ano
 for it. At any rate, LibFFI is the reason external_define and the sort work on the fly.
 
 I didn't include the source for reasons of size. Instead, this folder contains a static
-library built for Windows.
+library I built for Windows. Specifically, this is version 3.0.10.
 
 You can download the full source, with any updates, at the official website.
 http://sourceware.org/libffi/

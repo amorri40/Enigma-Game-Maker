@@ -42,10 +42,16 @@
 #include "Universal_System/fileio.h"
 #include "Universal_System/terminal_io.h"
 
-//#include <vector> //COLLIGMA
-
+#include "GameSettings.h"
 #include "Preprocessor_Environment_Editable/LIBINCLUDE.h"
 #include "Preprocessor_Environment_Editable/GAME_SETTINGS.h"
+
+#include "Universal_System/collisions_object.h"
+
+#include "Collision_Systems/collision_mandatory.h"
+#include "Graphics_Systems/graphics_mandatory.h"
+#include "Platforms/platforms_mandatory.h"
+
 #include "API_Switchboard.h"
 
 #include "Universal_System/reflexive_types.h"
@@ -54,13 +60,6 @@
 #include "Universal_System/ENIGMA_GLOBALS.h"
 
 #include "libEGMstd.h"
-
-
-#include "Universal_System/collisions_object.h"
-
-#include "Collision_Systems/collision_mandatory.h"
-#include "Graphics_Systems/graphics_mandatory.h"
-#include "Platforms/platforms_mandatory.h"
 
 #include "Universal_System/switch_stuff.h"
 #include "Universal_System/CallbackArrays.h"
@@ -74,8 +73,6 @@ extern int amain();
 #include "Universal_System/roomsystem.h"
 
 #include "Universal_System/globalupdate.h"
-
-#include "Universal_System/WITHconstruct.h"
 
 #include "Universal_System/simplecollisions.h"
 #if COLLIGMA
@@ -102,6 +99,7 @@ extern int amain();
 #include "unimplemented.h"
 #endif
 //TGMG end
+
 
 #ifndef ENIGMA_PARSER_RUN
   #include "Preprocessor_Environment_Editable/IDE_EDIT_resourcenames.h"
@@ -132,10 +130,11 @@ extern int amain();
 
 namespace enigma
 {
+  int game_ending();
   int game_ending()
   {
-    for (inst_iter *i = instance_list_first(); i != NULL; i = i->next)
-      { i->inst->unlink(); delete i->inst; }
+    for (enigma::iterator i = instance_list_first(); i; ++i)
+      { i->unlink(); delete *i; }
     return 0;
   }
 }

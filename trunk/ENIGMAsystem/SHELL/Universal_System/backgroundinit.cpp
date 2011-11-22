@@ -1,30 +1,20 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**  Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>                      **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2008-2011 Josh Ventura
+*** Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <string>
 #include <stdio.h>
@@ -32,9 +22,11 @@ using namespace std;
 
 #include "backgroundstruct.h"
 #include "../Graphics_Systems/graphics_mandatory.h"
+#include "../Widget_Systems/widgets_mandatory.h"
 #include "../Platforms/platforms_mandatory.h"
 #include "../libEGMstd.h"
-#include "compression.h"
+#include "zlib.h"
+#include "resinit.h"
 
 
 namespace enigma
@@ -44,19 +36,19 @@ namespace enigma
     int nullhere;
 	  unsigned bkgid, width, height,transparent,smoothEdges,preload,useAsTileset,tileWidth,tileHeight,hOffset,vOffset,hSep,vSep;
     
-    fread(&nullhere,4,1,exe);
-    if (nullhere != *(int*)"BKG ")
+    if (!fread(&nullhere,4,1,exe) or nullhere != *(int*)"BKG ")
       return;
     
     // Determine how many backgrounds we have
     int bkgcount;
-    fread(&bkgcount,4,1,exe);
+    if (!fread(&bkgcount,4,1,exe))
+      return;
     
-	  
 	  
 	  // Fetch the highest ID we will be using
 	  int bkg_highid;
-	  fread(&bkg_highid,4,1,exe);
+	  if (!fread(&bkg_highid,4,1,exe))
+	    return;
 	  
 	  printf("highestid: %d", bkg_highid);
 	  
@@ -65,31 +57,31 @@ namespace enigma
 	  for (int i = 0; i < bkgcount; i++)
 	  {
 		  int unpacked;
-		  fread(&bkgid, 4,1,exe);
-		  fread(&width, 4,1,exe);
+		  if (!fread(&bkgid, 4,1,exe)) return;
+		  if (!fread(&width, 4,1,exe)) return;
 		  printf("width: %d", width);
-		  fread(&height,4,1,exe);
+		  if (!fread(&height,4,1,exe)) return;
 		  printf("height: %d", height);
 		  
-		  fread(&transparent,4,1,exe);
+		  if (!fread(&transparent,4,1,exe)) return;
 		  printf("transparent: %d", transparent);
-		  fread(&smoothEdges,4,1,exe);
+		  if (!fread(&smoothEdges,4,1,exe)) return;
 		  printf("smoothEdges: %d", smoothEdges);
-		  fread(&preload,4,1,exe);
+		  if (!fread(&preload,4,1,exe)) return;
 		  printf("preload: %d", preload);
-		  fread(&useAsTileset,4,1,exe);
+		  if (!fread(&useAsTileset,4,1,exe)) return;
 		  printf("useAsTileset: %d", useAsTileset);
-		  fread(&tileWidth,4,1,exe);
+		  if (!fread(&tileWidth,4,1,exe)) return;
 		  printf("tileWidth: %d", tileWidth);
-		  fread(&tileHeight,4,1,exe);
+		  if (!fread(&tileHeight,4,1,exe)) return;
 		  printf("tileHeight: %d", tileHeight);
-		  fread(&hOffset,4,1,exe);
+		  if (!fread(&hOffset,4,1,exe)) return;
 		  printf("hOffset: %d", hOffset);
-		  fread(&vOffset,4,1,exe);
+		  if (!fread(&vOffset,4,1,exe)) return;
 		  printf("vOffset: %d", vOffset);
-		  fread(&hSep,4,1,exe);
+		  if (!fread(&hSep,4,1,exe)) return;
 		  printf("hSep: %d", hSep);
-		  fread(&vSep,4,1,exe);
+		  if (!fread(&vSep,4,1,exe)) return;
 		  printf("vSep: %d", vSep);
 		  
 		 
@@ -98,7 +90,7 @@ namespace enigma
 		  unpacked = width*height*4;
 		  
 		  unsigned int size;
-		  fread(&size,4,1,exe); 
+		  if (!fread(&size,4,1,exe)); 
 		  printf("Alloc size: %d", size);
 		  
 		  unsigned char* cpixels=new unsigned char[size+1];
@@ -124,13 +116,6 @@ namespace enigma
 		  background_new(bkgid, width, height, pixels, false, false, true, false, 32, 32, 0, 0, 1,1);
 		  
 		  delete[] pixels;
-		  
-		  
 	  }
-	  
-	  
-	 
-	  
-	  
   }
 }

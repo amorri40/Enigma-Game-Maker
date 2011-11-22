@@ -1,33 +1,23 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**  Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>                      **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2008-2011 Josh Ventura
+*** Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <string>
-#include <string.h>
+#include <cstring>
 using namespace std;
 
 #include "../Graphics_Systems/graphics_mandatory.h"
@@ -47,14 +37,7 @@ namespace enigma {
  * use at load time with data read from the executable. These both expect
  * RAW format, RGB only.
  */
-inline unsigned int nlpo2dc(unsigned int x) //Next largest power of two minus one
-{
-	x |= x>>1;
-	x |= x>>2;
-	x |= x>>4;
-	x |= x>>8;
-	return x | (x>>16);
-}
+#include "nlpo2.h"
 
 namespace enigma
 {
@@ -111,6 +94,4 @@ namespace enigma
 		for (unsigned i = 0; i < enigma::background_idmax; i++)
 			backgroundstructarray[i] = NULL;
 	}
-	
-	
 }

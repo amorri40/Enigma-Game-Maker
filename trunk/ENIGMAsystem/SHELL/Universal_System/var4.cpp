@@ -1,29 +1,19 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2011 Josh Ventura
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <map>
 #include <string>
@@ -364,15 +354,15 @@ types_binary_extrapolate_real_p  (double operator%, const variant&, { terror(rea
 types_binary_extrapolate_string_p(string operator%, const variant&, { terrortrue(); return 0; })
 
 types_binary_bitwise_extrapolate_real_p(<<, const variant&, terror(real);  )
-types_binary_extrapolate_string_p      (string operator<<, const variant&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator<<, const variant&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(>>, const variant&, terror(real);  )
-types_binary_extrapolate_string_p      (string operator>>, const variant&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator>>, const variant&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(&,  const variant&, terror(real);  )
-types_binary_extrapolate_string_p      (string operator&,  const variant&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator&,  const variant&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(|,  const variant&, terror(real);  )
-types_binary_extrapolate_string_p      (string operator|,  const variant&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator|,  const variant&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(^,  const variant&, terror(real);  )
-types_binary_extrapolate_string_p      (string operator^,  const variant&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator^,  const variant&, { terrortrue(); return 0; })
 
 // I have no fucking idea why C++0x can't do this for me.
 types_binary_extrapolate_real_p  (bool operator==, const variant&, { return y == x; })
@@ -414,15 +404,15 @@ types_binary_extrapolate_real_p  (double operator%, const var&, { div0c((*y).rva
 types_binary_extrapolate_string_p(string operator%, const var&, { terrortrue(); return 0; })
 
 types_binary_bitwise_extrapolate_real_p(<<, const var&,  )
-types_binary_extrapolate_string_p      (string operator<<, const var&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator<<, const var&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(>>, const var&,  )
-types_binary_extrapolate_string_p      (string operator>>, const var&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator>>, const var&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(&,  const var&,  )
-types_binary_extrapolate_string_p      (string operator&,  const var&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator&,  const var&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(|,  const var&,  )
-types_binary_extrapolate_string_p      (string operator|,  const var&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator|,  const var&, { terrortrue(); return 0; })
 types_binary_bitwise_extrapolate_real_p(^,  const var&,  )
-types_binary_extrapolate_string_p      (string operator^,  const var&, { terrortrue(); return 0; })
+//types_binary_extrapolate_string_p      (string operator^,  const var&, { terrortrue(); return 0; })
 
 // I have no fucking idea why C++0x can't do this for me.
 types_binary_extrapolate_real_p  (bool operator==, const var&, { return y == x; })
@@ -476,6 +466,7 @@ double    var::operator+ () const { return +(double)(**this); }
 
 
 #include <stdio.h>
+#include "../libEGMstd.h"
 string toString(const variant &a)
 {
   char buf[32];
@@ -487,13 +478,3 @@ string toString(const var &a) {
   return toString(*a);
 }
 
-string toString(variant &a)
-{
-  char buf[32];
-  if (a.type == real)
-    return string(buf,sprintf(buf,"%g",a.rval.d));
-  return a.sval;
-}
-string toString(var &a) {
-  return toString(*a);
-}

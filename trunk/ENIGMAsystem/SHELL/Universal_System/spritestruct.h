@@ -30,6 +30,9 @@
 #ifndef ENIGMA_SPRITESTRUCT
 #define ENIGMA_SPRITESTRUCT
 
+struct bbox_rect_t {
+  int bottom, left, right, top;
+};
 namespace enigma
 {
   struct sprite
@@ -40,7 +43,7 @@ namespace enigma
 
     //void*  *pixeldata;
     double texbordx, texbordy;
-    int bbox_bottom, bbox_left, bbox_right, bbox_top;
+    bbox_rect_t bbox, bbox_relative;
     bool where,smooth;
 
     sprite();
@@ -54,9 +57,6 @@ namespace enigma
 
 namespace enigma
 {
-  //Allocates and zero-fills the array at game start
-  void sprites_init();
-
   //Adds an empty sprite to the list
   int sprite_new_empty(unsigned sprid, unsigned subc, int w, int h, int x, int y, int bbt, int bbb, int bbl, int bbr, bool pl, bool sm);
 
@@ -64,17 +64,29 @@ namespace enigma
   void sprite_set_subimage(int sprid, int imgindex, int x, int y, unsigned int w,unsigned int h,unsigned char*chunk);
 }
 
-extern int sprite_get_width(int sprite);
-extern int sprite_get_height(int sprite);
-extern int sprite_get_bbox_bottom(int sprite);
-extern int sprite_get_bbox_left(int sprite);
-extern int sprite_get_bbox_right(int sprite);
-extern int sprite_get_bbox_top(int sprite);
-extern int sprite_get_bbox_mode(int sprite);
-extern int sprite_get_number(int sprite);
-extern int sprite_get_texture(int sprite, int subimage);
-extern int sprite_get_xoffset(int sprite);
-extern int sprite_get_yoffset(int sprite);
+extern int sprite_get_width  (int sprite);
+extern int sprite_get_height (int sprite);
+
+extern int sprite_get_bbox_bottom (int sprite);
+extern int sprite_get_bbox_left   (int sprite);
+extern int sprite_get_bbox_right  (int sprite);
+extern int sprite_get_bbox_top    (int sprite);
+extern int sprite_get_bbox_mode   (int sprite);
+
+extern int sprite_get_bbox_bottom_relative (int sprite);
+extern int sprite_get_bbox_left_relative   (int sprite);
+extern int sprite_get_bbox_right_relative  (int sprite);
+extern int sprite_get_bbox_top_relative    (int sprite);
+
+extern const bbox_rect_t &sprite_get_bbox(int sprite);
+extern const bbox_rect_t &sprite_get_bbox_relative(int sprite);
+
+extern int sprite_get_number  (int sprite);
+extern int sprite_get_texture (int sprite, int subimage);
+extern int sprite_get_xoffset (int sprite);
+extern int sprite_get_yoffset (int sprite);
+
+int sprite_add(string filename, int imgnumb, bool precise, bool transparent, bool smooth, bool preload, int x_offset, int y_offset);
 
 #endif // ENIGMA_SPRITESTRUCT
 

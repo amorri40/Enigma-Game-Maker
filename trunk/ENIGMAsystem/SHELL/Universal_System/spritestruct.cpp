@@ -1,36 +1,27 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2008-2011 Josh Ventura
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <string>
-#include <string.h>
+#include <cstring>
 using namespace std;
 
 #include "../Graphics_Systems/graphics_mandatory.h"
 #include "../Collision_Systems/collision_mandatory.h"
+#include "../Widget_Systems/widgets_mandatory.h"
 #include "spritestruct.h"
 #include "../libEGMstd.h"
 #include "IMGloading.h"
@@ -72,14 +63,7 @@ int sprite_add(string filename, int imgnumb, bool precise, bool transparent, boo
  * use at load time with data read from the executable. These both expect
  * RAW format, RGB only.
  */
-inline unsigned int nlpo2dc(unsigned int x) //Next largest power of two minus one
-{
-	x |= x>>1;
-	x |= x>>2;
-	x |= x>>4;
-	x |= x>>8;
-	return x | (x>>16);
-}
+#include "nlpo2.h"
 
 namespace enigma
 {
@@ -94,7 +78,7 @@ namespace enigma
   //Adds an empty sprite to the list
   int sprite_new_empty(unsigned sprid, unsigned subc, int w, int h, int x, int y, int bbt, int bbb, int bbl, int bbr, bool pl, bool sm)
   {
-    int fullwidth=nlpo2dc(w-1)+1,fullheight=nlpo2dc(h-1)+1;
+    int fullwidth=nlpo2dc(w)+1,fullheight=nlpo2dc(h)+1;
     sprite *as = new sprite(subc);
     spritestructarray[sprid] = as;
     
@@ -102,10 +86,14 @@ namespace enigma
     as->subcount = subc;
     as->width  = w;
     as->height = h;
-    as->bbox_bottom  = bbb;
-      as->bbox_left  = bbl;
-      as->bbox_top   = bbt;
-      as->bbox_right = bbr;
+    as->bbox.bottom  = bbb;
+      as->bbox.left  = bbl;
+      as->bbox.top   = bbt;
+      as->bbox.right = bbr;
+    as->bbox_relative.bottom  = bbb - y;
+      as->bbox_relative.left  = bbl - x;
+      as->bbox_relative.top   = bbt - y;
+      as->bbox_relative.right = bbr - x;
     as->xoffset = x;
     as->yoffset = y;
     as->texbordx = (double)w/fullwidth;
@@ -134,7 +122,7 @@ namespace enigma
   //Adds a subimage to an existing sprite from the exe
   void sprite_set_subimage(int sprid, int imgindex, int x,int y, unsigned int w,unsigned int h,unsigned char*chunk)
   {
-    unsigned int fullwidth = nlpo2dc(w-1)+1, fullheight = nlpo2dc(h-1)+1;
+    unsigned int fullwidth = nlpo2dc(w)+1, fullheight = nlpo2dc(h)+1;
     char *imgpxdata = new char[4*fullwidth*fullheight+1], *imgpxptr = imgpxdata;
     unsigned int rowindex,colindex;
     for (rowindex = 0; rowindex < h; rowindex++)
@@ -161,73 +149,103 @@ namespace enigma
   }
 }
 
-
-#define DEBUGMODE 1
+#ifdef DEBUG_MODE
+  #include "../Widget_Systems/widgets_mandatory.h"
+  #define get_sprite(spr,id,r) \
+    if (id < -1 or size_t(id) > enigma::sprite_idmax or !enigma::spritestructarray[id]) { \
+      show_error("Cannot access sprite with id " + toString(id), false); \
+      return r; \
+    } const enigma::sprite *const spr = enigma::spritestructarray[id];
+  #define get_spritev(spr,id) \
+    if (id < -1 or size_t(id) > enigma::sprite_idmax or !enigma::spritestructarray[id]) { \
+      show_error("Cannot access sprite with id " + toString(id), false); \
+      return; \
+    } const enigma::sprite *const spr = enigma::spritestructarray[id];
+  #define get_sprite_null(spr,id,r) \
+    if (id < -1 or size_t(id) > enigma::sprite_idmax) { \
+      show_error("Cannot access sprite with id " + toString(id), false); \
+      return r; \
+    } const enigma::sprite *const spr = enigma::spritestructarray[id];
+#else
+  #define get_sprite(spr,id,r) \
+    const enigma::sprite *const spr = enigma::spritestructarray[id];
+  #define get_spritev(spr,id) \
+    const enigma::sprite *const spr = enigma::spritestructarray[id];
+  #define get_sprite_null(spr,id,r) \
+    const enigma::sprite *const spr = enigma::spritestructarray[id];
+#endif
 
 int sprite_get_width(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve width of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->width;
+	get_sprite(spr,sprite,0);
+	return spr->width;
 }
 
 int sprite_get_height(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve width of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->height;
+	get_sprite(spr,sprite,0);
+	return spr->height;
 }
 
 
 int sprite_get_bbox_bottom(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve bounding box of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->bbox_bottom;
+	get_sprite(spr,sprite,0);
+	return spr->bbox.bottom;
 }
 int sprite_get_bbox_left(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve bounding box of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->bbox_left;
+	get_sprite(spr,sprite,0);
+	return spr->bbox.left;
 }
 int sprite_get_bbox_right(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve bounding box of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->bbox_right;
+	get_sprite(spr,sprite,0);
+	return spr->bbox.right;
 }
 int sprite_get_bbox_top(int sprite)
 {
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve bounding box of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->bbox_top;
+	get_sprite(spr,sprite,0);
+	return spr->bbox.top;
 }
 
+int sprite_get_bbox_bottom_relative(int sprite)
+{
+	get_sprite(spr,sprite,0);
+	return spr->bbox_relative.bottom;
+}
+int sprite_get_bbox_left_relative(int sprite)
+{
+	get_sprite(spr,sprite,0);
+	return spr->bbox_relative.left;
+}
+int sprite_get_bbox_right_relative(int sprite)
+{
+	get_sprite(spr,sprite,0);
+	return spr->bbox_relative.right;
+}
+int sprite_get_bbox_top_relative(int sprite)
+{
+	get_sprite(spr,sprite,0);
+	return spr->bbox_relative.top;
+}
+
+#ifdef DEBUG_MODE
+  bbox_rect_t dummy_bbox;
+#endif
+const bbox_rect_t &sprite_get_bbox(int sprite)
+{
+	get_sprite(spr,sprite,dummy_bbox);
+	return spr->bbox;
+}
+const bbox_rect_t &sprite_get_bbox_relative(int sprite)
+{
+	get_sprite(spr,sprite,dummy_bbox);
+	return spr->bbox_relative;
+}
+
+
+//TODO: IMPLEMENT
 //sprite_get_bbox_mode
 //sprite_get_name
 //sprite_get_precise
@@ -237,49 +255,25 @@ int sprite_get_bbox_top(int sprite)
 
 int sprite_get_number(int sprite)
 {
-  if (sprite == -1)
-    return 0;
-	#ifdef DEBUGMODE
-  if (!enigma::spritestructarray[sprite]) {
-	  show_error("Trying to retrieve subimage count of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return enigma::spritestructarray[sprite]->subcount;
+  if (sprite == -1) return 0;
+	get_sprite(spr,sprite,0);
+	return spr->subcount;
 }
 
 int sprite_get_texture(int sprite,int subimage)
 {
-  enigma::sprite* ps = enigma::spritestructarray[sprite];
-	#ifdef DEBUGMODE
-  if (!ps) {
-	  show_error("Trying to retrieve bounding box of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return ps->texturearray[subimage % ps->subcount];
+	get_sprite(spr,sprite,0);
+	return spr->texturearray[subimage % spr->subcount];
 }
 
 int sprite_get_xoffset(int sprite)
 {
-	enigma::sprite* fnd = enigma::spritestructarray[sprite];
-	#ifdef DEBUGMODE
-  if (!fnd) {
-	  show_error("Trying to retrieve x origin of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return fnd->xoffset;
+	get_sprite(spr,sprite,0);
+	return spr->xoffset;
 }
 
 int sprite_get_yoffset(int sprite)
 {
-	enigma::sprite* fnd = enigma::spritestructarray[sprite];
-	#ifdef DEBUGMODE
-  if (!fnd) {
-	  show_error("Trying to retrieve x origin of non-existing sprite "+toString(sprite),0);
-	  return 0;
-  }
-	#endif
-	return fnd->yoffset;
+	get_sprite(spr,sprite,0);
+	return spr->yoffset;
 }

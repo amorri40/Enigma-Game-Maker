@@ -76,15 +76,15 @@ int  window_get_stayontop();
 void window_set_caption(char* caption);
 void window_set_caption(string caption);
 string window_get_caption();
-double window_set_color(int color);
-double window_get_color();
+void window_set_color(int color);
+int  window_get_color();
 void window_set_region_scale(int scale, int adaptwindow);
 double window_get_region_scale();
 void window_set_position(int x, int y);
 void window_set_size(unsigned int width, unsigned int height);
 void window_set_rectangle(int x, int y, int width, int height);
 void window_center();
-int  window_default();
+void window_default();
 int  window_mouse_get_x();
 int  window_mouse_get_y();
 void window_mouse_set(int x,int y);
@@ -93,11 +93,5 @@ void window_set_fullscreen(const bool full);
 int  window_get_fullscreen();
 //int window_set_cursor(double c);
 
-namespace getstr {
-  void init();
-}
-
-string get_string(string message, string def);
-int game_end();
+void game_end();
 void action_end_game();
-int get_color(double defcolor);

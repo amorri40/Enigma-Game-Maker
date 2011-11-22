@@ -1,36 +1,28 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2011 Josh Ventura, Harijs Grînbergs                           **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2011 Josh Ventura, Harijs Grînbergs
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <math.h>
 #include <string>
 #include "OpenGLHeaders.h"
 #include "../../Universal_System/var4.h"
+#include "../../libEGMstd.h"
 #include "GScolors.h"
 #include "GSfont.h"
+#include "binding.h"
 
 using namespace std;
 #include "../../Universal_System/fontstruct.h"
@@ -41,7 +33,7 @@ using namespace std;
 
 namespace enigma {
   static int currentfont = -1;
-  extern unsigned bound_texture;
+  extern size_t font_idmax;
 }
 
 using namespace enigma;
@@ -69,11 +61,37 @@ unsigned draw_get_valign(){
     return valign;
 }
 
+#ifdef DEBUG_MODE
+  #include "../../Widget_Systems/widgets_mandatory.h"
+  #define get_font(fnt,id,r) \
+    if (id < -1 or size_t(id+1) >= (enigma::font_idmax-1) or !fontstructarray[id]) { \
+      show_error("Cannot access font with id " + toString(id), false); \
+      return r; \
+    } const font *const fnt = fontstructarray[id];
+  #define get_fontv(fnt,id) \
+    if (id < -1 or size_t(id+1) >= (enigma::font_idmax-1) or !fontstructarray[id]) { \
+      show_error("Cannot access font with id " + toString(id), false); \
+      return; \
+    } const font *const fnt = fontstructarray[id];
+  #define get_font_null(fnt,id,r) \
+    if (id < -1 or size_t(id+1) >= (enigma::font_idmax-1)) { \
+      show_error("Cannot access font with id " + toString(id), false); \
+      return r; \
+    } const font *const fnt = fontstructarray[id];
+#else
+  #define get_font(fnt,id,r) \
+    const font *const fnt = fontstructarray[id];
+  #define get_fontv(fnt,id) \
+    const font *const fnt = fontstructarray[id];
+  #define get_font_null(fnt,id,r) \
+    const font *const fnt = fontstructarray[id];
+#endif
+
 ///////////////////////////////////////////////////
 unsigned int string_width_line(variant vstr, int line)
 {
-  string str = string(vstr);
-  const font *const fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
   int len = 0, cl = 0;
   for (unsigned i = 0; i < str.length(); i++)
   {
@@ -83,12 +101,12 @@ unsigned int string_width_line(variant vstr, int line)
       cl += 1;
       len = 0;
       i += str[i+1] == '\n';
-    }else if (str[i] == '\n'){
+    } else if (str[i] == '\n'){
       if (cl == line)
         return len;
       cl += 1;
       len = 0;
-    }else if (str[i] == ' ')
+    } else if (str[i] == ' ')
       len += fnt->height/3; // FIXME: what's GM do about this?
     else {
       len += fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount].xs;
@@ -99,8 +117,8 @@ unsigned int string_width_line(variant vstr, int line)
 
 unsigned int string_width_ext_line(variant vstr, int w, int line)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
 
   unsigned int width = 0, tw = 0; int cl = 0;
   for (unsigned i = 0; i < str.length(); i++)
@@ -119,7 +137,7 @@ unsigned int string_width_ext_line(variant vstr, int w, int line)
       }
       if (width+tw >= unsigned(w) && w != -1)
         if (cl == line) return width; else width = 0, cl +=1; else;
-    }else
+    } else
       width += fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount].xs;
   }
   return width;
@@ -127,8 +145,8 @@ unsigned int string_width_ext_line(variant vstr, int w, int line)
 
 unsigned int string_width_ext_line_count(variant vstr, int w)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
 
   unsigned int width = 0, tw = 0, cl = 1;
   for (unsigned i = 0; i < str.length(); i++)
@@ -147,7 +165,7 @@ unsigned int string_width_ext_line_count(variant vstr, int w)
       }
       if (width+tw >= unsigned(w) && w != -1)
         width = 0, cl +=1;
-    }else
+    } else
       width += fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount].xs;
   }
   return cl;
@@ -155,8 +173,8 @@ unsigned int string_width_ext_line_count(variant vstr, int w)
 
 unsigned int string_width(variant vstr)
 {
-  string str = string(vstr);
-  const font *const fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
   int mlen = 0, tlen = 0;
   for (unsigned i = 0; i < str.length(); i++)
   {
@@ -174,8 +192,8 @@ unsigned int string_width(variant vstr)
 
 unsigned int string_height(variant vstr)
 {
-  string str = string(vstr);
-  const font *const fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
   int hgt = fnt->height;
   for (unsigned i = 0; i < str.length(); i++)
     if (str[i] == '\r' or str[i] == '\n')
@@ -185,8 +203,8 @@ unsigned int string_height(variant vstr)
 
 unsigned int string_width_ext(variant vstr, int sep, int w) //here sep doesn't do anything, but I can't make it 'default = ""', because its the second argument
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
 
   unsigned int width = 0, maxwidth = 0;
   for (unsigned i = 0; i < str.length(); i++)
@@ -196,7 +214,7 @@ unsigned int string_width_ext(variant vstr, int sep, int w) //here sep doesn't d
             (width>maxwidth ? maxwidth=width, width = 0 : width = 0);
         else
             width += fnt->height/3; // FIXME: what's GM do about this?
-    }else{
+    } else {
         fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
         width += g.xs;
     }
@@ -206,8 +224,8 @@ unsigned int string_width_ext(variant vstr, int sep, int w) //here sep doesn't d
 
 unsigned int string_height_ext(variant vstr, int sep, int w)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
+  string str = toString(vstr);
+  get_font(fnt,currentfont,0);
 
   unsigned int width = 0, tw = 0, height = fnt->height;
   for (unsigned i = 0; i < str.length(); i++)
@@ -227,21 +245,21 @@ unsigned int string_height_ext(variant vstr, int sep, int w)
 
       if (width+tw >= unsigned(w) && w != -1)
         height += (sep==-1 ? fnt->height : sep), width = 0, tw = 0;
-    }else{
+    } else {
         fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
         width += g.xs;
     }
   }
   return height;
 }
+
 ////////////////////////////////////////////////////
 void draw_text(int x,int y,variant vstr)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
+  
   int yy = valign == fa_top ? y+fnt->yoffset : valign == fa_middle ? y +fnt->yoffset - string_height(str)/2 : y + fnt->yoffset - string_height(str);
   if (halign == fa_left){
       int xx = x;
@@ -265,22 +283,22 @@ void draw_text(int x,int y,variant vstr)
               glVertex2i(xx + g.x2, yy + g.y2);
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
         }
       }
       glEnd();
-  }else{
-      int xx = halign == fa_center ? x-string_width_line(str,0)/2 : x-string_width_line(str,0), line = 0;
+  } else {
+      int xx = halign == fa_center ? x-int(string_width_line(str,0)/2) : x-int(string_width_line(str,0)), line = 0;
       glBegin(GL_QUADS);
       for (unsigned i = 0; i < str.length(); i++)
       {
         if (str[i] == '\r'){
           line +=1, yy += fnt->height, i += str[i+1] == '\n';
-          xx = halign == fa_center ? x-string_width_line(str,line)/2 : x-string_width_line(str,line);
-        }else if (str[i] == '\n'){
+          xx = halign == fa_center ? x-int(string_width_line(str,line)/2) : x-int(string_width_line(str,line));
+        } else if (str[i] == '\n'){
           line +=1, yy += fnt->height;
-          xx = halign == fa_center ? x-string_width_line(str,line)/2 : x-string_width_line(str,line);
-        }else if (str[i] == ' ')
+          xx = halign == fa_center ? x-int(string_width_line(str,line)/2) : x-int(string_width_line(str,line));
+        } else if (str[i] == ' ')
           xx += fnt->height/3; // FIXME: what's GM do about this?
         else
         {
@@ -293,7 +311,7 @@ void draw_text(int x,int y,variant vstr)
               glVertex2i(xx + g.x2, yy + g.y2);
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
         }
       }
       glEnd();
@@ -302,11 +320,9 @@ void draw_text(int x,int y,variant vstr)
 
 void draw_text_ext(int x,int y,variant vstr, int sep, int w)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   int yy = valign == fa_top ? y+fnt->yoffset : valign == fa_middle ? y + fnt->yoffset - string_height_ext(str,sep,w)/2 : y + fnt->yoffset - string_height_ext(str,sep,w);
 
@@ -332,7 +348,7 @@ void draw_text_ext(int x,int y,variant vstr, int sep, int w)
 
           if (width+tw >= w && w != -1)
             xx = x, yy += (sep==-1 ? fnt->height : sep), width = 0, tw = 0;
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
             glTexCoord2f(g.tx,  g.ty);
               glVertex2i(xx + g.x,  yy + g.y);
@@ -342,21 +358,21 @@ void draw_text_ext(int x,int y,variant vstr, int sep, int w)
               glVertex2i(xx + g.x2, yy + g.y2);
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
         }
       }
       glEnd();
-  }else{
-      int xx = halign == fa_center ? x-string_width_ext_line(str,w,0)/2 : x-string_width_ext_line(str,w,0), tmpx = xx, line = 0, width = 0, tw = 0;
+  } else {
+      int xx = halign == fa_center ? x-int(string_width_ext_line(str,w,0)/2) : x-int(string_width_ext_line(str,w,0)), line = 0, width = 0, tw = 0;
       glBegin(GL_QUADS);
       for (unsigned i = 0; i < str.length(); i++)
       {
         if (str[i] == '\r')
-          line += 1, xx = halign == fa_center ? x-string_width_ext_line(str,w,line)/2 : x-string_width_ext_line(str,w,line), tmpx = xx, yy += (sep+2 ? fnt->height : sep), i += str[i+1] == '\n';
+          line += 1, xx = halign == fa_center ? x-int(string_width_ext_line(str,w,line)/2) : x-int(string_width_ext_line(str,w,line)), yy += (sep+2 ? fnt->height : sep), i += str[i+1] == '\n', width = 0;
         else if (str[i] == '\n')
-          line += 1, xx = halign == fa_center ? x-string_width_ext_line(str,w,line)/2 : x-string_width_ext_line(str,w,line), tmpx = xx, yy += (sep+2 ? fnt->height : sep);
+          line += 1, xx = halign == fa_center ? x-int(string_width_ext_line(str,w,line)/2) : x-int(string_width_ext_line(str,w,line)), yy += (sep+2 ? fnt->height : sep), width = 0;
         else if (str[i] == ' '){
-          xx += fnt->height/3, width = xx-tmpx, tw = 0;
+          xx += fnt->height/3, width += fnt->height/3, tw = 0;
           for (unsigned c = i+1; c < str.length(); c++)
           {
             if (str[c] == ' ' or str[c] == '\r' or str[c] == '\n')
@@ -366,8 +382,8 @@ void draw_text_ext(int x,int y,variant vstr, int sep, int w)
           }
 
           if (width+tw >= w && w != -1)
-            line += 1, xx = halign == fa_center ? x-string_width_ext_line(str,w,line)/2 : x-string_width_ext_line(str,w,line), tmpx = xx, yy += (sep==-1 ? fnt->height : sep), width = 0, tw = 0;
-        }else{
+            line += 1, xx = halign == fa_center ? x-int(string_width_ext_line(str,w,line)/2) : x-int(string_width_ext_line(str,w,line)), yy += (sep==-1 ? fnt->height : sep), width = 0, tw = 0;
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
             glTexCoord2f(g.tx,  g.ty);
               glVertex2i(xx + g.x,  yy + g.y);
@@ -377,7 +393,8 @@ void draw_text_ext(int x,int y,variant vstr, int sep, int w)
               glVertex2i(xx + g.x2, yy + g.y2);
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
+          width += g.xs;
         }
       }
       glEnd();
@@ -386,11 +403,9 @@ void draw_text_ext(int x,int y,variant vstr, int sep, int w)
 
 void draw_text_transformed(double x,double y,variant vstr,double xscale,double yscale,double rot)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   rot *= M_PI/180;
 
@@ -437,12 +452,12 @@ void draw_text_transformed(double x,double y,variant vstr,double xscale,double y
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
         }
       }
       glEnd();
-    }else{
+    } else {
       tmpsize = string_width_line(str,0);
       if (halign == fa_center)
         xx = tmpx-tmpsize/2 * cvx, yy = tmpy+tmpsize/2 * svx;
@@ -458,13 +473,13 @@ void draw_text_transformed(double x,double y,variant vstr,double xscale,double y
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           lines += 1, tmpsize = string_width_line(str,lines);
           if (halign == fa_center)
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == ' ')
+        } else if (str[i] == ' ')
           xx += sw,
           yy -= sh;
         else
@@ -484,8 +499,8 @@ void draw_text_transformed(double x,double y,variant vstr,double xscale,double y
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
         }
       }
       glEnd();
@@ -494,11 +509,9 @@ void draw_text_transformed(double x,double y,variant vstr,double xscale,double y
 
 void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, double xscale,double yscale,double rot)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   rot *= M_PI/180;
 
@@ -541,7 +554,7 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
 
           if (width+tw >= w && w != -1)
             lines += 1, xx = tmpx + lines * shi, yy = tmpy + lines * chi, width = 0, tw = 0;
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           wi = g.x2-g.x;
             const float lx = xx + g.y * svy;
@@ -558,13 +571,13 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
       glEnd();
-  }else{
+  } else {
       int lines = 0,width = 0, tw = 0;
       tmpsize = string_width_ext_line(str,w,0);
       if (halign == fa_center)
@@ -580,13 +593,13 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           lines += 1, tmpsize = string_width_ext_line(str,w,lines), width = 0;
           if (halign == fa_center)
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == ' '){
+        } else if (str[i] == ' '){
           xx += sw,
           yy -= sh;
 
@@ -608,7 +621,7 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
                 xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
             width = 0, tw = 0;
           }
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           wi = g.x2-g.x;
             const float lx = xx + g.y * svy;
@@ -624,9 +637,9 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
       glEnd();
@@ -635,11 +648,9 @@ void draw_text_ext_transformed(double x,double y,variant vstr,int sep, int w, do
 
 void draw_text_transformed_color(double x,double y,variant vstr,double xscale,double yscale,double rot,int c1,int c2,int c3,int c4,double a)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   rot *= M_PI/180;
 
@@ -660,7 +671,8 @@ void draw_text_transformed_color(double x,double y,variant vstr,double xscale,do
   glPushAttrib(GL_CURRENT_BIT);
   glBegin(GL_QUADS);
   if (halign == fa_left){
-      int lines = 0, w, tmpsize = string_width_line(str,0);
+      int lines = 0, w;
+      tmpsize = string_width_line(str,0);
       for (unsigned i = 0; i < str.length(); i++)
       {
         if (str[i] == '\r')
@@ -695,12 +707,12 @@ void draw_text_transformed_color(double x,double y,variant vstr,double xscale,do
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
-    }else{
+    } else {
       tmpsize = string_width_line(str,0);
       if (halign == fa_center)
         xx = tmpx-tmpsize/2 * cvx, yy = tmpy+tmpsize/2 * svx;
@@ -715,13 +727,13 @@ void draw_text_transformed_color(double x,double y,variant vstr,double xscale,do
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           lines += 1, tmpsize = string_width_line(str,lines), width = 0;
           if (halign == fa_center)
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == ' ')
+        } else if (str[i] == ' ')
           xx += sw, yy -= sh,
           width += fnt->height/3;
         else
@@ -749,9 +761,9 @@ void draw_text_transformed_color(double x,double y,variant vstr,double xscale,do
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
     }
@@ -761,11 +773,9 @@ void draw_text_transformed_color(double x,double y,variant vstr,double xscale,do
 
 void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int w,double xscale,double yscale,double rot,int c1,int c2,int c3,int c4,double a)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   rot *= M_PI/180;
 
@@ -786,7 +796,8 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
   glPushAttrib(GL_CURRENT_BIT);
   glBegin(GL_QUADS);
   if (halign == fa_left){
-      int lines = 0, tw = 0, wi, tmpsize = string_width_ext_line(str,w,0);
+      int lines = 0, tw = 0, wi;
+      tmpsize = string_width_ext_line(str,w,0);
       for (unsigned i = 0; i < str.length(); i++)
       {
         if (str[i] == '\r')
@@ -807,7 +818,7 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
 
           if (width+tw >= w && w != -1)
             lines += 1, xx = tmpx + lines * shi, yy = tmpy + lines * chi, width = 0, tmpsize = string_width_ext_line(str,w,lines);
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           wi = g.x2-g.x;
             const float lx = xx + g.y * svy;
@@ -831,12 +842,12 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
-    }else{
+    } else {
       tmpsize = string_width_ext_line(str,w,0);
       if (halign == fa_center)
         xx = tmpx-tmpsize/2 * cvx, yy = tmpy+tmpsize/2 * svx;
@@ -851,13 +862,13 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           lines += 1, tmpsize = string_width_ext_line(str,w,lines), width = 0;
           if (halign == fa_center)
             xx = tmpx-tmpsize/2 * cvx + lines * shi, yy = tmpy+tmpsize/2 * svx + lines * chi;
           else
             xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
-        }else if (str[i] == ' '){
+        } else if (str[i] == ' '){
           xx += sw, yy -= sh,
           width += fnt->height/3;
           tw = 0;
@@ -877,7 +888,7 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
                 xx = tmpx-tmpsize * cvx + lines * shi, yy = tmpy+tmpsize * svx + lines * chi;
             width = 0;
           }
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           wi = g.x2-g.x;
             const float lx = xx + g.y * svy;
@@ -901,9 +912,9 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2f(xx + g.y2 * svy,  yy + g.y2 * cvy);
 
-          xx += g.xs * cvx;
-          yy -= g.xs * svx;
-          width += g.xs;
+          xx += int(g.xs) * cvx;
+          yy -= int(g.xs) * svx;
+          width += int(g.xs);
         }
       }
     }
@@ -913,11 +924,9 @@ void draw_text_ext_transformed_color(double x,double y,variant vstr,int sep,int 
 
 void draw_text_color(int x,int y,variant vstr,int c1,int c2,int c3,int c4,double a)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
 
   glPushAttrib(GL_CURRENT_BIT);
@@ -933,11 +942,11 @@ void draw_text_color(int x,int y,variant vstr,int c1,int c2,int c3,int c4,double
           xx = x, yy += fnt->height, i += str[i+1] == '\n';
           line += 1;
           sw = string_width_line(str, line);
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           xx = x, yy += fnt->height;
           line += 1;
           sw = string_width_line(str, line);
-        }else if (str[i] == ' ')
+        } else if (str[i] == ' ')
           xx += fnt->height/3; // FIXME: what's GM do about this?
         else
         {
@@ -962,20 +971,20 @@ void draw_text_color(int x,int y,variant vstr,int c1,int c2,int c3,int c4,double
             glColor4ub(__GETR(hcol4),__GETG(hcol4),__GETB(hcol4),char(a*255));
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
         }
       }
-  }else{
+  } else {
       int xx = halign == fa_center ? x-sw/2 : x-sw, tmpx = xx;
       for (unsigned i = 0; i < str.length(); i++)
       {
         if (str[i] == '\r'){
           yy += fnt->height, i += str[i+1] == '\n', line += 1,
           sw = string_width_line(str, line), xx = halign == fa_center ? x-sw/2 : x-sw, tmpx = xx;
-        }else if (str[i] == '\n'){
+        } else if (str[i] == '\n'){
           yy += fnt->height, line += 1, sw = string_width_line(str, line),
           xx = halign == fa_center ? x-sw/2 : x-sw, tmpx = xx;
-        }else if (str[i] == ' ')
+        } else if (str[i] == ' ')
           xx += fnt->height/3; // FIXME: what's GM do about this?
         else
         {
@@ -1001,7 +1010,7 @@ void draw_text_color(int x,int y,variant vstr,int c1,int c2,int c3,int c4,double
             glColor4ub(__GETR(hcol4),__GETG(hcol4),__GETB(hcol4),char(a*255));
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
         }
       }
   }
@@ -1011,11 +1020,9 @@ void draw_text_color(int x,int y,variant vstr,int c1,int c2,int c3,int c4,double
 
 void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,int c3,int c4,double a)
 {
-  string str = string(vstr);
-  font *fnt = fontstructarray[currentfont];
-
-  if (bound_texture != fnt->texture)
-    glBindTexture(GL_TEXTURE_2D, bound_texture = fnt->texture);
+  string str = toString(vstr);
+  get_fontv(fnt,currentfont);
+  bind_texture(fnt->texture);
 
   glPushAttrib(GL_CURRENT_BIT);
   int yy = valign == fa_top ? y+fnt->yoffset : valign == fa_middle ? y + fnt->yoffset - string_height_ext(str,sep,w)/2 : y + fnt->yoffset - string_height_ext(str,sep,w);
@@ -1043,7 +1050,7 @@ void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,
 
           if (width+tw >= w && w != -1)
             xx = x, yy += (sep==-1 ? fnt->height : sep), width = 0, line += 1, sw = string_width_ext_line(str, w, line);
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           hcol1 = merge_color(c1,c2,(float)(width)/sw);
           hcol2 = merge_color(c1,c2,(float)(width+g.xs)/sw);
@@ -1061,11 +1068,11 @@ void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,
             glColor4ub(__GETR(hcol4),__GETG(hcol4),__GETB(hcol4),char(a*255));
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
           width = xx-x;
         }
       }
-  }else{
+  } else {
       int xx = halign == fa_center ? x-sw/2 : x-sw, tmpx = xx;
       for (unsigned i = 0; i < str.length(); i++)
       {
@@ -1085,7 +1092,7 @@ void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,
 
           if (width+tw >= w && w != -1)
             yy += (sep==-1 ? fnt->height : sep), width = 0, line += 1, sw = string_width_ext_line(str, w, line), xx = halign == fa_center ? x-sw/2 : x-sw, tmpx = xx;
-        }else{
+        } else {
           fontglyph &g = fnt->glyphs[(unsigned char)(str[i] - fnt->glyphstart) % fnt->glyphcount];
           hcol1 = merge_color(c1,c2,(float)(width)/sw);
           hcol2 = merge_color(c1,c2,(float)(width+g.xs)/sw);
@@ -1103,7 +1110,7 @@ void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,
             glColor4ub(__GETR(hcol4),__GETG(hcol4),__GETB(hcol4),char(a*255));
             glTexCoord2f(g.tx,  g.ty2);
               glVertex2i(xx + g.x,  yy + g.y2);
-          xx += g.xs;
+          xx += int(g.xs);
           width = xx-tmpx;
         }
       }
@@ -1114,27 +1121,25 @@ void draw_text_ext_color(int x,int y,variant vstr,int sep, int w, int c1,int c2,
 
 unsigned int font_get_texture(int fnt)
 {
-  font *f = fontstructarray[fnt];
+  get_font_null(f,fnt,-1);
   return f ? f->texture : unsigned(-1);
 }
 unsigned int font_get_texture_width(int fnt)
 {
-  font *f = fontstructarray[fnt];
+  get_font_null(f,fnt,-1);
   return f ? f->twid: unsigned(-1);
 }
 unsigned int font_get_texture_height(int fnt)
 {
-  font *f = fontstructarray[fnt];
+  get_font_null(f,fnt,-1);
   return f ? f->thgt: unsigned(-1);
 }
 
-void draw_set_font(int fnt)
-{
+void draw_set_font(int fnt) {
   enigma::currentfont = fnt;
 }
 
-int draw_get_font()
-{
+int draw_get_font() {
   return enigma::currentfont;
 }
 

@@ -1,30 +1,20 @@
-/********************************************************************************\
-**                                                                              **
-**  Copyright (C) 2008 Josh Ventura                                             **
-**  Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>                      **
-**                                                                              **
-**  This file is a part of the ENIGMA Development Environment.                  **
-**                                                                              **
-**                                                                              **
-**  ENIGMA is free software: you can redistribute it and/or modify it under the **
-**  terms of the GNU General Public License as published by the Free Software   **
-**  Foundation, version 3 of the license or any later version.                  **
-**                                                                              **
-**  This application and its source code is distributed AS-IS, WITHOUT ANY      **
-**  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS   **
-**  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more       **
-**  details.                                                                    **
-**                                                                              **
-**  You should have recieved a copy of the GNU General Public License along     **
-**  with this code. If not, see <http://www.gnu.org/licenses/>                  **
-**                                                                              **
-**  ENIGMA is an environment designed to create games and other programs with a **
-**  high-level, fully compilable language. Developers of ENIGMA or anything     **
-**  associated with ENIGMA are in no way responsible for its users or           **
-**  applications created by its users, or damages caused by the environment     **
-**  or programs made in the environment.                                        **
-**                                                                              **
-\********************************************************************************/
+/** Copyright (C) 2008-2011 Josh Ventura
+*** Copyright (C) 2010 Alasdair Morrison <tgmg@g-java.com>
+***
+*** This file is a part of the ENIGMA Development Environment.
+***
+*** ENIGMA is free software: you can redistribute it and/or modify it under the
+*** terms of the GNU General Public License as published by the Free Software
+*** Foundation, version 3 of the license or any later version.
+***
+*** This application and its source code is distributed AS-IS, WITHOUT ANY
+*** WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+*** details.
+***
+*** You should have received a copy of the GNU General Public License along
+*** with this code. If not, see <http://www.gnu.org/licenses/>
+**/
 
 #include <string>
 #include <stdio.h>
@@ -32,9 +22,12 @@ using namespace std;
 
 #include "backgroundstruct.h"
 #include "../Graphics_Systems/graphics_mandatory.h"
+#include "../Platforms/platforms_mandatory.h"
+#include "../Widget_Systems/widgets_mandatory.h"
 #include "fontstruct.h"
 #include "../libEGMstd.h"
-#include "compression.h"
+#include "zlib.h"
+#include "resinit.h"
 
 namespace enigma
 {
@@ -44,11 +37,11 @@ namespace enigma
 	  unsigned fontcount, fntid, twid, thgt, gwid, ghgt;
 	  float advance, baseline, origin, gtx, gty, gtx2, gty2;
 
-    fread(&nullhere,4,1,exe);
+    if (!fread(&nullhere,4,1,exe)) return;
     if (nullhere != *(int*)"FNT ")
       return;
 
-    fread(&fontcount,4,1,exe);
+    if (!fread(&fontcount,4,1,exe)) return;
     if ((int)fontcount != rawfontcount) {
       show_error("Resource data does not match up with game metrics. Unable to improvise.",0);
       return;
@@ -59,9 +52,9 @@ namespace enigma
 	  for (int rf = 0; rf < rawfontcount; rf++)
 	  {
 		  // int unpacked;
-		  fread(&fntid, 4,1,exe);
-		  fread(&twid, 4,1,exe);
-		  fread(&thgt,4,1,exe);
+		  if (!fread(&fntid, 4,1,exe)) return;
+		  if (!fread(&twid, 4,1,exe)) return;
+		  if (!fread(&thgt,4,1,exe)) return;
 		  const int i = fntid;
 
 		  fontstructarray[i] = new font;
@@ -91,7 +84,7 @@ namespace enigma
 			  show_error("Failed to load font: Data is truncated before exe end. Read "+toString(sz2)+" out of expected "+toString(size),0);
 			  return;
 		  }
-      fread(&nullhere,4,1,exe);
+      if (!fread(&nullhere,4,1,exe)) return;
       if (nullhere != *(int*)"done")
       {
         printf("Unexpected end; eof:%s\n",feof(exe)?"true":"false");
@@ -109,15 +102,15 @@ namespace enigma
 		  int ymin=100, ymax=-100;
 		  for (int gi = 0; gi < enigma::fontstructarray[i]->glyphcount; gi++)
 		  {
-		    fread(&advance,4,1,exe);
-        fread(&baseline,4,1,exe);
-        fread(&origin,4,1,exe);
-        fread(&gwid,4,1,exe);
-        fread(&ghgt,4,1,exe);
-        fread(&gtx,4,1,exe);
-        fread(&gty,4,1,exe);
-        fread(&gtx2,4,1,exe);
-        fread(&gty2,4,1,exe);
+		    if (!fread(&advance,4,1,exe)) return;
+        if (!fread(&baseline,4,1,exe)) return;
+        if (!fread(&origin,4,1,exe)) return;
+        if (!fread(&gwid,4,1,exe)) return;
+        if (!fread(&ghgt,4,1,exe)) return;
+        if (!fread(&gtx,4,1,exe)) return;
+        if (!fread(&gty,4,1,exe)) return;
+        if (!fread(&gtx2,4,1,exe)) return;
+        if (!fread(&gty2,4,1,exe)) return;
 
         fontstructarray[i]->glyphs[gi].x = int(origin + .5);
         fontstructarray[i]->glyphs[gi].y = int(baseline + .5);
@@ -154,7 +147,7 @@ namespace enigma
 
 		  delete[] pixels;
 
-      fread(&nullhere,4,1,exe);
+      if (!fread(&nullhere,4,1,exe)) return;
       if (nullhere != *(int*)"endf")
         return;
 	  }

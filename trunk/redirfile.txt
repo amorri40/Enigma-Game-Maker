@@ -1,14 +1,383 @@
-cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa -lz -framework Cocoa -framework OpenGL" GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension Universal_System/Extensions/Timelines/Extension Universal_System/Extensions/Paths/Extension Universal_System/Extensions/MotionPlanning/Extension Universal_System/Extensions/DateTime/Extension Universal_System/Extensions/DataStructures/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Timelines/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Paths/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/MotionPlanning/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DateTime/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DataStructures/.eobjs/MacOSX/MacOSX/*.o"
-cd Graphics_Systems/OpenGL/   && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
-cd Platforms/Cocoa/          && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-make[2]: Nothing to be done for `this'.
-cd Universal_System/               && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-g++ -c loading.cpp		-o .eobjs/MacOSX/MacOSX/Run/loading.o -s -O3 
-g++ -c soundinit.cpp		-o .eobjs/MacOSX/MacOSX/Run/soundinit.o -s -O3 
-cd Audio_Systems/OpenAL/         && /usr/bin/make this MODE=Run GFLAGS="-s -O3" ECFLAGS="" ECPPFLAGS="" OBJECTS=".eobjs/MacOSX/MacOSX/Run"
-Makefile:2: Audio_Systems/OpenAL/alure/Makefile: No such file or directory
-Makefile:2: Audio_Systems/OpenAL/../Codecs/Makefile: No such file or directory
-make[2]: *** No rule to make target `Audio_Systems/OpenAL/../Codecs/Makefile'.  Stop.
-make[1]: *** [build] Error 2
+cd ENIGMAsystem/SHELL/ && /usr/bin/make GMODE=Run GLINKS="-lz -framework Cocoa " GFLAGS="-s -O3" GRAPHICS=OpenGL PLATFORM=Cocoa COMPILEPATH=MacOSX/MacOSX OUTPUTNAME="/Users/alasdairmorrison/EnigmaGIT/Enigma-Game-Maker/trunk/../trunk/MacOS/build/Release/EnigmaXcode.app/Contents/MacOS/EnigmaXcode" EXTENSIONS="Universal_System/Extensions/Alarms/Extension Universal_System/Extensions/Timelines/Extension Universal_System/Extensions/Paths/Extension Universal_System/Extensions/MotionPlanning/Extension Universal_System/Extensions/DateTime/Extension Universal_System/Extensions/DataStructures/Extension" EXTLINKS="Universal_System/Extensions/Alarms/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Timelines/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/Paths/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/MotionPlanning/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DateTime/.eobjs/MacOSX/MacOSX/*.o Universal_System/Extensions/DataStructures/.eobjs/MacOSX/MacOSX/*.o"
+Makefile:62: Universal_System/Extensions/Alarms/Extension/Makefile: No such file or directory
+Makefile:62: Universal_System/Extensions/Timelines/Extension/Makefile: No such file or directory
+Makefile:62: Universal_System/Extensions/Paths/Extension/Makefile: No such file or directory
+Makefile:62: Universal_System/Extensions/MotionPlanning/Extension/Makefile: No such file or directory
+Makefile:62: Universal_System/Extensions/DateTime/Extension/Makefile: No such file or directory
+Makefile:62: Universal_System/Extensions/DataStructures/Extension/Makefile: No such file or directory
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/var4_lua.o Universal_System/var4_lua.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/var4.o Universal_System/var4.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/transform_object.o Universal_System/transform_object.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/terminal_io.o Universal_System/terminal_io.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/spritestruct.o Universal_System/spritestruct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/spriteinit.o Universal_System/spriteinit.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/soundinit.o Universal_System/soundinit.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/simplecollisions.o Universal_System/simplecollisions.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/roomsystem.o Universal_System/roomsystem.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/resource_data.o Universal_System/resource_data.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/reflexive_types.o Universal_System/reflexive_types.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/rectpack.o Universal_System/rectpack.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/planar_object.o Universal_System/planar_object.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/pathstruct.o Universal_System/pathstruct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/pathinit.o Universal_System/pathinit.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/path_functions.o Universal_System/path_functions.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/object.o Universal_System/object.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/multifunction_variant.o Universal_System/multifunction_variant.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/mp_movement.o Universal_System/mp_movement.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/move_functions.o Universal_System/move_functions.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/motion_planning_struct.o Universal_System/motion_planning_struct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/motion_planning.o Universal_System/motion_planning.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/mathnc.o Universal_System/mathnc.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/loading.o Universal_System/loading.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/instance_system.o Universal_System/instance_system.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/instance.o Universal_System/instance.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/highscore_functions.o Universal_System/highscore_functions.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/graphics_object.o Universal_System/graphics_object.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/globalupdate.o Universal_System/globalupdate.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/fontstruct.o Universal_System/fontstruct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/fontinit.o Universal_System/fontinit.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/fileio.o Universal_System/fileio.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/events.o Universal_System/events.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/event_system.o Universal_System/event_system.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/estring.o Universal_System/estring.cpp
+Universal_System/estring.cpp: In function ‘int string_count(std::string, std::string)’:
+Universal_System/estring.cpp:103: warning: comparison between signed and unsigned integer expressions
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/dynamic_args.o Universal_System/dynamic_args.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/depth_draw.o Universal_System/depth_draw.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/darray.o Universal_System/darray.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/collisions_object.o Universal_System/collisions_object.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/backgroundstruct.o Universal_System/backgroundstruct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/backgroundinit.o Universal_System/backgroundinit.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/actions.o Universal_System/actions.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/WITHconstruct.o Universal_System/WITHconstruct.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/IMGloading.o Universal_System/IMGloading.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/ENIGMA_GLOBALS.o Universal_System/ENIGMA_GLOBALS.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Universal_System/CallbackArrays.o Universal_System/CallbackArrays.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Widget_Systems/None/nowidget_impl.o Widget_Systems/None/nowidget_impl.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Collision_Systems/BBox/placeholderlinks.o Collision_Systems/BBox/placeholderlinks.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Collision_Systems/BBox/coll_util.o Collision_Systems/BBox/coll_util.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Collision_Systems/BBox/coll_impl.o Collision_Systems/BBox/coll_impl.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Collision_Systems/BBox/coll_funcs.o Collision_Systems/BBox/coll_funcs.cpp
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/window.o Audio_Systems/Codecs/vorbis/lib/window.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/vorbisfile.o Audio_Systems/Codecs/vorbis/lib/vorbisfile.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/synthesis.o Audio_Systems/Codecs/vorbis/lib/synthesis.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/smallft.o Audio_Systems/Codecs/vorbis/lib/smallft.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/sharedbook.o Audio_Systems/Codecs/vorbis/lib/sharedbook.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/res0.o Audio_Systems/Codecs/vorbis/lib/res0.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/registry.o Audio_Systems/Codecs/vorbis/lib/registry.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/psy.o Audio_Systems/Codecs/vorbis/lib/psy.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/mdct.o Audio_Systems/Codecs/vorbis/lib/mdct.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/mapping0.o Audio_Systems/Codecs/vorbis/lib/mapping0.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/lsp.o Audio_Systems/Codecs/vorbis/lib/lsp.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/lpc.o Audio_Systems/Codecs/vorbis/lib/lpc.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/lookup.o Audio_Systems/Codecs/vorbis/lib/lookup.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/info.o Audio_Systems/Codecs/vorbis/lib/info.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/floor1.o Audio_Systems/Codecs/vorbis/lib/floor1.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/floor0.o Audio_Systems/Codecs/vorbis/lib/floor0.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/envelope.o Audio_Systems/Codecs/vorbis/lib/envelope.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/codebook.o Audio_Systems/Codecs/vorbis/lib/codebook.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/block.o Audio_Systems/Codecs/vorbis/lib/block.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/bitrate.o Audio_Systems/Codecs/vorbis/lib/bitrate.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/vorbis/lib/analysis.o Audio_Systems/Codecs/vorbis/lib/analysis.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/ogg/framing.o Audio_Systems/Codecs/ogg/framing.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/ogg/bitwise.o Audio_Systems/Codecs/ogg/bitwise.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/xmeffect.o Audio_Systems/Codecs/dumb/src/it/xmeffect.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/readxm2.o Audio_Systems/Codecs/dumb/src/it/readxm2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/readxm.o Audio_Systems/Codecs/dumb/src/it/readxm.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/reads3m2.o Audio_Systems/Codecs/dumb/src/it/reads3m2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/reads3m.o Audio_Systems/Codecs/dumb/src/it/reads3m.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/readmod2.o Audio_Systems/Codecs/dumb/src/it/readmod2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/readmod.o Audio_Systems/Codecs/dumb/src/it/readmod.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loadxm2.o Audio_Systems/Codecs/dumb/src/it/loadxm2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loadxm.o Audio_Systems/Codecs/dumb/src/it/loadxm.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loads3m2.o Audio_Systems/Codecs/dumb/src/it/loads3m2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loads3m.o Audio_Systems/Codecs/dumb/src/it/loads3m.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loadmod2.o Audio_Systems/Codecs/dumb/src/it/loadmod2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/loadmod.o Audio_Systems/Codecs/dumb/src/it/loadmod.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itunload.o Audio_Systems/Codecs/dumb/src/it/itunload.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itrender.o Audio_Systems/Codecs/dumb/src/it/itrender.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itread2.o Audio_Systems/Codecs/dumb/src/it/itread2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itread.o Audio_Systems/Codecs/dumb/src/it/itread.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itorder.o Audio_Systems/Codecs/dumb/src/it/itorder.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itmisc.o Audio_Systems/Codecs/dumb/src/it/itmisc.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itload2.o Audio_Systems/Codecs/dumb/src/it/itload2.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/it/itload.o Audio_Systems/Codecs/dumb/src/it/itload.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/stdfile.o Audio_Systems/Codecs/dumb/src/helpers/stdfile.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/silence.o Audio_Systems/Codecs/dumb/src/helpers/silence.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/sampbuf.o Audio_Systems/Codecs/dumb/src/helpers/sampbuf.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/resample.o Audio_Systems/Codecs/dumb/src/helpers/resample.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/memfile.o Audio_Systems/Codecs/dumb/src/helpers/memfile.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/helpers/clickrem.o Audio_Systems/Codecs/dumb/src/helpers/clickrem.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/unload.o Audio_Systems/Codecs/dumb/src/core/unload.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/rendsig.o Audio_Systems/Codecs/dumb/src/core/rendsig.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/rendduh.o Audio_Systems/Codecs/dumb/src/core/rendduh.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/register.o Audio_Systems/Codecs/dumb/src/core/register.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/readduh.o Audio_Systems/Codecs/dumb/src/core/readduh.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/rawsig.o Audio_Systems/Codecs/dumb/src/core/rawsig.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/makeduh.o Audio_Systems/Codecs/dumb/src/core/makeduh.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/loadduh.o Audio_Systems/Codecs/dumb/src/core/loadduh.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/dumbfile.o Audio_Systems/Codecs/dumb/src/core/dumbfile.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/duhtag.o Audio_Systems/Codecs/dumb/src/core/duhtag.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/duhlen.o Audio_Systems/Codecs/dumb/src/core/duhlen.c
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/Codecs/dumb/src/core/atexit.o Audio_Systems/Codecs/dumb/src/core/atexit.c
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/streamplay.o Audio_Systems/OpenAL/alure/streamplay.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/streamdec.o Audio_Systems/OpenAL/alure/streamdec.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/stream.o Audio_Systems/OpenAL/alure/stream.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/istream.o Audio_Systems/OpenAL/alure/istream.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/buffer.o Audio_Systems/OpenAL/alure/buffer.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/alure/alure.o Audio_Systems/OpenAL/alure/alure.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/wrap_oal.o Audio_Systems/OpenAL/wrap_oal.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Audio_Systems/OpenAL/as_basic.o Audio_Systems/OpenAL/as_basic.cpp
+gcc   -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/glew.o Graphics_Systems/OpenGL/glew.c
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/OPENGLStd.o Graphics_Systems/OpenGL/OPENGLStd.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GStextures.o Graphics_Systems/OpenGL/GStextures.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSsurface.o Graphics_Systems/OpenGL/GSsurface.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSstdraw.o Graphics_Systems/OpenGL/GSstdraw.cpp
+Graphics_Systems/OpenGL/GSstdraw.cpp: In function ‘void draw_set_line_pattern(short unsigned int, int)’:
+Graphics_Systems/OpenGL/GSstdraw.cpp:35: warning: comparison is always false due to limited range of data type
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSsprite.o Graphics_Systems/OpenGL/GSsprite.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSscreen.o Graphics_Systems/OpenGL/GSscreen.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSprmtvs.o Graphics_Systems/OpenGL/GSprmtvs.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSmiscextra.o Graphics_Systems/OpenGL/GSmiscextra.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSfont.o Graphics_Systems/OpenGL/GSfont.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSenable.o Graphics_Systems/OpenGL/GSenable.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSd3d.o Graphics_Systems/OpenGL/GSd3d.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GScurves.o Graphics_Systems/OpenGL/GScurves.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GScolors.o Graphics_Systems/OpenGL/GScolors.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSblend.o Graphics_Systems/OpenGL/GSblend.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/Graphics_Systems/OpenGL/GSbackground.o Graphics_Systems/OpenGL/GSbackground.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/libEGMstd.o libEGMstd.cpp
+g++ -Wall -s -O3  -IPlatforms/Cocoa/Info -IGraphics_Systems/OpenGL/Info -IAudio_Systems/OpenAL/Info -ICollision_Systems/BBox/Info -IWidget_Systems/None/Info -IUniversal_System/Info -MMD -MP -c -o .eobjs/MacOSX/MacOSX/Run/SHELLmain.o SHELLmain.cpp
+In file included from SHELLmain.cpp:99:
+unimplemented.h: In function ‘int keyboard_get_map(int)’:
+unimplemented.h:34: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool font_exists(int)’:
+unimplemented.h:60: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string font_get_name(int)’:
+unimplemented.h:61: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string font_get_fontname(int)’:
+unimplemented.h:62: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool font_get_bold(int)’:
+unimplemented.h:63: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool font_get_italic(int)’:
+unimplemented.h:64: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int font_get_first(int)’:
+unimplemented.h:65: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int font_get_last(int)’:
+unimplemented.h:66: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool show_question(std::string)’:
+unimplemented.h:95: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int display_get_width()’:
+unimplemented.h:120: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int display_get_height()’:
+unimplemented.h:121: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int display_get_colordepth()’:
+unimplemented.h:122: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int display_get_frequency()’:
+unimplemented.h:123: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool display_set_size(int, int)’:
+unimplemented.h:124: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool display_set_colordepth(int)’:
+unimplemented.h:125: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool display_set_frequency(int)’:
+unimplemented.h:126: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool display_set_all(int, int, int, int)’:
+unimplemented.h:127: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool display_test_all(int, int, int, int)’:
+unimplemented.h:128: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string registry_read_string(std::string)’:
+unimplemented.h:138: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double registry_read_real(std::string)’:
+unimplemented.h:139: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool registry_exists(std::string)’:
+unimplemented.h:140: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string registry_read_string_ext(std::string, std::string)’:
+unimplemented.h:144: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double registry_read_real_ext(std::string, std::string)’:
+unimplemented.h:145: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool registry_exists_ext(std::string, std::string)’:
+unimplemented.h:146: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string file_find_first(std::string, std::string)’:
+unimplemented.h:165: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string file_find_next()’:
+unimplemented.h:166: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool variable_global_exists(std::string)’:
+unimplemented.h:194: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool variable_local_exists(std::string)’:
+unimplemented.h:195: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_global_get(std::string)’:
+unimplemented.h:196: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_global_array_get(std::string, int)’:
+unimplemented.h:197: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_global_array2_get(std::string, int, int)’:
+unimplemented.h:198: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_local_get(std::string)’:
+unimplemented.h:199: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_local_array_get(std::string, int)’:
+unimplemented.h:200: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘variant variable_local_array2_get(std::string, int, int)’:
+unimplemented.h:201: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int d3d_model_create()’:
+unimplemented.h:329: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool part_type_exists(int)’:
+unimplemented.h:533: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int part_attractor_create(int)’:
+unimplemented.h:612: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool part_attractor_exists(int, int)’:
+unimplemented.h:615: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool path_exists(int)’:
+unimplemented.h:672: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string path_get_name(int)’:
+unimplemented.h:673: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_length(int)’:
+unimplemented.h:674: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_kind(int)’:
+unimplemented.h:675: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool path_get_closed(int)’:
+unimplemented.h:676: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘float path_get_precision(int)’:
+unimplemented.h:677: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_number(int)’:
+unimplemented.h:678: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_point_x(int, int)’:
+unimplemented.h:679: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_point_y(int, int)’:
+unimplemented.h:680: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘float path_get_point_speed(int, int)’:
+unimplemented.h:681: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_x(int, float)’:
+unimplemented.h:682: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_y(int, float)’:
+unimplemented.h:683: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int path_get_speed(int, float)’:
+unimplemented.h:684: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool background_exists(int)’:
+unimplemented.h:756: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string background_get_name(int)’:
+unimplemented.h:757: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double background_get_width(int)’:
+unimplemented.h:758: error: new declaration ‘double background_get_width(int)’
+Graphics_Systems/OpenGL/GSbackground.h:41: error: ambiguates old declaration ‘int background_get_width(int)’
+unimplemented.h:758: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double background_get_height(int)’:
+unimplemented.h:759: error: new declaration ‘double background_get_height(int)’
+Graphics_Systems/OpenGL/GSbackground.h:42: error: ambiguates old declaration ‘int background_get_height(int)’
+unimplemented.h:759: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool background_get_transparent(int)’:
+unimplemented.h:760: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool background_get_smooth(int)’:
+unimplemented.h:761: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool background_get_preload(int)’:
+unimplemented.h:762: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_duplicate(int)’:
+unimplemented.h:765: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_add(std::string, bool, bool, bool)’:
+unimplemented.h:767: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_add_alpha(std::string, bool)’:
+unimplemented.h:768: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_replace(int, std::string, bool, bool, bool)’:
+unimplemented.h:769: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_replace_alpha(int, std::string, bool)’:
+unimplemented.h:770: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_create_color(int, int, int, bool)’:
+unimplemented.h:771: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_create_gradient(int, int, int, int, int, bool)’:
+unimplemented.h:772: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_create_from_screen(int, int, int, int, bool, bool, bool)’:
+unimplemented.h:773: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int background_create_from_surface(int, int, int, int, int, bool, bool, bool)’:
+unimplemented.h:774: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool keyboard_check_direct(int)’:
+unimplemented.h:786: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int draw_roundrect(float, float, float, float, bool)’:
+unimplemented.h:811: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_name(std::string)’:
+unimplemented.h:819: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_path(std::string)’:
+unimplemented.h:820: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_dir(std::string)’:
+unimplemented.h:821: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_drive(std::string)’:
+unimplemented.h:822: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_ext(std::string)’:
+unimplemented.h:823: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string filename_change_ext(std::string, std::string)’:
+unimplemented.h:824: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int font_get_size(int)’:
+unimplemented.h:859: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int enigma_make_color(int, int, int)’:
+unimplemented.h:866: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_add(int, int, int, int, int, int, int, int)’:
+unimplemented.h:881: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool tile_exists(int)’:
+unimplemented.h:883: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_x(int)’:
+unimplemented.h:885: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_y(int)’:
+unimplemented.h:886: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_left(int)’:
+unimplemented.h:887: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_top(int)’:
+unimplemented.h:888: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_width(int)’:
+unimplemented.h:889: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_height(int)’:
+unimplemented.h:890: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_depth(int)’:
+unimplemented.h:891: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool tile_get_visible(int)’:
+unimplemented.h:892: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_xscale(int)’:
+unimplemented.h:893: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_yscale(int)’:
+unimplemented.h:894: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_background(int)’:
+unimplemented.h:895: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_blend(int)’:
+unimplemented.h:896: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_get_alpha(int)’:
+unimplemented.h:897: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int tile_layer_find(int, int, int)’:
+unimplemented.h:912: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int mp_grid_create(int, int, int, int, int, int)’:
+unimplemented.h:919: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool mp_grid_path(int, int, int, int, int, int, int)’:
+unimplemented.h:927: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool cd_present()’:
+unimplemented.h:939: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double cd_number()’:
+unimplemented.h:940: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool cd_playing()’:
+unimplemented.h:941: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool cd_paused()’:
+unimplemented.h:942: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘int cd_track()’:
+unimplemented.h:943: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double cd_length()’:
+unimplemented.h:944: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double cd_track_length(double)’:
+unimplemented.h:945: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double cd_position()’:
+unimplemented.h:946: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double cd_track_position()’:
+unimplemented.h:947: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string clipboard_get_text()’:
+unimplemented.h:1155: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘bool clipboard_has_text()’:
+unimplemented.h:1159: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘void action_change_object(int, int)’:
+unimplemented.h:1191: warning: unused variable ‘inst’
+unimplemented.h: In function ‘int show_message_ext(std::string, std::string, std::string, std::string)’:
+unimplemented.h:1240: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘std::string ini_read_string(std::string, std::string, std::string)’:
+unimplemented.h:1277: warning: no return statement in function returning non-void
+unimplemented.h: In function ‘double ini_read_real(std::string, std::string, variant)’:
+unimplemented.h:1278: warning: no return statement in function returning non-void
+In file included from SHELLmain.cpp:117:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h: In function ‘void enigma::constructor(enigma::object_basic*)’:
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:976: error: lvalue required as left operand of assignment
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:977: error: lvalue required as left operand of assignment
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:978: error: lvalue required as left operand of assignment
+Preprocessor_Environment_Editable/IDE_EDIT_objectfunctionality.h:979: error: lvalue required as left operand of assignment
+make[1]: *** No rule to make target `Universal_System/Extensions/DataStructures/Extension/Makefile'.  Stop.
 make: *** [Game] Error 2

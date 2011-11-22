@@ -37,7 +37,7 @@
 namespace enigma
 {
   object_graphics::object_graphics() {}
-  object_graphics::object_graphics(unsigned x, int y): object_planar(x,y) {}
+  object_graphics::object_graphics(unsigned _x, int _y): object_planar(_x,_y) {}
   object_graphics::~object_graphics() {};
   
   void depthv::function() {
@@ -51,14 +51,15 @@ namespace enigma
   void depthv::init(double d,object_basic* who) {
     myiter = drawing_depths[rval.d = floor(d)].draw_events->add_inst(who);
   }
-  
   void depthv::remove() {
-      if (myiter) { //TGMG
      drawing_depths[rval.d].draw_events->unlink(myiter);
      if (instance_event_iterator == myiter)
        instance_event_iterator = myiter->prev;
-      }
      myiter = NULL;
   }
   depthv::~depthv() {}
+  
+  
+  int object_graphics::$sprite_width()  const { return sprite_index == -1? 0 : sprite_get_width(sprite_index); }
+  int object_graphics::$sprite_height() const { return sprite_index == -1? 0 : sprite_get_width(sprite_index); }
 }

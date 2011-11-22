@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32
+/svnroot/enigma-dev/!svn/ver/935/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32
 END
 gtklike.h
 K 25
@@ -9,11 +9,17 @@ svn:wc:ra_dav:version-url
 V 88
 /svnroot/enigma-dev/!svn/ver/739/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/gtklike.h
 END
-main.cpp
+dialogs.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 87
-/svnroot/enigma-dev/!svn/ver/739/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/main.cpp
+V 90
+/svnroot/enigma-dev/!svn/ver/930/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/dialogs.cpp
+END
+main.cpp_old
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/main.cpp_old
 END
 manifest.xml
 K 25
@@ -25,29 +31,53 @@ widgets.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svnroot/enigma-dev/!svn/ver/739/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/widgets.cpp
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/widgets.cpp
+END
+dialogs.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/dialogs.h
+END
+menus.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/menus.cpp
+END
+include.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/include.h
 END
 Widgets_Win32.cbp
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svnroot/enigma-dev/!svn/ver/739/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/Widgets_Win32.cbp
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/Widgets_Win32.cbp
 END
 widgets.h
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svnroot/enigma-dev/!svn/ver/732/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/widgets.h
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/widgets.h
 END
 res.rc
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svnroot/enigma-dev/!svn/ver/738/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/res.rc
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/res.rc
 END
 Makefile
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svnroot/enigma-dev/!svn/ver/798/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/Makefile
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/Makefile
+END
+menus.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/enigma-dev/!svn/ver/921/trunk/ENIGMAsystem/SHELL/Widget_Systems/Win32/menus.h
 END

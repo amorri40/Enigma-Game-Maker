@@ -57,19 +57,19 @@ inline void action_set_life(double newlives) {
     else lives = newlives;
 }
 
-inline void action_set_caption(const int score, const string scoreCaption, const int lives,string livesCaption, const int health, const string healthCaption) {
-    show_score=score;
+inline void action_set_caption(const int vscore, const string scoreCaption, const int vlives,string livesCaption, const int vhealth, const string healthCaption) {
+    show_score=vscore;
     caption_score=scoreCaption;
-    show_lives=lives;
+    show_lives=vlives;
     caption_lives=livesCaption;
-    show_health=0;
+    show_health=vhealth;
     caption_health=healthCaption;
 }
 
-inline void action_sound(const int sound, const int loop) {
-	if (loop==0) sound_play(sound);
-	else sound_loop(sound);
-}
+#define action_sound(snd,loop) ((loop?sound_loop:sound_play)(snd))
+#define action_if_sound sound_isplaying
+#define action_end_sound sound_stop
+
 
 inline void action_color(const int color) {
 	draw_set_color(color);
@@ -94,7 +94,7 @@ inline void action_set_vspeed(const double newvspeed) {
         ((enigma::object_graphics*)enigma::instance_event_iterator->inst)->vspeed=newvspeed;
 }
 
-void action_set_hspeed(const double newhspeed) {
+inline void action_set_hspeed(const double newhspeed) {
 	if (argument_relative) {
         ((enigma::object_graphics*)enigma::instance_event_iterator->inst)->hspeed+=newhspeed;
     } else
@@ -168,8 +168,6 @@ inline void action_move(const char dir[9], int argspeed) {
     if (choices == 0) return;
     choices = int(random(choices)); //choices is now chosen
 
-    bool argument_relative = false;
-
     //We use rval.d for efficiency, so hspeed/vspeed aren't set twice.
     const double newdir =
     ((enigma::object_planar*)enigma::instance_event_iterator->inst)->direction.rval.d = chosendirs[choices];
@@ -215,7 +213,7 @@ inline void action_move_start() {
 	inst->y=inst->ystart;
 }
 
-void action_execute_script(string script,string argument0,string argument1,string argument2,string argument3,string argument4) {}
+inline void action_execute_script(string script,string argument0,string argument1,string argument2,string argument3,string argument4) {}
 #define action_execute_script(script,argument0,argument1,argument2,argument3,argument4) script((argument0),(argument1),(argument2),(argument3),(argument4))
 
 inline void action_draw_rectangle(const double x1, const double y1, const double x2, const double y2, const int filled) {
@@ -242,12 +240,6 @@ inline void action_draw_text(const string text, const double x, const double y) 
     }
 }
 
-inline bool action_if_sound(const int sound) {return sound_isplaying(sound);}
-
-inline void action_end_sound(const int sound) {
-    sound_stop(sound);
-}
-
 inline void action_sleep(const double milliseconds, const int redraw) {
     if (redraw) {screen_redraw();}
     sleep(milliseconds/1000);
@@ -268,9 +260,9 @@ inline void action_next_room(const int transition) {
     room_goto_next();
 }
 
-inline void action_another_room(const int room, const int transition) {
+inline void action_another_room(const int roomind, const int transition) {
 	//transition_kind=transition;
-	room_goto(room);
+	room_goto(roomind);
 }
 
 inline void action_font(const int font, const int align) {
@@ -310,8 +302,8 @@ inline void action_set_motion(const double dir, const double nspeed) {
 inline void game_restart() { //RELOCATE ME
     room_goto_first();
 }
-void show_info() {}  //TEMPORARY FILLER, RELOCATE ME
-inline void action_show_info() {show_info();}
+static void show_info() {}  //TEMPORARY FILLER, RELOCATE ME
+static inline void action_show_info() {show_info();}
 
 #define action_restart_game game_restart
 #define action_message(message) show_message(message)
@@ -332,6 +324,7 @@ inline void action_create_object(const int object, const double x, const double 
         instance_create(x, y, object);
 }
 
+void action_create_object_random(const int object1, const int object2, const int object3, const int object4, const double x, const double y);
 void action_create_object_random(const int object1, const int object2, const int object3, const int object4, const double x, const double y)
 {
     int obj_ar[4], obj_num = 0;
@@ -433,6 +426,7 @@ inline void action_set_health(double value) {
     else health = value;
 }
 
+void action_draw_health(const double x1, const double y1, const double x2, const double y2, const double backColor, const int barColor);
 void action_draw_health(const double x1, const double y1, const double x2, const double y2, const double backColor, const int barColor) {
   double realbar1, realbar2;
   switch (barColor)
@@ -579,13 +573,13 @@ inline void action_create_object_motion(int object, double x, double y, double s
     if (argument_relative)
     {
         enigma::object_planar* const inst = ((enigma::object_planar*)enigma::instance_event_iterator->inst);
-        enigma::object_planar* const ii = ((enigma::object_planar*)enigma::fetch_inst_iter_by_int(instance_create(inst->x + x, inst->y + y, object))->inst);
+        enigma::object_planar* const ii = ((enigma::object_planar*)enigma::fetch_instance_by_int(instance_create(inst->x + x, inst->y + y, object)));
         ii->speed.rval.d = speed;
         ii->direction = direction;
     }
     else
     {
-        enigma::object_planar* const ii = ((enigma::object_planar*)enigma::fetch_inst_iter_by_int(instance_create(x, y, object))->inst);
+        enigma::object_planar* const ii = ((enigma::object_planar*)enigma::fetch_instance_by_int(instance_create(x, y, object)));
         ii->speed.rval.d = speed;
         ii->direction = direction;
     }
