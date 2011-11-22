@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svnroot/enigma-dev/!svn/ver/860/trunk/pluginsource/org/enigma/messages
+/svnroot/enigma-dev/!svn/ver/918/trunk/pluginsource/org/enigma/messages
+END
+messages_sv_SE.properties
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/enigma-dev/!svn/ver/881/trunk/pluginsource/org/enigma/messages/messages_sv_SE.properties
 END
 messages.properties
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svnroot/enigma-dev/!svn/ver/860/trunk/pluginsource/org/enigma/messages/messages.properties
+/svnroot/enigma-dev/!svn/ver/918/trunk/pluginsource/org/enigma/messages/messages.properties
 END
 Messages.java
 K 25
@@ -20,6 +26,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 94
 /svnroot/enigma-dev/!svn/ver/823/trunk/pluginsource/org/enigma/messages/messages_es.properties
+END
+messages_sv.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/enigma-dev/!svn/ver/881/trunk/pluginsource/org/enigma/messages/messages_sv.properties
 END
 messages_es_MX.properties
 K 25

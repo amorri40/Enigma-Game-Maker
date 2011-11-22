@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svnroot/enigma-dev/!svn/ver/778/trunk/pluginsource/org/enigma/backend/resources
+/svnroot/enigma-dev/!svn/ver/873/trunk/pluginsource/org/enigma/backend/resources
 END
 Background.java
 K 25
@@ -49,7 +49,7 @@ GameSettings.java
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/svnroot/enigma-dev/!svn/ver/778/trunk/pluginsource/org/enigma/backend/resources/GameSettings.java
+/svnroot/enigma-dev/!svn/ver/873/trunk/pluginsource/org/enigma/backend/resources/GameSettings.java
 END
 GmObject.java
 K 25

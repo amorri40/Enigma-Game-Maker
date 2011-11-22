@@ -10,19 +10,26 @@ package org.enigma;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URI;
 
 import org.enigma.TargetHandler.TargetSelection;
 import org.enigma.backend.EnigmaCallbacks;
+import org.enigma.backend.EnigmaCallbacks.OutputHandler;
 import org.enigma.backend.EnigmaDriver;
+import org.enigma.backend.EnigmaDriver.SyntaxError;
 import org.enigma.backend.EnigmaSettings;
 import org.enigma.backend.EnigmaStruct;
-import org.enigma.backend.EnigmaCallbacks.OutputHandler;
-import org.enigma.backend.EnigmaDriver.SyntaxError;
+import org.enigma.file.EgmIO;
+import org.enigma.messages.Messages;
 import org.lateralgm.components.impl.ResNode;
 import org.lateralgm.file.GmFile;
-import org.lateralgm.file.GmFileReader;
+import org.lateralgm.file.GmFile.SingletonResourceHolder;
 import org.lateralgm.file.GmFormatException;
+import org.lateralgm.main.FileChooser;
+import org.lateralgm.main.FileChooser.FileReader;
 import org.lateralgm.main.LGM;
+import org.lateralgm.resources.Resource;
 import org.lateralgm.resources.Script;
 import org.lateralgm.resources.library.LibManager;
 
@@ -31,12 +38,16 @@ import com.sun.jna.Native;
 import com.sun.jna.NativeLibrary;
 import com.sun.jna.StringArray;
 
-public class EnigmaCli
+public final class EnigmaCli
 	{
 	public static final String prog = "enigma"; //$NON-NLS-1$
 	public static EnigmaDriver DRIVER;
 
 	public static boolean syntax = false;
+
+	private EnigmaCli()
+		{
+		}
 
 	public static void error(String err)
 		{
@@ -59,14 +70,14 @@ public class EnigmaCli
 
 		try
 			{
-			InitReturn r = initailize(args[0],null);
+			initailize(args[0],null);
 			EnigmaSettings es = initSettings();
 			if (syntax)
-				syntaxChecker(r.f,r.root,es);
+				syntaxChecker(LGM.currentFile,LGM.root,es);
 			else
-				compile(r.f,r.root,es);
+				compile(LGM.currentFile,LGM.root,es);
 			}
-		catch (FileNotFoundException e)
+		catch (IOException e)
 			{
 			error(e.getMessage());
 			}
@@ -76,31 +87,36 @@ public class EnigmaCli
 			}
 		}
 
-	//	public static void compile(String fn) throws FileNotFoundException,GmFormatException
-	//		{
-	//		compile(fn,null);
-	//		}
-	//
-	//	public static void compile(File file) throws FileNotFoundException,GmFormatException
-	//		{
-	//		compile(file.getPath(),null);
-	//		}
-
-	static class InitReturn
+	private static void addResourceHook()
 		{
-		GmFile f;
-		ResNode root;
-		String error; //contains String on toolchain failure during libInit
+		EgmIO io = new EgmIO();
+		FileChooser.readers.add(io);
+		FileChooser.writers.add(io);
+
+		Resource.kinds.add(EnigmaSettings.class);
+		Resource.kindsByName3.put("EGS",EnigmaSettings.class);
+		String name = Messages.getString("EnigmaRunner.RESNODE_NAME"); //$NON-NLS-1$
+		Resource.kindNames.put(EnigmaSettings.class,name);
+		Resource.kindNamesPlural.put(EnigmaSettings.class,name);
+
+		LGM.currentFile.resMap.put(EnigmaSettings.class,new SingletonResourceHolder<EnigmaSettings>(
+				new EnigmaSettings()));
 		}
 
-	public static InitReturn initailize(String fn, ResNode root) throws FileNotFoundException,
-			GmFormatException
+	public static String initailize(String fn, ResNode root) throws GmFormatException,IOException
 		{
-		if (!new File(fn).exists()) throw new FileNotFoundException(fn);
-		InitReturn r = new InitReturn();
+		File file = new File(fn);
+		if (!file.exists()) throw new FileNotFoundException(fn);
 		LibManager.autoLoad();
-		r.root = root == null ? new ResNode("Root",(byte) 0,null,null) : root; //$NON-NLS-1$;
-		r.f = GmFileReader.readGmFile(fn,r.root);
+
+		addResourceHook();
+
+		if (root == null) root = LGM.newRoot();
+
+		URI uri = file.toURI();
+		FileReader reader = FileChooser.findReader(uri);
+		LGM.currentFile = reader.read(uri.toURL().openStream(),uri,LGM.newRoot());
+
 		try
 			{
 			attemptLib();
@@ -111,8 +127,7 @@ public class EnigmaCli
 					+ "either because it could not be found or uses methods different from those expected.\n"
 					+ "The exact error is:\n" + e.getMessage());
 			}
-		r.error = DRIVER.libInit(new EnigmaCallbacks(new CliOutputHandler())); //returns String on toolchain failure
-		return r;
+		return DRIVER.libInit(new EnigmaCallbacks(new CliOutputHandler())); //returns String on toolchain failure
 		}
 
 	//TODO: Handle custom settings
@@ -135,9 +150,9 @@ public class EnigmaCli
 		SyntaxError err = ess.commitToDriver(DRIVER); //returns SyntaxError
 		if (err.absoluteIndex != -1) return err;
 
-		int scrNum = LGM.currentFile.scripts.size();
+		int scrNum = LGM.currentFile.resMap.getList(Script.class).size();
 		String osl[] = new String[scrNum];
-		Script isl[] = LGM.currentFile.scripts.toArray(new Script[0]);
+		Script isl[] = LGM.currentFile.resMap.getList(Script.class).toArray(new Script[0]);
 		for (int i = 0; i < scrNum; i++)
 			osl[i] = isl[i].getName();
 		StringArray scripts = new StringArray(osl);
@@ -166,7 +181,7 @@ public class EnigmaCli
 
 		//TODO: Handle custom outname
 		//FIXME: Make compliant with spec2
-		File outname = new File(f.filename.substring(0,f.filename.lastIndexOf('.'))
+		File outname = new File(f.uri.toString().substring(0,f.uri.toString().lastIndexOf('.'))
 				+ ess.targets.get("windowing").ext);
 		TargetSelection compiler = ess.targets.get(TargetHandler.COMPILER);
 		if (!compiler.outputexe.equals("$tempfile")) //$NON-NLS-1$

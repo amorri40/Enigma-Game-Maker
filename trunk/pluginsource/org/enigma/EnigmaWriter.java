@@ -23,20 +23,21 @@ import static org.lateralgm.main.Util.deRef;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumMap;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.Map;
 import java.util.zip.DeflaterOutputStream;
 
 import javax.swing.JOptionPane;
@@ -47,6 +48,7 @@ import org.enigma.backend.other.Extension;
 import org.enigma.backend.other.Include;
 import org.enigma.backend.resources.Background;
 import org.enigma.backend.resources.Font;
+import org.enigma.backend.resources.GameSettings;
 import org.enigma.backend.resources.GmObject;
 import org.enigma.backend.resources.Path;
 import org.enigma.backend.resources.Room;
@@ -70,17 +72,18 @@ import org.enigma.backend.util.Polygon;
 import org.enigma.utility.Masker.Mask;
 import org.lateralgm.components.impl.ResNode;
 import org.lateralgm.file.GmFile;
+import org.lateralgm.file.iconio.ICOFile;
+import org.lateralgm.resources.InstantiableResource;
+import org.lateralgm.resources.Resource;
 import org.lateralgm.resources.ResourceReference;
 import org.lateralgm.resources.Background.PBackground;
 import org.lateralgm.resources.Font.PFont;
+import org.lateralgm.resources.GameSettings.PGameSettings;
 import org.lateralgm.resources.GmObject.PGmObject;
 import org.lateralgm.resources.Path.PPath;
 import org.lateralgm.resources.Room.PRoom;
 import org.lateralgm.resources.Script.PScript;
 import org.lateralgm.resources.Sound.PSound;
-import org.lateralgm.resources.Sound.SoundKind;
-import org.lateralgm.resources.Sprite.BBMode;
-import org.lateralgm.resources.Sprite.MaskShape;
 import org.lateralgm.resources.Sprite.PSprite;
 import org.lateralgm.resources.library.LibAction;
 import org.lateralgm.resources.library.LibManager;
@@ -115,9 +118,10 @@ public final class EnigmaWriter
 
 	protected EnigmaStruct populateStruct()
 		{
-		o.fileVersion = i.fileVersion;
-		o.filename = i.filename;
+		o.fileVersion = i.format == null ? -1 : i.format.getVersion();
+		o.filename = i.uri == null ? null : i.uri.toString();
 
+		populateSettings();
 		populateSprites();
 		populateSounds();
 		populateBackgrounds();
@@ -169,45 +173,102 @@ public final class EnigmaWriter
 		return o;
 		}
 
-	protected static final SoundKind[] SOUND_KIND = { SoundKind.NORMAL,SoundKind.BACKGROUND,
-			SoundKind.SPATIAL,SoundKind.MULTIMEDIA };
-	protected static final Map<SoundKind,Integer> SOUND_CODE;
-	static
+	protected void populateSettings()
 		{
-		EnumMap<SoundKind,Integer> m = new EnumMap<SoundKind,Integer>(SoundKind.class);
-		for (int i = 0; i < SOUND_KIND.length; i++)
-			m.put(SOUND_KIND[i],i);
-		SOUND_CODE = Collections.unmodifiableMap(m);
-		}
-	protected static final BBMode[] SPRITE_BB_MODE = { BBMode.AUTO,BBMode.FULL,BBMode.MANUAL };
-	protected static final Map<BBMode,Integer> SPRITE_BB_CODE;
-	static
-		{
-		EnumMap<BBMode,Integer> m = new EnumMap<BBMode,Integer>(BBMode.class);
-		for (int i = 0; i < SPRITE_BB_MODE.length; i++)
-			m.put(SPRITE_BB_MODE[i],i);
-		SPRITE_BB_CODE = Collections.unmodifiableMap(m);
-		}
-	protected static final MaskShape[] SPRITE_MASK_SHAPE = { MaskShape.PRECISE,MaskShape.RECTANGLE,
-			MaskShape.DISK,MaskShape.DIAMOND };
-	protected static final Map<MaskShape,Integer> SPRITE_MASK_CODE;
-	static
-		{
-		EnumMap<MaskShape,Integer> m = new EnumMap<MaskShape,Integer>(MaskShape.class);
-		for (int i = 0; i < SPRITE_MASK_SHAPE.length; i++)
-			m.put(SPRITE_MASK_SHAPE[i],i);
-		SPRITE_MASK_CODE = Collections.unmodifiableMap(m);
+		org.lateralgm.resources.GameSettings ig = i.gameSettings;
+		GameSettings og = o.gameSettings;
+
+		og.gameId = ig.get(PGameSettings.GAME_ID);
+		og.startFullscreen = ig.get(PGameSettings.START_FULLSCREEN);
+		og.interpolate = ig.get(PGameSettings.INTERPOLATE);
+		og.dontDrawBorder = ig.get(PGameSettings.DONT_DRAW_BORDER);
+		og.displayCursor = ig.get(PGameSettings.DISPLAY_CURSOR);
+		og.scaling = ig.get(PGameSettings.SCALING);
+		og.allowWindowResize = ig.get(PGameSettings.ALLOW_WINDOW_RESIZE);
+		og.alwaysOnTop = ig.get(PGameSettings.ALWAYS_ON_TOP);
+		og.colorOutsideRoom = ARGBtoRGBA(((Color) ig.get(PGameSettings.COLOR_OUTSIDE_ROOM)).getRGB());
+		og.setResolution = ig.get(PGameSettings.SET_RESOLUTION);
+		og.colorDepth = GmFile.GS_DEPTH_CODE.get(ig.get(PGameSettings.COLOR_DEPTH)).byteValue();
+		og.resolution = GmFile.GS_RESOL_CODE.get(ig.get(PGameSettings.RESOLUTION)).byteValue();
+		og.frequency = GmFile.GS_FREQ_CODE.get(ig.get(PGameSettings.FREQUENCY)).byteValue();
+		og.dontShowButtons = ig.get(PGameSettings.DONT_SHOW_BUTTONS);
+		og.useSynchronization = ig.get(PGameSettings.USE_SYNCHRONIZATION);
+		og.disableScreensavers = ig.get(PGameSettings.DISABLE_SCREENSAVERS);
+		og.letF4SwitchFullscreen = ig.get(PGameSettings.LET_F4_SWITCH_FULLSCREEN);
+		og.letF1ShowGameInfo = ig.get(PGameSettings.LET_F1_SHOW_GAME_INFO);
+		og.letEscEndGame = ig.get(PGameSettings.LET_ESC_END_GAME);
+		og.letF5SaveF6Load = ig.get(PGameSettings.LET_F5_SAVE_F6_LOAD);
+		og.letF9Screenshot = ig.get(PGameSettings.LET_F9_SCREENSHOT);
+		og.treatCloseAsEscape = ig.get(PGameSettings.TREAT_CLOSE_AS_ESCAPE);
+		og.gamePriority = GmFile.GS_PRIORITY_CODE.get(ig.get(PGameSettings.GAME_PRIORITY)).byteValue();
+		og.freezeOnLoseFocus = ig.get(PGameSettings.FREEZE_ON_LOSE_FOCUS);
+		og.loadBarMode = GmFile.GS_PROGBAR_CODE.get(ig.get(PGameSettings.LOAD_BAR_MODE)).byteValue();
+		//populateImage((BufferedImage) ig.get(PGameSettings.FRONT_LOAD_BAR),og.frontLoadBar,false);
+		//populateImage((BufferedImage) ig.get(PGameSettings.BACK_LOAD_BAR),og.backLoadBar,false);
+		og.showCustomLoadImage = ig.get(PGameSettings.SHOW_CUSTOM_LOAD_IMAGE);
+		//populateImage((BufferedImage) ig.get(PGameSettings.LOADING_IMAGE),og.loadingImage,false);
+		og.imagePartiallyTransparent = ig.get(PGameSettings.IMAGE_PARTIALLY_TRANSPARENTY);
+		og.loadImageAlpha = ig.get(PGameSettings.LOAD_IMAGE_ALPHA);
+		og.scaleProgressBar = ig.get(PGameSettings.SCALE_PROGRESS_BAR);
+		og.displayErrors = ig.get(PGameSettings.DISPLAY_ERRORS);
+		og.writeToLog = ig.get(PGameSettings.WRITE_TO_LOG);
+		og.abortOnError = ig.get(PGameSettings.ABORT_ON_ERROR);
+		og.treatUninitializedAs0 = ig.get(PGameSettings.TREAT_UNINIT_AS_0);
+		og.author = ig.get(PGameSettings.AUTHOR);
+		og.version = ig.get(PGameSettings.VERSION);
+		og.lastChanged = ig.get(PGameSettings.LAST_CHANGED);
+		og.information = ig.get(PGameSettings.INFORMATION);
+
+		og.includeFolder = GmFile.GS_INCFOLDER_CODE.get(ig.get(PGameSettings.INCLUDE_FOLDER));
+		og.overwriteExisting = ig.get(PGameSettings.OVERWRITE_EXISTING);
+		og.removeAtGameEnd = ig.get(PGameSettings.REMOVE_AT_GAME_END);
+
+		og.versionMajor = ig.get(PGameSettings.VERSION_MAJOR);
+		og.versionMinor = ig.get(PGameSettings.VERSION_MINOR);
+		og.versionRelease = ig.get(PGameSettings.VERSION_RELEASE);
+		og.versionBuild = ig.get(PGameSettings.VERSION_BUILD);
+		og.company = ig.get(PGameSettings.COMPANY);
+		og.product = ig.get(PGameSettings.PRODUCT);
+		og.copyright = ig.get(PGameSettings.COPYRIGHT);
+		og.description = ig.get(PGameSettings.DESCRIPTION);
+
+		//All this shit is just to write the icon to a temp file and provide the filename...
+		ICOFile ico = ig.get(PGameSettings.GAME_ICON);
+		OutputStream os = null;
+		String fn = null;
+		if (ico != null) try
+			{
+			File f = File.createTempFile("gms_ico",".ico");
+			ico.write(os = new FileOutputStream(f));
+			fn = f.getAbsolutePath();
+			}
+		catch (IOException e)
+			{
+			e.printStackTrace();
+			}
+		finally
+			{
+			if (os != null) try
+				{
+				os.close();
+				}
+			catch (IOException e)
+				{
+				e.printStackTrace();
+				}
+			}
+		og.gameIcon = fn;
 		}
 
 	protected void populateSprites()
 		{
-		int size = i.sprites.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Sprite.class).size();
 		o.spriteCount = size;
 		if (size == 0) return;
 
 		o.sprites = new Sprite.ByReference();
 		Sprite[] osl = (Sprite[]) o.sprites.toArray(size);
-		org.lateralgm.resources.Sprite[] isl = i.sprites.toArray(new org.lateralgm.resources.Sprite[0]);
+		org.lateralgm.resources.Sprite[] isl = i.resMap.getList(org.lateralgm.resources.Sprite.class).toArray(new org.lateralgm.resources.Sprite[0]);
 		for (int s = 0; s < size; s++)
 			{
 			Sprite os = osl[s];
@@ -217,14 +278,14 @@ public final class EnigmaWriter
 			os.id = is.getId();
 
 			os.transparent = is.get(PSprite.TRANSPARENT);
-			os.shape = SPRITE_MASK_CODE.get(is.get(PSprite.SHAPE)); //0*=Precise, 1=Rectangle,  2=Disk, 3=Diamond
+			os.shape = GmFile.SPRITE_MASK_CODE.get(is.get(PSprite.SHAPE)); //0*=Precise, 1=Rectangle,  2=Disk, 3=Diamond
 			os.alphaTolerance = is.get(PSprite.ALPHA_TOLERANCE);
 			os.separateMask = is.get(PSprite.SEPARATE_MASK);
 			os.smoothEdges = is.get(PSprite.SMOOTH_EDGES);
 			os.preload = is.get(PSprite.PRELOAD);
 			os.originX = is.get(PSprite.ORIGIN_X);
 			os.originY = is.get(PSprite.ORIGIN_Y);
-			os.bbMode = SPRITE_BB_CODE.get(is.get(PSprite.BB_MODE)); //0*=Automatic, 1=Full image, 2=Manual
+			os.bbMode = GmFile.SPRITE_BB_CODE.get(is.get(PSprite.BB_MODE)); //0*=Automatic, 1=Full image, 2=Manual
 			os.bbLeft = is.get(PSprite.BB_LEFT);
 			os.bbRight = is.get(PSprite.BB_RIGHT);
 			os.bbTop = is.get(PSprite.BB_TOP);
@@ -285,13 +346,13 @@ public final class EnigmaWriter
 
 	protected void populateSounds()
 		{
-		int size = i.sounds.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Sound.class).size();
 		o.soundCount = size;
 		if (size == 0) return;
 
 		o.sounds = new Sound.ByReference();
 		Sound[] osl = (Sound[]) o.sounds.toArray(size);
-		org.lateralgm.resources.Sound[] isl = i.sounds.toArray(new org.lateralgm.resources.Sound[0]);
+		org.lateralgm.resources.Sound[] isl = i.resMap.getList(org.lateralgm.resources.Sound.class).toArray(new org.lateralgm.resources.Sound[0]);
 		for (int s = 0; s < size; s++)
 			{
 			Sound os = osl[s];
@@ -300,7 +361,7 @@ public final class EnigmaWriter
 			os.name = is.getName();
 			os.id = is.getId();
 
-			os.kind = SOUND_CODE.get(is.get(PSound.KIND));
+			os.kind = GmFile.SOUND_CODE.get(is.get(PSound.KIND));
 			os.fileType = is.get(PSound.FILE_TYPE);
 			os.fileName = is.get(PSound.FILE_NAME);
 			os.chorus = is.get(PSound.CHORUS);
@@ -324,13 +385,13 @@ public final class EnigmaWriter
 
 	protected void populateBackgrounds()
 		{
-		int size = i.backgrounds.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Background.class).size();
 		o.backgroundCount = size;
 		if (size == 0) return;
 
 		o.backgrounds = new Background.ByReference();
 		Background[] obl = (Background[]) o.backgrounds.toArray(size);
-		org.lateralgm.resources.Background[] ibl = i.backgrounds.toArray(new org.lateralgm.resources.Background[0]);
+		org.lateralgm.resources.Background[] ibl = i.resMap.getList(org.lateralgm.resources.Background.class).toArray(new org.lateralgm.resources.Background[0]);
 		for (int s = 0; s < size; s++)
 			{
 			Background ob = obl[s];
@@ -357,13 +418,13 @@ public final class EnigmaWriter
 
 	protected void populatePaths()
 		{
-		int size = i.paths.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Path.class).size();
 		o.pathCount = size;
 		if (size == 0) return;
 
 		o.paths = new Path.ByReference();
 		Path[] opl = (Path[]) o.paths.toArray(size);
-		org.lateralgm.resources.Path[] ipl = i.paths.toArray(new org.lateralgm.resources.Path[0]);
+		org.lateralgm.resources.Path[] ipl = i.resMap.getList(org.lateralgm.resources.Path.class).toArray(new org.lateralgm.resources.Path[0]);
 		for (int p = 0; p < size; p++)
 			{
 			Path op = opl[p];
@@ -398,13 +459,13 @@ public final class EnigmaWriter
 		{
 		List<LibAction> qs = getQuestionLibActions();
 
-		int size = i.scripts.size() + qs.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Script.class).size() + qs.size();
 		o.scriptCount = size;
 		if (size == 0) return;
 
 		o.scripts = new Script.ByReference();
 		Script[] osl = (Script[]) o.scripts.toArray(size);
-		org.lateralgm.resources.Script[] isl = i.scripts.toArray(new org.lateralgm.resources.Script[0]);
+		org.lateralgm.resources.Script[] isl = i.resMap.getList(org.lateralgm.resources.Script.class).toArray(new org.lateralgm.resources.Script[0]);
 		for (int s = 0; s < isl.length; s++)
 			{
 			Script oo = osl[s];
@@ -426,7 +487,7 @@ public final class EnigmaWriter
 
 	protected void populateFonts()
 		{
-		int size = i.fonts.size() + 1;
+		int size = i.resMap.getList(org.lateralgm.resources.Font.class).size() + 1;
 		o.fontCount = size;
 
 		o.fonts = new Font.ByReference();
@@ -443,11 +504,11 @@ public final class EnigmaWriter
 		oF.italic = false;
 		oF.rangeMin = 32;
 		oF.rangeMax = 127;
-		oF.glyphs = populateGlyphs(iF,oF.rangeMin,oF.rangeMax,true);
+		oF.glyphs = populateGlyphs(iF,oF.rangeMin,oF.rangeMax,0);
 
 		if (size == 1) return;
 
-		org.lateralgm.resources.Font[] ifl = i.fonts.toArray(new org.lateralgm.resources.Font[0]);
+		org.lateralgm.resources.Font[] ifl = i.resMap.getList(org.lateralgm.resources.Font.class).toArray(new org.lateralgm.resources.Font[0]);
 		for (int f = 1; f < size; f++)
 			{
 			Font of = ofl[f];
@@ -469,13 +530,12 @@ public final class EnigmaWriter
 			int fsize = (int) Math.round(of.size * screenRes / 72.0); // Java assumes 72 dps
 			java.awt.Font fnt = new java.awt.Font(of.fontName,style,fsize);
 
-			of.glyphs = populateGlyphs(fnt,of.rangeMin,of.rangeMax,
-					(Integer) ifont.get(PFont.ANTIALIAS) > 0);
+			of.glyphs = populateGlyphs(fnt,of.rangeMin,of.rangeMax,(Integer) ifont.get(PFont.ANTIALIAS));
 			}
 		}
 
 	private static Glyph.ByReference populateGlyphs(java.awt.Font fnt, int rangeMin, int rangeMax,
-			boolean aa)
+			int aa)
 		{
 		Glyph.ByReference glyphs = new Glyph.ByReference();
 		Glyph[] ofgl = (Glyph[]) glyphs.toArray(rangeMax - rangeMin + 1);
@@ -484,9 +544,14 @@ public final class EnigmaWriter
 		return glyphs;
 		}
 
-	private static void populateGlyph(Glyph og, java.awt.Font fnt, char c, boolean aa)
+	private static void populateGlyph(Glyph og, java.awt.Font fnt, char c, int aa)
 		{
-		GlyphVector gv = fnt.createGlyphVector(new FontRenderContext(null,aa,false),String.valueOf(c));
+		Object aaHints[] = { RenderingHints.VALUE_TEXT_ANTIALIAS_OFF,
+				RenderingHints.VALUE_TEXT_ANTIALIAS_GASP,RenderingHints.VALUE_TEXT_ANTIALIAS_ON,
+				RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB };
+		if (aa < 0 || aa >= aaHints.length) aa = 0;
+		GlyphVector gv = fnt.createGlyphVector(new FontRenderContext(null,aaHints[aa],
+				RenderingHints.VALUE_FRACTIONALMETRICS_OFF),String.valueOf(c));
 		Rectangle2D r = gv.getPixelBounds(null,0,0); //don't know why it needs coordinates
 		if (r.getWidth() <= 0 || r.getHeight() <= 0) return;
 
@@ -519,13 +584,13 @@ public final class EnigmaWriter
 
 	protected void populateTimelines()
 		{
-		int size = i.timelines.size();
+		int size = i.resMap.getList(org.lateralgm.resources.Timeline.class).size();
 		o.timelineCount = size;
 		if (size == 0) return;
 
 		o.timelines = new Timeline.ByReference();
 		Timeline[] otl = (Timeline[]) o.timelines.toArray(size);
-		org.lateralgm.resources.Timeline[] itl = i.timelines.toArray(new org.lateralgm.resources.Timeline[0]);
+		org.lateralgm.resources.Timeline[] itl = i.resMap.getList(org.lateralgm.resources.Timeline.class).toArray(new org.lateralgm.resources.Timeline[0]);
 		for (int t = 0; t < size; t++)
 			{
 			Timeline ot = otl[t];
@@ -549,13 +614,13 @@ public final class EnigmaWriter
 
 	protected void populateObjects()
 		{
-		int size = i.gmObjects.size();
+		int size = i.resMap.getList(org.lateralgm.resources.GmObject.class).size();
 		o.gmObjectCount = size;
 		if (size == 0) return;
 
 		o.gmObjects = new GmObject.ByReference();
 		GmObject[] ool = (GmObject[]) o.gmObjects.toArray(size);
-		org.lateralgm.resources.GmObject[] iol = i.gmObjects.toArray(new org.lateralgm.resources.GmObject[0]);
+		org.lateralgm.resources.GmObject[] iol = i.resMap.getList(org.lateralgm.resources.GmObject.class).toArray(new org.lateralgm.resources.GmObject[0]);
 		for (int s = 0; s < size; s++)
 			{
 			GmObject oo = ool[s];
@@ -618,7 +683,7 @@ public final class EnigmaWriter
 		while (e.hasMoreElements())
 			{
 			ResNode node = (ResNode) e.nextElement();
-			if (node.kind == org.lateralgm.resources.Resource.Kind.ROOM)
+			if (node.kind == org.lateralgm.resources.Room.class)
 				{
 				org.lateralgm.resources.Room r = (org.lateralgm.resources.Room) deRef((ResourceReference<?>) node.getRes());
 				if (r != null) irooms.add(r); // is this null check even necessary?
@@ -815,8 +880,8 @@ public final class EnigmaWriter
 
 	public static int toId(Object obj, int def)
 		{
-		ResourceReference<?> rr = (ResourceReference<?>) obj;
-		if (deRef(rr) != null) return rr.get().getId();
+		Resource<?,?> r = deRef((ResourceReference<?>) obj);
+		if (r != null) return ((InstantiableResource<?,?>) r).getId();
 		return def;
 		}
 

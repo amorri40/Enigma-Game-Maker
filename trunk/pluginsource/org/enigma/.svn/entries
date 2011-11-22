@@ -1,14 +1,14 @@
 10
 
 dir
-868
+948
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev/trunk/pluginsource/org/enigma
 https://enigma-dev.svn.sourceforge.net/svnroot/enigma-dev
 
 
 
-2011-09-09T01:10:49.187962Z
-868
+2011-11-21T22:36:27.898422Z
+947
 ismavatar
 has-props
 
@@ -25,6 +25,9 @@ has-props
 
 
 726d713c-bd1a-46cb-9ef0-1b6e075168bb
+
+file
+dir
 
 lgm_enigma.png
 file
@@ -60,40 +63,6 @@ has-props
 
 6589
 
-lgm1.png
-file
-
-
-
-
-2011-07-14T17:29:27.000000Z
-b87cad127acba6429232d07ca7db3092
-2011-07-12T23:31:38.010841Z
-810
-ismavatar
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4579
-
 enigma.png
 file
 
@@ -128,17 +97,18 @@ has-props
 
 3506
 
-EFileReader.java
+lgm1.png
 file
 
 
 
 
-2011-09-09T14:47:28.000000Z
-e00e23eff8eae1d9fe01621c9552eb64
-2011-09-06T04:25:03.037119Z
-867
+2011-07-14T17:29:27.000000Z
+b87cad127acba6429232d07ca7db3092
+2011-07-12T23:31:38.010841Z
+810
 ismavatar
+has-props
 
 
 
@@ -159,8 +129,7 @@ ismavatar
 
 
 
-
-30825
+4579
 
 backend
 dir
@@ -171,10 +140,10 @@ file
 
 
 
-2011-07-14T17:29:27.000000Z
-1a383b7e4cbf9e65de994a51adc62327
-2011-07-12T23:31:38.010841Z
-810
+2011-11-22T03:33:47.000000Z
+ed975bb6152fd1563b062102e27e7853
+2011-09-30T15:44:55.394879Z
+905
 ismavatar
 
 
@@ -197,41 +166,7 @@ ismavatar
 
 
 
-2636
-
-EFileWriter.java
-file
-
-
-
-
-2011-09-09T14:47:28.000000Z
-ae4dae9cdffcc479948eeb4be0fed9ef
-2011-09-06T04:25:03.037119Z
-867
-ismavatar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22149
+2690
 
 utility
 dir
@@ -242,10 +177,10 @@ file
 
 
 
-2011-08-31T06:22:52.000000Z
-b9632dc17cf7e0dbf76a65228e03d79d
-2011-08-11T22:26:38.383162Z
-838
+2011-11-22T03:33:48.000000Z
+18b03ce167d946226baa8109d482fa0d
+2011-11-21T19:15:13.837563Z
+946
 ismavatar
 
 
@@ -268,7 +203,7 @@ ismavatar
 
 
 
-13462
+13450
 
 EnigmaUpdater.java
 file
@@ -276,10 +211,10 @@ file
 
 
 
-2011-06-21T22:11:34.000000Z
-f3abb442f278b89c004a690ada5a2c53
-2011-06-10T20:47:26.954191Z
-778
+2011-11-22T03:33:48.000000Z
+5d33feb77c3c657dc03b3d5ab70df2e9
+2011-10-17T22:18:05.526429Z
+925
 ismavatar
 
 
@@ -302,10 +237,56 @@ ismavatar
 
 
 
-10802
+10542
+
+EefDisplay.java
+file
+
+
+
+
+2011-11-22T03:33:48.000000Z
+7b596057480bc9d5c1409dd9abc7d7c1
+2011-11-21T19:15:13.837563Z
+946
+ismavatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4465
 
 messages
 dir
+
+EnigmaCli.java
+file
+
+
+
+
+
+843b73f1db1edde8d8237ceecaad4b1b
+2011-11-21T22:36:27.898422Z
+947
+ismavatar
 
 EnigmaThread.java
 file
@@ -340,18 +321,6 @@ ismavatar
 
 
 4197
-
-EnigmaCli.java
-file
-
-
-
-
-
-c35a2ee698c00313630a2745490c2181
-2011-08-11T22:26:38.383162Z
-838
-ismavatar
 
 syntax.png
 file
@@ -393,10 +362,10 @@ file
 
 
 
-2011-09-09T14:47:38.000000Z
-aed8ff420bbd5cc4a9962257870e42b9
-2011-09-09T01:10:49.187962Z
-868
+2011-11-22T03:33:48.000000Z
+b476df5693a7d4c8ba708d603ad47869
+2011-11-21T19:15:13.837563Z
+946
 ismavatar
 
 
@@ -419,7 +388,7 @@ ismavatar
 
 
 
-26389
+27062
 
 EnigmaSettingsFrame.java
 file
@@ -427,10 +396,10 @@ file
 
 
 
-2011-08-31T06:22:52.000000Z
-76833b70be7e55dcce401827d4e0523e
-2011-08-11T22:26:38.383162Z
-838
+2011-11-22T03:33:48.000000Z
+651b9a5792fd83a8e7059c3606f9aa8e
+2011-10-17T22:18:05.526429Z
+925
 ismavatar
 
 
@@ -453,7 +422,7 @@ ismavatar
 
 
 
-30312
+28174
 
 EnigmaWriter.java
 file
@@ -462,9 +431,9 @@ file
 
 
 
-d86367b86ce3c070ee79ed797d7a5097
-2011-07-21T02:57:23.741000Z
-826
+1b656038cbdcc5e06f5d8ce505d10199
+2011-11-20T19:34:21.168408Z
+944
 ismavatar
 
 SettingsHandler.java
@@ -473,10 +442,10 @@ file
 
 
 
-2011-08-31T06:22:52.000000Z
-e2b8143d6fc11ad4b6443b06fdafc88b
-2011-08-11T22:26:38.383162Z
-838
+2011-11-22T03:33:48.000000Z
+7ae29c91b4daa6f4fb6b095f1cbf2feb
+2011-11-21T19:15:13.837563Z
+946
 ismavatar
 
 
@@ -499,5 +468,5 @@ ismavatar
 
 
 
-5272
+5596
 

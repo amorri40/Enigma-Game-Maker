@@ -13,9 +13,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 import java.util.Map.Entry;
 
@@ -27,8 +31,12 @@ import org.enigma.SettingsHandler.OptionGroupSetting;
 import org.enigma.SettingsHandler.OptionSetting;
 import org.enigma.TargetHandler.TargetSelection;
 import org.enigma.backend.EnigmaDriver.SyntaxError;
+import org.enigma.file.YamlParser.YamlNode;
+import org.lateralgm.resources.Resource;
+import org.lateralgm.resources.ResourceReference;
+import org.lateralgm.util.PropertyMap;
 
-public class EnigmaSettings
+public class EnigmaSettings extends Resource<EnigmaSettings,EnigmaSettings.PEnigmaSettings>
 	{
 	public String definitions = "", globalLocals = ""; //$NON-NLS-1$ //$NON-NLS-2$
 	public String initialization = "", cleanup = ""; //$NON-NLS-1$ //$NON-NLS-2$
@@ -38,6 +46,10 @@ public class EnigmaSettings
 	public Map<String,TargetSelection> targets = new HashMap<String,TargetSelection>();
 	public Set<String> extensions = new HashSet<String>();
 
+	public enum PEnigmaSettings
+		{
+		}
+
 	public EnigmaSettings()
 		{
 		this(true);
@@ -45,6 +57,7 @@ public class EnigmaSettings
 
 	private EnigmaSettings(boolean load)
 		{
+		super();
 		if (!load) return;
 
 		loadDefinitions();
@@ -55,7 +68,7 @@ public class EnigmaSettings
 				options.put(os.id,os.def);
 
 		for (ExtensionSetting es : SettingsHandler.extensions)
-			extensions.add(es.path);
+			if (es.def) extensions.add(es.path);
 		}
 
 	void loadDefinitions()
@@ -99,50 +112,96 @@ public class EnigmaSettings
 			}
 		}
 
-	private String toYaml()
+	public void fromYaml(YamlNode n)
 		{
-		StringBuilder yaml = new StringBuilder("%e-yaml\n---\n"); //$NON-NLS-1$
-		for (Entry<String,String> entry : options.entrySet())
-			yaml.append(entry.getKey()).append(": ").append(entry.getValue()).append('\n'); //$NON-NLS-1$
+		for (String key : options.keySet())
+			options.put(key,n.getMC(key,null));
 
-		yaml.append('\n');
+		for (String key : targets.keySet())
+			{
+			String targetName = n.getMC("target-" + key,null);
+			if (targetName == null) continue;
+			for (TargetSelection ts : TargetHandler.targets.get(key))
+				if (ts.id == targetName)
+					{
+					targets.put(key,ts);
+					break;
+					}
+			}
+
+		String ext = n.getMC("extensions",null);
+		if (ext != null)
+			{
+			extensions.clear();
+			Collections.addAll(extensions,ext.split(","));
+			}
+		}
+
+	public void fromProperties(Properties p)
+		{
+		for (String key : options.keySet())
+			options.put(key,p.getProperty(key));
+
+		for (String key : targets.keySet())
+			{
+			String targetName = p.getProperty("target-" + key);
+			if (targetName == null) continue;
+			for (TargetSelection ts : TargetHandler.targets.get(key))
+				if (ts.id.equals(targetName))
+					{
+					targets.put(key,ts);
+					break;
+					}
+			}
+
+		String ext = p.getProperty("extensions");
+		if (ext != null)
+			{
+			extensions.clear();
+			Collections.addAll(extensions,ext.split(","));
+			}
+		}
+
+	public void toYaml(PrintWriter out, boolean includeHeader)
+		{
+		if (includeHeader)
+			{
+			out.println("%e-yaml"); //$NON-NLS-1$
+			out.println("---"); //$NON-NLS-1$
+			}
+
+		for (Entry<String,String> entry : options.entrySet())
+			out.append(entry.getKey()).append(": ").append(entry.getValue()).println(); //$NON-NLS-1$
+
+		out.println();
 
 		for (Entry<String,TargetSelection> entry : targets.entrySet())
 			{
 			if (entry.getValue() == null) continue;
-			yaml.append("target-").append(entry.getKey()).append(": ").append(entry.getValue().id).append('\n'); //$NON-NLS-1$ //$NON-NLS-2$
+			out.append("target-").append(entry.getKey()).append(": ").append(entry.getValue().id).println(); //$NON-NLS-1$ //$NON-NLS-2$
 			}
-		yaml.append("target-networking: None\n"); //$NON-NLS-1$
+		out.println("target-networking: None"); //$NON-NLS-1$
 
 		if (extensions.size() > 0)
 			{
-			yaml.append('\n');
-			yaml.append("extensions: "); //$NON-NLS-1$
+			out.println();
+			out.append("extensions: "); //$NON-NLS-1$
 
 			String[] exts = extensions.toArray(new String[0]);
-			yaml.append(exts[0]);
+			out.append(exts[0]);
 			for (int i = 1; i < exts.length; i++)
-				yaml.append(',').append(exts[i]);
+				out.append(',').append(exts[i]);
 
-			yaml.append('\n');
+			out.println();
 			}
-
-		System.out.println();
-		System.out.println(yaml);
-
-		return yaml.toString();
+		out.flush();
 		}
 
 	public SyntaxError commitToDriver(EnigmaDriver driver)
 		{
-		return driver.definitionsModified(definitions,toYaml());
-		}
-
-	public EnigmaSettings copy()
-		{
-		EnigmaSettings es = new EnigmaSettings(false);
-		copyInto(es);
-		return es;
+		StringWriter sw = new StringWriter();
+		toYaml(new PrintWriter(sw),true);
+		return driver.definitionsModified(definitions,sw.toString());
 		}
 
 	public void copyInto(EnigmaSettings es)
@@ -158,5 +217,34 @@ public class EnigmaSettings
 		es.targets.putAll(targets);
 		es.extensions.clear();
 		es.extensions.addAll(extensions);
+		}
+
+	@Override
+	public EnigmaSettings makeInstance(ResourceReference<EnigmaSettings> ref)
+		{
+		return new EnigmaSettings(false);
+		}
+
+	@Override
+	protected PropertyMap<PEnigmaSettings> makePropertyMap()
+		{
+		return new PropertyMap<PEnigmaSettings>(PEnigmaSettings.class,this,null);
+		}
+
+	@Override
+	protected void postCopy(EnigmaSettings dest)
+		{
+		copyInto(dest);
+		}
+
+	public boolean equals(Object o)
+		{
+		if (this == o) return true;
+		if (o == null || !(o instanceof EnigmaSettings)) return false;
+		EnigmaSettings es = (EnigmaSettings) o;
+		if (!es.definitions.equals(definitions) || !es.globalLocals.equals(globalLocals)
+				|| !es.initialization.equals(initialization) || !es.cleanup.equals(cleanup)) return false;
+		return es.options.equals(options) && es.targets.equals(targets)
+				&& es.extensions.equals(extensions);
 		}
 	}

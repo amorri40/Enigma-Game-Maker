@@ -1,3 +1,11 @@
+/*
+ * Copyright (C) 2011 IsmAvatar <IsmAvatar@gmail.com>
+ * 
+ * This file is part of Enigma Plugin.
+ * Enigma Plugin is free software and comes with ABSOLUTELY NO WARRANTY.
+ * See LICENSE for details.
+ */
+
 package org.enigma;
 
 import java.io.File;
@@ -7,10 +15,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.enigma.file.YamlParser;
+import org.enigma.file.YamlParser.YamlElement;
+import org.enigma.file.YamlParser.YamlNode;
 import org.enigma.messages.Messages;
-import org.enigma.utility.YamlParser;
-import org.enigma.utility.YamlParser.YamlElement;
-import org.enigma.utility.YamlParser.YamlNode;
 
 public final class SettingsHandler
 	{
@@ -57,13 +65,15 @@ public final class SettingsHandler
 		{
 		public File icon;
 		public String path, name, desc;
+		public boolean def;
 
-		public ExtensionSetting(File icon, String path, String name, String desc)
+		public ExtensionSetting(File icon, String path, String name, String desc, boolean def)
 			{
 			this.icon = icon;
 			this.path = path;
 			this.name = name;
 			this.desc = desc;
+			this.def = def;
 			}
 		}
 
@@ -186,7 +196,9 @@ public final class SettingsHandler
 					String name = yn.getMC("id"); //$NON-NLS-1$
 					String icon = yn.getMC("icon",null); //$NON-NLS-1$
 					String desc = yn.getMC("description"); //$NON-NLS-1$
-					extensions.add(new ExtensionSetting(icon == null ? null : new File(f,icon),path,name,desc));
+					boolean def = yn.getBool("default",true); //$NON-NLS-1$
+					extensions.add(new ExtensionSetting(icon == null ? null : new File(f,icon),path,name,
+							desc,def));
 					//					tm.addRow(icon == null ? null : new File(f,icon),path,name,desc);
 					}
 				catch (FileNotFoundException e)

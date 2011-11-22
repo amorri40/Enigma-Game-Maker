@@ -22,11 +22,8 @@ package org.enigma;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -36,7 +33,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.prefs.Preferences;
 import java.util.regex.Pattern;
 
 import javax.swing.AbstractListModel;
@@ -52,38 +48,45 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.tree.TreeNode;
 
 import org.enigma.backend.EnigmaCallbacks;
 import org.enigma.backend.EnigmaDriver;
+import org.enigma.backend.EnigmaDriver.SyntaxError;
 import org.enigma.backend.EnigmaSettings;
 import org.enigma.backend.EnigmaStruct;
-import org.enigma.backend.EnigmaDriver.SyntaxError;
+import org.enigma.file.EFileReader;
+import org.enigma.file.EgmIO;
+import org.enigma.file.YamlParser;
+import org.enigma.file.YamlParser.YamlNode;
 import org.enigma.messages.Messages;
 import org.enigma.utility.EnigmaBuildReader;
-import org.enigma.utility.YamlParser;
-import org.enigma.utility.YamlParser.YamlNode;
 import org.lateralgm.components.ErrorDialog;
 import org.lateralgm.components.GMLTextArea;
 import org.lateralgm.components.impl.CustomFileFilter;
 import org.lateralgm.components.impl.ResNode;
 import org.lateralgm.components.mdi.MDIFrame;
+import org.lateralgm.file.GmFile.ResourceHolder;
+import org.lateralgm.file.GmFile.SingletonResourceHolder;
 import org.lateralgm.file.GmFormatException;
 import org.lateralgm.jedit.GMLKeywords;
 import org.lateralgm.jedit.GMLKeywords.Construct;
 import org.lateralgm.jedit.GMLKeywords.Function;
 import org.lateralgm.jedit.GMLKeywords.Keyword;
+import org.lateralgm.main.FileChooser;
 import org.lateralgm.main.LGM;
 import org.lateralgm.main.LGM.ReloadListener;
 import org.lateralgm.resources.Resource;
 import org.lateralgm.resources.Script;
 import org.lateralgm.subframes.ActionFrame;
 import org.lateralgm.subframes.CodeFrame;
+import org.lateralgm.subframes.ResourceFrame;
+import org.lateralgm.subframes.ResourceFrame.ResourceFrameFactory;
 import org.lateralgm.subframes.ScriptFrame;
 import org.lateralgm.subframes.SubframeInformer;
 import org.lateralgm.subframes.SubframeInformer.SubframeListener;
@@ -106,14 +109,15 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 	public EnigmaFrame ef = new EnigmaFrame();
 	/** This is global scoped so that it doesn't get GC'd */
 	private EnigmaCallbacks ec = new EnigmaCallbacks(ef);
-	public EnigmaSettings es;
 	public EnigmaSettingsFrame esf;
 	public JMenuItem busy, run, debug, design, compile, rebuild;
-	public JMenuItem showFunctions, showGlobals, showTypes;
-	public final EnigmaNode node = new EnigmaNode();
+	public JMenuItem mImport, showFunctions, showGlobals, showTypes;
+	public ResNode node = new ResNode(Messages.getString("EnigmaRunner.RESNODE_NAME"), //$NON-NLS-1$
+			ResNode.STATUS_SECONDARY,EnigmaSettings.class);
 
 	public EnigmaRunner()
 		{
+		addReasourceHook();
 		populateMenu();
 		populateTree();
 		LGM.addReloadListener(this);
@@ -133,22 +137,17 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 				public void run()
 					{
 					//Disable updates by removing plugins/shared/svnkit.jar (e.g. linux packages)
-					Preferences root = Preferences.userRoot().node("/org/enigma"); //$NON-NLS-1$
-					boolean rebuild = root.getBoolean("NEEDS_REBUILD",false); //$NON-NLS-1$
-					root.putBoolean("NEEDS_REBUILD",false); //$NON-NLS-1$
 					int updates = attemptUpdate(); //displays own error
 					if (updates == -1)
 						{
 						ENIGMA_FAIL = true;
 						return;
 						}
-					if (updates == 1 || rebuild || attemptLib() != null)
+					//Make checks for changes itself
+					if (!make()) //displays own error
 						{
-						if (!make()) //displays own error
-							{
-							ENIGMA_FAIL = true;
-							return;
-							}
+						ENIGMA_FAIL = true;
+						return;
 						}
 					Error e = attemptLib();
 					if (e != null)
@@ -170,7 +169,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 						}
 
 					ENIGMA_READY = true;
-					es = new EnigmaSettings();
+					EnigmaSettings es = LGM.currentFile.resMap.get(EnigmaSettings.class).getResource();
 					esf = new EnigmaSettingsFrame(es);
 					LGM.mdi.add(esf);
 					es.commitToDriver(DRIVER);
@@ -179,7 +178,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			}.start();
 		}
 
-	private UnsatisfiedLinkError attemptLib()
+	private static UnsatisfiedLinkError attemptLib()
 		{
 		try
 			{
@@ -207,7 +206,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 
 	public boolean make()
 		{
-		String make, path;
+		String make, tcpath, path;
 
 		//try to read the YAML definition for `make` on this platform
 		try
@@ -217,8 +216,8 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 				File gccey = new File(new File("Compilers",TargetHandler.getOS()),"gcc.ey"); //$NON-NLS-1$ //$NON-NLS-2$
 				YamlNode n = YamlParser.parse(gccey);
 				make = n.getMC("Make"); //or OOB  //$NON-NLS-1$
+				tcpath = n.getMC("TCPath",new String()); //$NON-NLS-1$
 				path = n.getMC("Path",new String()); //$NON-NLS-1$
-				if (path == null) path = new String();
 				//replace starting \ with root
 				if (make.startsWith("\\")) make = new File("/").getAbsolutePath() + make.substring(1); //$NON-NLS-1$ //$NON-NLS-2$
 				}
@@ -235,47 +234,77 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			{
 			e2.printStackTrace();
 			new ErrorDialog(null,Messages.getString("EnigmaRunner.ERROR_YAML_MAKE_TITLE"), //$NON-NLS-1$
-					Messages.getString("EnigmaRunner.ERROR_YAML_MAKE"), //$NON-NLS-1$
-					org.lateralgm.messages.Messages.format("Listener.DEBUG_INFO", //$NON-NLS-1$
-							e2.getClass().getName(),e2.getMessage(),e2.stackAsString())).setVisible(true);
+					Messages.getString("EnigmaRunner.ERROR_YAML_MAKE"),e2).setVisible(true); //$NON-NLS-1$
 			return false;
 			}
 
 		//run make
 		Process p = null;
-		String cmd = make + " eTCpath=\"" + path + '\"'; //$NON-NLS-1$
+		String cmd = make + " eTCpath=\"" + tcpath + "\""; //$NON-NLS-1$
+		String[] env = null;
+		if (path != null) env = new String[] { "PATH=" + path };
 		try
 			{
-			p = Runtime.getRuntime().exec(cmd,null,LGM.workDir.getParentFile());
+			p = Runtime.getRuntime().exec(cmd,env,LGM.workDir.getParentFile());
 			}
 		catch (IOException e)
 			{
 			GmFormatException e2 = new GmFormatException(null,e);
 			e2.printStackTrace();
 			new ErrorDialog(null,Messages.getString("EnigmaRunner.ERROR_MAKE_TITLE"), //$NON-NLS-1$
-					Messages.getString("EnigmaRunner.ERROR_MAKE"), //$NON-NLS-1$
-					org.lateralgm.messages.Messages.format("Listener.DEBUG_INFO", //$NON-NLS-1$
-							e2.getClass().getName(),e2.getMessage(),e2.stackAsString())).setVisible(true);
+					Messages.getString("EnigmaRunner.ERROR_MAKE"),e2).setVisible(true); //$NON-NLS-1$
 			return false;
 			}
 
 		//Set up listeners, waitFor, finish successfully
 		String calling = Messages.format("EnigmaRunner.EXEC_CALLING",cmd); //$NON-NLS-1$
 		System.out.println(calling);
-		ef.ta.append(calling);
+		ef.append(calling + "\n");
 		new EnigmaThread(ef,p.getInputStream());
 		new EnigmaThread(ef,p.getErrorStream());
-		ef.setVisible(true);
+		ef.open();
 		try
 			{
 			System.out.println(p.waitFor());
+			System.out.println("Process terminated");
 			}
 		catch (InterruptedException e)
 			{
 			e.printStackTrace();
 			}
-		ef.setVisible(false);
+		ef.close();
 		return true;
+		}
+
+	void addReasourceHook()
+		{
+		EgmIO io = new EgmIO();
+		FileChooser.readers.add(io);
+		FileChooser.writers.add(io);
+
+		LGM.listener.fc.addOpenFilters(io);
+		LGM.listener.fc.addSaveFilters(io);
+
+		FileChooser.fileViews.add(io);
+		ResNode.ICON.put(EnigmaSettings.class,LGM.findIcon("restree/gm.png"));
+
+		Resource.kinds.add(EnigmaSettings.class);
+		Resource.kindsByName3.put("EGS",EnigmaSettings.class);
+		String name = Messages.getString("EnigmaRunner.RESNODE_NAME"); //$NON-NLS-1$
+		Resource.kindNames.put(EnigmaSettings.class,name);
+		Resource.kindNamesPlural.put(EnigmaSettings.class,name);
+
+		LGM.currentFile.resMap.put(EnigmaSettings.class,new SingletonResourceHolder<EnigmaSettings>(
+				new EnigmaSettings()));
+
+		ResourceFrame.factories.put(EnigmaSettings.class,new ResourceFrameFactory()
+			{
+				@Override
+				public ResourceFrame<?,?> makeFrame(Resource<?,?> r, ResNode node)
+					{
+					return esf;
+					}
+			});
 		}
 
 	public void populateMenu()
@@ -304,8 +333,21 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 
 		menu.addSeparator();
 
+		mImport = new JMenuItem(Messages.getString("EnigmaRunner.MENU_IMPORT")); //$NON-NLS-1$
+		mImport.addActionListener(this);
+		menu.add(mImport);
+
+		menu.addSeparator();
+
 		JMenuItem mi = new JMenuItem(Messages.getString("EnigmaRunner.MENU_SETTINGS")); //$NON-NLS-1$
-		mi.addActionListener(node);
+		mi.addActionListener(new ActionListener()
+			{
+				@Override
+				public void actionPerformed(ActionEvent e)
+					{
+					node.openFrame();
+					}
+			});
 		menu.add(mi);
 
 		JMenu sub = new JMenu(Messages.getString("EnigmaRunner.MENU_KEYWORDS")); //$NON-NLS-1$
@@ -326,18 +368,27 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 
 	public void populateTree()
 		{
-		LGM.root.add(node);
-
-		/*EnigmaGroup node = new EnigmaGroup();
-		LGM.root.add(node);
-		node.add(new EnigmaNode("Whitespace"));
-		node.add(new EnigmaNode("Enigma Init"));
-		node.add(new EnigmaNode("Enigma Term"));*/
-
-		LGM.tree.updateUI();
+		if (!LGM.root.isNodeChild(node))
+			{
+			boolean found = false;
+			for (int i = 0; i < LGM.root.getChildCount() && !found; i++)
+				{
+				TreeNode n = LGM.root.getChildAt(i);
+				if (n instanceof ResNode && ((ResNode) n).kind == EnigmaSettings.class)
+					{
+					node = (ResNode) n;
+					found = true;
+					}
+				}
+			if (!found)
+				{
+				LGM.root.add(node);
+				LGM.tree.updateUI();
+				}
+			}
 		}
 
-	public void populateKeywords()
+	public static void populateKeywords()
 		{
 		Comparator<Keyword> nameComp = new Comparator<Keyword>()
 			{
@@ -399,7 +450,6 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			int up = EnigmaUpdater.checkForUpdates(ef);
 			if (EnigmaUpdater.needsRestart)
 				{
-				Preferences.userRoot().node("/org/enigma").putBoolean("NEEDS_REBUILD",true); //$NON-NLS-1$ //$NON-NLS-2$
 				JOptionPane.showMessageDialog(null,Messages.getString("EnigmaRunner.INFO_UPDATE_RESTART")); //$NON-NLS-1$
 				System.exit(120); //exit code 120 lets our launcher know to restart us.
 				}
@@ -450,50 +500,6 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			}
 		}
 
-	public class EnigmaNode extends ResNode implements ActionListener
-		{
-		private static final long serialVersionUID = 1L;
-		private JPopupMenu pm;
-
-		public EnigmaNode()
-			{
-			super(
-					Messages.getString("EnigmaRunner.RESNODE_NAME"),ResNode.STATUS_SECONDARY,Resource.Kind.GAMESETTINGS); //$NON-NLS-1$
-			pm = new JPopupMenu();
-			pm.add(new JMenuItem(Messages.getString("EnigmaRunner.RESNODE_EDIT"))).addActionListener(this); //$NON-NLS-1$
-			}
-
-		public void openFrame()
-			{
-			if (ENIGMA_READY) esf.toTop();
-			}
-
-		public void showMenu(MouseEvent e)
-			{
-			pm.show(e.getComponent(),e.getX(),e.getY());
-			}
-
-		public void actionPerformed(ActionEvent e)
-			{
-			openFrame();
-			}
-
-		public DataFlavor[] getTransferDataFlavors()
-			{
-			return new DataFlavor[0];
-			}
-
-		public boolean isDataFlavorSupported(DataFlavor flavor)
-			{
-			return false;
-			}
-
-		public Object getTransferData(DataFlavor flavor) throws UnsupportedFlavorException
-			{
-			throw new UnsupportedFlavorException(flavor);
-			}
-		}
-
 	public void setMenuEnabled(boolean en)
 		{
 		busy.setVisible(!en);
@@ -507,6 +513,8 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 	public void compile(final int mode)
 		{
 		if (!assertReady()) return;
+
+		EnigmaSettings es = LGM.currentFile.resMap.get(EnigmaSettings.class).getResource();
 
 		if (es.targets.get(TargetHandler.COMPILER) == null
 				|| es.targets.get(TargetHandler.ids[1]) == null)
@@ -554,7 +562,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 			{
 				public void run()
 					{
-					ef.setVisible(true);
+					ef.open();
 					ef.progress(10,Messages.getString("EnigmaRunner.POPULATING")); //$NON-NLS-1$
 					EnigmaStruct es = EnigmaWriter.prepareStruct(LGM.currentFile,LGM.root);
 					ef.progress(20,Messages.getString("EnigmaRunner.CALLING")); //$NON-NLS-1$
@@ -581,8 +589,8 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		{
 		if (!assertReady()) return null;
 
-		String osl[] = new String[LGM.currentFile.scripts.size()];
-		Script isl[] = LGM.currentFile.scripts.toArray(new Script[0]);
+		String osl[] = new String[LGM.currentFile.resMap.getList(Script.class).size()];
+		Script isl[] = LGM.currentFile.resMap.getList(Script.class).toArray(new Script[0]);
 		for (int i = 0; i < osl.length; i++)
 			osl[i] = isl[i].getName();
 		return DRIVER.syntaxCheck(osl.length,new StringArray(osl),code);
@@ -599,6 +607,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		if (s == compile) compile(MODE_COMPILE);
 		if (s == rebuild) compile(MODE_REBUILD);
 
+		if (s == mImport) EFileReader.importEgmFolder();
 		if (s == showFunctions) showKeywordListFrame(FUNCTIONS);
 		if (s == showGlobals) showKeywordListFrame(GLOBALS);
 		if (s == showTypes) showKeywordListFrame(TYPES);
@@ -731,14 +740,14 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 				res += ")"; //$NON-NLS-1$
 				rl.add(res);
 				}
-			break;
-		case 1:
-			if (DRIVER.resource_isGlobal()) rl.add(res);
-			break;
-		case 2:
-			if (DRIVER.resource_isTypeName()) rl.add(res);
-			break;
-		}
+					break;
+				case 1:
+					if (DRIVER.resource_isGlobal()) rl.add(res);
+					break;
+				case 2:
+					if (DRIVER.resource_isTypeName()) rl.add(res);
+					break;
+				}
 			res = DRIVER.next_available_resource();
 			}
 		return rl;
@@ -817,17 +826,21 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		if (newRoot) populateTree();
 		if (ENIGMA_READY)
 			{
-			es = new EnigmaSettings();
-			esf.setComponents(es);
+			ResourceHolder<EnigmaSettings> rh = LGM.currentFile.resMap.get(EnigmaSettings.class);
+			if (rh == null)
+				LGM.currentFile.resMap.put(EnigmaSettings.class,
+						rh = new SingletonResourceHolder<EnigmaSettings>(new EnigmaSettings()));
+			rh.getResource().copyInto(esf.resOriginal);
+			esf.revertResource(); //updates local es copy as well
 			}
 		}
 
-	public ImageIcon findIcon(String loc)
+	public static ImageIcon findIcon(String loc)
 		{
 		ImageIcon ico = new ImageIcon(loc);
 		if (ico.getIconWidth() != -1) return ico;
 
-		URL url = this.getClass().getClassLoader().getResource(loc);
+		URL url = EnigmaRunner.class.getClassLoader().getResource(loc);
 		if (url != null) ico = new ImageIcon(url);
 		if (ico.getIconWidth() != -1) return ico;
 
@@ -835,7 +848,7 @@ public class EnigmaRunner implements ActionListener,SubframeListener,ReloadListe
 		ico = new ImageIcon(loc);
 		if (ico.getIconWidth() != -1) return ico;
 
-		url = this.getClass().getClassLoader().getResource(loc);
+		url = EnigmaRunner.class.getClassLoader().getResource(loc);
 		if (url != null) ico = new ImageIcon(url);
 		return ico;
 		}

@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svnroot/enigma-dev/!svn/ver/865/trunk/pluginsource/org/enigma/utility
-END
-YamlParser.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svnroot/enigma-dev/!svn/ver/838/trunk/pluginsource/org/enigma/utility/YamlParser.java
+/svnroot/enigma-dev/!svn/ver/946/trunk/pluginsource/org/enigma/utility
 END
 Pump.java
 K 25
@@ -27,27 +21,15 @@ svn:wc:ra_dav:version-url
 V 82
 /svnroot/enigma-dev/!svn/ver/824/trunk/pluginsource/org/enigma/utility/Masker.java
 END
-EEFReader.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svnroot/enigma-dev/!svn/ver/865/trunk/pluginsource/org/enigma/utility/EEFReader.java
-END
 EnigmaBuildReader.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svnroot/enigma-dev/!svn/ver/824/trunk/pluginsource/org/enigma/utility/EnigmaBuildReader.java
+/svnroot/enigma-dev/!svn/ver/944/trunk/pluginsource/org/enigma/utility/EnigmaBuildReader.java
 END
 CmdLineParser.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
 /svnroot/enigma-dev/!svn/ver/824/trunk/pluginsource/org/enigma/utility/CmdLineParser.java
-END
-APNGExperiments.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svnroot/enigma-dev/!svn/ver/865/trunk/pluginsource/org/enigma/utility/APNGExperiments.java
 END
